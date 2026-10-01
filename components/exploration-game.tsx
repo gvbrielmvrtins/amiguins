@@ -75,7 +75,6 @@ export default function ExplorationGame() {
           </div>
           <div className="welcome-sticker"><span className="sticker-sun" aria-hidden="true"><Asterisk size="1em" strokeWidth={2.5} /></span><div>Gente boa.<br />Lugares incríveis.<br /><strong>Encontre seus AmiguINs.</strong></div></div>
           <div className="map-controls"><button aria-label="Aumentar zoom" disabled={zoom >= 2} onClick={() => setZoom(z => Math.min(2, z + .25))}><Plus size={19} /></button><span>{Math.round(zoom * 100)}%</span><button aria-label="Diminuir zoom" disabled={zoom <= 1} onClick={() => setZoom(z => Math.max(1, z - .25))}><Minus size={19} /></button><div /><button aria-label="Ajustar mapa à tela" onClick={() => { setZoom(1); viewport.current?.scrollTo({ top: 0, left: 0 }); }}><Maximize size={17} /></button></div>
-          <div className="map-instruction"><MousePointer2 size={14} /><span>Clique para encontrar <i /> Arraste para explorar</span></div>
           <button className="hint-button" disabled={complete} onClick={giveHint}><Lightbulb size={18} /> Uma ajudinha?</button>
           {(message || complete) && <div className={`game-message ${complete ? 'complete' : ''}`} role="status"><Sparkles size={19} /><span>{complete ? 'Você encontrou os 15 AmiguINs! Que tal explorar de novo?' : message}</span><button aria-label="Fechar mensagem" onClick={() => setMessage('')}><X size={15} /></button></div>}
         </div>
