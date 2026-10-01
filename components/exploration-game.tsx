@@ -52,7 +52,6 @@ export default function ExplorationGame() {
       <aside className="discovery-panel">
         <div className="panel-intro"><h1>Cadê todo<br />mundo<span>?</span><span className="intro-spark" aria-hidden="true"><Asterisk size="1em" strokeWidth={2.5} /></span></h1><p>Tem um montão de histórias por aqui.<br />Encontre cada uma delas!</p></div>
         <div className="progress-section"><div className="progress-label"><span>Sua descoberta</span><strong>{found.length}<span> / 15</span></strong></div><div className="progress-track" role="progressbar" aria-label="Elementos encontrados" aria-valuenow={found.length} aria-valuemin={0} aria-valuemax={15}><span style={{ width: `${found.length / 15 * 100}%` }} /></div></div>
-        <div className="list-filter"><button aria-pressed={filter === 'all'} className={filter === 'all' ? 'active' : ''} onClick={() => setFilter('all')}>Todos</button><button aria-pressed={filter === 'remaining'} className={filter === 'remaining' ? 'active' : ''} onClick={() => setFilter('remaining')}>Faltam encontrar <span>{15 - found.length}</span></button></div>
         <div className="category-list">{categories.map(category => {
           const items = targets.filter(t => t.category === category.id);
           const count = items.filter(t => found.includes(t.id)).length;
