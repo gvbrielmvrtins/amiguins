@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useRef, type PointerEvent } from 'react';
-import { Asterisk, ArrowUpRight, Check, ChevronDown, HelpCircle, Lightbulb, Maximize, Minus, MousePointer2, PawPrint, Plus, RotateCcw, Sparkles, Store, Users, X } from 'lucide-react';
+import { ArrowUpRight, Check, ChevronDown, HelpCircle, Lightbulb, Maximize, Minus, MousePointer2, PawPrint, Plus, RotateCcw, Sparkles, Store, Users, X } from 'lucide-react';
 import { categories, targets, worldImage, type Target } from '@/lib/game-data';
 
 function Portrait({ target }: { target: Target }) {
@@ -26,7 +26,7 @@ export default function ExplorationGame() {
   function discover(target: Target) {
     if (didDrag.current || found.includes(target.id)) return;
     setFound(prev => [...prev, target.id]);
-    setMessage(`${target.name}: encontrado! Boa, explorador.`);
+    setMessage(`Você encontrou ${target.article} ${target.name}!`);
     if (selected === target.id) setSelected(null);
   }
   function startDrag(e: PointerEvent<HTMLDivElement>) {
@@ -50,7 +50,6 @@ export default function ExplorationGame() {
   return <main className="game-shell">
     <div className="game-layout">
       <aside className="discovery-panel">
-        <div className="panel-intro"><h1>Cadê todo<br />mundo<span>?</span><span className="intro-spark" aria-hidden="true"><Asterisk size="1em" strokeWidth={2.5} /></span></h1><p>Tem um montão de histórias por aqui.<br />Encontre cada uma delas!</p></div>
         <div className="progress-section"><div className="progress-label"><span>Sua descoberta</span><strong>{found.length}<span> / 15</span></strong></div><div className="progress-track" role="progressbar" aria-label="Elementos encontrados" aria-valuenow={found.length} aria-valuemin={0} aria-valuemax={15}><span style={{ width: `${found.length / 15 * 100}%` }} /></div></div>
         <div className="category-list">{categories.map(category => {
           const items = targets.filter(t => t.category === category.id);
@@ -75,7 +74,7 @@ export default function ExplorationGame() {
         <footer className="map-footer"><button onClick={() => reset.current?.showModal()}><RotateCcw size={14} /> Recomeçar</button></footer>
       </section>
     </div>
-    <dialog ref={help} className="game-dialog"><button className="dialog-close" aria-label="Fechar instruções" onClick={() => help.current?.close()}><X /></button><span className="dialog-flower"><Asterisk size="1em" strokeWidth={2.5} /></span><h2>O encontro começa<br />com um olhar.</h2><p>Explore a vila e encontre 10 pessoas, 3 espaços e 2 animais.</p><ol><li>Escolha um AmiguIN na lista para ver quem procurar.</li><li>Clique nele no mapa para registrar a descoberta.</li><li>Use o zoom e arraste o mapa para ver os detalhes.</li><li>Se precisar, peça uma ajudinha!</li></ol><small>Este é um protótipo: seu progresso vale enquanto esta página estiver aberta.</small><button className="dialog-primary" onClick={() => help.current?.close()}>Vamos explorar <ArrowUpRight size={17} /></button></dialog>
+    <dialog ref={help} className="game-dialog"><button className="dialog-close" aria-label="Fechar instruções" onClick={() => help.current?.close()}><X /></button><h2>Cadê o amiguIN?</h2><ol><li>Escolha um AmiguIN na lista para ver quem procurar.</li><li>Clique nele no mapa para registrar a descoberta.</li><li>Use o zoom e arraste o mapa para ver os detalhes.</li><li>Se precisar, peça uma ajudinha!</li></ol><button className="dialog-primary" onClick={() => help.current?.close()}>Vamos explorar <ArrowUpRight size={17} /></button></dialog>
     <dialog ref={reset} className="game-dialog"><h2>Mais uma volta?</h2><p>As descobertas desta rodada serão apagadas e todos os AmiguINs estarão escondidos de novo.</p><div className="dialog-actions"><button onClick={() => reset.current?.close()}>Continuar jogando</button><button className="dialog-primary" onClick={() => { setFound([]); setSelected(null); setMessage(''); setZoom(1); reset.current?.close(); }}>Recomeçar</button></div></dialog>
   </main>;
 }

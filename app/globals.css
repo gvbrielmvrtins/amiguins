@@ -234,3 +234,56 @@ button:focus-visible,a:focus-visible { outline:3px solid var(--blue); outline-of
 @media(max-width:1000px) { .map-edition { display:none; }.game-layout { grid-template-columns:245px minmax(0,1fr); }.panel-intro,.category-list { padding-left:17px; padding-right:17px; }.progress-section,.list-filter { margin-left:17px; margin-right:17px; }.map-section { padding:0 12px; }.map-instruction { font-size:8px; padding:8px; }.map-instruction i,.map-instruction span { gap:4px; }.hint-button { padding:9px; }.welcome-sticker { transform:rotate(-3deg) scale(.85); transform-origin:top left; } }
 @media(max-width:700px) { .game-shell { height:auto; min-height:100dvh; }.site-header { height:76px; padding:0 18px; }.header-center { display:none; }.wordmark strong { font-size:27px; }.help-button { padding:9px; font-size:10px; }.game-layout { display:flex; flex-direction:column; }.discovery-panel { order:2; border-right:0; }.map-section { order:1; height:65dvh; min-height:420px; padding:0 12px; border-bottom:1.5px solid var(--ink); }.map-topbar { height:48px; }.map-world { min-width:740px; }.map-footer>span { font-size:8px; max-width:70%; }.map-instruction { bottom:15px; left:10px; }.map-instruction span { font-size:0; }.map-instruction span i { display:none; }.map-instruction span:before { content:'Arraste para explorar'; font-size:9px; }.hint-button { bottom:15px; right:10px; }.welcome-sticker { top:14px; left:13px; }.map-controls { right:10px; }.panel-intro { padding:23px 23px 15px; }.panel-intro h1 br { display:none; }.panel-intro h1 { font-size:36px; }.intro-spark { display:none; }.panel-intro p br { display:none; }.progress-section,.list-filter { margin-left:23px; margin-right:23px; }.category-list { overflow:visible; padding:0 23px 15px; }.target-grid { grid-template-columns:repeat(5,minmax(0,1fr)); gap:13px; }.places-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }.portrait-wrap { width:58px; height:58px; }.portrait { transform:none; }.target-card { font-size:11px; }.category-heading strong { font-size:14px; }.category { padding:16px 0; } }
 @media(prefers-reduced-motion:reduce) { *,*::before,*::after { animation:none!important; transition:none!important; } }
+
+/* Bento layout: discovery and map share the same frame alignment. */
+.game-layout { padding:0 24px; gap:20px; background:#f5f3eb; }
+.discovery-panel { margin:61px 0 46px; padding:14px; gap:14px; border:1.5px solid var(--ink); border-radius:12px; background:var(--paper); box-shadow:3px 3px 0 var(--ink); overflow:hidden; }
+.discovery-panel .progress-section { margin:0; padding:14px; border:1px solid var(--ink); border-radius:9px; background:#e2eaff; flex-shrink:0; }
+.discovery-panel .category-list { display:grid; align-content:start; gap:12px; padding:0 3px 3px 0; }
+.discovery-panel .category { padding:14px 10px; border:1px solid #d5d2c6; border-radius:9px; background:#fffef9; }
+.discovery-panel .category:last-child { border:1px solid #d5d2c6; }
+.discovery-panel .category-heading { gap:5px; }
+.discovery-panel .target-grid { gap:12px 4px; }
+.map-section { padding:0; }
+@media(min-width:1450px) { .discovery-panel .category-list { padding-top:0; } }
+@media(max-width:1000px) { .game-layout { padding:0 16px; gap:16px; grid-template-columns:268px minmax(0,1fr); } .map-section { padding:0; } }
+@media(max-width:700px) {
+  .game-layout { padding:16px 12px; gap:18px; }
+  .map-section { padding:0; border-bottom:0; }
+  .map-topbar { display:none; }
+  .discovery-panel { margin:0 0 8px; overflow:visible; }
+  .discovery-panel .category-list { overflow:visible; padding:0; }
+  .discovery-panel .target-grid { grid-template-columns:repeat(4,minmax(0,1fr)); gap:14px 6px; }
+  .discovery-panel .places-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
+}
+
+/* Typography roles shared across the design kit. */
+@theme inline {
+  --font-sans: var(--font-archivo);
+  --font-display: var(--font-gasoek);
+  --font-heading: var(--font-now);
+}
+:root {
+  --type-display: var(--font-gasoek), sans-serif;
+  --type-heading: var(--font-now), sans-serif;
+  --type-body: var(--font-archivo), sans-serif;
+}
+body { font-family:var(--type-body); }
+h1,h2,h3,h4,h5,h6,button,label,.eyebrow,.progress-label,.category-count,.map-topbar,.map-controls { font-family:var(--type-heading); }
+.panel-intro h1,.game-dialog h2,.wordmark strong { font-family:var(--type-display); font-weight:400; letter-spacing:0; line-height:1.2; }
+.game-dialog h2 { font-size:28px; }
+.category-heading strong,.progress-label,.dialog-primary { font-weight:700; }
+.target-card,.game-message,.map-instruction,.panel-footer,.panel-intro p,.game-dialog p,.game-dialog li,.game-dialog small { font-family:var(--type-body); }
+.target-card { font-size:12px; line-height:1.3; }
+.game-message { font-size:15px; line-height:1.4; }
+.game-dialog p,.game-dialog li { font-size:16px; line-height:1.6; }
+@media(max-width:700px) { .target-card { font-size:13px; } .game-dialog h2 { font-size:25px; } }
+
+/* Uppercase is the default for heading and display typography. */
+h1,h2,h3,h4,h5,h6,button,label,.eyebrow,.progress-label,.category-count,.map-topbar,.map-controls,.wordmark strong,.font-heading,.font-display {
+  text-transform:uppercase;
+}
+/* Body typography keeps its original casing, including names inside buttons. */
+.target-card,.game-message,.map-instruction,.panel-footer,.panel-intro p,.game-dialog p,.game-dialog li,.game-dialog small,.font-sans {
+  text-transform:none;
+}
