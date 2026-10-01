@@ -49,9 +49,6 @@ export default function ExplorationGame() {
     setSelected(next.id); setHint(true); setMessage(next.clue);
   }
   return <main className="game-shell">
-    <header className="site-header">
-<a className="wordmark" href="/" aria-label="Where is AmiguINs? Início"><span className="logo-eyes" aria-hidden="true"><i /><i /></span><span><small>WHERE IS</small><strong>AmiguINs<span>?</span></strong></span></a>
-</header>
     <div className="game-layout">
       <aside className="discovery-panel">
         <div className="panel-intro"><h1>Cadê todo<br />mundo<span>?</span><span className="intro-spark" aria-hidden="true"><Asterisk size="1em" strokeWidth={2.5} /></span></h1><p>Tem um montão de histórias por aqui.<br />Encontre cada uma delas!</p></div>
