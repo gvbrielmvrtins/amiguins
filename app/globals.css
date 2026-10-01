@@ -176,7 +176,7 @@ button:focus-visible,a:focus-visible { outline:3px solid var(--blue); outline-of
 .logo-eyes i:nth-child(2) { background:var(--coral); }
 .header-center { display:flex; gap:10px; align-items:center; font-size:12px; color:#68665e; }
 .tiny-star { font-size:27px; color:var(--coral); }
-.help-button { display:flex; align-items:center; gap:8px; border:1.5px solid var(--ink); border-radius:7px; padding:10px 14px; font-size:12px; font-weight:600; background:var(--paper); box-shadow:2px 2px 0 var(--ink); }
+.help-button { position:absolute; bottom:19px; left:16px; display:flex; align-items:center; gap:8px; border:1.5px solid var(--ink); border-radius:7px; padding:11px 14px; font-size:11px; font-weight:700; background:var(--paper); box-shadow:2px 2px 0 var(--ink); }
 .help-button:hover { background:var(--yellow); }
 .game-layout { flex:1; min-height:0; display:grid; grid-template-columns:268px minmax(0,1fr); }
 .discovery-panel { display:flex; flex-direction:column; min-height:0; border-right:1.5px solid var(--ink); }

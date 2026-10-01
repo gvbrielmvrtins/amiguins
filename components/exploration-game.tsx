@@ -50,10 +50,8 @@ export default function ExplorationGame() {
   }
   return <main className="game-shell">
     <header className="site-header">
-      <a className="wordmark" href="/" aria-label="Where is AmiguINs? Início"><span className="logo-eyes" aria-hidden="true"><i /><i /></span><span><small>WHERE IS</small><strong>AmiguINs<span>?</span></strong></span></a>
-      
-      <button className="help-button" onClick={() => help.current?.showModal()}><HelpCircle size={17} /><span>Como jogar</span></button>
-    </header>
+<a className="wordmark" href="/" aria-label="Where is AmiguINs? Início"><span className="logo-eyes" aria-hidden="true"><i /><i /></span><span><small>WHERE IS</small><strong>AmiguINs<span>?</span></strong></span></a>
+</header>
     <div className="game-layout">
       <aside className="discovery-panel">
         <div className="panel-intro"><h1>Cadê todo<br />mundo<span>?</span><span className="intro-spark" aria-hidden="true"><Asterisk size="1em" strokeWidth={2.5} /></span></h1><p>Tem um montão de histórias por aqui.<br />Encontre cada uma delas!</p></div>
@@ -75,7 +73,8 @@ export default function ExplorationGame() {
           </div>
           <div className="welcome-sticker"><span className="sticker-sun" aria-hidden="true"><Asterisk size="1em" strokeWidth={2.5} /></span><div>Gente boa.<br />Lugares incríveis.<br /><strong>Encontre seus AmiguINs.</strong></div></div>
           <div className="map-controls"><button aria-label="Aumentar zoom" disabled={zoom >= 2} onClick={() => setZoom(z => Math.min(2, z + .25))}><Plus size={19} /></button><span>{Math.round(zoom * 100)}%</span><button aria-label="Diminuir zoom" disabled={zoom <= 1} onClick={() => setZoom(z => Math.max(1, z - .25))}><Minus size={19} /></button><div /><button aria-label="Ajustar mapa à tela" onClick={() => { setZoom(1); viewport.current?.scrollTo({ top: 0, left: 0 }); }}><Maximize size={17} /></button></div>
-          <button className="hint-button" disabled={complete} onClick={giveHint}><Lightbulb size={18} /> Uma ajudinha?</button>
+          <button className="help-button" onClick={() => help.current?.showModal()}><HelpCircle size={17} /><span>Como jogar</span></button>
+<button className="hint-button" disabled={complete} onClick={giveHint}><Lightbulb size={18} /> Uma ajudinha?</button>
           {(message || complete) && <div className={`game-message ${complete ? 'complete' : ''}`} role="status"><Sparkles size={19} /><span>{complete ? 'Você encontrou os 15 AmiguINs! Que tal explorar de novo?' : message}</span><button aria-label="Fechar mensagem" onClick={() => setMessage('')}><X size={15} /></button></div>}
         </div>
         <footer className="map-footer"><button onClick={() => reset.current?.showModal()}><RotateCcw size={14} /> Recomeçar</button></footer>
