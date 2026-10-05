@@ -1,0 +1,10 @@
+# BINstrô — revisão v02
+
+Gerado via imagegen integrado. Referências explícitas: cinema, biblioteca e árvore. Paleta original, contornos limpos, sombras suaves. Novo emblema de queijo, garrafa e taça de vinho. Projeção calibrada pelas arestas da base para os eixos de ±30° do terreno; implantação e mobiliário preservados.
+
+Arquivo: public/images/modular/binstro-render-v02.png
+
+## Prompt
+
+Generate ONE isolated contemporary themed English pub building as a modular illustrated game asset. Images 1 CINEMA and 2 LIBRARY are STRICT visual style and palette references: match their clean hand-drawn black contours, broad matte flat colors, gentle restrained cel shading, simple legible architectural shapes, modest material detail and consistent line weight. Image3 TREE is supporting style reference only. Do not imitate a glossy 3D render or luxury gold ornament. Use only the reference royal blue, warm yellow (NOT metallic gold), coral red, pink, warm off-white, gray roof and black outlines. Subject: ONE contemporary bistro building, single storey compact rectangular footprint225x140 height100, flat gray roof and off-white parapet. Coral walls with blue window and door frames, warm yellow and pink restrained layered moldings, central double blue glass door and two broad simple dark blue windows. Short cream/yellow striped awning over entrance. Above entrance ONE cohesive small sculptural sign emblem of CHEESE AND WINE: a clearly recognizable yellow triangular cheese wedge with three dark holes, next to a simple dark blue wine bottle with coral capsule and a small coral-filled wine glass. Clean flat illustrated silhouettes, balanced and readable as one emblem, modest size and no text. No beer mug, no coffee cup. Use strict matte reference palette: blue, yellow, coral, pink, off-white, gray and black; no metallic gold, no glowing bottles, no busy window interiors. Front long edge DOWN-RIGHT +30degrees, visible right side UP-RIGHT -30degrees, verticals vertical. Entire isolated building, transparent margins, no vignette or halo, no exterior tables, trees or ground tile. Same clean architectural finish as cinema/library references.
+

@@ -1,0 +1,75 @@
+export type CivicArt={file:string;width:number;height:number;anchorX:number;anchorY:number;scale:number;mirror?:boolean;risingSlope?:number;fallingSlope?:number};
+export const civicRenderedAssets:Record<string,CivicArt>={
+  africaBridge:{file:'africa-ponte-v01.png',width:1536,height:1024,anchorX:820,anchorY:570,scale:.155,risingSlope:-.60,fallingSlope:.58},
+  africaHome:{file:'africa-residencia-v01.png',width:1415,height:1111,anchorX:710,anchorY:925,scale:.10,risingSlope:-.56,fallingSlope:.43},
+  africaStall:{file:'africa-banca-v01.png',width:1536,height:1024,anchorX:770,anchorY:795,scale:.065,risingSlope:-.57,fallingSlope:.45},
+  africaShop:{file:'africa-comercio-v01.png',width:1415,height:1111,anchorX:710,anchorY:900,scale:.085,risingSlope:-.57,fallingSlope:.46},
+  africaPavilion:{file:'africa-pavilhao-v01.png',width:1536,height:1024,anchorX:770,anchorY:790,scale:.13,risingSlope:-.57,fallingSlope:.35},
+  coloridinFlag:{file:'coloridin-bandeira-v01.png',width:1448,height:1086,anchorX:610,anchorY:970,scale:.12,risingSlope:-.50,fallingSlope:.50},
+  coloridinBlanket:{file:'coloridin-pano-piquenique-v01.png',width:1415,height:1111,anchorX:710,anchorY:590,scale:.052,risingSlope:-.54,fallingSlope:.55},
+  sheriffBuilding:{file:'xerifins-departamento-v01.png',width:1536,height:1024,anchorX:790,anchorY:835,scale:.14,risingSlope:-.58,fallingSlope:.30},
+  sheriffBooth:{file:'xerifins-guarita-v01.png',width:1322,height:1190,anchorX:680,anchorY:1020,scale:.043,risingSlope:-.58,fallingSlope:.50},
+  sheriffCar:{file:'xerifins-viatura-v01.png',width:1448,height:1086,anchorX:750,anchorY:800,scale:.054,risingSlope:-.52,fallingSlope:.53},
+  pubMicrophone:{file:'pub-microfone-v01.png',width:1024,height:1536,anchorX:520,anchorY:1400,scale:.036},
+  pubSpeaker:{file:'pub-caixa-som-v01.png',width:1402,height:1122,anchorX:710,anchorY:960,scale:.04,risingSlope:-.58,fallingSlope:.40},
+  pubStage:{file:'pracinha-palco-v01.png',width:1536,height:1024,anchorX:770,anchorY:650,scale:.027,risingSlope:-.577,fallingSlope:.44},
+  inglishPub:{file:'inglish-pub-render-v02.png',width:1536,height:1024,anchorX:780,anchorY:810,scale:.14,mirror:true,risingSlope:-.75,fallingSlope:.325},
+  creativeSculpture:{file:'estudio-escultura-v02.png',width:1320,height:1191,anchorX:660,anchorY:1050,scale:.055,risingSlope:-.50,fallingSlope:.50},
+  creativeBench:{file:'estudio-bancada-v02.png',width:1536,height:1024,anchorX:770,anchorY:790,scale:.05,mirror:true,risingSlope:-.64,fallingSlope:.33},
+  creativeEasel:{file:'estudio-cavalete-v02.png',width:916,height:1717,anchorX:460,anchorY:1550,scale:.038,mirror:true},
+  creativeStudio:{file:'estudio-render-v02.png',width:1536,height:1024,anchorX:780,anchorY:810,scale:.13,mirror:true,risingSlope:-.70,fallingSlope:.35},
+  fairProduce:{file:'feira-hortifruti-v01.png',width:1536,height:1024,anchorX:800,anchorY:765,scale:.055,risingSlope:-.58,fallingSlope:.49},
+  fairElectronics:{file:'feira-eletronicos-v01.png',width:1312,height:1199,anchorX:660,anchorY:975,scale:.073,risingSlope:-.58,fallingSlope:.47},
+  fairCeramics:{file:'feira-ceramica-v01.png',width:1312,height:1199,anchorX:660,anchorY:975,scale:.073,risingSlope:-.58,fallingSlope:.47},
+  fairBooks:{file:'feira-livros-v01.png',width:1312,height:1199,anchorX:660,anchorY:970,scale:.073,risingSlope:-.58,fallingSlope:.47},
+  fairClothes:{file:'feira-roupas-v01.png',width:1312,height:1199,anchorX:660,anchorY:960,scale:.073,risingSlope:-.58,fallingSlope:.47},
+  commerceBistro:{file:'binstro-render-v02.png',width:1536,height:1024,anchorX:800,anchorY:790,scale:.15,risingSlope:-.69,fallingSlope:.325},
+  commerceWeights:{file:'academia-pesos-v01.png',width:1448,height:1086,anchorX:760,anchorY:835,scale:.047,risingSlope:-.40,fallingSlope:.58},
+  commerceRig:{file:'academia-barra-v01.png',width:1374,height:1145,anchorX:720,anchorY:880,scale:.06,risingSlope:-.58,fallingSlope:.46},
+  commerceGym:{file:'academia-render-v02.png',width:1536,height:1024,anchorX:800,anchorY:790,scale:.15,risingSlope:-.61,fallingSlope:.31},
+  tavern:{file:'taverna-bar-contemporaneo-v03.png',width:1536,height:1024,anchorX:780,anchorY:800,scale:.17,risingSlope:-.67,fallingSlope:.26},
+  tavernPicnic:{file:'parque-piquenique-v01.png',width:1448,height:1086,anchorX:710,anchorY:940,scale:.044,risingSlope:-.577,fallingSlope:.577},
+  tavernRoundTable:{file:'taverna-mesa-redonda-v01.png',width:1415,height:1111,anchorX:710,anchorY:900,scale:.043},
+  tavernBench:{file:'parque-banco-v01.png',width:1415,height:1111,anchorX:720,anchorY:940,scale:.042},
+  eastCafe:{file:'cafe-apoio-render-v01.png',width:1536,height:1024,anchorX:800,anchorY:840,scale:.09,risingSlope:-.58,fallingSlope:.34},
+  valleyPrototype:{file:'silicin-prototipos-v01.png',width:1415,height:1111,anchorX:725,anchorY:925,scale:.07,mirror:true,risingSlope:-.32,fallingSlope:.56},
+  valleyRobot:{file:'silicin-robo-v01.png',width:1508,height:1043,anchorX:710,anchorY:810,scale:.075,risingSlope:-.577,fallingSlope:.577},
+  valleyCycles:{file:'silicin-bicicletario-v02.png',width:1844,height:853,anchorX:930,anchorY:590,scale:.065,risingSlope:-.58,fallingSlope:.26},
+  linkedinBuilding:{file:'linkedin-predio-v01.png',width:1415,height:1111,anchorX:720,anchorY:855,scale:.165,risingSlope:-.59,fallingSlope:.29},
+  linkedinTerminal:{file:'linkedin-totem-v01.png',width:1160,height:1356,anchorX:610,anchorY:1210,scale:.062,risingSlope:-.577,fallingSlope:.44},
+  linkedinTalks:{file:'linkedin-arquibancada-v01.png',width:1415,height:1111,anchorX:740,anchorY:790,scale:.072,risingSlope:-.58,fallingSlope:.43},
+  linkedinCheckin:{file:'linkedin-credenciamento-v01.png',width:1416,height:1111,anchorX:725,anchorY:865,scale:.07,mirror:true,risingSlope:-.38,fallingSlope:.58},
+  valleyCampus:{file:'silicin-campus-v01.png',width:1536,height:1024,anchorX:780,anchorY:780,scale:.16,risingSlope:-.57,fallingSlope:.40},
+  letreiro:{file:'plaza-letreiro-rbd-v01.png',width:1415,height:1111,anchorX:710,anchorY:1030,scale:.065},
+  tarot:{file:'torre-taro-render-v02.png',width:1359,height:1157,anchorX:680,anchorY:900,scale:.115,risingSlope:-.577,fallingSlope:.577},
+  plaza:{file:'plaza-arcada-v01.png',width:1536,height:1024,anchorX:770,anchorY:800,scale:.115,risingSlope:-.53,fallingSlope:.40},
+  palco:{file:'pracinha-palco-v01.png',width:1536,height:1024,anchorX:770,anchorY:650,scale:.06,risingSlope:-.577,fallingSlope:.44},
+  jogos:{file:'pracinha-jogos-v01.png',width:1415,height:1111,anchorX:700,anchorY:750,scale:.07,risingSlope:-.577,fallingSlope:.577},
+  pergolado:{file:'pracinha-pergolado-v01.png',width:1415,height:1111,anchorX:710,anchorY:840,scale:.095,risingSlope:-.5,fallingSlope:.37},
+  quiosque:{file:'pracinha-quiosque-v01.png',width:1415,height:1111,anchorX:770,anchorY:1030,scale:.065,risingSlope:-.50,fallingSlope:.44},
+  fonte:{file:'pracinha-fonte-v01.png',width:1448,height:1086,anchorX:724,anchorY:760,scale:.08},
+  torre:{file:'torre-mistica-render-v01.png',width:1024,height:1536,anchorX:550,anchorY:1470,scale:.18,risingSlope:-.58,fallingSlope:.43},
+  prefeitura:{file:'prefeitura-render-v01.png',width:1415,height:1111,anchorX:850,anchorY:1010,scale:.16,mirror:true,risingSlope:-.58,fallingSlope:.34},
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

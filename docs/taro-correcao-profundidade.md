@@ -1,0 +1,6 @@
+Correção via imagegen integrada. Arquivo: `public/images/modular/torre-taro-render-v02.png`.
+
+Mesa e cadeiras recuadas para dentro da cobertura; pilar frontal contínuo sobreposto à mesa, com apoios no chão. Mesma escala, posição e enquadramento no mapa.
+
+Prompt executado:
+Precise object edit of this transparent tarot gazebo image. Correct the depth/occlusion mistake: the nearest CENTRAL GOLDEN POST must run continuously and visibly from the front roof corner to its front ground foot, IN FRONT OF the table. Move the table and both chairs deeper INSIDE the four-post footprint, toward the back, and reduce furniture slightly if needed to keep it fully inside the canopy. The table must sit naturally on four wooden legs on the same ground plane as the chairs and pavilion posts, with proper isometric elevation; no floating furniture and no furniture crossing through a post. Central front post occludes a narrow strip of tablecloth naturally; cards remain visible on either side. Keep exactly the purple and gold canopy design, ornamental moons/stars, three tarot cards, two chairs, same retro-pop illustration outlines/materials/detail, same isometric camera and canvas size/framing and transparent background. Only fix furniture placement and full continuous foreground post. No people or additional objects.

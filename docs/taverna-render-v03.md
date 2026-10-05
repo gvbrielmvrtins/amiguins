@@ -1,0 +1,10 @@
+# Taverna dos joguINs — revisão v03
+
+Geração individual via imagegen integrado com transparência. Referências: cinema, biblioteca e árvore. Bar contemporâneo temático de jogos, paleta original, contornos limpos e emblema de dados. Projeção ajustada aos eixos de ±30° do terreno; implantação e mesas existentes preservadas.
+
+Arquivo: public/images/modular/taverna-bar-contemporaneo-v03.png
+
+## Prompt
+
+Generate ONE isolated contemporary themed English pub building as a modular illustrated game asset. Images 1 CINEMA and 2 LIBRARY are STRICT visual style and palette references: match their clean hand-drawn black contours, broad matte flat colors, gentle restrained cel shading, simple legible architectural shapes, modest material detail and consistent line weight. Image3 TREE is supporting style reference only. Do not imitate a glossy 3D render or luxury gold ornament. Use only the reference royal blue, warm yellow (NOT metallic gold), coral red, pink, warm off-white, gray roof and black outlines.  Subject: ONE contemporary games-themed bar building, single storey wide rectangular facade, footprint300 wide140deep height100, flat gray roof with cream parapet. Coral plaster walls, blue double glass central doors and two broad simple dark blue windows, warm yellow and blue layered cornice with restrained pink accents. Two short blue/yellow striped fabric awnings over windows. Above entrance a small clean emblem of TWO cream dice with clear black circular pips, proportionate and readable, integrated in an arched yellow/cream sign frame. Small flat coral heart and blue club motifs on fascia, no lettering. Contemporary urban themed bar, NO medieval timber, rustic tavern, pitched roof or stone castle. Strict matte cinema/library palette, clean black contours, restrained cel shading, no metallic gold, glowing bottles, glossy dice or tiny clutter. Front long edge DOWN-RIGHT +30degrees, right side UP-RIGHT -30degrees, verticals vertical. Single entire isolated building with actual transparent background, no halo, floor tile, furniture, trees or people.
+
