@@ -8,12 +8,13 @@ import {projectGround} from '@/lib/map-projection';
 import { ArrowUpRight, Check, ChevronDown, HelpCircle, Lightbulb, Maximize, Minus, MousePointer2, PawPrint, Plus, RotateCcw, Sparkles, Store, Users, X } from 'lucide-react';
 import ModularMap from '@/components/modular-map';
 import { modularDestinations } from '@/lib/modular-map';
+import { mapCharacters } from '@/lib/map-characters';
 import {type Target} from '@/lib/game-data';
-const categories=[{id:'places',label:'Espacins'}] as const;
-const targets:Target[]=modularDestinations.map(d=>({id:d.id,name:d.name,article:'o',category:'places',x:d.x,y:d.y,width:0,height:0,clue:'Procure '+d.name+' no mapa.'}));
+const categories=[{id:'people',label:'Pessoas'},{id:'places',label:'Espacins'}] as const;
+const targets:Target[]=[...mapCharacters, ...modularDestinations.map<Target>(d=>({id:d.id,name:d.name,article:'o',category:'places',x:d.x,y:d.y,width:0,height:0,clue:'Procure '+d.name+' no mapa.'}))];
 
 const destinationPortraits:Record<string,string>={"vagao-feminino":"vagao-feminino-isometrico-v01.png","livrinhoteca":"livrinhoteca-isometrico-v01.png","cineminha":"cineminha-isometrico-v01.png","mercado-vagas":"mercado-vagas-isometrico-v01.png","prefeintura":"prefeitura-render-v01.png","taverna-joguins":"taverna-render-v01.png","pracinha":"pracinha-fonte-v01.png","espacin-coloridin":"coloridin-bandeira-v01.png","linkedin":"linkedin-predio-v01.png","jardim-secreto":"rosa-arvore-isometrica-v01.png","estudio-criativins":"estudio-render-v02.png","silicin-valley":"silicin-campus-v01.png","departamento-xerifins":"xerifins-departamento-v01.png","inglish-pub":"inglish-pub-render-v02.png","oficina-vendinhas":"feira-roupas-v01.png","torre-mistica":"torre-mistica-render-v01.png","plaza-hispanica":"plaza-arcada-v01.png","academia-marombins":"academia-render-v02.png","binstro":"binstro-render-v02.png","paises-africanos":"africa-pavilhao-v01.png"};
-function Portrait({target}:{target:Target}){return <img className="portrait" aria-hidden="true" alt="" src={`/images/modular/${destinationPortraits[target.id]}`} style={{objectFit:"contain"}}/>;}
+function Portrait({target}:{target:Target}){return <img className="portrait" aria-hidden="true" alt="" src={mapCharacters.find(person=>person.id===target.id)?.file ?? `/images/modular/${destinationPortraits[target.id]}`} style={{objectFit:"contain"}}/>;}
 
 export default function ExplorationGame() {
 
@@ -44,7 +45,7 @@ export default function ExplorationGame() {
     const observer=new ResizeObserver(constrainCamera);observer.observe(v);return()=>observer.disconnect();
   },[zoom]);
   function locateDestination(id:string){
-    setSelected(id);const v=viewport.current,d=modularDestinations.find(item=>item.id===id);if(!v||!d)return;
+    setSelected(id);const v=viewport.current,d=targets.find(item=>item.id===id);if(!v||!d)return;
     const lot=[...communityLots,...commerceLots].find(item=>item.id===id);
     const at=projectGround(lot?.x??d.x,lot?.y??d.y),scale=v.scrollWidth/2700;
     v.scrollLeft=at.x*scale-v.clientWidth/2;v.scrollTop=(at.y+70)*scale-v.clientHeight/2;constrainCamera();
@@ -103,17 +104,19 @@ export default function ExplorationGame() {
           </div>
 
           <div className="map-controls"><button aria-label="Aumentar zoom" disabled={zoom >= 2} onClick={() => changeZoom(Math.min(2, zoom + .25))}><Plus size={19} /></button><span>{Math.round(zoom * 100)}%</span><button aria-label="Diminuir zoom" disabled={zoom <= 1} onClick={() => changeZoom(Math.max(1, zoom - .25))}><Minus size={19} /></button><div /><button aria-label="Ajustar mapa à tela" onClick={() => { setZoom(1); viewport.current?.scrollTo({ top: 0, left: 0 }); }}><Maximize size={17} /></button></div>
-          {<div className="map-actions"><button className="help-button" onClick={() => help.current?.showModal()}><HelpCircle size={17} /><span>Como jogar</span></button><button className="help-button" onClick={() => reset.current?.showModal()}><RotateCcw size={17} /><span>Recomeçar</span></button></div>}
-{<button className="hint-button" disabled={complete} onClick={giveHint}><Lightbulb size={18} /> Uma ajudinha?</button>}
-          {(message || complete) && <div className={`game-message ${complete ? 'complete' : ''}`} role="status"><Sparkles size={19} /><span>{complete ? `Você encontrou os ${targets.length} espaços da vila! Que tal explorar de novo?` : message}</span><button aria-label="Fechar mensagem" onClick={() => setMessage('')}><X size={15} /></button></div>}
+          {<div className="map-actions"><button className="help-button" aria-label="Como jogar" title="Como jogar" onClick={() => help.current?.showModal()}><HelpCircle size={17} /></button><button className="help-button" aria-label="Recomeçar" title="Recomeçar" onClick={() => reset.current?.showModal()}><RotateCcw size={17} /></button></div>}
+{<button className="hint-button" aria-label="Uma ajudinha?" title="Uma ajudinha?" disabled={complete} onClick={giveHint}><Lightbulb size={18} /></button>}
+          {(message || complete) && <div className={`game-message ${complete ? 'complete' : ''}`} role="status"><Sparkles size={19} /><span>{complete ? `Você encontrou os ${targets.length} itens da vila! Que tal explorar de novo?` : message}</span><button aria-label="Fechar mensagem" onClick={() => setMessage('')}><X size={15} /></button></div>}
         </div>
-        <div className="map-footer"><span>20 espaços para descobrir · use o zoom e arraste para explorar</span></div>
+        <div className="map-footer"><span>{targets.length} pessoas e espaços para descobrir · use o zoom e arraste para explorar</span></div>
       </section>
     </div>
-    <dialog ref={help} className="game-dialog"><button className="dialog-close" aria-label="Fechar instruções" onClick={() => help.current?.close()}><X /></button><h2>Explore a Vila AmiguINs</h2><ol><li>Escolha um espaço na lista para procurar.</li><li>Clique nele no mapa para registrar a descoberta.</li><li>Use o zoom e arraste o mapa para ver os detalhes.</li><li>Se precisar, peça uma ajudinha!</li></ol><button className="dialog-primary" onClick={() => help.current?.close()}>Vamos explorar <ArrowUpRight size={17} /></button></dialog>
-    <dialog ref={reset} className="game-dialog"><h2>Mais uma volta?</h2><p>As descobertas desta rodada serão apagadas e os 20 espaços poderão ser descobertos novamente.</p><div className="dialog-actions"><button onClick={() => reset.current?.close()}>Continuar jogando</button><button className="dialog-primary" onClick={() => { setFound([]); setSelected(null); setMessage(''); setZoom(1); reset.current?.close(); }}>Recomeçar</button></div></dialog>
+    <dialog ref={help} className="game-dialog"><button className="dialog-close" aria-label="Fechar instruções" onClick={() => help.current?.close()}><X /></button><h2>Explore a Vila AmiguINs</h2><ol><li>Escolha uma pessoa ou espaço na lista para procurar.</li><li>Clique nele no mapa para registrar a descoberta.</li><li>Use o zoom e arraste o mapa para ver os detalhes.</li><li>Se precisar, peça uma ajudinha!</li></ol><button className="dialog-primary" onClick={() => help.current?.close()}>Vamos explorar <ArrowUpRight size={17} /></button></dialog>
+    <dialog ref={reset} className="game-dialog"><h2>Mais uma volta?</h2><p>As descobertas desta rodada serão apagadas e as pessoas e os espaços poderão ser descobertos novamente.</p><div className="dialog-actions"><button onClick={() => reset.current?.close()}>Continuar jogando</button><button className="dialog-primary" onClick={() => { setFound([]); setSelected(null); setMessage(''); setZoom(1); reset.current?.close(); }}>Recomeçar</button></div></dialog>
   </main>;
 }
+
+
 
 
 

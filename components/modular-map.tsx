@@ -1,3 +1,4 @@
+import { mapCharacters } from '@/lib/map-characters';
 import CommunityStudy, {CommunityGround} from './community-study';
 import NeighborhoodStudy,{NeighborhoodStudyGround,RiverBridge} from './new-neighborhood-study';
 import {communityIds,communityLandscape} from '@/lib/community-study';
@@ -51,7 +52,15 @@ export default function ModularMap({ selected, onSelect }: { selected: string | 
     <g data-layer="destinations-depth-sorted">
     <RiverBridge/>
     <WestGreenProps/>
-    {[...gardenStudyProps.filter(item=>!item.id.startsWith('secret-')).map(item=>({type: 'garden' as const,...item})), ...modularDestinations.map(destination => ({ type: 'destination' as const, ...destination })), ...eastFillers.map(item=>({type: 'east-filler' as const,...item})), ...[...parkFencePanels,...northGardenFencePanels].map(item=>({type:'fence' as const,...item})), ...parkStudyProps.map(item => ({ type: 'park' as const, ...item })), ...fillerBuildings.map(item => ({ type: 'filler' as const, ...item })), ...[...communityLandscape, ...commerceLandscape, ...pilotLandscape, ...fillerLandscape, ...civicLandscape, ...eastLandscape].map(item => ({ type: 'landscape' as const, ...item }))].sort((a,b) => (a.x+a.y)-(b.x+b.y)).map(destination => {
+    {[...mapCharacters.map(item=>({...item,type: 'character' as const})), ...gardenStudyProps.filter(item=>!item.id.startsWith('secret-')).map(item=>({type: 'garden' as const,...item})), ...modularDestinations.map(destination => ({ type: 'destination' as const, ...destination })), ...eastFillers.map(item=>({type: 'east-filler' as const,...item})), ...[...parkFencePanels,...northGardenFencePanels].map(item=>({type:'fence' as const,...item})), ...parkStudyProps.map(item => ({ type: 'park' as const, ...item })), ...fillerBuildings.map(item => ({ type: 'filler' as const, ...item })), ...[...communityLandscape, ...commerceLandscape, ...pilotLandscape, ...fillerLandscape, ...civicLandscape, ...eastLandscape].map(item => ({ type: 'landscape' as const, ...item }))].sort((a,b) => (a.x+a.y)-(b.x+b.y)).map(destination => {
+      if (destination.type === 'character') {
+        const at = projectGround(destination.x, destination.y);
+        return <g key={destination.id} id={`character-${destination.id}`} data-character={destination.id} transform={`translate(${at.x} ${at.y}) scale(${buildingScale})`} className={`modular-destination map-character ${selected === destination.id ? 'is-selected' : ''}`} role="button" tabIndex={0} aria-label={`Encontrar ${destination.name}`} aria-pressed={selected === destination.id} onClick={() => onSelect(destination.id)} onKeyDown={event => { if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); onSelect(destination.id, true); } }}>
+          <title>{destination.name} — com pipoca no canto direito do terreno do cinema</title>
+          <rect x={-15} y={-44} width={30} height={46} rx={5} fill="transparent"/>
+          <image href={destination.file} x={-15} y={-44} width={destination.width} height={destination.height} pointerEvents="none"/>
+        </g>;
+      }
       if (destination.type === 'garden') return <GardenStudyProp key={destination.id} item={destination}/>;
       if (destination.type === 'east-filler') return <EastFiller key={destination.id} item={destination}/>;
       if (destination.type === 'fence') return <ParkFence key={destination.id} item={destination}/>;
@@ -72,7 +81,7 @@ export default function ModularMap({ selected, onSelect }: { selected: string | 
       const plaza = id === 'pracinha';
       const height = id === 'torre-mistica' ? 260 : plaza ? 80 : 150;
       return <g key={id} id={`destination-${id}`} className={`modular-destination ${selected === id ? 'is-selected' : ''}`} transform={`translate(${position.x} ${position.y}) scale(${buildingScale})`} tabIndex={0} role="button" aria-label={`Examinar ${name}`} aria-pressed={selected === id} onClick={() => onSelect(id)} onKeyDown={event => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); onSelect(id, true); } }}>
-        <title>{name} — espaço provisório</title>
+        <title>{`${name} — espaço provisório`}</title>
         
         <path d={`M${-half} ${-depth}L0 ${-depth*2}L${half+28} ${-depth+20}L28 20Z`} fill={p.ink} opacity="0.18"/>
         <g stroke={p.ink} strokeWidth="4" strokeLinejoin="round">
@@ -86,6 +95,7 @@ export default function ModularMap({ selected, onSelect }: { selected: string | 
     </g>
   </svg>;
 }
+
 
 
 

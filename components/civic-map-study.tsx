@@ -48,7 +48,7 @@ export function CivicGround() {return <g data-layer="civic-study-ground" strokeW
 export default function CivicMapStudy({destination:d,selected,onSelect}:{destination:ModularDestination;selected:string|null;onSelect:(id:string,keyboard?:boolean)=>void}) {
   const at=projectGround(d.x-100,d.y-100);
   return <g id={`destination-${d.id}`} data-civic-study={d.id} className={`modular-destination ${selected===d.id?'is-selected':''}`} transform={`translate(${at.x} ${at.y})`} tabIndex={0} role="button" aria-label={`Examinar ${d.name}`} aria-pressed={selected===d.id} onClick={()=>onSelect(d.id)} onKeyDown={e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();onSelect(d.id,true);}}}>
-    <title>{d.name} — {'espaço renderizado'}</title>
+    <title>{`${d.name} — espaço renderizado`}</title>
     
     <g stroke={p.ink} strokeWidth="2" strokeLinejoin="round">
       {d.id==='pracinha' && <><Fountain x={10} y={20}/><CivicRenderedProp kind="quiosque" x={120} y={-65}/></>}

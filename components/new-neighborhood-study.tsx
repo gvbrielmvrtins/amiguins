@@ -47,10 +47,10 @@ export function NeighborhoodStudyGround(){return <>
 </>;}
 export function RiverBridge(){const at=projectGround(2680,1350);return <g transform={`translate(${at.x} ${at.y})`} aria-label="Ponte entre a cidade e o bairro de Países africanos"><title>Ponte — espaço renderizado</title><CivicRenderedProp kind="africaBridge"/></g>;}
 export default function NeighborhoodStudy({destination:d,selected,onSelect}:{destination:ModularDestination;selected:string|null;onSelect:(id:string,keyboard?:boolean)=>void}){const african=d.id==='paises-africanos',at=projectGround(d.x,d.y);return <g id={`destination-${d.id}`} transform={`translate(${at.x} ${at.y})`} className={`modular-destination ${selected===d.id?'is-selected':''}`} role="button" tabIndex={0} aria-label={`Examinar ${d.name}`} aria-pressed={selected===d.id} onClick={()=>onSelect(d.id)} onKeyDown={e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();onSelect(d.id,true);}}}>
-<title>{d.name} — {african?'bairro renderizado':'parque renderizado'}</title>
+<title>{`${d.name} — ${african ? 'bairro renderizado' : 'parque renderizado'}`}</title>
 {african?<>
   {africanLots.map(lot=><g key={lot.id} transform={`translate(${pt(lot.x,lot.y)})`}>
-    <title>{lot.id} — construção e área de convivência</title>
+    <title>{`${lot.id} — construção e área de convivência`}</title>
     <LocalLandscape item={{id:`${lot.id}-tree`,kind:'tree',x:85,y:-80,size:55}}/>
     <CivicRenderedProp kind={lot.art} x={-25} y={-30}/>
     <CivicRenderedProp kind="tavernBench" x={-65} y={80}/>

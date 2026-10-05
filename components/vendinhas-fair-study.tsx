@@ -6,4 +6,4 @@ const stalls=[
  {x:95,y:35,kind:'fairElectronics',label:'Barraca de eletrônicos'},
  {x:-115,y:145,kind:'fairProduce',label:'Banca de produtos frescos'},
 ].sort((a,b)=>a.x+a.y-b.x-b.y);
-export default function VendinhasFair(){return <g data-fair="rendered" aria-label="Feira de vendas renderizada com roupas, livros, cerâmica, eletrônicos e produtos frescos">{stalls.map(s=><g key={s.kind} aria-label={s.label}><title>{s.label} — espaço renderizado</title><CivicRenderedProp kind={s.kind} x={s.x} y={s.y}/></g>)}</g>;}
+export default function VendinhasFair(){return <g data-fair="rendered" aria-label="Feira de vendas renderizada com roupas, livros, cerâmica, eletrônicos e produtos frescos">{stalls.map(s=><g key={s.kind} aria-label={s.label}><title>{`${s.label} — espaço renderizado`}</title><CivicRenderedProp kind={s.kind} x={s.x} y={s.y}/></g>)}</g>;}
