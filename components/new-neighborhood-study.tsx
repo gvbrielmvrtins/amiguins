@@ -15,7 +15,7 @@ const africanLots=[
   {id:'residencia-oeste',x:0,y:680,width:260,depth:260,color:p.blue,art:'africaHome'},
   {id:'residencia-leste',x:340,y:680,width:260,depth:260,color:p.blue,art:'africaHome'},
 ];
-function AfricanBuildingLots(){return <g aria-label="Terrenos individuais em relevo do bairro de Países africanos">{africanLots.map(lot=><g key={lot.id} transform={`translate(${lot.x} ${lot.y})`}>
+function AfricanBuildingLots(){return <g aria-label="Terrenos individuais em relevo do bairro de amiguINs INternacionais">{africanLots.map(lot=><g key={lot.id} transform={`translate(${lot.x} ${lot.y})`}>
   <rect x={-lot.width/2+7} y={-lot.depth/2+7} width={lot.width} height={lot.depth} rx="18" fill="#B6A487" stroke={p.ink} strokeWidth="3"/>
   <rect x={-lot.width/2} y={-lot.depth/2} width={lot.width} height={lot.depth} rx="18" fill={p.cream} stroke={p.ink} strokeWidth="3"/>
   <rect x={-lot.width/2+9} y={-lot.depth/2+9} width={lot.width-18} height={lot.depth-18} rx="12" fill="none" stroke={lot.color} strokeWidth="3"/>
@@ -34,7 +34,7 @@ export function NeighborhoodStudyGround(){return <>
     <path d={cityBankPath} transform="translate(7 7)" fill="none" stroke={p.ink} strokeWidth="26"/>
     <path d={cityBankPath} transform="translate(7 7)" fill="none" stroke="#B6A487" strokeWidth="20"/>
     <path d={riverPath} fill="none" stroke={p.ink} strokeWidth="156"/>
-    <path d={riverPath} fill="none" stroke="url(#river-water-rendered)" strokeWidth="150"><title>Rio separando a cidade do bairro de Países africanos — água renderizada</title></path>
+    <path d={riverPath} fill="none" stroke="url(#river-water-rendered)" strokeWidth="150"><title>Rio separando a cidade do bairro de amiguINs INternacionais — água renderizada</title></path>
     <path d={cityBankPath} fill="none" stroke={p.ink} strokeWidth="26"/>
     <path d={cityBankPath} fill="none" stroke={p.cream} strokeWidth="20"><title>Margem do rio do lado da cidade — calçada contínua com relevo</title></path>
   </g>
@@ -45,7 +45,7 @@ export function NeighborhoodStudyGround(){return <>
   <g transform="translate(190 1220)"><title>Parque LGBT com gramado e espaços de piquenique</title><rect x="-204" y="-204" width="420" height="420" rx="30" fill="#B6A487" stroke={p.ink} strokeWidth="3"/><rect x="-210" y="-210" width="420" height="420" rx="30" fill="#FFFAE9" stroke={p.ink} strokeWidth="3"/><rect x="-198" y="-198" width="396" height="396" rx="22" fill="url(#coloridin-grass)" stroke="#91AE77" strokeWidth="6"/><circle r="42" fill={p.cream} stroke={p.yellow} strokeWidth="4"/></g>
   <g transform="translate(2680 1775)"><AfricanBuildingLots/></g>
 </>;}
-export function RiverBridge(){const at=projectGround(2680,1350);return <g transform={`translate(${at.x} ${at.y})`} aria-label="Ponte entre a cidade e o bairro de Países africanos"><title>Ponte — espaço renderizado</title><CivicRenderedProp kind="africaBridge"/></g>;}
+export function RiverBridge(){const at=projectGround(2680,1350);return <g transform={`translate(${at.x} ${at.y})`} aria-label="Ponte entre a cidade e o bairro de amiguINs INternacionais"><title>Ponte — espaço renderizado</title><CivicRenderedProp kind="africaBridge"/></g>;}
 export default function NeighborhoodStudy({destination:d,selected,onSelect}:{destination:ModularDestination;selected:string|null;onSelect:(id:string,keyboard?:boolean)=>void}){const african=d.id==='paises-africanos',at=projectGround(d.x,d.y);return <g id={`destination-${d.id}`} transform={`translate(${at.x} ${at.y})`} className={`modular-destination ${selected===d.id?'is-selected':''}`} role="button" tabIndex={0} aria-label={`Examinar ${d.name}`} aria-pressed={selected===d.id} onClick={()=>onSelect(d.id)} onKeyDown={e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();onSelect(d.id,true);}}}>
 <title>{`${d.name} — ${african ? 'bairro renderizado' : 'parque renderizado'}`}</title>
 {african?<>

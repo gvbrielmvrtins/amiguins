@@ -29,7 +29,7 @@ const mainland = 'M-5000-5000H8000V8000H-5000Z';
 export default function ModularMap({ selected, onSelect }: { selected: string | null; onSelect: (id: string, keyboard?: boolean) => void }) {
   return <svg className="modular-map" viewBox="0 -70 2700 1800" aria-labelledby="modular-map-title modular-map-description">
     <title id="modular-map-title">Mapa da Vila AmiguINs</title>
-    <desc id="modular-map-description">Vinte destinos ilustrados em terreno retrô-pop, com praças, parques e áreas livres reservadas para personagens futuros. Bairro de Países africanos com pavilhão cultural, comércios, bancas e residências, conectado à cidade por uma ponte sobre o rio.</desc>
+    <desc id="modular-map-description">Vinte destinos ilustrados em terreno retrô-pop, com praças, parques e áreas livres reservadas para personagens futuros. Bairro de amiguINs INternacionais com pavilhão cultural, comércios, bancas e residências, conectado à cidade por uma ponte sobre o rio.</desc>
     <defs>
       <pattern id="map-checks" width="64" height="64" patternUnits="userSpaceOnUse" ><rect width="64" height="64" fill={p.cream}/><path d="M0 0H32V32H0ZM32 32H64V64H32Z" fill={p.coral}/></pattern>
       <pattern id="map-stripes" width="30" height="30" patternUnits="userSpaceOnUse" patternTransform="rotate(25)"><rect width="30" height="30" fill={p.yellow}/><rect width="10" height="30" fill={p.pink}/></pattern>

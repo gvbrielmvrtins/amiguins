@@ -33,7 +33,7 @@ export default function ExplorationGame() {
   const drag = useRef<{ x: number; y: number; left: number; top: number } | null>(null);
   const didDrag = useRef(false);
   const current = targets.find(t => t.id === selected);
-  const complete = found.length === targets.length;
+  const complete = mapCharacters.length > 0 && found.length === mapCharacters.length;
   function constrainCamera(){
     const v=viewport.current;if(!v)return;
     const next=boundedScroll(v.scrollLeft,v.scrollTop,v.clientWidth,v.clientHeight,v.scrollWidth,v.scrollHeight);
@@ -48,7 +48,8 @@ export default function ExplorationGame() {
     setSelected(id);const v=viewport.current,d=targets.find(item=>item.id===id);if(!v||!d)return;
     const lot=[...communityLots,...commerceLots].find(item=>item.id===id);
     const at=projectGround(lot?.x??d.x,lot?.y??d.y),scale=v.scrollWidth/2700;
-    v.scrollLeft=at.x*scale-v.clientWidth/2;v.scrollTop=(at.y+70)*scale-v.clientHeight/2;constrainCamera();
+    const next=boundedScroll(at.x*scale-v.clientWidth/2,(at.y+70)*scale-v.clientHeight/2,v.clientWidth,v.clientHeight,v.scrollWidth,v.scrollHeight);
+    v.scrollTo({left:next.left,top:next.top,behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});
   }
   function changeZoom(next:number){
     const v=viewport.current;
@@ -58,7 +59,7 @@ export default function ExplorationGame() {
     requestAnimationFrame(()=>{const scale=v.scrollWidth/2700;v.scrollLeft=cx*scale-v.clientWidth/2;v.scrollTop=cy*scale-v.clientHeight/2;constrainCamera();});
   }
   function discover(target: Target) {
-    if (didDrag.current || found.includes(target.id)) return;
+    if (target.category !== 'people' || found.includes(target.id)) return;
     setFound(prev => [...prev, target.id]);
     setMessage(`Você encontrou ${target.name}!`);
     if (selected === target.id) setSelected(null);
@@ -78,7 +79,7 @@ export default function ExplorationGame() {
     constrainCamera();
   }
   function giveHint() {
-    const remaining = targets.filter(t => !found.includes(t.id));
+    const remaining = mapCharacters.filter(t => !found.includes(t.id));
     if (!remaining.length) return;
     const next = remaining[Math.floor(Math.random() * remaining.length)];
     locateDestination(next.id); setSelected(next.id); setMessage(`Procure ${next.name} nesta região do mapa.`);
@@ -86,12 +87,12 @@ export default function ExplorationGame() {
   return <main className="game-shell">
     <div className="game-layout">
       <aside className="discovery-panel">
-        <div className="progress-section"><div className="progress-label"><span>Você encontrou</span><strong>{found.length}<span> / {targets.length}</span></strong></div><div className="progress-track" role="progressbar" aria-label="Elementos encontrados" aria-valuenow={found.length} aria-valuemin={0} aria-valuemax={targets.length}><span style={{ width: `${found.length / targets.length * 100}%` }} /></div></div>
+        <div className="progress-section"><div className="progress-label"><span>Você encontrou</span><strong>{found.length}<span> / {mapCharacters.length}</span></strong></div><div className="progress-track" role="progressbar" aria-label="Pessoas encontradas" aria-valuenow={found.length} aria-valuemin={0} aria-valuemax={mapCharacters.length}><span style={{ width: `${found.length / Math.max(1,mapCharacters.length) * 100}%` }} /></div></div>
         <div className="category-list">{categories.map(category => {
           const items = targets.filter(t => t.category === category.id);
           const count = items.filter(t => found.includes(t.id)).length;
           const Icon = Store;
-          return <section className="category" key={category.id}><button className="category-heading" aria-expanded={!collapsed.includes(category.id)} onClick={() => setCollapsed(prev => prev.includes(category.id) ? prev.filter(c => c !== category.id) : [...prev, category.id])}><strong>{category.label}</strong><span className="category-count">{count}<span>/{items.length}</span></span><ChevronDown size={15} className={collapsed.includes(category.id) ? 'closed' : ''} /></button>{!collapsed.includes(category.id) && <div className={`target-grid ${category.id === 'places' ? 'places-grid' : ''}`}>{items.filter(t => filter !== 'remaining' || !found.includes(t.id)).map(target => <button key={target.id} className={`target-card ${selected === target.id ? 'selected' : ''} ${found.includes(target.id) ? 'found' : ''}`} aria-label={`Procurar ${target.name}${found.includes(target.id) ? ', encontrado' : ''}`} aria-pressed={selected === target.id} onClick={() => { setSelected(target.id); setMessage(found.includes(target.id) ? `${target.name} já foi encontrado!` : `Procurando ${target.name}. Encontre no mapa!`); }}><span className="portrait-wrap"><Portrait target={target}/>{found.includes(target.id) && <span className="found-check"><Check size={12} /></span>}</span><span>{target.name}</span></button>)}</div>}</section>;
+          return <section className="category" key={category.id}><button className="category-heading" aria-expanded={!collapsed.includes(category.id)} onClick={() => setCollapsed(prev => prev.includes(category.id) ? prev.filter(c => c !== category.id) : [...prev, category.id])}><strong>{category.label}</strong>{category.id === 'people' && <span className="category-count">{count}<span>/{items.length}</span></span>}<ChevronDown size={15} className={collapsed.includes(category.id) ? 'closed' : ''} /></button>{!collapsed.includes(category.id) && <div className={`target-grid ${category.id === 'places' ? 'places-grid' : ''}`}>{items.filter(t => category.id === 'places' || filter !== 'remaining' || !found.includes(t.id)).map(target => <button key={target.id} className={`target-card ${selected === target.id ? 'selected' : ''} ${found.includes(target.id) ? 'found' : ''}`} aria-label={target.category === 'places' ? `Ir para ${target.name}` : `Procurar ${target.name}${found.includes(target.id) ? ', encontrado' : ''}`} aria-pressed={selected === target.id} onClick={() => { if(target.category === 'places'){locateDestination(target.id);setMessage(`Você está em ${target.name}.`);return;} setSelected(target.id); setMessage(found.includes(target.id) ? `${target.name} já foi encontrado!` : `Procurando ${target.name}. Encontre no mapa!`); }}><span className="portrait-wrap"><Portrait target={target}/>{found.includes(target.id) && <span className="found-check"><Check size={12} /></span>}</span><span>{target.name}</span></button>)}</div>}</section>;
         })}</div>
         
 
@@ -100,19 +101,19 @@ export default function ExplorationGame() {
         <div className="map-topbar" aria-hidden="true"/>
         <div className="map-frame">
           <div className="map-viewport" ref={viewport} onScroll={constrainCamera} onPointerDown={startDrag} onPointerMove={moveDrag} onPointerUp={() => { drag.current = null; }} onPointerLeave={() => { drag.current = null; }}>
-            <div className="map-world modular-world" style={{width:`${mapScale*100}%`,minWidth:`${740*mapScale}px`}}><ModularMap selected={selected} onSelect={(id,keyboard)=>{if(keyboard||!didDrag.current){const target=targets.find(t=>t.id===id);if(target)discover(target);}}}/></div>
+            <div className="map-world modular-world" style={{width:`${mapScale*100}%`,minWidth:`${740*mapScale}px`}}><ModularMap selected={selected} onSelect={(id,keyboard)=>{if(keyboard||!didDrag.current){const target=targets.find(t=>t.id===id);if(target?.category === 'people')discover(target);else if(target){locateDestination(id);setMessage(`Você está em ${target.name}.`);}}}}/></div>
           </div>
 
           <div className="map-controls"><button aria-label="Aumentar zoom" disabled={zoom >= 2} onClick={() => changeZoom(Math.min(2, zoom + .25))}><Plus size={19} /></button><span>{Math.round(zoom * 100)}%</span><button aria-label="Diminuir zoom" disabled={zoom <= 1} onClick={() => changeZoom(Math.max(1, zoom - .25))}><Minus size={19} /></button><div /><button aria-label="Ajustar mapa à tela" onClick={() => { setZoom(1); viewport.current?.scrollTo({ top: 0, left: 0 }); }}><Maximize size={17} /></button></div>
           {<div className="map-actions"><button className="help-button" aria-label="Como jogar" title="Como jogar" onClick={() => help.current?.showModal()}><HelpCircle size={17} /></button><button className="help-button" aria-label="Recomeçar" title="Recomeçar" onClick={() => reset.current?.showModal()}><RotateCcw size={17} /></button></div>}
 {<button className="hint-button" aria-label="Uma ajudinha?" title="Uma ajudinha?" disabled={complete} onClick={giveHint}><Lightbulb size={18} /></button>}
-          {(message || complete) && <div className={`game-message ${complete ? 'complete' : ''}`} role="status"><Sparkles size={19} /><span>{complete ? `Você encontrou os ${targets.length} itens da vila! Que tal explorar de novo?` : message}</span><button aria-label="Fechar mensagem" onClick={() => setMessage('')}><X size={15} /></button></div>}
+          {(message || complete) && <div className={`game-message ${complete ? 'complete' : ''}`} role="status"><Sparkles size={19} /><span>{complete ? `Você encontrou todas as ${mapCharacters.length} pessoas da vila! Que tal explorar de novo?` : message}</span><button aria-label="Fechar mensagem" onClick={() => setMessage('')}><X size={15} /></button></div>}
         </div>
-        <div className="map-footer"><span>{targets.length} pessoas e espaços para descobrir · use o zoom e arraste para explorar</span></div>
+        <div className="map-footer"><span>{mapCharacters.length} pessoas para encontrar · clique nos EspacINs para navegar · use o zoom e arraste para explorar</span></div>
       </section>
     </div>
-    <dialog ref={help} className="game-dialog"><button className="dialog-close" aria-label="Fechar instruções" onClick={() => help.current?.close()}><X /></button><h2>Explore a Vila AmiguINs</h2><ol><li>Escolha uma pessoa ou espaço na lista para procurar.</li><li>Clique nele no mapa para registrar a descoberta.</li><li>Use o zoom e arraste o mapa para ver os detalhes.</li><li>Se precisar, peça uma ajudinha!</li></ol><button className="dialog-primary" onClick={() => help.current?.close()}>Vamos explorar <ArrowUpRight size={17} /></button></dialog>
-    <dialog ref={reset} className="game-dialog"><h2>Mais uma volta?</h2><p>As descobertas desta rodada serão apagadas e as pessoas e os espaços poderão ser descobertos novamente.</p><div className="dialog-actions"><button onClick={() => reset.current?.close()}>Continuar jogando</button><button className="dialog-primary" onClick={() => { setFound([]); setSelected(null); setMessage(''); setZoom(1); reset.current?.close(); }}>Recomeçar</button></div></dialog>
+    <dialog ref={help} className="game-dialog"><button className="dialog-close" aria-label="Fechar instruções" onClick={() => help.current?.close()}><X /></button><h2>Explore a Vila AmiguINs</h2><ol><li>Escolha uma pessoa na lista para procurar.</li><li>Clique na pessoa no mapa para registrar a descoberta.</li><li>Clique em um EspacIN na lista para ir até ele no mapa.</li><li>Use o zoom e arraste o mapa para ver os detalhes.</li><li>Se precisar, peça uma ajudinha!</li></ol><button className="dialog-primary" onClick={() => help.current?.close()}>Vamos explorar <ArrowUpRight size={17} /></button></dialog>
+    <dialog ref={reset} className="game-dialog"><h2>Mais uma volta?</h2><p>As descobertas desta rodada serão apagadas e as pessoas poderão ser encontradas novamente.</p><div className="dialog-actions"><button onClick={() => reset.current?.close()}>Continuar jogando</button><button className="dialog-primary" onClick={() => { setFound([]); setSelected(null); setMessage(''); setZoom(1); reset.current?.close(); }}>Recomeçar</button></div></dialog>
   </main>;
 }
 
