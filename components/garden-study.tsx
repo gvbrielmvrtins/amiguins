@@ -24,7 +24,7 @@ export function GardenStudyProp({item}:{item:GardenProp}){
 }
 export default function SecretGarden({destination:d,selected,onSelect}:{destination:ModularDestination;selected:string|null;onSelect:(id:string,keyboard?:boolean)=>void}){
   const at=projectGround(secretGarden.x,secretGarden.y);
-  return <g id="destination-jardim-secreto" transform={`translate(${at.x} ${at.y})`} className={`modular-destination ${selected===d.id?'is-selected':''}`} role="button" tabIndex={0} aria-label={`Examinar ${d.name}`} aria-pressed={selected===d.id} onClick={()=>onSelect(d.id)} onKeyDown={e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();onSelect(d.id,true);}}}>
+  return <g id="destination-jardim-secreto" transform={`translate(${at.x} ${at.y})`} className={`modular-destination ${selected===d.id?'is-selected':''}`} role="group" aria-label={d.name}>
     <title>Jardim secreto — labirinto renderizado</title>
     <polygon points={[[-260,-240],[260,-240],[260,240],[-260,240]].map(([x,y])=>pt(x,y)).join(' ')} fill="transparent"/>
     

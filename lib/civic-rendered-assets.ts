@@ -1,5 +1,6 @@
 export type CivicArt={file:string;width:number;height:number;anchorX:number;anchorY:number;scale:number;mirror?:boolean;risingSlope?:number;fallingSlope?:number};
 export const civicRenderedAssets:Record<string,CivicArt>={
+  savannaGrass:{file:'savana-vegetacao-baixa-v01.png',width:1448,height:1086,anchorX:725,anchorY:875,scale:.022},
   savannaOasis:{file:'savana-oasis-v01.png',width:1536,height:1024,anchorX:770,anchorY:600,scale:.075},
   savannaSafari:{file:'savana-carro-safari-v01.png',width:1448,height:1086,anchorX:740,anchorY:940,scale:.065,risingSlope:-.49,fallingSlope:.47},
   savannaRhino:{file:'savana-rinoceronte-v01.png',width:1415,height:1111,anchorX:710,anchorY:945,scale:.05},
@@ -68,7 +69,6 @@ export const civicRenderedAssets:Record<string,CivicArt>={
   torre:{file:'torre-mistica-render-v01.png',width:1024,height:1536,anchorX:550,anchorY:1470,scale:.18,risingSlope:-.58,fallingSlope:.43},
   prefeitura:{file:'prefeitura-render-v01.png',width:1415,height:1111,anchorX:850,anchorY:1010,scale:.16,mirror:true,risingSlope:-.58,fallingSlope:.34},
 };
-
 
 
 

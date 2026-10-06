@@ -14,7 +14,7 @@ export default function PinkMapDistrict({ selected, onSelect, only }: { only?: s
         const y = -site.anchor.y * site.scale;
         const width = site.source.width * site.scale;
         const height = site.source.height * site.scale;
-        return <g key={site.id} id={`destination-${site.id}`} data-order={site.order} transform={`translate(${position.x} ${position.y}) scale(${buildingScale})`} className={`modular-destination ${selected === site.id ? 'is-selected' : ''}`} tabIndex={0} role="button" aria-label={`Examinar ${name}`} aria-pressed={selected === site.id} onClick={() => onSelect(site.id)} onKeyDown={event => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); onSelect(site.id, true); } }}>
+        return <g key={site.id} id={`destination-${site.id}`} data-order={site.order} transform={`translate(${position.x} ${position.y}) scale(${buildingScale})`} className={`modular-destination ${selected === site.id ? 'is-selected' : ''}`} role="group" aria-label={name}>
           <title>{`${name} — módulo rosa`}</title>
           <g data-projection="upright-isometric" transform={pilotProjections[site.id].transform}>
             

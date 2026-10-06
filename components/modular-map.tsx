@@ -86,7 +86,7 @@ export default function ModularMap({ selected, onSelect }: { selected: string | 
       const depth = half * Math.tan(Math.PI / 6);
       const plaza = id === 'pracinha';
       const height = id === 'torre-mistica' ? 260 : plaza ? 80 : 150;
-      return <g key={id} id={`destination-${id}`} className={`modular-destination ${selected === id ? 'is-selected' : ''}`} transform={`translate(${position.x} ${position.y}) scale(${buildingScale})`} tabIndex={0} role="button" aria-label={`Examinar ${name}`} aria-pressed={selected === id} onClick={() => onSelect(id)} onKeyDown={event => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); onSelect(id, true); } }}>
+      return <g key={id} id={`destination-${id}`} className={`modular-destination ${selected === id ? 'is-selected' : ''}`} transform={`translate(${position.x} ${position.y}) scale(${buildingScale})`} role="group" aria-label={name}>
         <title>{`${name} — espaço provisório`}</title>
         
         <path d={`M${-half} ${-depth}L0 ${-depth*2}L${half+28} ${-depth+20}L28 20Z`} fill={p.ink} opacity="0.18"/>

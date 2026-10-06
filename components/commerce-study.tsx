@@ -15,7 +15,7 @@ export function CommerceGround(){return <g data-layer="commerce-study-ground">{c
 export default function CommerceStudy({destination:d,selected,onSelect}:{destination:ModularDestination;selected:string|null;onSelect:(id:string,keyboard?:boolean)=>void}){
  const lot=commerceLots.find(l=>l.id===d.id)!;
  const at=projectGround(lot.x,lot.y);
- return <g id={`destination-${d.id}`} transform={`translate(${at.x} ${at.y})`} className={`modular-destination ${selected===d.id?'is-selected':''}`} role="button" tabIndex={0} aria-label={`Examinar ${d.name}`} aria-pressed={selected===d.id} onClick={()=>onSelect(d.id)} onKeyDown={e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();onSelect(d.id,true);}}}><title>{`${d.name} — espaço renderizado`}</title><Props kind={d.id}/></g>;
+ return <g id={`destination-${d.id}`} transform={`translate(${at.x} ${at.y})`} className={`modular-destination ${selected===d.id?'is-selected':''}`} role="group" aria-label={d.name}><title>{`${d.name} — espaço renderizado`}</title><Props kind={d.id}/></g>;
 }
 
 

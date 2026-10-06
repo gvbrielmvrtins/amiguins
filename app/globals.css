@@ -299,7 +299,8 @@ h1,h2,h3,h4,h5,h6,button,label,.eyebrow,.progress-label,.category-count,.map-top
 .modular-world { aspect-ratio:2700/1800; min-height:0; background:var(--blue); }
 .preview-frame { background:var(--blue); }
 .modular-map { display:block; width:100%; height:auto; font-family:var(--type-heading),sans-serif; }
-.modular-destination { cursor:pointer; outline:none; }
+.modular-destination { cursor:inherit; outline:none; }
+.modular-destination:not(.map-character) { pointer-events:none; }
 .preview-panel { display:flex; flex-direction:column; min-height:0; height:100%; }
 .preview-intro { padding:4px 0 16px; border-bottom:1px solid var(--ink); }
 .preview-kicker { font-size:10px; letter-spacing:1px; }
