@@ -56,7 +56,7 @@ export default function ModularMap({ selected, onSelect }: { selected: string | 
       if (destination.type === 'character') {
         const at = projectGround(destination.x, destination.y);
         return <g key={destination.id} id={`character-${destination.id}`} data-character={destination.id} transform={`translate(${at.x} ${at.y}) scale(${buildingScale})`} className={`modular-destination map-character ${selected === destination.id ? 'is-selected' : ''}`} role="button" tabIndex={0} aria-label={`Encontrar ${destination.name}`} aria-pressed={selected === destination.id} onClick={() => onSelect(destination.id)} onKeyDown={event => { if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); onSelect(destination.id, true); } }}>
-          <title>{destination.name} — com pipoca no canto direito do terreno do cinema</title>
+          <title>{`${destination.name} — ${destination.clue}`}</title>
           <rect x={-15} y={-44} width={30} height={46} rx={5} fill="transparent"/>
           <image href={destination.file} x={-15} y={-44} width={destination.width} height={destination.height} pointerEvents="none"/>
         </g>;
