@@ -1,6 +1,10 @@
+import BeachProp from './beach-prop';
+import SavannaProp from './savanna-prop';
+import {savannaProps} from '@/lib/savanna-layout';
+import { beachProps } from '@/lib/beach-layout';
 import { mapCharacters } from '@/lib/map-characters';
 import CommunityStudy, {CommunityGround} from './community-study';
-import NeighborhoodStudy,{NeighborhoodStudyGround,RiverBridge} from './new-neighborhood-study';
+import NeighborhoodStudy,{NeighborhoodStudyGround} from './new-neighborhood-study';
 import {communityIds,communityLandscape} from '@/lib/community-study';
 import CommerceStudy, {CommerceGround} from './commerce-study';
 import {commerceIds,commerceLandscape} from '@/lib/commerce-study';
@@ -29,7 +33,7 @@ const mainland = 'M-5000-5000H8000V8000H-5000Z';
 export default function ModularMap({ selected, onSelect }: { selected: string | null; onSelect: (id: string, keyboard?: boolean) => void }) {
   return <svg className="modular-map" viewBox="0 -70 2700 1800" aria-labelledby="modular-map-title modular-map-description">
     <title id="modular-map-title">Mapa da Vila AmiguINs</title>
-    <desc id="modular-map-description">Vinte destinos ilustrados em terreno retrô-pop, com praças, parques e áreas livres reservadas para personagens futuros. Bairro de amiguINs INternacionais com pavilhão cultural, comércios, bancas e residências, conectado à cidade por uma ponte sobre o rio.</desc>
+    <desc id="modular-map-description">Vinte destinos ilustrados em terreno retrô-pop, com praças, parques e áreas livres reservadas para personagens futuros. Além do mar, um continente aberto representa o resto do mundo e acolhe os amiguINs que moram em qualquer país, com um aeroporto para receber os personagens internacionais e uma praia na margem da vila.</desc>
     <defs>
       <pattern id="map-checks" width="64" height="64" patternUnits="userSpaceOnUse" ><rect width="64" height="64" fill={p.cream}/><path d="M0 0H32V32H0ZM32 32H64V64H32Z" fill={p.coral}/></pattern>
       <pattern id="map-stripes" width="30" height="30" patternUnits="userSpaceOnUse" patternTransform="rotate(25)"><rect width="30" height="30" fill={p.yellow}/><rect width="10" height="30" fill={p.pink}/></pattern>
@@ -50,12 +54,14 @@ export default function ModularMap({ selected, onSelect }: { selected: string | 
     </g>
     </g>
     <g data-layer="destinations-depth-sorted">
-    <RiverBridge/>
+    {savannaProps.filter(item=>item.kind==='savannaOasis').map(item=><SavannaProp key={item.id} item={item}/>)}
     <WestGreenProps/>
-    {[...mapCharacters.map(item=>({...item,type: 'character' as const})), ...gardenStudyProps.filter(item=>!item.id.startsWith('secret-')).map(item=>({type: 'garden' as const,...item})), ...modularDestinations.map(destination => ({ type: 'destination' as const, ...destination })), ...eastFillers.map(item=>({type: 'east-filler' as const,...item})), ...[...parkFencePanels,...northGardenFencePanels].map(item=>({type:'fence' as const,...item})), ...parkStudyProps.map(item => ({ type: 'park' as const, ...item })), ...fillerBuildings.map(item => ({ type: 'filler' as const, ...item })), ...[...communityLandscape, ...commerceLandscape, ...pilotLandscape, ...fillerLandscape, ...civicLandscape, ...eastLandscape].map(item => ({ type: 'landscape' as const, ...item }))].sort((a,b) => (a.x+a.y)-(b.x+b.y)).map(destination => {
+    {[...savannaProps.filter(item=>item.kind!=='savannaOasis').map(item=>({...item,type: 'savanna' as const})), ...beachProps.map(item=>({...item,type: 'beach' as const})), ...mapCharacters.map(item=>({...item,type: 'character' as const})), ...gardenStudyProps.filter(item=>!item.id.startsWith('secret-')).map(item=>({type: 'garden' as const,...item})), ...modularDestinations.map(destination => ({ type: 'destination' as const, ...destination })), ...eastFillers.map(item=>({type: 'east-filler' as const,...item})), ...[...parkFencePanels,...northGardenFencePanels].map(item=>({type:'fence' as const,...item})), ...parkStudyProps.map(item => ({ type: 'park' as const, ...item })), ...fillerBuildings.map(item => ({ type: 'filler' as const, ...item })), ...[...communityLandscape, ...commerceLandscape, ...pilotLandscape, ...fillerLandscape, ...civicLandscape, ...eastLandscape].map(item => ({ type: 'landscape' as const, ...item }))].sort((a,b) => (a.x+a.y)-(b.x+b.y)).map(destination => {
+      if (destination.type === 'savanna') return <SavannaProp key={destination.id} item={destination}/>;
+      if (destination.type === 'beach') return <BeachProp key={destination.id} item={destination}/>;
       if (destination.type === 'character') {
         const at = projectGround(destination.x, destination.y);
-        return <g key={destination.id} id={`character-${destination.id}`} data-character={destination.id} transform={`translate(${at.x} ${at.y}) scale(${buildingScale})`} className={`modular-destination map-character ${selected === destination.id ? 'is-selected' : ''}`} role="button" tabIndex={0} aria-label={`Encontrar ${destination.name}`} aria-pressed={selected === destination.id} onClick={() => onSelect(destination.id)} onKeyDown={event => { if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); onSelect(destination.id, true); } }}>
+        return <g key={destination.id} id={`character-${destination.id}`} data-character={destination.id} transform={`translate(${at.x} ${at.y}) scale(${buildingScale})`} className="modular-destination map-character" role="button" tabIndex={0} aria-label={`Encontrar ${destination.name}`} onClick={() => onSelect(destination.id)} onKeyDown={event => { if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); onSelect(destination.id, true); } }}>
           <title>{`${destination.name} — ${destination.clue}`}</title>
           <rect x={-15} y={-44} width={30} height={46} rx={5} fill="transparent"/>
           <image href={destination.file} x={-15} y={-44} width={destination.width} height={destination.height} pointerEvents="none"/>
@@ -95,8 +101,6 @@ export default function ModularMap({ selected, onSelect }: { selected: string | 
     </g>
   </svg>;
 }
-
-
 
 
 

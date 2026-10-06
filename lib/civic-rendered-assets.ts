@@ -1,5 +1,22 @@
 export type CivicArt={file:string;width:number;height:number;anchorX:number;anchorY:number;scale:number;mirror?:boolean;risingSlope?:number;fallingSlope?:number};
 export const civicRenderedAssets:Record<string,CivicArt>={
+  savannaOasis:{file:'savana-oasis-v01.png',width:1536,height:1024,anchorX:770,anchorY:600,scale:.075},
+  savannaSafari:{file:'savana-carro-safari-v01.png',width:1448,height:1086,anchorX:740,anchorY:940,scale:.065,risingSlope:-.49,fallingSlope:.47},
+  savannaRhino:{file:'savana-rinoceronte-v01.png',width:1415,height:1111,anchorX:710,anchorY:945,scale:.05},
+  savannaLioness:{file:'savana-leoa-v01.png',width:1448,height:1086,anchorX:740,anchorY:885,scale:.035},
+  savannaLamb:{file:'savana-ovelha-anjo-v01.png',width:1415,height:1111,anchorX:710,anchorY:970,scale:.021},
+  savannaAcacia:{file:'savana-acacia-v01.png',width:1448,height:1086,anchorX:740,anchorY:990,scale:.085},
+  savannaLion:{file:'savana-leao-v01.png',width:1415,height:1111,anchorX:720,anchorY:875,scale:.032},
+  savannaImpala:{file:'savana-impala-v01.png',width:1415,height:1111,anchorX:710,anchorY:1030,scale:.037},
+  savannaZebra:{file:'savana-zebra-v01.png',width:1415,height:1111,anchorX:710,anchorY:945,scale:.036},
+  savannaGiraffe:{file:'savana-girafa-v01.png',width:1415,height:1111,anchorX:730,anchorY:1040,scale:.065},
+  savannaElephant:{file:'savana-elefante-v01.png',width:1448,height:1086,anchorX:740,anchorY:960,scale:.055},
+  beachShell:{file:'praia-concha-v01.png',width:1448,height:1086,anchorX:724,anchorY:760,scale:.02},
+  beachBall:{file:'praia-bola-v01.png',width:1351,height:1164,anchorX:680,anchorY:1050,scale:.025},
+  beachPalm:{file:'praia-coqueiro-v01.png',width:1415,height:1111,anchorX:725,anchorY:1030,scale:.095},
+  beachChair:{file:'praia-espreguicadeira-v01.png',width:1415,height:1111,anchorX:740,anchorY:850,scale:.045},
+  beachUmbrella:{file:'praia-guarda-sol-v01.png',width:1415,height:1111,anchorX:710,anchorY:985,scale:.055},
+  internationalAirport:{file:'aeroporto-internacional-v02.png',width:1448,height:1086,anchorX:740,anchorY:850,scale:.26,risingSlope:-.47,fallingSlope:.59},
   africaBridge:{file:'africa-ponte-v01.png',width:1536,height:1024,anchorX:820,anchorY:570,scale:.155,risingSlope:-.60,fallingSlope:.58},
   africaHome:{file:'africa-residencia-v01.png',width:1415,height:1111,anchorX:710,anchorY:925,scale:.10,risingSlope:-.56,fallingSlope:.43},
   africaStall:{file:'africa-banca-v01.png',width:1536,height:1024,anchorX:770,anchorY:795,scale:.065,risingSlope:-.57,fallingSlope:.45},
@@ -51,21 +68,6 @@ export const civicRenderedAssets:Record<string,CivicArt>={
   torre:{file:'torre-mistica-render-v01.png',width:1024,height:1536,anchorX:550,anchorY:1470,scale:.18,risingSlope:-.58,fallingSlope:.43},
   prefeitura:{file:'prefeitura-render-v01.png',width:1415,height:1111,anchorX:850,anchorY:1010,scale:.16,mirror:true,risingSlope:-.58,fallingSlope:.34},
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

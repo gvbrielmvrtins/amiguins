@@ -1,0 +1,23 @@
+# amiguINs INternacionais — continente
+
+Revisão praia e mar: a água representa um mar, ampliado de 150 para 200 unidades na faixa base. A borda continental foi recuada 30 unidades para preservar as enseadas. A margem da vila virou praia de areia com textura pontilhada e espuma, substituindo a calçada. O ícone do menu passou a ser um avião (Lucide Plane).
+
+Aeroporto editado pela ferramenta integrada imagegen para acrescentar exatamente duas bandeiras da ONU hasteadas no teto. Arquivo `public/images/modular/aeroporto-internacional-v02.png`, 1448 × 1086, transparência preservada; posição, escala e demais elementos mantidos.
+
+### Prompt da edição das bandeiras
+
+Use case: precise-object-edit. Edit the attached airport asset ONLY by adding EXACTLY TWO United Nations (ONU) flags hoisted on two vertical slim flagpoles mounted on the flat ROOF of the passenger terminal, one above the left flat roof and one above the rear central flat roof, distinct from the control tower antennas. Flags are United Nations light sky-blue with a clearly recognizable WHITE United Nations emblem: a polar world map enclosed by two olive branches. Both flags wave gently in the same breeze and are clearly legible at small map scale. Preserve the existing airport terminal, tower, jet, apron, all colors, shapes, dark outlines, isometric perspective, shadows and precise object layout. Do not change any existing element. Keep the SAME 1448x1086 canvas and SAME airport position and size; fit the new poles and flags in the empty transparent space above the terminal rooftops. Keep genuine transparent alpha background. No new people, trees, buildings, text, logos, or flags elsewhere. Exactly two roof-mounted UN flags. Match the existing polished retro-pop illustrated linework and controlled cel shading.
+
+A área inteira além do rio representa o resto do mundo e recebe futuros personagens que moram em qualquer país. Os seis lotes e suas construções foram retirados da composição; as imagens permanecem no acervo.
+
+O continente tem margem com enseadas e saliências curvas e faixa de areia; a margem urbana foi preservada. A ponte saiu da composição. Reutiliza `parque-grama-v01.png`, `rosa-arvore-isometrica-v01.png` e `rio-agua-textura-v02.png`, preservando a projeção e a identidade do mapa. O globo da lista é um SVG cartográfico.
+
+O enquadramento de 2700 × 1800 e os limites anteriores da câmera foram restaurados, deixando parte do continente fora da tela. A navegação volta ao ponto original da região; somente Pessoas continuam encontráveis.
+
+O aeroporto ocupa uma área compacta em terra, com terminal, torre e avião, preservando terreno livre para personagens. Passou por composição provisória, conferência no navegador, renderização individual com a ferramenta integrada imagegen e substituição. Asset: `public/images/modular/aeroporto-internacional-v01.png`, 1448 × 1086, fundo transparente. Referências explícitas: `cineminha-isometrico-v01.png` e `rosa-arvore-isometrica-v01.png`.
+
+## Prompt executado
+
+Use case: stylized-concept. Asset type: individual transparent illustrated airport sprite for the existing AmiguINs isometric village. The two attached images are explicit STYLE REFERENCES ONLY: cinema for architecture, layered moldings, confident dark outlines and retro-pop finish; tree for controlled cel shading, illustrated material and level of detail. Do not reproduce those subjects. Create ONE compact small international airport: low colorful passenger terminal, a single attached modest control tower with glazed blue top, and one small white passenger airplane parked on a compact gray apron with readable runway/taxi markings. All integrated as a single airport facility asset, not an entire continent or map. Elevated isometric view, ground axes at plus/minus 30 degrees, verticals upright, building rear, aircraft foreground, whole object centered and fully visible with generous transparent margin. Match polished retro-pop village illustration, natural controlled shadows, black detailed outlines, layered cream trim, coral/pink walls, yellow accents and vivid blue glazing. Airport must read clearly at about 220 pixels wide on map. No people, no flags, no country-specific decoration, no trees, no landscape, no surrounding city, no lettering, no logos, no background. True transparent alpha background. Ground apron should be compact and isometric, no extensive runway; keep the whole facility modest, leave open land around it when integrated.
+
+Refinamento de implantação: aeroporto ampliado de escala 0,16 para 0,26 (62,5%) e reposicionado para (100, 140) em relação à âncora do continente. Nome da região deslocado para evitar sobreposição com o pátio.

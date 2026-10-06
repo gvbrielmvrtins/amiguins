@@ -333,4 +333,4 @@ h1,h2,h3,h4,h5,h6,button,label,.eyebrow,.progress-label,.category-count,.map-top
 .pink-study-controls p { margin: 5px 0 0; }
 /* Compact map actions retain accessible names and comfortable touch targets. */
 .map-actions .help-button, .hint-button { width:44px; height:44px; padding:0; justify-content:center; }
-.map-character:focus-visible rect, .map-character.is-selected rect { stroke:var(--blue); stroke-width:2; }
+.map-character:focus-visible rect { stroke:var(--blue); stroke-width:2; }

@@ -21,7 +21,7 @@ export const modularDestinations = [
   { id: 'plaza-hispanica', name: 'la plaza hispânica', lines: ['la plaza hispânica'], x: 1850, y: 930, width: 320, color: 'yellow' },
   { id: 'academia-marombins', name: 'gINásio dos marombINs', lines: ['gINásio dos', 'marombINs'], x:1310, y:1780, width: 290, color: 'coral' },
   { id: 'binstro', name: 'bINstrô', lines: ['bINstrô'], x:750, y:1780, width: 260, color: 'coral' },
-  { id: 'paises-africanos', name: 'amiguINs INternacionais', lines: ['amiguINs', 'INternacionais'], x: 2680, y: 1775, width: 320, color: 'yellow' },
+  { id: 'paises-africanos', name: 'aeroporto', lines: ['aeroporto'], x: 2680, y: 1775, width: 320, color: 'yellow' },
 ] as const;
 
 export type ModularDestination = typeof modularDestinations[number];
