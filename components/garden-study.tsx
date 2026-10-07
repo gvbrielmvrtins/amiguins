@@ -10,7 +10,6 @@ const pt=(x:number,y:number,z=0)=>`${(x-y)*.5196152423},${(x+y)*.3-z}`;
 export function GardenGround(){return <g data-layer="gardens-rendered" stroke="#748660" strokeWidth="2.5">
   <MazeGround/>
   <g transform={`translate(${northGarden.x} ${northGarden.y})`}>
-    <title>Jardim ao norte da região central — espaço renderizado</title>
     <rect x="-220" y="-115" width="440" height="230" rx="12" fill="url(#civic-grass)"/>
   </g>
 </g>;}
@@ -25,9 +24,9 @@ export function GardenStudyProp({item}:{item:GardenProp}){
 export default function SecretGarden({destination:d,selected,onSelect}:{destination:ModularDestination;selected:string|null;onSelect:(id:string,keyboard?:boolean)=>void}){
   const at=projectGround(secretGarden.x,secretGarden.y);
   return <g id="destination-jardim-secreto" transform={`translate(${at.x} ${at.y})`} className={`modular-destination ${selected===d.id?'is-selected':''}`} role="group" aria-label={d.name}>
-    <title>Jardim secreto — labirinto renderizado</title>
+
     <polygon points={[[-260,-240],[260,-240],[260,240],[-260,240]].map(([x,y])=>pt(x,y)).join(' ')} fill="transparent"/>
-    
+
   </g>;
 }
 

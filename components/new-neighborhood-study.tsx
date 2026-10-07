@@ -31,7 +31,7 @@ export function NeighborhoodStudyGround(){return <>
   <defs><pattern id="copacabana-mosaic" width="160" height="100" patternUnits="userSpaceOnUse"><rect width="160" height="100" fill="#FFFEF9" stroke="none"/><path d="M-40 0Q0-35 40 0T120 0T200 0M-40 50Q0 15 40 50T120 50T200 50M-40 100Q0 65 40 100T120 100T200 100" fill="none" stroke="#343331" strokeWidth="17"/><path d="M0 0V100M10 0V100M20 0V100M30 0V100M40 0V100M50 0V100M60 0V100M70 0V100M80 0V100M90 0V100M100 0V100M110 0V100M120 0V100M130 0V100M140 0V100M150 0V100M0 10H160M0 20H160M0 30H160M0 40H160M0 50H160M0 60H160M0 70H160M0 80H160M0 90H160" fill="none" stroke="#C9C5BB" strokeWidth=".6" opacity=".5"/></pattern><pattern id="beach-sand" width="90" height="90" patternUnits="userSpaceOnUse"><rect width="90" height="90" fill="#F3DEAA" stroke="none"/><path d="M12 17h6M58 41h8M29 70h5" stroke="#C9A96B" strokeWidth="2" opacity=".5"/><circle cx="74" cy="12" r="1.5" fill="#C9A96B" stroke="none"/><circle cx="18" cy="48" r="1" fill="#C9A96B" stroke="none"/></pattern><pattern id="international-grass" width="325" height="320" patternUnits="userSpaceOnUse"><rect width="325" height="320" fill="#9CBA78" stroke="none"/><image href="/images/modular/parque-grama-v01.png" width="325" height="320" preserveAspectRatio="none" opacity=".78"/></pattern><pattern id="sea-water-rendered" width="520" height="520" patternUnits="userSpaceOnUse"><image href="/images/modular/rio-agua-textura-v02.png" width="520" height="520" preserveAspectRatio="none"/></pattern></defs>
   <g data-layer="sea-study" aria-label="Mar entre a vila e o continente internacional">
     <path d={continentBase} fill="url(#sea-water-rendered)" stroke="none"/>
-    <path d={seaPath} fill="none" stroke="url(#sea-water-rendered)" strokeWidth="200"><title>Mar entre a vila e os amiguINs INternacionais</title></path>
+    <path d={seaPath} fill="none" stroke="url(#sea-water-rendered)" strokeWidth="200"></path>
   </g>
   <g data-layer="international-continent" aria-label="Continente dos amiguINs INternacionais — espaço para quem mora em qualquer país">
     <path d={internationalGround} fill="url(#international-grass)" stroke="none"/><path d={internationalGround} fill="#D8BF78" fillOpacity=".62" stroke="none"/><path d={coastPath} fill="none" stroke="#DCC58F" strokeWidth="22" strokeLinejoin="round" strokeLinecap="round"/>
@@ -56,35 +56,34 @@ export function NeighborhoodStudyGround(){return <>
     <path d={beachPath} fill="none" stroke="#E5D5AF" strokeWidth="170" opacity=".25"/>
     <path d={beachPath} fill="none" stroke="#E5D5AF" strokeWidth="154" opacity=".45"/>
     <path d={beachPath} fill="none" stroke="#D4B879" strokeWidth="140"/>
-    <path d={beachPath} fill="none" stroke="url(#beach-sand)" strokeWidth="132"><title>Praia de areia na margem da vila</title></path>
+    <path d={beachPath} fill="none" stroke="url(#beach-sand)" strokeWidth="132"></path>
     <g data-layer="beach-promenade" aria-label="Calçadão com mosaico de ondas inspirado em Copacabana">
       <path d={promenadePath} fill="none" stroke="#B8B2A4" strokeWidth="54"/>
-      <path d={promenadePath} fill="none" stroke="url(#copacabana-mosaic)" strokeWidth="46"><title>Calçadão de ondas entre a rua e a praia</title></path>
+      <path d={promenadePath} fill="none" stroke="url(#copacabana-mosaic)" strokeWidth="46"></path>
     </g>
-    <path d={foamPath} fill="none" stroke="#D7F2F7" strokeWidth="12" opacity=".85"><title>Espuma do mar na praia</title></path>
+    <path d={foamPath} fill="none" stroke="#D7F2F7" strokeWidth="12" opacity=".85"></path>
   </g>
   <defs>
     <pattern id="coloridin-grass" width="325" height="320" patternUnits="userSpaceOnUse"><rect width="325" height="320" fill="#9CBA78" stroke="none"/><image href="/images/modular/parque-grama-v01.png" width="325" height="320" preserveAspectRatio="none" opacity=".78"/></pattern>
 
   </defs>
-  <g transform="translate(190 1220)"><title>Parque LGBT com gramado e espaços de piquenique</title><rect x="-204" y="-204" width="420" height="420" rx="30" fill="#B6A487" stroke={p.ink} strokeWidth="3"/><rect x="-210" y="-210" width="420" height="420" rx="30" fill="#FFFAE9" stroke={p.ink} strokeWidth="3"/><rect x="-198" y="-198" width="396" height="396" rx="22" fill="url(#coloridin-grass)" stroke="#91AE77" strokeWidth="6"/><circle r="42" fill={p.cream} stroke={p.yellow} strokeWidth="4"/></g>
 
 </>;}
 export default function NeighborhoodStudy({destination:d,selected,onSelect}:{destination:ModularDestination;selected:string|null;onSelect:(id:string,keyboard?:boolean)=>void}){const international=d.id==='paises-africanos',at=projectGround(d.x,d.y);return <g id={`destination-${d.id}`} transform={`translate(${at.x} ${at.y})`} className={`modular-destination ${selected===d.id?'is-selected':''}`} role="group" aria-label={d.name}>
-<title>{`${d.name} — ${international ? 'continente para amiguINs de qualquer país' : 'parque renderizado'}`}</title>
+
 {international?<>
-  <g aria-label="Aeroporto dos amiguINs INternacionais"><title>Aeroporto — terminal, torre de controle, avião e duas bandeiras da ONU no teto</title><CivicRenderedProp kind="internationalAirport" x={100} y={140}/></g>
+  <g aria-label="Aeroporto dos amiguINs INternacionais"><CivicRenderedProp kind="internationalAirport" x={100} y={140}/></g>
   <g transform="matrix(0.5196152423 0.3 -0.5196152423 0.3 0 0)">
     <path d={internationalGround} transform={`translate(${-d.x} ${-d.y})`} fill="transparent" stroke="none"/>
   </g>
-</>:<><g><title>Panos de piquenique renderizados</title><CivicRenderedProp kind="coloridinBlanket" x={-120} y={77.5}/><CivicRenderedProp kind="coloridinBlanket" x={120} y={132.5}/></g>
-  <g><title>Áreas de convivência LGBT com fonte e mesas de piquenique</title>
+</>:<><g><CivicRenderedProp kind="coloridinBlanket" x={-120} y={77.5}/><CivicRenderedProp kind="coloridinBlanket" x={120} y={132.5}/></g>
+  <g>
     <LocalLandscape item={{id:'coloridin-tree-back',kind:'tree',x:-150,y:-130,size:75}}/>
     <g transform={`translate(${pt(80,-120)}) scale(.65)`}><CivicRenderedProp kind="fonte"/></g>
     <CivicRenderedProp kind="tavernPicnic" x={-125} y={-35}/>
     <CivicRenderedProp kind="tavernPicnic" x={125} y={0}/>
   </g>
-  <g aria-label="Bandeira LGBT no centro da praça"><title>Bandeira arco-íris LGBT — marco central de encontro</title>
+  <g aria-label="Bandeira LGBT no centro da praça">
     <CivicRenderedProp kind="coloridinFlag"/>
   </g>
   <LocalLandscape item={{id:'coloridin-tree-front',kind:'tree',x:-155,y:140,size:75}}/>

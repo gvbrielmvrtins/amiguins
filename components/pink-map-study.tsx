@@ -11,7 +11,7 @@ export default function PinkMapStudy() {
       </mask>
     </defs>
     <g clipPath="url(#pink-study-boundary)" stroke="none">
-      <rect x="-500" y="-450" width="1700" height="1550" fill="#E9E5D8"/>
+
       {/* Pedestrian gaps retain the open surrounding ground surface. */}
 
       {lots.map(lot=> {
@@ -29,4 +29,3 @@ export default function PinkMapStudy() {
     </g>
   </g>;
 }
-

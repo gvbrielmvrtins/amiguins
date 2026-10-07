@@ -8,7 +8,7 @@ export default function MapOpenSpaces() {
   return <g data-layer="land-use-reservations" strokeWidth="3" strokeLinejoin="round">
     <defs><pattern id="west-green-grass" width="325" height="320" patternUnits="userSpaceOnUse"><rect width="325" height="320" fill="#9CBA78" stroke="none"/><image href="/images/modular/parque-grama-v01.png" width="325" height="320" preserveAspectRatio="none" opacity=".78"/></pattern></defs>
     <g fill="url(#west-green-grass)" stroke="#879D70" data-use="vegetation">
-      <path d="M-130 1250Q-130 1190-95 1190Q-55 1190-55 1250L-55 1620Q-55 1680-95 1680Q-130 1680-130 1620Z"><title>Faixa verde oeste — espaço renderizado</title></path>
+      <path d="M-130 1250Q-130 1190-95 1190Q-55 1190-55 1250L-55 1620Q-55 1680-95 1680Q-130 1680-130 1620Z"></path>
     </g>
   </g>;
 }

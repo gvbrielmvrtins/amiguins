@@ -10,9 +10,10 @@ export function FillerGround() {
     <path d="M-323 137Q-333 107-283 107H-28V867H-283Q-323 867-323 827Z" fill="#B6A487" stroke="#1C1C1C" strokeWidth="3"/>
     <path d="M-330 130Q-340 100-290 100H-35V860H-290Q-330 860-330 820Z" fill="#FFFAE9" stroke="#1C1C1C" strokeWidth="3"/>
     <path d="M-320 133Q-328 112-289 112H-47V848H-289Q-318 848-318 818Z" fill="none" stroke="#F77B5D" strokeWidth="7"/>
-    <path d="M-340-240Q-335-320-230-320H-70Q-15-300-15-235V-20Q-15 0-40 0H-285Q-330 0-340-40Z" fill="#9CBA78" stroke="#547653"/>
-    <defs><clipPath id="park-lawn"><path d="M-340-240Q-335-320-230-320H-70Q-15-300-15-235V-20Q-15 0-40 0H-285Q-330 0-340-40Z"/></clipPath></defs>
-    <image href="/images/modular/parque-grama-v01.png" x="-340" y="-320" width="325" height="320" preserveAspectRatio="none" clipPath="url(#park-lawn)" opacity=".78"/>
+    <g transform="translate(-170 -155)">
+      <rect x="-175" y="-150" width="350" height="300" rx="18" fill="#F4D7CC" stroke="#F0B981"/>
+      {Array.from({length:100},(_,i)=><path key={i} d={`M${-160+(i%20)*16.5} ${-133+Math.floor(i/20)*60+Math.sin(i)*12}l4 3`} stroke={['#F77B5D','#FAD846','#3774FA','#A163BF','#63A77C'][i%5]} strokeWidth="3"/>)}
+    </g>
 
   </g>;
 }

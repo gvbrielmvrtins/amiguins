@@ -8,7 +8,7 @@ export const modularDestinations = [
   { id: 'taverna-joguins', name: 'taverna dos joguINs', lines: ['taverna dos', 'joguINs'], x: 2340, y: 300, width: 300, color: 'coral' },
   { id: 'pracinha', name: 'pracINha', lines: ['pracINha'], x: 1340, y: 930, width: 280, color: 'yellow' },
   { id: 'mercado-vagas', name: 'mercadIN de vaguINhas', lines: ['mercadIN de', 'vaguINhas'], x: 850, y: 795, width: 231, color: 'coral' },
-  { id: 'espacin-coloridin', name: 'cantIN coloridIN', lines: ['cantIN coloridIN'], x: 190, y: 1220, width: 320, color: 'pink' },
+  { id: 'espacin-coloridin', name: 'cantIN coloridIN', lines: ['cantIN coloridIN'], x: -170, y: -155, width: 440, color: 'pink' },
   { id: 'cineminha', name: 'no escurIN do cINema', lines: ['no escurIN', 'do cINema'], x: 385, y: 795, width: 184, color: 'coral' },
   { id: 'linkedin', name: 'INbaixada do linkedIN', lines: ['INbaixada do', 'linkedIN'], x: 2340, y: 810, width: 260, color: 'blue' },
   { id: 'jardim-secreto', name: 'jardIN secreto', lines: ['jardIN secreto'], x: 2800, y: 360, width: 280, color: 'pink' },
