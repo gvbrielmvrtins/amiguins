@@ -35,9 +35,15 @@ export function NeighborhoodStudyGround(){return <>
   </g>
   <g data-layer="international-continent" aria-label="Continente dos amiguINs INternacionais — espaço para quem mora em qualquer país">
     <path d={internationalGround} fill="url(#international-grass)" stroke="none"/><path d={internationalGround} fill="#D8BF78" fillOpacity=".62" stroke="none"/><path d={coastPath} fill="none" stroke="#DCC58F" strokeWidth="22" strokeLinejoin="round" strokeLinecap="round"/>
-    <defs><clipPath id="savanna-ground-clip"><path d={internationalGround}/></clipPath></defs>
+    <defs><pattern id="savanna-earth-texture" width="113" height="97" patternUnits="userSpaceOnUse">
+      <rect width="113" height="97" fill="#CDA46B" stroke="none"/>
+      <path d="M3 28Q28 6 60 22T120 20M-12 76Q18 57 51 75T124 71" fill="none" stroke="#DABB85" strokeWidth="15" opacity=".42"/>
+      <path d="M10 18l7-2m23 16 9 3m29-24 4 2M18 65l8 3m48 16 8-3m14-31 6 2" stroke="#9E784D" strokeWidth="2" opacity=".65"/>
+      <g fill="#A67D50" stroke="none" opacity=".7"><ellipse cx="29" cy="44" rx="2.5" ry="1.5"/><ellipse cx="86" cy="36" rx="3" ry="2"/><circle cx="53" cy="90" r="1.5"/><circle cx="106" cy="7" r="1.3"/></g>
+      <path d="M49 59l-3-7m3 7 2-9m-2 9 5-4M96 89l-3-7m3 7 2-9" stroke="#A38E4F" strokeWidth="1.5" fill="none"/>
+    </pattern><clipPath id="savanna-ground-clip"><path d={internationalGround}/></clipPath></defs>
     <g clipPath="url(#savanna-ground-clip)" aria-label="Chão de terra da savana">
-      <path d="M2340 2020Q2490 1930 2670 2020Q2770 2170 2760 2360Q2660 2570 2350 2580Q2240 2340 2340 2020Z" fill="#CDA46B" stroke="#D7B77D" strokeWidth="32" strokeLinejoin="round"/>
+      <path d="M2340 2020Q2490 1930 2670 2020Q2770 2170 2760 2360Q2660 2570 2350 2580Q2240 2340 2340 2020Z" fill="url(#savanna-earth-texture)" stroke="#D7B77D" strokeWidth="32" strokeLinejoin="round"/>
       <path d="M2380 2090Q2510 2150 2700 2100M2330 2430Q2490 2380 2720 2460" fill="none" stroke="#B99362" strokeWidth="3" opacity=".4"/>
     </g>
     <g aria-label="Vegetação rasteira da savana" clipPath="url(#savanna-ground-clip)" stroke="#A18F50" strokeWidth="2" fill="none" opacity=".75">

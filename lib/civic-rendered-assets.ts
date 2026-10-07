@@ -1,5 +1,9 @@
 export type CivicArt={file:string;width:number;height:number;anchorX:number;anchorY:number;scale:number;mirror?:boolean;risingSlope?:number;fallingSlope?:number};
 export const civicRenderedAssets:Record<string,CivicArt>={
+  savannaVisitor1:{file:'safari-visitante-1-v01.png',width:1024,height:1536,anchorX:530,anchorY:1480,scale:.024},
+  savannaVisitor2:{file:'safari-visitante-2-v01.png',width:1024,height:1536,anchorX:530,anchorY:1480,scale:.024},
+  savannaVisitor3:{file:'safari-visitante-3-v01.png',width:1024,height:1536,anchorX:530,anchorY:1480,scale:.024},
+  savannaVisitor4:{file:'safari-visitante-4-v01.png',width:1448,height:1086,anchorX:750,anchorY:1060,scale:.034},
   savannaGrass:{file:'savana-vegetacao-baixa-v01.png',width:1448,height:1086,anchorX:725,anchorY:875,scale:.022},
   savannaOasis:{file:'savana-oasis-v01.png',width:1536,height:1024,anchorX:770,anchorY:600,scale:.075},
   savannaSafari:{file:'savana-carro-safari-v01.png',width:1448,height:1086,anchorX:740,anchorY:940,scale:.065,risingSlope:-.49,fallingSlope:.47},

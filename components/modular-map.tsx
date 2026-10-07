@@ -1,4 +1,5 @@
 import BeachProp from './beach-prop';
+import SeaCharacters from './sea-characters';
 import SavannaProp from './savanna-prop';
 import {savannaProps} from '@/lib/savanna-layout';
 import { beachProps } from '@/lib/beach-layout';
@@ -32,7 +33,7 @@ import PilotLandscapeProp from '@/components/pilot-landscape-prop';
 const mainland = 'M-5000-5000H8000V8000H-5000Z';
 export default function ModularMap({ selected, onSelect }: { selected: string | null; onSelect: (id: string, keyboard?: boolean) => void }) {
   return <svg className="modular-map" viewBox="0 -70 2700 1800" aria-labelledby="modular-map-title modular-map-description">
-    <title id="modular-map-title">Mapa da Vila AmiguINs</title>
+    <title id="modular-map-title">mapa da amiguINlândia</title>
     <desc id="modular-map-description">Vinte destinos ilustrados em terreno retrô-pop, com praças, parques e áreas livres reservadas para personagens futuros. Além do mar, um continente aberto representa o resto do mundo e acolhe os amiguINs que moram em qualquer país, com um aeroporto para receber os personagens internacionais e uma praia na margem da vila.</desc>
     <defs>
       <pattern id="map-checks" width="64" height="64" patternUnits="userSpaceOnUse" ><rect width="64" height="64" fill={p.cream}/><path d="M0 0H32V32H0ZM32 32H64V64H32Z" fill={p.coral}/></pattern>
@@ -54,6 +55,7 @@ export default function ModularMap({ selected, onSelect }: { selected: string | 
     </g>
     </g>
     <g data-layer="destinations-depth-sorted">
+    <SeaCharacters/>
     {savannaProps.filter(item=>item.kind==='savannaOasis').map(item=><SavannaProp key={item.id} item={item}/>)}
     <WestGreenProps/>
     {[...savannaProps.filter(item=>item.kind!=='savannaOasis').map(item=>({...item,type: 'savanna' as const})), ...beachProps.map(item=>({...item,type: 'beach' as const})), ...mapCharacters.map(item=>({...item,type: 'character' as const})), ...gardenStudyProps.filter(item=>!item.id.startsWith('secret-')).map(item=>({type: 'garden' as const,...item})), ...modularDestinations.map(destination => ({ type: 'destination' as const, ...destination })), ...eastFillers.map(item=>({type: 'east-filler' as const,...item})), ...[...parkFencePanels,...northGardenFencePanels].map(item=>({type:'fence' as const,...item})), ...parkStudyProps.map(item => ({ type: 'park' as const, ...item })), ...fillerBuildings.map(item => ({ type: 'filler' as const, ...item })), ...[...communityLandscape, ...commerceLandscape, ...pilotLandscape, ...fillerLandscape, ...civicLandscape, ...eastLandscape].map(item => ({ type: 'landscape' as const, ...item }))].sort((a,b) => (a.x+a.y)-(b.x+b.y)).map(destination => {
@@ -101,7 +103,6 @@ export default function ModularMap({ selected, onSelect }: { selected: string | 
     </g>
   </svg>;
 }
-
 
 
 
