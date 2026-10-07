@@ -7,6 +7,8 @@ import {boundedScroll} from '@/lib/map-camera';
 import {projectGround} from '@/lib/map-projection';
 import { ArrowUpRight, Check, ChevronDown, HelpCircle, Lightbulb, Maximize, Minus, MousePointer2, PawPrint, Plus, RotateCcw, Sparkles, Store, Users, X } from 'lucide-react';
 import ModularMap from '@/components/modular-map';
+import {MapEditorContext,type LayoutOffsets} from './map-layout-editor';
+import savedLayoutOffsets from '@/lib/map-layout-offsets.json';
 import { modularDestinations } from '@/lib/modular-map';
 import { mapCharacters } from '@/lib/map-characters';
 import {type Target} from '@/lib/game-data';
@@ -20,6 +22,27 @@ function Portrait({target}:{target:Target}){return <img className="portrait" ari
 export default function ExplorationGame() {
 
 
+  const localEditor=process.env.NODE_ENV==='development';
+  const [editing,setEditing]=useState(false);
+  const [layoutOffsets,setLayoutOffsets]=useState<LayoutOffsets>(savedLayoutOffsets);
+  const [editingSelection,setEditingSelection]=useState<string|null>(null);
+  const [layoutReady,setLayoutReady]=useState(false);
+  const layoutHistory=useRef<LayoutOffsets[]>([]);
+  useEffect(()=>{
+    if(!localEditor)return;
+    try{const parsed=JSON.parse(localStorage.getItem('amiguins-map-layout-v1')??'{}');
+      const valid:LayoutOffsets={...savedLayoutOffsets};for(const [id,p] of Object.entries(parsed)){const point=p as {x?:number;y?:number};if(point&&Number.isFinite(point.x)&&Number.isFinite(point.y))valid[id]={x:point.x!,y:point.y!};}setLayoutOffsets(valid);
+    }catch{}setLayoutReady(true);
+  },[localEditor]);
+  useEffect(()=>{if(localEditor&&layoutReady){try{localStorage.setItem('amiguins-map-layout-v1',JSON.stringify(layoutOffsets));}catch{}}},[layoutOffsets,layoutReady,localEditor]);
+  function moveElement(id:string,x:number,y:number,begin=false){
+    if(begin){layoutHistory.current.push(layoutOffsets);if(layoutHistory.current.length>100)layoutHistory.current.shift();}
+    setLayoutOffsets(prev=>({...prev,[id]:{x:Math.round(x*100)/100,y:Math.round(y*100)/100}}));
+  }
+  function exportLayout(){
+    const blob=new Blob([JSON.stringify({version:1,coordinates:'svg-offsets',elements:layoutOffsets},null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');
+    a.href=url;a.download='amiguins-posicoes.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
+  }
   const [found, setFound] = useState<string[]>([]);
   const [selected, setSelected] = useState<string | null>(null);
   const [collapsed, setCollapsed] = useState<string[]>([]);
@@ -128,7 +151,15 @@ export default function ExplorationGame() {
     const next = remaining[Math.floor(Math.random() * remaining.length)];
     locateDestination(next.id); setSelected(next.id); setMessage(`Procure ${next.name} nesta região do mapa.`);
   }
-  return <main className="game-shell">
+  return <MapEditorContext.Provider value={{enabled:localEditor&&editing,offsets:localEditor?layoutOffsets:savedLayoutOffsets,selected:editingSelection,select:setEditingSelection,move:moveElement}}><main className="game-shell">
+    {localEditor&&<div className="map-editor-toolbar">
+      <button onClick={()=>setEditing(v=>!v)} aria-pressed={editing}>{editing?'Concluir edição':'Editar posições'}</button>
+      {editing&&<><button disabled={!layoutHistory.current.length} onClick={()=>{const previous=layoutHistory.current.pop();if(previous)setLayoutOffsets(previous);}}>Desfazer</button>
+      <button onClick={exportLayout}>Exportar posições</button>
+      <button disabled={!editingSelection||!layoutOffsets[editingSelection]} onClick={()=>{if(editingSelection){layoutHistory.current.push(layoutOffsets);setLayoutOffsets(prev=>{const next={...prev};if(editingSelection in savedLayoutOffsets){next[editingSelection]=savedLayoutOffsets[editingSelection as keyof typeof savedLayoutOffsets];}else{delete next[editingSelection];}return next;});}}}>Restaurar elemento</button>
+      <span>{editingSelection??'Selecione e arraste um elemento'} · setas ajustam; Shift move mais · salvo neste navegador</span></>}
+    </div>}
+
     <div className="game-layout">
       <aside className="discovery-panel">
         <div className="progress-section"><div className="progress-label"><span>Você encontrou</span><strong>{found.length}<span> / {mapCharacters.length}</span></strong></div><div className="progress-track" role="progressbar" aria-label="Pessoas encontradas" aria-valuenow={found.length} aria-valuemin={0} aria-valuemax={mapCharacters.length}><span style={{ width: `${found.length / Math.max(1,mapCharacters.length) * 100}%` }} /></div></div>
@@ -159,7 +190,7 @@ export default function ExplorationGame() {
     </div>
     <dialog ref={help} className="game-dialog"><button className="dialog-close" aria-label="Fechar instruções" onClick={() => help.current?.close()}><X /></button><h2>Explore a Vila AmiguINs</h2><ol><li>Escolha uma pessoa na lista para procurar.</li><li>Clique na pessoa no mapa para registrar a descoberta.</li><li>Clique em um EspacIN na lista para ir até ele no mapa.</li><li>Use o zoom e arraste o mapa para ver os detalhes. No celular, aproxime ou afaste dois dedos para ajustar o zoom.</li><li>Se precisar, peça uma ajudinha!</li></ol><button className="dialog-primary" onClick={() => help.current?.close()}>Vamos explorar <ArrowUpRight size={17} /></button></dialog>
     <dialog ref={reset} className="game-dialog"><h2>Mais uma volta?</h2><p>As descobertas desta rodada serão apagadas e as pessoas poderão ser encontradas novamente.</p><div className="dialog-actions"><button onClick={() => reset.current?.close()}>Continuar jogando</button><button className="dialog-primary" onClick={() => { setFound([]); setSelected(null); setMessage(''); setZoom(1); reset.current?.close(); }}>Recomeçar</button></div></dialog>
-  </main>;
+  </main></MapEditorContext.Provider>;
 }
 
 

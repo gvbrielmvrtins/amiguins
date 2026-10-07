@@ -33,9 +33,9 @@ function TransitionProps(){return <g pointerEvents="none">{transitionProps.map((
   {a.kind<2?<image href="/images/modular/rosa-arvore-isometrica-v01.png" x="-40" y="-60" width="80" height="60"/>:a.kind===2?<image href="/images/modular/parque-banco-v01.png" x="-22" y="-31" width="44" height="35"/>:<image href="/images/modular/floreira-detalhada-v01.png" x="-21" y="-22" width="42" height="28"/>}
 </g>)}</g>;}
 export default function NorthMetropolis(){return <g data-layer="north-metropolis" pointerEvents="none" aria-label="Metrópole que continua além da borda superior do mapa">
-  <defs><clipPath id="metropolis-boundary"><path d={cityBoundary}/></clipPath><filter id="city-edge-soft"><feGaussianBlur stdDeviation="10"/></filter><mask id="city-ground-mask"><path d={cityBoundary} fill="white" filter="url(#city-edge-soft)"/></mask></defs>
+  <defs><linearGradient id="city-desert-fringe" x1="760" y1="0" x2="1390" y2="0" gradientUnits="userSpaceOnUse"><stop stopColor="#DAD8C7"/><stop offset=".55" stopColor="#DED7BD"/><stop offset="1" stopColor="#E8CFA0"/></linearGradient><clipPath id="metropolis-boundary"><path d={cityBoundary}/></clipPath><filter id="city-edge-soft"><feGaussianBlur stdDeviation="10"/></filter><mask id="city-ground-mask"><path d={cityBoundary} fill="white" filter="url(#city-edge-soft)"/></mask></defs>
   <g clipPath="url(#metropolis-boundary)" mask="url(#city-ground-mask)">
-    <path d={cityBoundary} fill="#DAD8C7"/>
+    <path d={cityBoundary} fill="url(#city-desert-fringe)"/>
     {[-240,-90,60,210].map(y=><g key={y}><path d={`M-220 ${y}L1400 ${y+935}`} stroke="#DAD5C3" strokeWidth="56"/><path d={`M-220 ${y}L1400 ${y+935}`} stroke="#747976" strokeWidth="38"/><path d={`M-220 ${y}L1400 ${y+935}`} stroke="#D8CB91" strokeWidth="1.5" strokeDasharray="12 15"/></g>)}
   </g>
     {blocks.map(b=><g key={b.id} transform={`translate(${b.sx} ${b.sy})`} data-metropolis-building={b.id}>

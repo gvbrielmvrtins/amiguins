@@ -335,3 +335,12 @@ h1,h2,h3,h4,h5,h6,button,label,.eyebrow,.progress-label,.category-count,.map-top
 /* Compact map actions retain accessible names and comfortable touch targets. */
 .map-actions .help-button, .hint-button { width:44px; height:44px; padding:0; justify-content:center; }
 .map-character:focus-visible rect { stroke:var(--blue); stroke-width:2; }
+
+.map-editor-toolbar { display:flex; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:12px; padding:10px; background:#e3ebff; border:2px solid #1c1c1c; border-radius:12px; }
+.map-editor-toolbar button { padding:7px 12px; border:1px solid #1c1c1c; border-radius:7px; background:#fffef9; cursor:pointer; }
+.map-editor-toolbar button[aria-pressed="true"] { background:#3774fa; color:white; }
+.map-editor-toolbar button:disabled { opacity:.45; cursor:default; }
+.map-editor-toolbar span { font-size:12px; }
+.map-edit-handle { cursor:move; }
+.map-edit-handle rect { stroke-opacity:0; }
+.map-edit-handle:hover rect,.map-edit-handle:focus rect,.map-edit-handle.selected rect { stroke-opacity:1; }
