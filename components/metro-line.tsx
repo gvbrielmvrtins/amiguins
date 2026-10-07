@@ -17,6 +17,28 @@ export default function MetroTrain(){
         <g transform={carriageProjection}><image href={`/images/modular/${car.file}`} x="-106.4" y="-99.4" width="215.04" height="143.36"/></g>
       </g>;
     })}
+    {/* Share the carriage correction so the inset lid follows its roof axes. */}
+    <g data-metro-roof-hatch="locked" transform={`translate(${projectGround(260,55).x} ${projectGround(260,55).y})`}>
+      <g transform={`${carriageProjection} translate(9 -49)`} strokeLinejoin="round" strokeLinecap="round">
+        <path d="M-12-3Q-10-8-2-8L14-1Q12 3 4 4Z" fill="#6B5945" opacity=".15"/>
+        <path d="M-13-4Q-10-9-3-8.9L13-2.18Q10 2.6 3 2.72L3 3.7Q10 3.5 13-1.2L-3-7.9Q-10-8-13-2.9Z" fill="#A69A82" stroke="#39332C" strokeWidth=".65"/>
+        <path d="M-13-4Q-10-9-3-8.9L13-2.18Q10 2.6 3 2.72Z" fill="#F0E8D5" stroke="#39332C" strokeWidth=".85"/>
+        <path d="M-10.4-3.6Q-8.7-7.4-2.9-7.4L10.4-1.9Q8.2 1.1 2.8 1.3Z" fill="#FFFAE9" stroke="#C1B59C" strokeWidth=".45"/>
+        <path d="M-10.4-3.6Q-8.7-7.4-2.9-7.4L10.4-1.9" fill="none" stroke="#FFFFFF" strokeWidth=".7"/>
+        <path d="M-8.5-5.4Q-2-5.3 7.5-.7" fill="none" stroke="#E2D8C3" strokeWidth=".8"/>
+
+        <path d="M-8-6.4l2.6 1.1m3.7-4.2 2.6 1.1" stroke="#544D42" strokeWidth="1.1"/>
+        <path d="M4-.6l2.4-1.1 1 .4-2.4 1.2Z" fill="#8C8576" stroke="#4C463B" strokeWidth=".5"/>
+        <path d="M5.2 .2v-1.6a1.1 1.1 0 0 1 2.2 0v1.6" fill="none" stroke="#47443C" strokeWidth=".8"/>
+        <rect x="4.5" y="-.2" width="3.6" height="3" rx=".6" fill="#E8BA4C" stroke="#655333" strokeWidth=".6"/>
+        <path d="M5 .3h2.4" stroke="#FFE59A" strokeWidth=".5"/>
+        <circle cx="6.3" cy="1.2" r=".4" fill="#443B2C"/>
+      </g>
+    </g>
+    <g data-metro-agent="decorative" transform={`translate(${projectGround(260,55).x+34} ${projectGround(260,55).y-43})`}>
+      <ellipse cx="0" cy="-1" rx="7" ry="2" fill="#574F40" opacity=".18"/>
+      <image href="/images/modular/agente-galinha-v02.png" x="-14" y="-26" width="28" height="27"/>
+    </g>
   </g>;
 }
 

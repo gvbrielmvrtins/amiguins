@@ -1,6 +1,7 @@
 import type { Target } from './game-data';
 
-export const mapCharacters: (Target & { file: string })[] = [
+export const mapCharacters: (Target & { file: string; elevation?: number })[] = [
+  { id: 'henrique-hardman', name: 'Henrique Hardman', article: 'o', category: 'people', x: 260, y: 55, elevation: 61, width: 34, height: 38, file: '/images/characters/henrique-hardman-v01.png', clue: 'Henrique está agachado no teto do vagão feminino, com um pé de cabra junto ao alçapão fechado com cadeado.' },
   { id: 'patrick-canuto', name: 'Patrick Canuto', article: 'o', category: 'people', x: 2828, y: 130, width: 30, height: 45, file: '/images/characters/patrick-canuto-v01.png', clue: 'Patrick é o taverneiro de roupas medievais, óculos, estrela de xerife e controle de videogame, diante da taverna junto à floresta.' },
   { id: 'paula-lotti', name: 'Paula Lotti', article: 'a', category: 'people', x: 2080, y: 2050, width: 30, height: 45, file: '/images/characters/paula-lotti-v02.png', clue: 'Paula está na praia, cavando a areia com uma pá. Procure os cabelos cacheados e a camisa listrada verde e branca.' },
   { id: 'gabriel-martins', name: 'Gabriel Martins', article: 'o', category: 'people', x: 415, y: 570, width: 30, height: 45, file: '/images/characters/gabriel-martins-v01.png', clue: 'Gabriel está com sua pipoca no canto direito do terreno do cinema.' },
