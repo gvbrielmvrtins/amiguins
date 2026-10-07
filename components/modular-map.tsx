@@ -1,3 +1,6 @@
+import NorthMountain from './north-mountain';
+import {northForestTrees,forestCoastPlants} from '@/lib/north-forest';
+import MetroTrain, {MetroGround} from './metro-line';
 import MapStreets from './map-streets';
 import PrideParade from './pride-parade';
 import BeachProp from './beach-prop';
@@ -8,18 +11,17 @@ import {savannaProps} from '@/lib/savanna-layout';
 import { beachProps } from '@/lib/beach-layout';
 import { mapCharacters } from '@/lib/map-characters';
 import CommunityStudy, {CommunityGround} from './community-study';
-import NeighborhoodStudy,{NeighborhoodStudyGround} from './new-neighborhood-study';
+import NeighborhoodStudy,{NeighborhoodStudyGround,ValleyCoastOverlay} from './new-neighborhood-study';
 import {communityIds,communityLandscape} from '@/lib/community-study';
 import CommerceStudy, {CommerceGround} from './commerce-study';
 import {commerceIds,commerceLandscape} from '@/lib/commerce-study';
 import SecretGardenMaze from './secret-garden-maze';
 import EastDestination, { EastGround, EastFiller } from './east-district-study';
-import SecretGarden, {GardenGround,GardenStudyProp} from './garden-study';
+import SecretGarden, {GardenGround,GardenStudyProp,ForestGround} from './garden-study';
 import {gardenStudyProps} from '@/lib/garden-study';
 import { eastStudyIds, eastFillers, eastLandscape } from '@/lib/east-district-study';
 import CivicMapStudy, { CivicGround } from './civic-map-study';
 import { civicIds, civicLandscape } from '@/lib/civic-study';
-import ParkFence, { northGardenFencePanels } from './park-fence';
 import FillerBuilding, { FillerGround } from './map-filler-study';
 import { fillerBuildings, fillerLandscape } from '@/lib/map-filler';
 import MapOpenSpaces,{WestGreenProps} from './map-open-spaces';
@@ -48,21 +50,25 @@ export default function ModularMap({ selected, onSelect }: { selected: string | 
       <path d={mainland} fill="#E9E5D8"/>
       <g clipPath="url(#map-land)">
         <MapStreets/>
+        <MetroGround/>
+        <ForestGround/>
         <NeighborhoodStudyGround/>
         <PinkMapStudy/>
         <MapNeighborhoodLots/>
         <MapOpenSpaces/>
         <FillerGround/>
         <CivicGround/><EastGround/><GardenGround/><CommerceGround/><CommunityGround/>
+        <ValleyCoastOverlay/>
       </g>
     </g>
     </g>
+    <NorthMountain/>
     <g data-layer="destinations-depth-sorted">
     <SeaCharacters/>
     <g transform="translate(1095.588457269 1459)" pointerEvents="none" aria-label="Buraco que Paula está cavando"><ellipse cx="-7" cy="0" rx="11" ry="5" fill="#AB7F48" stroke="#CDA260" strokeWidth="2"/><path d="M-15 0Q-7-5 2 0" fill="none" stroke="#735733" strokeWidth="2"/><path d="M-22 3Q-18-5-13 1L-10 5Z" fill="#D8B87B" stroke="#BE965B" strokeWidth="1"/></g>
     {savannaProps.filter(item=>item.kind==='savannaOasis').map(item=><SavannaProp key={item.id} item={item}/>)}
     <WestGreenProps/>
-    {[...savannaProps.filter(item=>item.kind!=='savannaOasis').map(item=>({...item,type: 'savanna' as const})), ...[...beachProps,...paulaBeachProps].map(item=>({...item,type: 'beach' as const})), ...mapCharacters.map(item=>({...item,type: 'character' as const})), ...gardenStudyProps.filter(item=>!item.id.startsWith('secret-')).map(item=>({type: 'garden' as const,...item})), ...modularDestinations.map(destination => ({ type: 'destination' as const, ...destination })), ...eastFillers.map(item=>({type: 'east-filler' as const,...item})), ...[...northGardenFencePanels].map(item=>({type:'fence' as const,...item})), ...fillerBuildings.map(item => ({ type: 'filler' as const, ...item })), ...[...communityLandscape, ...commerceLandscape, ...pilotLandscape, ...fillerLandscape.filter(item=>item.id!=='filler-park-flowers'), ...civicLandscape, ...eastLandscape].map(item => ({ type: 'landscape' as const, ...item }))].sort((a,b) => (a.x+a.y)-(b.x+b.y)).map(destination => {
+    {[...[...savannaProps.filter(item=>item.kind!=='savannaOasis'),...forestCoastPlants].map(item=>({...item,type: 'savanna' as const})), ...[...beachProps,...paulaBeachProps].map(item=>({...item,type: 'beach' as const})), ...mapCharacters.map(item=>({...item,type: 'character' as const})), ...[...gardenStudyProps.filter(item=>!item.id.startsWith('secret-')&&!item.id.startsWith('north-')),...northForestTrees].map(item=>({type: 'garden' as const,...item})), ...modularDestinations.map(destination => ({ type: 'destination' as const, ...destination })), ...eastFillers.map(item=>({type: 'east-filler' as const,...item})), ...fillerBuildings.map(item => ({ type: 'filler' as const, ...item })), ...[...communityLandscape, ...commerceLandscape, ...pilotLandscape, ...fillerLandscape.filter(item=>item.id!=='filler-park-flowers'), ...civicLandscape, ...eastLandscape].map(item => ({ type: 'landscape' as const, ...item }))].sort((a,b) => (a.id==='vagao-feminino'?615:a.x+a.y)-(b.id==='vagao-feminino'?615:b.x+b.y)).map(destination => {
       if (destination.type === 'savanna') return <SavannaProp key={destination.id} item={destination}/>;
       if (destination.type === 'beach') return <BeachProp key={destination.id} item={destination}/>;
       if (destination.type === 'character') {
@@ -75,7 +81,6 @@ export default function ModularMap({ selected, onSelect }: { selected: string | 
       }
       if (destination.type === 'garden') return <GardenStudyProp key={destination.id} item={destination}/>;
       if (destination.type === 'east-filler') return <EastFiller key={destination.id} item={destination}/>;
-      if (destination.type === 'fence') return <ParkFence key={destination.id} item={destination}/>;
       if (destination.type === 'filler') return <FillerBuilding key={destination.id} item={destination}/>;
       if (destination.type === 'landscape') return <PilotLandscapeProp key={destination.id} item={destination}/>;
       if(destination.id==='espacin-coloridin')return <PrideParade key={destination.id}/>;
@@ -85,6 +90,7 @@ export default function ModularMap({ selected, onSelect }: { selected: string | 
       if (commerceIds.has(destination.id)) return <CommerceStudy key={destination.id} destination={destination} selected={selected} onSelect={onSelect}/>;
       if (eastStudyIds.has(destination.id)) return <EastDestination key={destination.id} destination={destination} selected={selected} onSelect={onSelect}/>;
       if (civicIds.has(destination.id)) return <CivicMapStudy key={destination.id} destination={destination} selected={selected} onSelect={onSelect}/>;
+      if (destination.id==='vagao-feminino') return <MetroTrain key={destination.id}/>;
       if (pilotBuildings[destination.id]) return <PinkMapDistrict key={destination.id} only={destination.id} selected={selected} onSelect={onSelect}/>;
       const { id, x, y, width, color, lines, name } = destination;
       const position = projectGround(x, y);

@@ -2,7 +2,7 @@ export const mapPalette = { blue: '#3774FA', coral: '#F77B5D', yellow: '#FAD846'
 
 // Coordinates describe the logical ground plan; map-projection.ts converts them to the SVG artboard.
 export const modularDestinations = [
-  { id: 'vagao-feminino', name: 'vagão femININo', lines: ['vagão femININo'], x: 385, y: 350, width: 234, color: 'pink' },
+  { id: 'vagao-feminino', name: 'vagão femININo', lines: ['vagão femININo'], x: 260, y: 55, width: 234, color: 'pink' },
   { id: 'livrinhoteca', name: 'livrINhoteca', lines: ['livrINhoteca'], x: 850, y: 350, width: 187, color: 'yellow' },
   { id: 'prefeintura', name: 'gabINete da prefeitura', lines: ['gabINete da', 'prefeitura'], x: 1340, y: 420, width: 300, color: 'blue' },
   { id: 'taverna-joguins', name: 'taverna dos joguINs', lines: ['taverna dos', 'joguINs'], x: 2340, y: 300, width: 300, color: 'coral' },

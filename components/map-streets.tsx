@@ -1,6 +1,6 @@
 // Ground-plane artwork: lots and the coastline render above the streets.
 const lanes=[
-  'M30 55H2990',
+  'M1150 55H2990',
   'M30 55V2580',
   'M500 55V2620',
   'M1005 55V2620',

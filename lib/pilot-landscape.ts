@@ -1,6 +1,6 @@
 // Pilot landscape: only these four lots and the two connecting pedestrian lanes.
 export const pilotLots = [
-  { id: 'vagao-feminino', x: 105, y: 105, width: 350, height: 305, accent: '#F889BA' },
+  { id: 'vagao-feminino', x: 105, y: 105, width: 350, height: 100, accent: '#F889BA' },
   { id: 'cineminha', x: 105, y: 525, width: 350, height: 345, accent: '#F77B5D' },
   { id: 'livrinhoteca', x: 555, y: 105, width: 370, height: 305, accent: '#FAD846' },
   { id: 'mercado-vagas', x: 555, y: 525, width: 370, height: 345, accent: '#3774FA' },
@@ -11,7 +11,7 @@ export type LandscapeProp = { id: string; kind: LandscapeKind; x: number; y: num
 export const pilotLandscape: LandscapeProp[] = [
   { id: 'station-tree', kind: 'tree', x: 165, y: 190, size: 112 },
   { id: 'station-clock', kind: 'clock', x: 250, y: 145 },
-  { id: 'station-flowers', kind: 'planter', x: 185, y: 365 },
+  { id: 'station-flowers', kind: 'planter', x: 185, y: 185 },
   { id: 'cinema-tree', kind: 'tree', x: 160, y: 610, size: 105 },
   { id: 'cinema-popcorn', kind: 'popcorn', x: 215, y: 705 },
   { id: 'cinema-flowers', kind: 'planter', x: 175, y: 830 },

@@ -27,6 +27,16 @@ const internationalGround = `${coastPath}L4400 3600H2200Z`;
 const beachPath=cityShorePath(170);
 const foamPath=cityShorePath(104);
 const promenadePath=cityShorePath(262);
+// Coastal paving takes precedence over the campus ground at this junction.
+export function ValleyCoastOverlay(){return <g pointerEvents="none" stroke="none">
+  <defs><clipPath id="valley-coastal-overlay"><rect x="2480" y="850" width="760" height="700"/></clipPath></defs>
+  <g clipPath="url(#valley-coastal-overlay)" fill="none" strokeLinejoin="round" strokeLinecap="round">
+    <path d={beachPath} stroke="#D4B879" strokeWidth="140"/>
+    <path d={beachPath} stroke="url(#beach-sand)" strokeWidth="132"/>
+    <path d={promenadePath} stroke="#B8B2A4" strokeWidth="54"/>
+    <path d={promenadePath} stroke="url(#copacabana-mosaic)" strokeWidth="46"/>
+  </g>
+</g>;}
 export function NeighborhoodStudyGround(){return <>
   <defs><pattern id="copacabana-mosaic" width="160" height="100" patternUnits="userSpaceOnUse"><rect width="160" height="100" fill="#FFFEF9" stroke="none"/><path d="M-40 0Q0-35 40 0T120 0T200 0M-40 50Q0 15 40 50T120 50T200 50M-40 100Q0 65 40 100T120 100T200 100" fill="none" stroke="#343331" strokeWidth="17"/><path d="M0 0V100M10 0V100M20 0V100M30 0V100M40 0V100M50 0V100M60 0V100M70 0V100M80 0V100M90 0V100M100 0V100M110 0V100M120 0V100M130 0V100M140 0V100M150 0V100M0 10H160M0 20H160M0 30H160M0 40H160M0 50H160M0 60H160M0 70H160M0 80H160M0 90H160" fill="none" stroke="#C9C5BB" strokeWidth=".6" opacity=".5"/></pattern><pattern id="beach-sand" width="90" height="90" patternUnits="userSpaceOnUse"><rect width="90" height="90" fill="#F3DEAA" stroke="none"/><path d="M12 17h6M58 41h8M29 70h5" stroke="#C9A96B" strokeWidth="2" opacity=".5"/><circle cx="74" cy="12" r="1.5" fill="#C9A96B" stroke="none"/><circle cx="18" cy="48" r="1" fill="#C9A96B" stroke="none"/></pattern><pattern id="international-grass" width="325" height="320" patternUnits="userSpaceOnUse"><rect width="325" height="320" fill="#9CBA78" stroke="none"/><image href="/images/modular/parque-grama-v01.png" width="325" height="320" preserveAspectRatio="none" opacity=".78"/></pattern><pattern id="sea-water-rendered" width="520" height="520" patternUnits="userSpaceOnUse"><image href="/images/modular/rio-agua-textura-v02.png" width="520" height="520" preserveAspectRatio="none"/></pattern></defs>
   <g data-layer="sea-study" aria-label="Mar entre a vila e o continente internacional">

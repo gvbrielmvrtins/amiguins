@@ -1,4 +1,4 @@
-export type GardenProp = {id:string;kind:string;x:number;y:number};
+export type GardenProp = {id:string;kind:string;x:number;y:number;scale?:number};
 export const secretGarden={x:2740,y:200,w:520,h:480};
 export const northGarden={x:1550,y:-30,w:440,h:230};
 export const gardenStudyProps:GardenProp[]=[
