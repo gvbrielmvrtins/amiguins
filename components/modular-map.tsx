@@ -1,4 +1,5 @@
 import BeachProp from './beach-prop';
+import {paulaBeachProps} from '@/lib/paula-beach-layout';
 import SeaCharacters from './sea-characters';
 import SavannaProp from './savanna-prop';
 import {savannaProps} from '@/lib/savanna-layout';
@@ -56,9 +57,10 @@ export default function ModularMap({ selected, onSelect }: { selected: string | 
     </g>
     <g data-layer="destinations-depth-sorted">
     <SeaCharacters/>
+    <g transform="translate(1095.588457269 1459)" pointerEvents="none" aria-label="Buraco que Paula está cavando"><ellipse cx="-7" cy="0" rx="11" ry="5" fill="#AB7F48" stroke="#CDA260" strokeWidth="2"/><path d="M-15 0Q-7-5 2 0" fill="none" stroke="#735733" strokeWidth="2"/><path d="M-22 3Q-18-5-13 1L-10 5Z" fill="#D8B87B" stroke="#BE965B" strokeWidth="1"/></g>
     {savannaProps.filter(item=>item.kind==='savannaOasis').map(item=><SavannaProp key={item.id} item={item}/>)}
     <WestGreenProps/>
-    {[...savannaProps.filter(item=>item.kind!=='savannaOasis').map(item=>({...item,type: 'savanna' as const})), ...beachProps.map(item=>({...item,type: 'beach' as const})), ...mapCharacters.map(item=>({...item,type: 'character' as const})), ...gardenStudyProps.filter(item=>!item.id.startsWith('secret-')).map(item=>({type: 'garden' as const,...item})), ...modularDestinations.map(destination => ({ type: 'destination' as const, ...destination })), ...eastFillers.map(item=>({type: 'east-filler' as const,...item})), ...[...parkFencePanels,...northGardenFencePanels].map(item=>({type:'fence' as const,...item})), ...parkStudyProps.map(item => ({ type: 'park' as const, ...item })), ...fillerBuildings.map(item => ({ type: 'filler' as const, ...item })), ...[...communityLandscape, ...commerceLandscape, ...pilotLandscape, ...fillerLandscape, ...civicLandscape, ...eastLandscape].map(item => ({ type: 'landscape' as const, ...item }))].sort((a,b) => (a.x+a.y)-(b.x+b.y)).map(destination => {
+    {[...savannaProps.filter(item=>item.kind!=='savannaOasis').map(item=>({...item,type: 'savanna' as const})), ...[...beachProps,...paulaBeachProps].map(item=>({...item,type: 'beach' as const})), ...mapCharacters.map(item=>({...item,type: 'character' as const})), ...gardenStudyProps.filter(item=>!item.id.startsWith('secret-')).map(item=>({type: 'garden' as const,...item})), ...modularDestinations.map(destination => ({ type: 'destination' as const, ...destination })), ...eastFillers.map(item=>({type: 'east-filler' as const,...item})), ...[...parkFencePanels,...northGardenFencePanels].map(item=>({type:'fence' as const,...item})), ...parkStudyProps.map(item => ({ type: 'park' as const, ...item })), ...fillerBuildings.map(item => ({ type: 'filler' as const, ...item })), ...[...communityLandscape, ...commerceLandscape, ...pilotLandscape, ...fillerLandscape, ...civicLandscape, ...eastLandscape].map(item => ({ type: 'landscape' as const, ...item }))].sort((a,b) => (a.x+a.y)-(b.x+b.y)).map(destination => {
       if (destination.type === 'savanna') return <SavannaProp key={destination.id} item={destination}/>;
       if (destination.type === 'beach') return <BeachProp key={destination.id} item={destination}/>;
       if (destination.type === 'character') {

@@ -26,7 +26,7 @@ export const beachProps=Array.from({length:22},(_,i)=>{
   const atOffset=(offset:number)=>({x:x+(offset-174)*dy/length,y:y-(offset-174)*dx/length});
   if(i%2===0){
     items.push({id:`beach-umbrella-${i}`,kind:'beachUmbrella',x,y});
-    items.push({id:`beach-rest-${i}`,kind:i%4===0?'coloridinBlanket':'beachChair',x:x+32*dx/length,y:y+32*dy/length});
+    if(i!==6)items.push({id:`beach-rest-${i}`,kind:i%4===0?'coloridinBlanket':'beachChair',x:x+32*dx/length,y:y+32*dy/length});
   }else{
     items.push({id:`beach-feature-${i}`,kind:i%4===1?'beachPalm':'beachBall',...atOffset(i%4===1?214:163)});
     items.push({id:`beach-shell-${i}`,kind:'beachShell',...atOffset(132)});
