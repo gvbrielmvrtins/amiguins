@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef,useEffect, type PointerEvent } from 'react';
+import { useState, useRef,useEffect, useLayoutEffect, type TouchEvent, type PointerEvent } from 'react';
 import {communityLots} from '@/lib/community-study';
 import {commerceLots} from '@/lib/commerce-study';
 import {boundedScroll} from '@/lib/map-camera';
@@ -33,6 +33,49 @@ export default function ExplorationGame() {
   const viewport = useRef<HTMLDivElement>(null);
   const drag = useRef<{ x: number; y: number; left: number; top: number } | null>(null);
   const didDrag = useRef(false);
+  const touchGesture = useRef<{distance:number;zoom:number;mapX:number;mapY:number} | null>(null);
+  const zoomAnchor = useRef<{mapX:number;mapY:number;x:number;y:number} | null>(null);
+  useLayoutEffect(()=>{
+    const v=viewport.current,anchor=zoomAnchor.current;
+    if(!v||!anchor)return;
+    const scale=v.scrollWidth/2700;
+    v.scrollLeft=anchor.mapX*scale-anchor.x;
+    v.scrollTop=anchor.mapY*scale-anchor.y;
+    zoomAnchor.current=null;
+  },[zoom]);
+  function beginTouch(e:TouchEvent<HTMLDivElement>){
+    const v=viewport.current;if(!v)return;
+    if(e.touches.length>=2){
+      const [a,b]=Array.from(e.touches),rect=v.getBoundingClientRect(),scale=v.scrollWidth/2700;
+      const x=(a.clientX+b.clientX)/2-rect.left,y=(a.clientY+b.clientY)/2-rect.top;
+      touchGesture.current={distance:Math.max(1,Math.hypot(a.clientX-b.clientX,a.clientY-b.clientY)),zoom,mapX:(v.scrollLeft+x)/scale,mapY:(v.scrollTop+y)/scale};
+      drag.current=null;didDrag.current=true;
+    }else if(e.touches.length===1){
+      const t=e.touches[0];
+      drag.current={x:t.clientX,y:t.clientY,left:v.scrollLeft,top:v.scrollTop};
+    }
+  }
+  function moveTouch(e:TouchEvent<HTMLDivElement>){
+    const v=viewport.current;if(!v)return;
+    if(e.touches.length>=2&&touchGesture.current){
+      e.preventDefault();
+      const [a,b]=Array.from(e.touches),g=touchGesture.current,rect=v.getBoundingClientRect();
+      const x=(a.clientX+b.clientX)/2-rect.left,y=(a.clientY+b.clientY)/2-rect.top;
+      const next=Math.max(.25,Math.min(5,g.zoom*Math.hypot(a.clientX-b.clientX,a.clientY-b.clientY)/g.distance));
+      zoomAnchor.current={mapX:g.mapX,mapY:g.mapY,x,y};
+      const scale=v.scrollWidth/2700;
+      v.scrollLeft=g.mapX*scale-x;v.scrollTop=g.mapY*scale-y;
+      setZoom(next);didDrag.current=true;
+    }else if(e.touches.length===1&&drag.current){
+      e.preventDefault();const t=e.touches[0],g=drag.current,dx=t.clientX-g.x,dy=t.clientY-g.y;
+      if(Math.abs(dx)+Math.abs(dy)>5)didDrag.current=true;
+      v.scrollLeft=g.left-dx;v.scrollTop=g.top-dy;
+    }
+  }
+  function endTouch(e:TouchEvent<HTMLDivElement>){
+    touchGesture.current=null;drag.current=null;
+    if(e.touches.length)beginTouch(e);
+  }
   const current = targets.find(t => t.id === selected);
   const complete = mapCharacters.length > 0 && found.length === mapCharacters.length;
   function constrainCamera(){
@@ -72,7 +115,7 @@ export default function ExplorationGame() {
     drag.current = { x: e.clientX, y: e.clientY, left: viewport.current.scrollLeft, top: viewport.current.scrollTop };
   }
   function moveDrag(e: PointerEvent<HTMLDivElement>) {
-    if (!drag.current || !viewport.current) return;
+    if (e.pointerType === 'touch' || !drag.current || !viewport.current) return;
     const dx = e.clientX - drag.current.x, dy = e.clientY - drag.current.y;
     if (Math.abs(dx) + Math.abs(dy) > 5) didDrag.current = true;
     viewport.current.scrollLeft = drag.current.left - dx;
@@ -102,7 +145,7 @@ export default function ExplorationGame() {
       <section className="map-section" aria-label="Mapa interativo da Vila AmiguINs">
         <div className="map-topbar" aria-hidden="true"/>
         <div className="map-frame">
-          <div className="map-viewport" ref={viewport} onScroll={constrainCamera} onPointerDown={startDrag} onPointerMove={moveDrag} onPointerUp={() => { drag.current = null; }} onPointerLeave={() => { drag.current = null; }}>
+          <div className="map-viewport" ref={viewport} onTouchStart={e=>{if(e.touches.length===1)didDrag.current=false;beginTouch(e);}} onTouchMove={moveTouch} onTouchEnd={endTouch} onTouchCancel={()=>{touchGesture.current=null;drag.current=null;}} onScroll={constrainCamera} onPointerDown={startDrag} onPointerMove={moveDrag} onPointerUp={() => { drag.current = null; }} onPointerLeave={() => { drag.current = null; }}>
             <div className="map-world modular-world" style={{width:`${mapScale*100}%`,minWidth:`${740*mapScale}px`}}><ModularMap selected={selected} onSelect={(id,keyboard)=>{if(keyboard||!didDrag.current){const target=targets.find(t=>t.id===id);if(target?.category === 'people')discover(target);else if(target){locateDestination(id);setMessage(`Você está em ${target.name}.`);}}}}/></div>
           </div>
 
@@ -114,7 +157,7 @@ export default function ExplorationGame() {
         <div className="map-footer"><span>{mapCharacters.length} pessoas para encontrar · clique nos EspacINs para navegar · use o zoom e arraste para explorar</span></div>
       </section>
     </div>
-    <dialog ref={help} className="game-dialog"><button className="dialog-close" aria-label="Fechar instruções" onClick={() => help.current?.close()}><X /></button><h2>Explore a Vila AmiguINs</h2><ol><li>Escolha uma pessoa na lista para procurar.</li><li>Clique na pessoa no mapa para registrar a descoberta.</li><li>Clique em um EspacIN na lista para ir até ele no mapa.</li><li>Use o zoom e arraste o mapa para ver os detalhes.</li><li>Se precisar, peça uma ajudinha!</li></ol><button className="dialog-primary" onClick={() => help.current?.close()}>Vamos explorar <ArrowUpRight size={17} /></button></dialog>
+    <dialog ref={help} className="game-dialog"><button className="dialog-close" aria-label="Fechar instruções" onClick={() => help.current?.close()}><X /></button><h2>Explore a Vila AmiguINs</h2><ol><li>Escolha uma pessoa na lista para procurar.</li><li>Clique na pessoa no mapa para registrar a descoberta.</li><li>Clique em um EspacIN na lista para ir até ele no mapa.</li><li>Use o zoom e arraste o mapa para ver os detalhes. No celular, aproxime ou afaste dois dedos para ajustar o zoom.</li><li>Se precisar, peça uma ajudinha!</li></ol><button className="dialog-primary" onClick={() => help.current?.close()}>Vamos explorar <ArrowUpRight size={17} /></button></dialog>
     <dialog ref={reset} className="game-dialog"><h2>Mais uma volta?</h2><p>As descobertas desta rodada serão apagadas e as pessoas poderão ser encontradas novamente.</p><div className="dialog-actions"><button onClick={() => reset.current?.close()}>Continuar jogando</button><button className="dialog-primary" onClick={() => { setFound([]); setSelected(null); setMessage(''); setZoom(1); reset.current?.close(); }}>Recomeçar</button></div></dialog>
   </main>;
 }
