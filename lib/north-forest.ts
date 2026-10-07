@@ -65,3 +65,31 @@ for(let i=0;i<8;i++){
   if(!shoreline || y>shoreline.y-30)continue;
   forestCoastPlants.push({id:`valley-coast-grass-${i}`,kind:'savannaGrass',x,y,scale:.55,mirror:i%2===0});
 }
+
+// A sheltered clearing keeps the reduced maze and its visitors unobstructed.
+const clearing=projectGround(2100,-500);
+for(let i=northForestTrees.length-1;i>=0;i--){
+  const at=projectGround(northForestTrees[i].x,northForestTrees[i].y);
+  if(((at.x-clearing.x)/285)**2+((at.y-65-clearing.y)/220)**2<1)northForestTrees.splice(i,1);
+}
+
+// Follow the maze's diamond footprint instead of leaving an oversized oval clearing.
+// The near-side roots sit lower so their upright crowns stay outside the garden.
+const gardenTreeCorners=[[0,-170],[255,35],[0,185],[-255,35]];
+for(let i=0;i<40;i++){
+  const side=Math.floor(i/10),t=(i%10)/10;
+  const a=gardenTreeCorners[side],b=gardenTreeCorners[(side+1)%4];
+  const dx=a[0]+(b[0]-a[0])*t,dy=a[1]+(b[1]-a[1])*t;
+  const x=2100+dx/(2*.5196152423)+dy/.6;
+  const y=-500-dx/(2*.5196152423)+dy/.6;
+  northForestTrees.push({id:`secret-garden-ring-${i}`,kind:i%6===0?'pine':i%9===0?'birch':'oak',x,y,scale:.5+(i%3)*.025});
+}
+
+// A staggered outer row joins the close border to the surrounding tall forest.
+const outerTreeCorners=[[0,-225],[310,30],[0,250],[-310,30]];
+for(let i=0;i<32;i++){
+  const side=Math.floor(i/8),t=((i%8)+.5)/8;
+  const a=outerTreeCorners[side],b=outerTreeCorners[(side+1)%4];
+  const dx=a[0]+(b[0]-a[0])*t,dy=a[1]+(b[1]-a[1])*t;
+  northForestTrees.push({id:`secret-garden-outer-${i}`,kind:i%4===0?'pine':'oak',x:2100+dx/(2*.5196152423)+dy/.6,y:-500-dx/(2*.5196152423)+dy/.6,scale:.72+(i%3)*.035});
+}

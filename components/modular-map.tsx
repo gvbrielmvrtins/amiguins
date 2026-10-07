@@ -1,6 +1,7 @@
+import NorthMetropolis, {MetropolisTransitionGround} from './north-metropolis';
 import NorthMountain from './north-mountain';
 import {northForestTrees,forestCoastPlants} from '@/lib/north-forest';
-import MetroTrain, {MetroGround} from './metro-line';
+import MetroTrain, {MetroGround,MetroUnderpass} from './metro-line';
 import MapStreets from './map-streets';
 import PrideParade from './pride-parade';
 import BeachProp from './beach-prop';
@@ -48,6 +49,7 @@ export default function ModularMap({ selected, onSelect }: { selected: string | 
     <rect x="0" y="-100" width="3000" height="2100" fill="#E9E5D8"/>
     <g transform={groundTransform} stroke={p.ink} strokeWidth="5" strokeLinejoin="round">
       <path d={mainland} fill="#E9E5D8"/>
+      <g transform="matrix(.96225044865 -.96225044865 1.66666666667 1.66666666667 -1405.8971512087 672.5638178753)"><MetropolisTransitionGround/></g>
       <g clipPath="url(#map-land)">
         <MapStreets/>
         <MetroGround/>
@@ -62,13 +64,15 @@ export default function ModularMap({ selected, onSelect }: { selected: string | 
       </g>
     </g>
     </g>
+    <NorthMetropolis/>
+    <MetroUnderpass/>
     <NorthMountain/>
     <g data-layer="destinations-depth-sorted">
     <SeaCharacters/>
     <g transform="translate(1095.588457269 1459)" pointerEvents="none" aria-label="Buraco que Paula está cavando"><ellipse cx="-7" cy="0" rx="11" ry="5" fill="#AB7F48" stroke="#CDA260" strokeWidth="2"/><path d="M-15 0Q-7-5 2 0" fill="none" stroke="#735733" strokeWidth="2"/><path d="M-22 3Q-18-5-13 1L-10 5Z" fill="#D8B87B" stroke="#BE965B" strokeWidth="1"/></g>
     {savannaProps.filter(item=>item.kind==='savannaOasis').map(item=><SavannaProp key={item.id} item={item}/>)}
     <WestGreenProps/>
-    {[...[...savannaProps.filter(item=>item.kind!=='savannaOasis'),...forestCoastPlants].map(item=>({...item,type: 'savanna' as const})), ...[...beachProps,...paulaBeachProps].map(item=>({...item,type: 'beach' as const})), ...mapCharacters.map(item=>({...item,type: 'character' as const})), ...[...gardenStudyProps.filter(item=>!item.id.startsWith('secret-')&&!item.id.startsWith('north-')),...northForestTrees].map(item=>({type: 'garden' as const,...item})), ...modularDestinations.map(destination => ({ type: 'destination' as const, ...destination })), ...eastFillers.map(item=>({type: 'east-filler' as const,...item})), ...fillerBuildings.map(item => ({ type: 'filler' as const, ...item })), ...[...communityLandscape, ...commerceLandscape, ...pilotLandscape, ...fillerLandscape.filter(item=>item.id!=='filler-park-flowers'), ...civicLandscape, ...eastLandscape].map(item => ({ type: 'landscape' as const, ...item }))].sort((a,b) => (a.id==='vagao-feminino'?615:a.x+a.y)-(b.id==='vagao-feminino'?615:b.x+b.y)).map(destination => {
+    {[...[...savannaProps.filter(item=>item.kind!=='savannaOasis'),...forestCoastPlants].map(item=>({...item,type: 'savanna' as const})), ...[...beachProps,...paulaBeachProps].map(item=>({...item,type: 'beach' as const})), ...mapCharacters.map(item=>({...item,type: 'character' as const})), ...[...gardenStudyProps.filter(item=>!item.id.startsWith('secret-')&&!item.id.startsWith('north-')),...northForestTrees].map(item=>({type: 'garden' as const,...item})), ...modularDestinations.map(destination => ({ type: 'destination' as const, ...destination })), ...eastFillers.map(item=>({type: 'east-filler' as const,...item})), ...fillerBuildings.map(item => ({ type: 'filler' as const, ...item })), ...[...communityLandscape, ...commerceLandscape, ...pilotLandscape, ...fillerLandscape.filter(item=>item.id!=='filler-park-flowers'), ...civicLandscape, ...eastLandscape].map(item => ({ type: 'landscape' as const, ...item }))].sort((a,b) => (a.id==='patrick-canuto'?3085:a.id==='vagao-feminino'?615:a.id==='taverna-joguins'?a.x+a.y-200:a.x+a.y)-(b.id==='patrick-canuto'?3085:b.id==='vagao-feminino'?615:b.id==='taverna-joguins'?b.x+b.y-200:b.x+b.y)).map(destination => {
       if (destination.type === 'savanna') return <SavannaProp key={destination.id} item={destination}/>;
       if (destination.type === 'beach') return <BeachProp key={destination.id} item={destination}/>;
       if (destination.type === 'character') {

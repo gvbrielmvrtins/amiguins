@@ -1,5 +1,5 @@
 export type GardenProp = {id:string;kind:string;x:number;y:number;scale?:number};
-export const secretGarden={x:2740,y:200,w:520,h:480};
+export const secretGarden={x:2100,y:-500,w:416,h:384};
 export const northGarden={x:1550,y:-30,w:440,h:230};
 export const gardenStudyProps:GardenProp[]=[
   {id:'north-oak',kind:'oak',x:1420,y:-50},

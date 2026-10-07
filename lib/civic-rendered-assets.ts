@@ -56,7 +56,7 @@ export const civicRenderedAssets:Record<string,CivicArt>={
   commerceWeights:{file:'academia-pesos-v01.png',width:1448,height:1086,anchorX:760,anchorY:835,scale:.047,risingSlope:-.40,fallingSlope:.58},
   commerceRig:{file:'academia-barra-v01.png',width:1374,height:1145,anchorX:720,anchorY:880,scale:.06,risingSlope:-.58,fallingSlope:.46},
   commerceGym:{file:'academia-render-v02.png',width:1536,height:1024,anchorX:800,anchorY:790,scale:.15,risingSlope:-.61,fallingSlope:.31},
-  tavern:{file:'taverna-bar-contemporaneo-v03.png',width:1536,height:1024,anchorX:780,anchorY:800,scale:.17,risingSlope:-.67,fallingSlope:.26},
+  tavern:{file:'taverna-medieval-games-v04.png',width:1415,height:1111,anchorX:720,anchorY:1060,scale:.155,risingSlope:-.58,fallingSlope:.58},
   tavernPicnic:{file:'parque-piquenique-v01.png',width:1448,height:1086,anchorX:710,anchorY:940,scale:.044,risingSlope:-.577,fallingSlope:.577},
   tavernRoundTable:{file:'taverna-mesa-redonda-v01.png',width:1415,height:1111,anchorX:710,anchorY:900,scale:.043},
   tavernBench:{file:'parque-banco-v01.png',width:1415,height:1111,anchorX:720,anchorY:940,scale:.042},
