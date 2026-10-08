@@ -329,8 +329,8 @@
     "hidden": false
   },
   "plaza-hispanica/plaza/10/-70": {
-    "x": 13.91,
-    "y": -2.03,
+    "x": 247.3,
+    "y": 113.3,
     "scale": 1,
     "rotation": 0,
     "layer": 0,
@@ -1035,8 +1035,8 @@
     "hidden": false
   },
   "car-pickup::copy:9efd0e5c-cbd4-420e-9173-6ca0cd848750": {
-    "x": 881.17,
-    "y": -119.28,
+    "x": 883.29,
+    "y": -114.55,
     "scale": 1,
     "rotation": 0,
     "layer": 0,
@@ -1599,12 +1599,12 @@
     "hidden": false
   },
   "linkedin/linkedinBuilding/0/-55": {
-    "x": 222.28,
-    "y": -105.32,
+    "x": 254.35,
+    "y": -130.5,
     "scale": 1,
     "rotation": 0,
     "layer": 0,
-    "hidden": false
+    "hidden": true
   },
   "ground-asphalt-square": {
     "x": -108.04,
@@ -1612,8 +1612,8 @@
     "scale": 0.85
   },
   "ground-sand-square": {
-    "x": -121.09,
-    "y": 115.21,
+    "x": -383.43,
+    "y": 223.93,
     "scale": 1,
     "rotation": 0,
     "layer": 0,
@@ -1648,8 +1648,8 @@
     "y": -58.18
   },
   "civic-tower-flowers": {
-    "x": 165.37,
-    "y": 108.64
+    "x": 194.36,
+    "y": 58.25
   },
   "ground-asphalt-square::copy:17684264-b9d9-4d68-9108-feed31eb295f": {
     "x": -183.37,
@@ -1987,8 +1987,9 @@
     "scale": 1.1
   },
   "north-forest-6-5": {
-    "x": -20.29,
-    "y": -0.92
+    "x": -20.21,
+    "y": -0.92,
+    "layer": -1
   },
   "north-forest-6-5::copy:3fcdb736-cd62-4c15-802c-bd4c4f67c7dc": {
     "x": 17.41,
@@ -1999,8 +2000,8 @@
     "scale": 0.7
   },
   "secret-garden-outer-29": {
-    "x": -19.19,
-    "y": -3.74
+    "x": -20.24,
+    "y": -3.52
   },
   "secret-garden-ring-37": {
     "x": -16.36,
@@ -2162,8 +2163,9 @@
     "y": 72.79
   },
   "livrinhoteca": {
-    "x": -209.98,
-    "y": -147.84
+    "x": -217.22,
+    "y": -144.27,
+    "scale": 1.1
   },
   "mercado-vagas": {
     "x": 170.4,
@@ -2214,8 +2216,8 @@
     "y": -163.11
   },
   "pracinha/quiosque/120/-65": {
-    "x": -108.77,
-    "y": -11.92
+    "x": -359.23,
+    "y": 456.4
   },
   "cineminha": {
     "x": -13.93,
@@ -2226,8 +2228,8 @@
     "y": 10.31
   },
   "cinema-tree": {
-    "x": 165.9,
-    "y": -40.95
+    "x": 191.8,
+    "y": -112.32
   },
   "cinema-flowers": {
     "x": 329.34,
@@ -2263,20 +2265,24 @@
     "y": 10.18
   },
   "north-forest-5-4": {
-    "x": 15.31,
-    "y": 30.42
+    "x": 14.16,
+    "y": 31.16,
+    "layer": -1
   },
   "north-forest-5-3": {
-    "x": -20.96,
-    "y": -7.1
+    "x": -20.91,
+    "y": -7.1,
+    "layer": -1
   },
   "north-forest-6-3": {
-    "x": -1.24,
-    "y": -9.09
+    "x": -1.09,
+    "y": -9.24,
+    "layer": -1
   },
   "north-forest-7-2": {
     "x": 1.99,
-    "y": -17.55
+    "y": -17.55,
+    "layer": -2
   },
   "north-forest-8-3": {
     "x": 12.16,
@@ -2284,16 +2290,18 @@
   },
   "north-forest-7-4": {
     "x": 7.19,
-    "y": 13.78
+    "y": 13.78,
+    "layer": -2
   },
   "north-forest-7-3": {
-    "x": -19.22,
+    "x": -19.17,
     "y": -20.72
   },
   "forest-cottage": {
     "x": -75.98,
-    "y": -88.54,
-    "scale": 1.05
+    "y": -88.7,
+    "scale": 1.05,
+    "layer": -1
   },
   "forest-jacu-1": {
     "x": 1156.41,
@@ -2308,8 +2316,9 @@
     "y": -182.58
   },
   "forest-jacu-3": {
-    "x": 1168.91,
-    "y": -811.63
+    "x": 1214.15,
+    "y": -820.4,
+    "scale": 0.75
   },
   "forest-jacu-4": {
     "x": 1134.64,
@@ -2319,5 +2328,128 @@
   "forest-jacu-5": {
     "x": 1175.98,
     "y": -920.95
+  },
+  "diego-dog": {
+    "x": -43.52,
+    "y": -34.63,
+    "scale": 0.75
+  },
+  "secret-garden-outer-30": {
+    "x": 0,
+    "y": -0.1,
+    "layer": -2
+  },
+  "diego-dog-2": {
+    "x": 1092.7,
+    "y": -753.96,
+    "scale": 0.7
+  },
+  "diego-ungari": {
+    "x": -49.63,
+    "y": -3.82,
+    "layer": 0,
+    "scale": 1.15
+  },
+  "north-forest-6-2": {
+    "x": 0,
+    "y": 0,
+    "layer": 0
+  },
+  "north-forest-5-2": {
+    "x": 0.32,
+    "y": 0,
+    "layer": 0
+  },
+  "estudio-criativins/creativeStudio/-20/-70": {
+    "x": 218.05,
+    "y": -76.74
+  },
+  "cottage-stone-path": {
+    "x": 1122.08,
+    "y": -744.17,
+    "layer": -2
+  },
+  "linkedin/linkedinTerminal/143/30": {
+    "x": 97.04,
+    "y": -186.03
+  },
+  "linkedin/linkedinCheckin/120/148": {
+    "x": 275.51,
+    "y": -152.72
+  },
+  "east-in-lamp": {
+    "x": 535.34,
+    "y": -121.05
+  },
+  "linkedin-building-reimport-v02": {
+    "x": 944.91,
+    "y": 98.3,
+    "scale": 1.15
+  },
+  "civic-city-flowers": {
+    "x": -21.8,
+    "y": -72.2
+  },
+  "civic-plaza-flowers": {
+    "x": 146.34,
+    "y": 89.95
+  },
+  "plaza-hispanica/fonte/35/105": {
+    "x": 319.06,
+    "y": 111.68
+  },
+  "civic-plaza-lamp": {
+    "x": 185.92,
+    "y": 18.36
+  },
+  "ground-grass-square": {
+    "x": 131.22,
+    "y": 294.85
+  },
+  "civic-plaza-tree": {
+    "x": 248.02,
+    "y": 219.53
+  },
+  "plaza-hispanica/letreiro/-115/40": {
+    "x": -34.84,
+    "y": 201.06
+  },
+  "civic-plaza-table": {
+    "x": 133.08,
+    "y": 176.67
+  },
+  "civic-square-lamp": {
+    "x": -312.94,
+    "y": 308.06
+  },
+  "civic-square-table": {
+    "x": -279.77,
+    "y": 421.47
+  },
+  "civic-square-tree": {
+    "x": -304.26,
+    "y": 484.76
+  },
+  "pracinha/palco/125/125": {
+    "x": 585.82,
+    "y": 283.22
+  },
+  "central-circular-square": {
+    "x": 453.02,
+    "y": -38.32,
+    "scale": 1.45,
+    "rotation": 0
+  },
+  "pracinha/pergolado/-100/250": {
+    "x": -228.03,
+    "y": -100.52
+  },
+  "pracinha/jogos/97/235": {
+    "x": -333.01,
+    "y": -91.62
+  },
+  "ground-sidewalk-square": {
+    "x": -198.92,
+    "y": 245.42
   }
 }
