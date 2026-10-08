@@ -107,10 +107,14 @@ export default function ExplorationGame() {
   const didDrag = useRef(false);
   const touchGesture = useRef<{distance:number;zoom:number;mapX:number;mapY:number} | null>(null);
   const zoomAnchor = useRef<{mapX:number;mapY:number;x:number;y:number} | null>(null);
+  function renderedMapScale(v:HTMLDivElement){
+    const world=v.querySelector<HTMLElement>('.map-world');
+    return (world?.getBoundingClientRect().width??v.clientWidth)/2320;
+  }
   useLayoutEffect(()=>{
     const v=viewport.current,anchor=zoomAnchor.current;
     if(!v||!anchor)return;
-    const scale=v.scrollWidth/2700;
+    const scale=renderedMapScale(v);
     v.scrollLeft=anchor.mapX*scale-anchor.x;
     v.scrollTop=anchor.mapY*scale-anchor.y;
     zoomAnchor.current=null;
@@ -118,7 +122,7 @@ export default function ExplorationGame() {
   function beginTouch(e:TouchEvent<HTMLDivElement>){
     const v=viewport.current;if(!v)return;
     if(e.touches.length>=2){
-      const [a,b]=Array.from(e.touches),rect=v.getBoundingClientRect(),scale=v.scrollWidth/2700;
+      const [a,b]=Array.from(e.touches),rect=v.getBoundingClientRect(),scale=renderedMapScale(v);
       const x=(a.clientX+b.clientX)/2-rect.left,y=(a.clientY+b.clientY)/2-rect.top;
       touchGesture.current={distance:Math.max(1,Math.hypot(a.clientX-b.clientX,a.clientY-b.clientY)),zoom,mapX:(v.scrollLeft+x)/scale,mapY:(v.scrollTop+y)/scale};
       drag.current=null;didDrag.current=true;
@@ -135,7 +139,7 @@ export default function ExplorationGame() {
       const x=(a.clientX+b.clientX)/2-rect.left,y=(a.clientY+b.clientY)/2-rect.top;
       const next=Math.max(.25,Math.min(5,g.zoom*Math.hypot(a.clientX-b.clientX,a.clientY-b.clientY)/g.distance));
       zoomAnchor.current={mapX:g.mapX,mapY:g.mapY,x,y};
-      const scale=v.scrollWidth/2700;
+      const scale=renderedMapScale(v);
       v.scrollLeft=g.mapX*scale-x;v.scrollTop=g.mapY*scale-y;
       setZoom(next);didDrag.current=true;
     }else if(e.touches.length===1&&drag.current){
@@ -168,7 +172,7 @@ export default function ExplorationGame() {
       if(!delta)return;
       const next=Math.max(.25,Math.min(5,wheelZoom.current*Math.exp(-Math.max(-200,Math.min(200,delta))*.0015)));
       if(next===wheelZoom.current)return;
-      const rect=v!.getBoundingClientRect(),x=e.clientX-rect.left,y=e.clientY-rect.top,scale=v!.scrollWidth/2700;
+      const rect=v!.getBoundingClientRect(),x=e.clientX-rect.left,y=e.clientY-rect.top,scale=renderedMapScale(v!);
       zoomAnchor.current={mapX:(v!.scrollLeft+x)/scale,mapY:(v!.scrollTop+y)/scale,x,y};
       wheelZoom.current=next;setZoom(next);
     }
@@ -195,9 +199,9 @@ export default function ExplorationGame() {
   function changeZoom(next:number){
     const v=viewport.current;
     if(!v){setZoom(next);return;}
-    const scale=v.scrollWidth/2700,cx=(v.scrollLeft+v.clientWidth/2)/scale,cy=(v.scrollTop+v.clientHeight/2)/scale;
+    const scale=renderedMapScale(v),cx=(v.scrollLeft+v.clientWidth/2)/scale,cy=(v.scrollTop+v.clientHeight/2)/scale;
     setZoom(next);
-    requestAnimationFrame(()=>{const scale=v.scrollWidth/2700;v.scrollLeft=cx*scale-v.clientWidth/2;v.scrollTop=cy*scale-v.clientHeight/2;constrainCamera();});
+    requestAnimationFrame(()=>{const scale=renderedMapScale(v);v.scrollLeft=cx*scale-v.clientWidth/2;v.scrollTop=cy*scale-v.clientHeight/2;constrainCamera();});
   }
   function discover(target: Target) {
     if (target.category !== 'people' || found.includes(target.id)) return;

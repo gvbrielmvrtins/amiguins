@@ -42,18 +42,23 @@ import PilotLandscapeProp from '@/components/pilot-landscape-prop';
 
 const mainland = 'M-5000-5000H8000V8000H-5000Z';
 export default function ModularMap({ selected, onSelect }: { selected: string | null; onSelect: (id: string, keyboard?: boolean) => void }) {
-  return <svg className="modular-map" viewBox="0 -70 2700 1800" aria-label="mapa da amiguINlândia" aria-describedby="modular-map-description">
+  return <svg className="modular-map" viewBox="380 -70 2320 1800" aria-label="mapa da amiguINlândia" aria-describedby="modular-map-description">
 
     <desc id="modular-map-description">Vinte destinos ilustrados em terreno retrô-pop, com praças, parques e áreas livres reservadas para personagens futuros. Além do mar, um continente aberto representa o resto do mundo e acolhe os amiguINs que moram em qualquer país, com um aeroporto para receber os personagens internacionais e uma praia na margem da vila.</desc>
     <defs>
+      <pattern id="map-base-texture" width="137" height="131" patternUnits="userSpaceOnUse">
+        <rect width="137" height="131" fill="#E9E5D8"/>
+        {Array.from({length:55},(_,i)=><ellipse key={i} cx={(i*47+13)%137} cy={(i*61+29)%131} rx={i%4===0?3:1.5} ry={i%4===0?1.5:.85} fill={i%3===0?'#FFFEF9':'#AAA494'} opacity={i%3===0?.55:.38}/>)}
+        <path d="M17 41l2-.4m66 58 2 .3m-37-84 1.6-.2m67 60 1.8 .4" fill="none" stroke="#AAA494" strokeWidth="1.2" opacity=".35"/>
+      </pattern>
       <pattern id="map-checks" width="64" height="64" patternUnits="userSpaceOnUse" ><rect width="64" height="64" fill={p.cream}/><path d="M0 0H32V32H0ZM32 32H64V64H32Z" fill={p.coral}/></pattern>
       <pattern id="map-stripes" width="30" height="30" patternUnits="userSpaceOnUse" patternTransform="rotate(25)"><rect width="30" height="30" fill={p.yellow}/><rect width="10" height="30" fill={p.pink}/></pattern>
       <clipPath id="map-land"><path d={mainland}/></clipPath>
     </defs>
     <g data-layer="terrain">
-    <rect x="0" y="-100" width="3000" height="2100" fill="#E9E5D8"/>
+    <rect x="0" y="-100" width="3000" height="2100" fill="url(#map-base-texture)"/>
     <g transform={groundTransform} stroke={p.ink} strokeWidth="5" strokeLinejoin="round">
-      <path d={mainland} fill="#E9E5D8"/>
+      <path d={mainland} fill="url(#map-base-texture)"/>
       <g transform="matrix(.96225044865 -.96225044865 1.66666666667 1.66666666667 -1405.8971512087 672.5638178753)"><NorthDesert/></g>
       <g transform="matrix(.96225044865 -.96225044865 1.66666666667 1.66666666667 -1405.8971512087 672.5638178753)"><MetropolisTransitionGround/></g>
       <g clipPath="url(#map-land)">
@@ -145,7 +150,6 @@ export default function ModularMap({ selected, onSelect }: { selected: string | 
     </g>
   </svg>;
 }
-
 
 
 

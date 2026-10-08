@@ -296,7 +296,7 @@ h1,h2,h3,h4,h5,h6,button,label,.eyebrow,.progress-label,.category-count,.map-top
 .map-comparison>div { gap:0; padding:3px; border:1px solid var(--ink); border-radius:8px; background:var(--paper); }
 .map-comparison button { padding:8px 12px; border-radius:5px; font-size:10px; }
 .map-comparison button[aria-pressed=true] { background:var(--ink); color:var(--paper); }
-.modular-world { aspect-ratio:2700/1800; min-height:0; background:var(--blue); }
+.modular-world { aspect-ratio:2320/1800; min-height:0; background:var(--blue); }
 .preview-frame { background:var(--blue); }
 .modular-map { display:block; width:100%; height:auto; font-family:var(--type-heading),sans-serif; }
 .modular-destination { cursor:inherit; outline:none; }

@@ -161,8 +161,8 @@
     "hidden": false
   },
   "filler-west-table": {
-    "x": 149.63,
-    "y": -28.89,
+    "x": 154.21,
+    "y": -32.7,
     "scale": 0.75,
     "rotation": 0,
     "layer": 0,
@@ -329,9 +329,9 @@
     "hidden": false
   },
   "plaza-hispanica/plaza/10/-70": {
-    "x": 247.3,
-    "y": 113.3,
-    "scale": 1,
+    "x": -691.65,
+    "y": -204.54,
+    "scale": 1.6,
     "rotation": 0,
     "layer": 0,
     "hidden": false
@@ -541,17 +541,17 @@
     "hidden": false
   },
   "valley-forest-grass-3/savannaGrass/0/0": {
-    "x": -815.78,
-    "y": -1075.37,
+    "x": -623.88,
+    "y": -1158.64,
     "scale": 2.7,
     "rotation": 0,
-    "layer": 0,
+    "layer": -3,
     "hidden": false
   },
   "paises-africanos/internationalAirport/100/140": {
-    "x": 184.82,
-    "y": 1159.92,
-    "scale": 1,
+    "x": 188.47,
+    "y": 1165.17,
+    "scale": 1.2,
     "rotation": 0,
     "layer": 0,
     "hidden": false
@@ -1035,8 +1035,8 @@
     "hidden": false
   },
   "car-pickup::copy:9efd0e5c-cbd4-420e-9173-6ca0cd848750": {
-    "x": 883.29,
-    "y": -114.55,
+    "x": -216.98,
+    "y": -139.73,
     "scale": 1,
     "rotation": 0,
     "layer": 0,
@@ -1317,9 +1317,9 @@
     "hidden": false
   },
   "coastal-forest-10-3": {
-    "x": 42.91,
-    "y": 45.09,
-    "scale": 1,
+    "x": 37.91,
+    "y": 42.89,
+    "scale": 1.2,
     "rotation": 0,
     "layer": 0,
     "hidden": false
@@ -1615,8 +1615,8 @@
     "hidden": false
   },
   "ground-sand-square": {
-    "x": -383.43,
-    "y": 223.93,
+    "x": -571.93,
+    "y": 166.85,
     "scale": 1,
     "rotation": 0,
     "layer": 0,
@@ -2464,8 +2464,8 @@
     "hidden": false
   },
   "east-garden-tree-a": {
-    "x": -281.6,
-    "y": -110.2,
+    "x": -321.98,
+    "y": -116.16,
     "scale": 1,
     "rotation": 0,
     "layer": 0,
@@ -2787,8 +2787,8 @@
     "hidden": false
   },
   "east-cafe-table": {
-    "x": 120.93,
-    "y": -182.58,
+    "x": 790.65,
+    "y": -112.84,
     "scale": 1,
     "rotation": 0,
     "layer": 0,
@@ -2867,11 +2867,11 @@
     "hidden": false
   },
   "estudio-criativins/creativeStudio/-20/-70": {
-    "x": 268.32,
-    "y": 156.98,
+    "x": 746.24,
+    "y": 175.85,
     "scale": 1,
     "rotation": 0,
-    "layer": 0,
+    "layer": 1,
     "hidden": false
   },
   "cottage-stone-path": {
@@ -2923,88 +2923,88 @@
     "hidden": false
   },
   "civic-plaza-flowers": {
-    "x": 146.34,
-    "y": 89.95,
-    "scale": 1,
+    "x": 154.29,
+    "y": 54.71,
+    "scale": 1.15,
     "rotation": 0,
-    "layer": 0,
+    "layer": -1,
     "hidden": false
   },
   "plaza-hispanica/fonte/35/105": {
-    "x": 319.06,
-    "y": 111.68,
+    "x": -749.98,
+    "y": -168.9,
     "scale": 1,
     "rotation": 0,
     "layer": 0,
     "hidden": false
   },
   "civic-plaza-lamp": {
-    "x": 185.92,
-    "y": 18.36,
+    "x": 137.78,
+    "y": -119.88,
     "scale": 1,
     "rotation": 0,
     "layer": 0,
     "hidden": false
   },
   "ground-grass-square": {
-    "x": 341.79,
-    "y": 237.69,
+    "x": -770.16,
+    "y": 227.46,
     "scale": 1,
     "rotation": 0,
     "layer": 0,
     "hidden": false
   },
   "civic-plaza-tree": {
-    "x": 248.02,
-    "y": 219.53,
-    "scale": 1,
+    "x": 191.31,
+    "y": 173.53,
+    "scale": 1.55,
     "rotation": 0,
     "layer": 0,
     "hidden": false
   },
   "plaza-hispanica/letreiro/-115/40": {
-    "x": 2.25,
-    "y": 147.95,
+    "x": -279.31,
+    "y": 189.23,
     "scale": 1,
     "rotation": 0,
     "layer": 0,
     "hidden": false
   },
   "civic-plaza-table": {
-    "x": 145.82,
-    "y": 188.07,
+    "x": 360.14,
+    "y": 141.61,
     "scale": 1,
     "rotation": 0,
     "layer": 0,
     "hidden": false
   },
   "civic-square-lamp": {
-    "x": -312.94,
-    "y": 308.06,
+    "x": 276.18,
+    "y": 251.44,
     "scale": 1,
     "rotation": 0,
     "layer": 0,
     "hidden": false
   },
   "civic-square-table": {
-    "x": -279.77,
-    "y": 421.47,
+    "x": -268.24,
+    "y": 406.46,
     "scale": 1,
     "rotation": 0,
     "layer": 0,
     "hidden": false
   },
   "civic-square-tree": {
-    "x": -304.26,
-    "y": 484.76,
+    "x": 174,
+    "y": -220.83,
     "scale": 1,
     "rotation": 0,
     "layer": 0,
     "hidden": false
   },
   "pracinha/palco/125/125": {
-    "x": 585.82,
-    "y": 283.22,
+    "x": -245.06,
+    "y": 292.99,
     "scale": 1,
     "rotation": 0,
     "layer": 0,
@@ -3019,60 +3019,60 @@
     "hidden": false
   },
   "pracinha/pergolado/-100/250": {
-    "x": -665,
-    "y": -50.31,
+    "x": -561.03,
+    "y": -139.55,
     "scale": 1,
     "rotation": 0,
-    "layer": 0,
+    "layer": 1,
     "hidden": false
   },
   "pracinha/jogos/97/235": {
-    "x": -624.74,
-    "y": -37.49,
-    "scale": 1,
+    "x": 334.3,
+    "y": 63.64,
+    "scale": 0.85,
     "rotation": 0,
     "layer": 0,
     "hidden": false
   },
   "ground-sidewalk-square": {
-    "x": -198.92,
-    "y": 245.42,
+    "x": -489.85,
+    "y": 51.3,
     "scale": 1,
     "rotation": 0,
     "layer": 0,
     "hidden": false
   },
   "colabin": {
-    "x": -362.79,
-    "y": -322.54,
-    "scale": 1.2,
+    "x": -608.49,
+    "y": -471.55,
+    "scale": 1.15,
     "rotation": 0,
     "layer": 1,
     "hidden": false
   },
   "civic-plaza-bench": {
-    "x": -116.62,
-    "y": -26.18,
+    "x": 100.22,
+    "y": -36.83,
     "scale": 1,
     "rotation": 0,
     "layer": 0,
     "hidden": false
   },
   "ground-grass-square::copy:c72eb878-2540-40f2-bf7b-cf4d8bcb23d3": {
-    "x": -303.8,
-    "y": 268.57,
-    "scale": 1.55,
+    "x": -655.43,
+    "y": 278.41,
+    "scale": 0.95,
     "rotation": 0,
     "layer": 0,
     "hidden": false,
     "sourceId": "ground-grass-square"
   },
   "market-tree": {
-    "x": -89.41,
-    "y": 460.97,
-    "scale": 1,
+    "x": -399.38,
+    "y": -244.37,
+    "scale": 1.5,
     "rotation": 0,
-    "layer": 0,
+    "layer": -1,
     "hidden": false
   },
   "market-flowers": {
@@ -3092,16 +3092,16 @@
     "hidden": false
   },
   "academia-marombins/commerceGym/-55/-80": {
-    "x": -16.06,
-    "y": 3.1,
-    "scale": 1,
+    "x": 557.61,
+    "y": -33.87,
+    "scale": 0.95,
     "rotation": 0,
     "layer": 0,
     "hidden": false
   },
   "departamento-xerifins-planter": {
-    "x": 180.08,
-    "y": -33.64,
+    "x": 1320.72,
+    "y": 195.06,
     "scale": 1,
     "rotation": 0,
     "layer": 0,
@@ -3132,9 +3132,9 @@
     "hidden": false
   },
   "binstro/commerceBistro/-30/-85": {
-    "x": -26.87,
-    "y": 51.04,
-    "scale": 1,
+    "x": 1321.15,
+    "y": 181.04,
+    "scale": 1.1,
     "rotation": 0,
     "layer": 0,
     "hidden": false
@@ -3555,20 +3555,21 @@
     "y": -135.75
   },
   "estudio-criativins/creativeBench/-120/25": {
-    "x": -305.52,
-    "y": -34.08
+    "x": 716.61,
+    "y": 196.23
   },
   "estudio-criativins/creativeEasel/-115/105": {
-    "x": -218.62,
-    "y": -45.68
+    "x": 789.28,
+    "y": 146.97
   },
   "estudio-criativins/creativeEasel/0/135": {
-    "x": -239.56,
-    "y": -69.38
+    "x": 901.56,
+    "y": 169.58,
+    "layer": 2
   },
   "estudio-criativins/creativeSculpture/100/85": {
-    "x": -369.84,
-    "y": -136.2
+    "x": 760.27,
+    "y": 181.85
   },
   "estudio-criativins-planter": {
     "x": -124.93,
@@ -3600,5 +3601,233 @@
     "x": 17.44,
     "y": -14.34,
     "scale": 1.3
+  },
+  "inglish-pub/inglishPub/-20/-70": {
+    "x": 774.85,
+    "y": -72.82
+  },
+  "car-suv": {
+    "x": 1182.22,
+    "y": 44.37
+  },
+  "binstro-terrace-b": {
+    "x": 414.69,
+    "y": -52.36,
+    "scale": 1.15
+  },
+  "academia-marombins/commerceRig/-115/110": {
+    "x": 794.89,
+    "y": -41.93
+  },
+  "academia-marombins/commerceWeights/35/110": {
+    "x": 671.92,
+    "y": -63.02
+  },
+  "nathan-machado": {
+    "x": 721.2,
+    "y": -111.39
+  },
+  "binstro-terrace-a": {
+    "x": 751.81,
+    "y": 292.42
+  },
+  "car-sedan": {
+    "x": 506,
+    "y": 125.8
+  },
+  "departamento-xerifins-tree": {
+    "x": 470.65,
+    "y": -66.01,
+    "layer": 1,
+    "scale": 1.25
+  },
+  "departamento-xerifins-lamp": {
+    "x": 549.98,
+    "y": 24.68
+  },
+  "car-hatch": {
+    "x": -149.15,
+    "y": -103.81
+  },
+  "binstro-tree": {
+    "x": 436.02,
+    "y": 65.52
+  },
+  "binstro-flowers": {
+    "x": -13.84,
+    "y": -162.22
+  },
+  "binstro-lamp": {
+    "x": -148.37,
+    "y": -390.23,
+    "layer": 1
+  },
+  "inglish-pub-tree": {
+    "x": 840.05,
+    "y": -190.89,
+    "layer": 1,
+    "scale": 1.15
+  },
+  "academia-marombins-tree": {
+    "x": -367.59,
+    "y": -376.58,
+    "layer": 1
+  },
+  "inglish-pub/pubSpeaker/-130/30": {
+    "x": 1102.07,
+    "y": -146.24,
+    "scale": 0.85
+  },
+  "inglish-pub/tavernRoundTable/-105/115": {
+    "x": 1464.89,
+    "y": 55.65
+  },
+  "inglish-pub/tavernRoundTable/20/135": {
+    "x": 2272.44,
+    "y": -40.66,
+    "layer": -2
+  },
+  "inglish-pub/pubMicrophone/110/45": {
+    "x": 959.48,
+    "y": -218.34
+  },
+  "inglish-pub/pubStage/110/45": {
+    "x": 819.48,
+    "y": -11.23,
+    "scale": 2.65
+  },
+  "inglish-pub-planter": {
+    "x": 456.62,
+    "y": -231.98
+  },
+  "inglish-pub-lamp": {
+    "x": 657.64,
+    "y": -473.49,
+    "layer": 1
+  },
+  "oficina-vendinhas/fairClothes/-105/-115": {
+    "x": 653.61,
+    "y": -321.74,
+    "layer": 1
+  },
+  "oficina-vendinhas/fairBooks/80/-115": {
+    "x": 499.88,
+    "y": -406.54,
+    "layer": 1
+  },
+  "oficina-vendinhas/fairCeramics/-105/30": {
+    "x": 670.11,
+    "y": -330.24,
+    "layer": 1
+  },
+  "oficina-vendinhas/fairElectronics/95/35": {
+    "x": 623.12,
+    "y": -359.9,
+    "layer": 1
+  },
+  "oficina-vendinhas-lamp": {
+    "x": 1376.93,
+    "y": -240.7
+  },
+  "oficina-vendinhas-tree": {
+    "x": 444.95,
+    "y": 58.94
+  },
+  "oficina-vendinhas/fairProduce/-115/145": {
+    "x": 666.6,
+    "y": -403.03
+  },
+  "oficina-vendinhas-flowers": {
+    "x": 459.1,
+    "y": -76.67
+  },
+  "academia-marombins-lamp": {
+    "x": 257.75,
+    "y": -380.88
+  },
+  "taverna-joguins/duck/2": {
+    "x": 0,
+    "y": 0
+  },
+  "ground-grass-organic::copy:7554a651-6393-43f4-8e5b-5c5dec52e5c8": {
+    "x": 536.99,
+    "y": 475.82,
+    "scale": 1.05,
+    "rotation": -190,
+    "layer": 0,
+    "hidden": false,
+    "sourceId": "ground-grass-organic"
+  },
+  "ground-grass-organic::copy:fb55b904-b90d-4634-8566-762c11f079d0": {
+    "x": 600.55,
+    "y": 534.57,
+    "scale": 1.05,
+    "rotation": -190,
+    "layer": 0,
+    "hidden": false,
+    "sourceId": "ground-grass-organic"
+  },
+  "ground-grass-organic::copy:d9dd8fb4-47e2-4572-a362-dd4fa6276634": {
+    "x": 873.88,
+    "y": 730.93,
+    "scale": 1.45,
+    "rotation": -190,
+    "layer": 0,
+    "hidden": false,
+    "sourceId": "ground-grass-organic"
+  },
+  "coastal-forest-10-7": {
+    "x": -6.47,
+    "y": 2.8
+  },
+  "coastal-forest-9-8": {
+    "x": -8.87,
+    "y": 15.37
+  },
+  "coastal-forest-9-7": {
+    "x": -15.43,
+    "y": 7.95
+  },
+  "departamento-xerifins-lamp::copy:949ca515-7065-4843-bc6f-27183a127292": {
+    "x": 729.7,
+    "y": 125.39,
+    "sourceId": "departamento-xerifins-lamp",
+    "hidden": false,
+    "layer": 1
+  },
+  "academia-marombins-flowers": {
+    "x": 248.56,
+    "y": 136.65
+  },
+  "car-pickup": {
+    "x": 467.04,
+    "y": -367.65
+  },
+  "market-tree::copy:a4696e55-b264-4076-aaca-d0cac7233a97": {
+    "x": -393.37,
+    "y": -59.47,
+    "scale": 1.35,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false,
+    "sourceId": "market-tree"
+  },
+  "west-townhouse::copy:3f89af43-b393-480d-9ac2-ff6574307112": {
+    "x": -280.35,
+    "y": 219.37,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false,
+    "sourceId": "west-townhouse"
+  },
+  "west-small-shop::copy:a87a8ea4-2124-4f8b-8015-758867ec5671": {
+    "x": -299.52,
+    "y": 241.88,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false,
+    "sourceId": "west-small-shop"
   }
 }
