@@ -1,0 +1,5 @@
+# Caminho de pedrinhas
+
+Asset: `public/images/modular/caminho-pedrinhas-v01.png`, gerado com imagegen integrado. Peça independente `cottage-stone-path`, disponível em área aberta à direita do ginásio para posicionamento pelo usuário. Mantidas as posições existentes da casa e demais peças.
+
+Prompt: Single isolated narrow irregular stepping stone garden path for existing isometric game, transparent background. About 12–16 uneven flat natural warm gray and beige stones, irregular rounded polygons varied sizes, spaced with transparent gaps, arranged along a gently winding S curve. Path approximately 5 stones long and 2–3 stones wide, not rectangular pavement, no straight border. Elevated isometric ground view ±30° axes, low flat stones tiny subtle beveled edges. Match supplied original cinema and tree cartoon game references: dark worked outlines, controlled warm cel shading, natural materials, polished readable small scale. ONLY stone path, no grass dirt ground plants people house text. Entire path visible on transparent background.

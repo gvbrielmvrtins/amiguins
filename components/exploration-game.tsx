@@ -17,9 +17,10 @@ const placeListPriority: Record<string, number> = { 'pracinha': 0, 'prefeintura'
 const categories=[{id:'people',label:'AMIGUINS'},{id:'places',label:'Espacins'}] as const;
 const targets:Target[]=[...mapCharacters, ...modularDestinations.map<Target>(d=>({id:d.id,name:d.name,article:'o',category:'places',x:d.x,y:d.y,width:0,height:0,clue:'Procure '+d.name+' no mapa.'}))];
 
-const destinationPortraits:Record<string,string>={"vagao-feminino":"metro-vagao-feminino-v03.png","livrinhoteca":"livrinhoteca-isometrico-v01.png","cineminha":"cineminha-isometrico-v01.png","mercado-vagas":"mercado-vagas-isometrico-v01.png","prefeintura":"prefeitura-render-v01.png","taverna-joguins":"taverna-medieval-games-v04.png","pracinha":"pracinha-fonte-v01.png","espacin-coloridin":"coloridin-arco-iris-frontal-v02.png","linkedin":"linkedin-predio-v01.png","jardim-secreto":"rosa-arvore-isometrica-v01.png","estudio-criativins":"estudio-render-v02.png","silicin-valley":"silicin-campus-v01.png","departamento-xerifins":"xerifins-departamento-v01.png","inglish-pub":"inglish-pub-render-v02.png","oficina-vendinhas":"feira-roupas-v01.png","torre-mistica":"torre-feiticaria-v02.png","plaza-hispanica":"plaza-arcada-v01.png","academia-marombins":"academia-render-v02.png","binstro":"binstro-render-v02.png","paises-africanos":"aeroporto-internacional-v02.png"};
+const destinationPortraits:Record<string,string>={"vagao-feminino":"metro-vagao-feminino-v03.png","livrinhoteca":"livrinhoteca-isometrico-v01.png","cineminha":"cineminha-isometrico-v01.png","mercado-vagas":"mercado-vagas-isometrico-v01.png","prefeintura":"prefeitura-render-v01.png","taverna-joguins":"taverna-medieval-games-v04.png","pracinha":"praca-central-circular-v01.png","espacin-coloridin":"coloridin-arco-iris-frontal-v02.png","linkedin":"linkedin-predio-v02.png","jardim-secreto":"rosa-arvore-isometrica-v01.png","estudio-criativins":"estudio-render-v02.png","silicin-valley":"silicin-campus-v01.png","departamento-xerifins":"xerifins-departamento-v01.png","inglish-pub":"inglish-pub-render-v02.png","oficina-vendinhas":"feira-roupas-v01.png","torre-mistica":"torre-feiticaria-v02.png","plaza-hispanica":"plaza-arcada-v01.png","academia-marombins":"academia-render-v02.png","binstro":"binstro-render-v02.png","paises-africanos":"aeroporto-internacional-v02.png"};
 // Crop the existing illustration to the head without exposing the map pose or props.
 const facePortraits:Record<string,{width:number;height:number;crop:[number,number,number]}>= {
+  'diego-ungari':{width:1388,height:1133,crop:[490,15,255]},
   'elton-pavesi':{width:1024,height:1536,crop:[235,10,490]},
   'davi-cabeca':{width:1254,height:1254,crop:[110,10,1140]},
   'loisi-vieira':{width:1310,height:1200,crop:[275,20,410]},
@@ -165,6 +166,15 @@ export default function ExplorationGame() {
   },[viewportNode]);
   function locateDestination(id:string){
     setSelected(id);const v=viewport.current,d=targets.find(item=>item.id===id);if(!v||!d)return;
+    if(id==='pracinha'){
+      const square=v.querySelector<SVGImageElement>('image[href="/images/modular/praca-central-circular-v01.png"]');
+      if(square){
+        const rect=square.getBoundingClientRect(),frame=v.getBoundingClientRect();
+        const next=boundedScroll(v.scrollLeft+rect.left-frame.left+rect.width/2-v.clientWidth/2,v.scrollTop+rect.top-frame.top+rect.height/2-v.clientHeight/2,v.clientWidth,v.clientHeight,v.scrollWidth,v.scrollHeight);
+        v.scrollTo({left:next.left,top:next.top,behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});
+        return;
+      }
+    }
     const lot=[...communityLots,...commerceLots].find(item=>item.id===id);
     const at=projectGround(lot?.x??d.x,lot?.y??d.y),scale=v.scrollWidth/2700;
     const next=boundedScroll(at.x*scale-v.clientWidth/2,(at.y+70)*scale-v.clientHeight/2,v.clientWidth,v.clientHeight,v.scrollWidth,v.scrollHeight);

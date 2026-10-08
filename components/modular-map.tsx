@@ -76,6 +76,7 @@ export default function ModularMap({ selected, onSelect }: { selected: string | 
     <g data-layer="destinations-depth-sorted">
     <MapLayoutLayers front={false}/>
     <EditableGroundPatches/>
+    <MovableMapElement id="cottage-stone-path"><image href="/images/modular/caminho-pedrinhas-v01.png" x="1117" y="1185" width="90" height="60" pointerEvents="none"/></MovableMapElement>
     <SeaCharacters/>
     <g transform="translate(1095.588457269 1459)" pointerEvents="none" aria-label="Buraco que Paula está cavando"><ellipse cx="-7" cy="0" rx="11" ry="5" fill="#AB7F48" stroke="#CDA260" strokeWidth="2"/><path d="M-15 0Q-7-5 2 0" fill="none" stroke="#735733" strokeWidth="2"/><path d="M-22 3Q-18-5-13 1L-10 5Z" fill="#D8B87B" stroke="#BE965B" strokeWidth="1"/></g>
     {savannaProps.filter(item=>item.kind==='savannaOasis').map(item=><SavannaProp key={item.id} item={item}/>)}
@@ -126,6 +127,8 @@ export default function ModularMap({ selected, onSelect }: { selected: string | 
       };
       return <MovableMapElement key={destination.id} id={destination.id}>{render()}</MovableMapElement>;
     })}
+    <MovableMapElement id="central-circular-square"><image href="/images/modular/praca-central-circular-v01.png" x="760" y="720" width="300" height="224.8" pointerEvents="none"/></MovableMapElement>
+    <MovableMapElement id="linkedin-building-reimport-v02"><image href="/images/modular/linkedin-predio-v02.png" x="1100" y="750" width="175" height="137.4" pointerEvents="none"/></MovableMapElement>
     <MovableMapElement id="desert-camel"><image href="/images/modular/deserto-camelo-v01.png" x="1550" y="35" width="78" height="65" pointerEvents="none"/></MovableMapElement>
     <MovableMapElement id="desert-editable-dune"><image href="/images/modular/deserto-dunas-v01.png" x="1510" y="-60" width="340" height="195" pointerEvents="none"/></MovableMapElement>
     <MapCars/>
@@ -133,8 +136,6 @@ export default function ModularMap({ selected, onSelect }: { selected: string | 
     </g>
   </svg>;
 }
-
-
 
 
 

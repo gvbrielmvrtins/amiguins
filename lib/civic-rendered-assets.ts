@@ -64,7 +64,7 @@ export const civicRenderedAssets:Record<string,CivicArt>={
   valleyPrototype:{file:'silicin-prototipos-v01.png',width:1415,height:1111,anchorX:725,anchorY:925,scale:.07,mirror:true,risingSlope:-.32,fallingSlope:.56},
   valleyRobot:{file:'silicin-robo-v01.png',width:1508,height:1043,anchorX:710,anchorY:810,scale:.075,risingSlope:-.577,fallingSlope:.577},
   valleyCycles:{file:'silicin-bicicletario-v02.png',width:1844,height:853,anchorX:930,anchorY:590,scale:.065,risingSlope:-.58,fallingSlope:.26},
-  linkedinBuilding:{file:'linkedin-predio-v01.png',width:1415,height:1111,anchorX:720,anchorY:855,scale:.165,risingSlope:-.59,fallingSlope:.29},
+  linkedinBuilding:{file:'linkedin-predio-v02.png',width:1415,height:1111,anchorX:720,anchorY:855,scale:.165,risingSlope:-.59,fallingSlope:.29},
   linkedinTerminal:{file:'linkedin-totem-v01.png',width:1160,height:1356,anchorX:610,anchorY:1210,scale:.062,risingSlope:-.577,fallingSlope:.44},
   linkedinTalks:{file:'linkedin-arquibancada-v01.png',width:1415,height:1111,anchorX:740,anchorY:790,scale:.072,risingSlope:-.58,fallingSlope:.43},
   linkedinCheckin:{file:'linkedin-credenciamento-v01.png',width:1416,height:1111,anchorX:725,anchorY:865,scale:.07,mirror:true,risingSlope:-.38,fallingSlope:.58},

@@ -1,0 +1,5 @@
+# Segundo cachorro do Diego
+
+Arquivo: `public/images/modular/diego-cachorro-2-v01.png`, gerado com imagegen integrado. Peça decorativa independente no editor, em área aberta à direita do ginásio (1750,1640). Referências: foto fornecida e ilustração do primeiro cachorro para estilo.
+
+Prompt: Create ONLY the main dog in center of photo1 as isolated full-body cartoon game sprite, NOT seated: standing naturally on FOUR paws, body and head oriented toward RIGHT, side view slight elevated 3/4. Border collie type dog dark black-brown coat, white chest ruff and belly, long white legs, white narrow blaze down face and muzzle, dark ears with slightly folded tips, fluffy tail dark with white tip, long soft fur. Friendly mouth open tongue out. Ignore other dog cropped on right of photograph. Reference2 existing husky game sprite is STYLE reference, match polished friendly cartoon dark outlines clean dimensional cel shading, stylized fur, natural proportions. Entire ears paws tail visible. Transparent background, no ground, plants, human, scenery or text.

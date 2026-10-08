@@ -6,6 +6,7 @@ const patches=[
   {id:'ground-grass-organic',x:1830,y:640,texture:'editable-patch-grass',organic:true},
   {id:'ground-sand-square',x:1620,y:850,texture:'beach-sand'},
   {id:'ground-asphalt-square',x:1830,y:850,texture:'street-asphalt'},
+  {id:'ground-sidewalk-square',x:1620,y:1060,texture:'editable-patch-sidewalk'},
 ];
 
 // Flat surfaces reuse the scenery's textures and ground projection.
@@ -13,6 +14,12 @@ const patches=[
 export default function EditableGroundPatches(){
   return <g data-layer="editable-ground-patches">
     <defs>
+      <pattern id="editable-patch-sidewalk" patternUnits="userSpaceOnUse" width="30" height="30">
+        <rect width="30" height="30" fill="#CCC8BB"/>
+        <rect x=".8" y=".8" width="28.4" height="28.4" rx=".6" fill="#DDD9CD"/>
+        <path d="M2 28V2H28" fill="none" stroke="#EEEADF" strokeWidth=".7"/>
+        <path d="M5 8h1m14 11h1M9 24h1m14-19h1" stroke="#BFBBAF" strokeWidth=".7" opacity=".65"/>
+      </pattern>
       <pattern id="editable-patch-grass" patternUnits="userSpaceOnUse" x="-120" y="-120" width="240" height="240">
         <image href="/images/modular/parque-grama-v01.png" width="240" height="240" preserveAspectRatio="none" stroke="none"/>
       </pattern>

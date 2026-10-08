@@ -1,6 +1,7 @@
 import type { Target } from './game-data';
 
 export const mapCharacters: (Target & { file: string; elevation?: number; isSheriff?: boolean })[] = [
+  { id: 'diego-ungari', name: 'Diego Ungari', article: 'o', category: 'people', x: 1600, y: -730, width: 48, height: 39, file: '/images/characters/diego-ungari-v02.png', clue: 'Diego mora na casinha da clareira e está sentado em um tronco, de moletom rosa, botas verdes e caneca na mão, perto de seu cachorro.' },
   { id: 'elton-pavesi', name: 'Elton Pavesi', article: 'o', category: 'people', x: 2795, y: 375, width: 30, height: 45, file: '/images/characters/elton-pavesi-v02.png', clue: 'Elton está sentado em um banquinho na região da taverna dos joguINs, segurando um aviãozinho em uma mão e um pedaço de queijo na outra.' },
   { id: 'davi-cabeca', name: 'Davi Cabeça', article: 'o', category: 'people', x: -95, y: -25, elevation: 14, width: 18, height: 20, file: '/images/characters/davi-cabeca-v01.png', clue: 'Davi é uma cabeça flutuante de cabelos cacheados e barba, em meio à Parada do Orgulho LGBT no cantIN coloridIN.' },
   { id: 'loisi-vieira', isSheriff: true, name: 'Loisi Vieira', article: 'a', category: 'people', x: 2690, y: 245, width: 49, height: 45, file: '/images/characters/loisi-vieira-v01.png', clue: 'Loisi está na área da taverna dos joguINs, empurrando um carrinho de supermercado e usando uma estrela de xerife no peito.' },
