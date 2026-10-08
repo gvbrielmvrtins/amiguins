@@ -11,7 +11,7 @@ function Props({kind}:{kind:string}){
  if(kind==='oficina-vendinhas')return <VendinhasFair/>;
  return <CivicRenderedProp kind="commerceBistro" x={-30} y={-85}/>;
 }
-export function CommerceGround(){return <g data-layer="commerce-study-ground">{commerceLots.map(l=><g key={l.id} transform={`translate(${l.x} ${l.y})`}><rect x="-204" y="-204" width="420" height="420" rx="25" fill="#B6A487"/><rect x="-210" y="-210" width="420" height="420" rx="25" fill={p.cream} stroke={p.ink} strokeWidth="3"/><rect x="-198" y="-198" width="396" height="396" rx="18" fill="none" stroke={l.color} strokeWidth="6"/></g>)}</g>;}
+export function CommerceGround(){return null;}
 export default function CommerceStudy({destination:d,selected,onSelect}:{destination:ModularDestination;selected:string|null;onSelect:(id:string,keyboard?:boolean)=>void}){
  const lot=commerceLots.find(l=>l.id===d.id)!;
  const at=projectGround(lot.x,lot.y);

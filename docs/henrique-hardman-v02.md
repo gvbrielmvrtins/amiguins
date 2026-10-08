@@ -1,0 +1,5 @@
+# Correção anatômica do Henrique
+
+Arquivo: `public/images/characters/henrique-hardman-v02.png`. Editado com imagegen integrado a partir da versão 1. Inspeção visual confirma apenas dois pés. Dimensões 1199×1312, pose, enquadramento e ajustes de posição preservados.
+
+Prompt: Edit only the lower-body anatomy error in this exact game sprite. Henrique currently has THREE shoes/feet. Remove the extra rear-most shoe at the FAR LEFT edge, approximately x50–230 y910–1170. Retain exactly TWO legs and TWO feet: the large foreground shoe bottom center-left and the shoe behind his bent right knee in lower center. Repair the trouser silhouette naturally where the extraneous far-left foot was attached. Preserve crouching/kneeling pose, head, face, glasses, headphones, beard, patterned shirt, both arms/hands, crowbar, all colors shading outlines, composition and canvas dimensions 1199x1312. Do not redraw other parts. Transparent background preserved. The removed foot area becomes transparent. No new objects or text.

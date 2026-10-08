@@ -1,3 +1,5 @@
+import MapCars from './map-cars';
+import EditableGroundPatches from './editable-ground-patches';
 import {MovableMapElement,MapLayoutLayers} from './map-layout-editor';
 import NorthMetropolis, {MetropolisTransitionGround} from './north-metropolis';
 import NorthMountain from './north-mountain';
@@ -67,11 +69,12 @@ export default function ModularMap({ selected, onSelect }: { selected: string | 
       </g>
     </g>
     </g>
-    <MovableMapElement id="north-metropolis"><NorthMetropolis/></MovableMapElement>
+    <MovableMapElement id="north-metropolis" locked><NorthMetropolis/></MovableMapElement>
     <MetroUnderpass/>
-    <MovableMapElement id="north-mountain"><NorthMountain/></MovableMapElement>
+    <MovableMapElement id="north-mountain" locked><NorthMountain/></MovableMapElement>
     <g data-layer="destinations-depth-sorted">
     <MapLayoutLayers front={false}/>
+    <EditableGroundPatches/>
     <SeaCharacters/>
     <g transform="translate(1095.588457269 1459)" pointerEvents="none" aria-label="Buraco que Paula está cavando"><ellipse cx="-7" cy="0" rx="11" ry="5" fill="#AB7F48" stroke="#CDA260" strokeWidth="2"/><path d="M-15 0Q-7-5 2 0" fill="none" stroke="#735733" strokeWidth="2"/><path d="M-22 3Q-18-5-13 1L-10 5Z" fill="#D8B87B" stroke="#BE965B" strokeWidth="1"/></g>
     {savannaProps.filter(item=>item.kind==='savannaOasis').map(item=><SavannaProp key={item.id} item={item}/>)}
@@ -121,11 +124,13 @@ export default function ModularMap({ selected, onSelect }: { selected: string | 
       };
       return <MovableMapElement key={destination.id} id={destination.id}>{render()}</MovableMapElement>;
     })}
+    <MovableMapElement id="desert-camel"><image href="/images/modular/deserto-camelo-v01.png" x="1550" y="35" width="78" height="65" pointerEvents="none"/></MovableMapElement>
+    <MovableMapElement id="desert-editable-dune"><image href="/images/modular/deserto-dunas-v01.png" x="1510" y="-60" width="340" height="195" pointerEvents="none"/></MovableMapElement>
+    <MapCars/>
     <MapLayoutLayers front/>
     </g>
   </svg>;
 }
-
 
 
 

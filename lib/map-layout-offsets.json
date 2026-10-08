@@ -2,217 +2,1227 @@
   "espacin-coloridin/prideCrowd2/0/0": {
     "x": 4.87,
     "y": 13.22,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
     "hidden": true
   },
   "espacin-coloridin/prideCrowd1/0/0": {
     "x": 28.75,
     "y": 18.62,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
     "hidden": true
   },
   "espacin-coloridin/prideRainbow/0/0": {
     "x": -89.34,
     "y": 14.57,
-    "layer": -2
+    "scale": 1,
+    "rotation": 0,
+    "layer": -2,
+    "hidden": false
   },
   "north-residence-coral": {
     "x": -34.5,
-    "y": 5.71
+    "y": 5.71,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "henrique-hardman": {
     "x": -6.74,
-    "y": -4.92
+    "y": -4.92,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "north-corner-store": {
     "x": -24.99,
-    "y": 27.32
+    "y": 27.32,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "filler-north-lamp-east": {
-    "x": -150.64,
-    "y": -210.93
+    "x": 74.95,
+    "y": -22.44,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "filler-north-table": {
     "x": 130.32,
-    "y": 59.98
+    "y": 59.98,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "filler-north-lamp-middle": {
     "x": 208.56,
-    "y": 412.15
+    "y": 412.15,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "filler-north-flowers": {
     "x": 306.64,
-    "y": 144.11
+    "y": 144.11,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "station-clock": {
     "x": -181.92,
-    "y": -97.9
+    "y": -97.9,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "north-residence-pink": {
     "x": -60.56,
-    "y": 9.32
+    "y": 9.32,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "prefeintura/prefeitura/0/20": {
     "x": 16.43,
-    "y": 38.47
+    "y": 38.47,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "filler-north-tree-b": {
-    "x": -17.98,
-    "y": 42.81
+    "x": -19.28,
+    "y": 44.82,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "north-metropolis": {
     "x": 87.95,
     "y": 152.86,
-    "layer": 0
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "espacin-coloridin/prideCrowd1/0/0::copy:cffc5d70-57aa-4e40-bca8-bd0e69a062a0": {
     "x": 90.16,
     "y": 17.66,
-    "sourceId": "espacin-coloridin/prideCrowd1/0/0",
-    "hidden": true
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": true,
+    "sourceId": "espacin-coloridin/prideCrowd1/0/0"
   },
   "espacin-coloridin": {
     "x": 0,
-    "y": 0
+    "y": 0,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "west-townhouse": {
     "x": -10.82,
     "y": -6.32,
-    "rotation": 0
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "filler-west-tree": {
     "x": 140.54,
-    "y": -134.09
+    "y": -134.09,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "west-workshop": {
     "x": 24.14,
-    "y": 18.92
+    "y": 18.92,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "filler-west-table": {
     "x": 150.56,
     "y": -35.78,
+    "scale": 0.75,
+    "rotation": 0,
     "layer": 0,
-    "scale": 0.75
+    "hidden": false
   },
   "filler-west-lamp-end": {
     "x": 446.41,
-    "y": -42.49
+    "y": -42.49,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "filler-west-lamp-middle": {
     "x": -135.09,
-    "y": -21.58
+    "y": -21.58,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "west-small-shop": {
     "x": -15.2,
     "y": 3.4,
-    "layer": 0
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "filler-west-lamp-park": {
     "x": -135.18,
-    "y": -60.3
+    "y": -60.3,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "filler-west-flowers": {
     "x": 119.28,
     "y": 72.23,
+    "scale": 0.85,
+    "rotation": 0,
     "layer": 1,
-    "scale": 0.85
+    "hidden": false
   },
   "north-mountain": {
     "x": 28.43,
     "y": 11.8,
-    "layer": 0
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "north-forest-4-0": {
-    "x": -11.91,
-    "y": -19.02
+    "x": 57.89,
+    "y": 34.04,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "north-forest-1-0": {
-    "x": -51.86,
-    "y": -34.11
+    "x": -387.42,
+    "y": -277.66,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "north-forest-2-1": {
     "x": 561.61,
-    "y": 75.28
+    "y": 75.28,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "north-forest-4-5": {
     "x": 0,
-    "y": 0
+    "y": 0,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "taverna-joguins/tavern/0/-55": {
     "x": 6.58,
     "y": -13.23,
+    "scale": 1.15,
     "rotation": 0,
-    "scale": 1.15
+    "layer": 0,
+    "hidden": false
   },
   "patrick-canuto": {
     "x": 10.31,
     "y": -0.38,
-    "scale": 1.25
+    "scale": 1.25,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "loisi-vieira": {
     "x": -2.66,
     "y": -23.6,
-    "scale": 1.15
+    "scale": 1.15,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "east-tav-lamp": {
     "x": -79.56,
-    "y": -5.71
+    "y": -5.71,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "taverna-joguins/tavernRoundTable/-115/120": {
     "x": -12.14,
-    "y": 0.36
+    "y": 0.36,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "taverna-joguins/tavernRoundTable/-20/145": {
     "x": 6.64,
-    "y": 5.43
+    "y": 5.43,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "coastal-forest-4-0": {
     "x": 1.8,
     "y": 1.7,
-    "layer": -1
+    "scale": 1,
+    "rotation": 0,
+    "layer": -1,
+    "hidden": false
   },
   "taverna-joguins/tavernRoundTable/85/120": {
     "x": -30.13,
-    "y": -65.08
+    "y": -65.08,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "taverna-joguins": {
     "x": 0,
     "y": 0.12,
-    "layer": 0
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "coastal-forest-6-0": {
     "x": 0,
-    "y": 0
+    "y": 0,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "plaza-hispanica/plaza/10/-70": {
     "x": 13.91,
-    "y": -2.03
+    "y": -2.03,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "vagao-feminino": {
     "x": 0,
-    "y": 0
+    "y": 0,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "coloridin-folioes-b/prideCrowd2/0/0": {
     "x": -53.29,
     "y": -47.73,
-    "scale": 1.05
+    "scale": 1.05,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "coloridin-folioes-a/prideCrowd1/0/0": {
     "x": 138.25,
     "y": -17.93,
-    "scale": 1.1
+    "scale": 1.1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "coloridin-folioes-b/prideCrowd2/0/0::copy:91753e50-3047-4e26-a86e-5bd76d2b80f3": {
     "x": 65.11,
     "y": 17.38,
     "scale": 1,
-    "sourceId": "coloridin-folioes-b/prideCrowd2/0/0",
-    "hidden": false
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false,
+    "sourceId": "coloridin-folioes-b/prideCrowd2/0/0"
   },
   "coloridin-folioes-b": {
     "x": 1.69,
-    "y": 2.56
+    "y": 2.56,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "station-tree": {
     "x": 0,
+    "y": 0,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
+  },
+  "davi-cabeca": {
+    "x": -10.55,
+    "y": -59.9,
+    "scale": 1.55,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
+  },
+  "north-forest-1-0::copy:03b82546-3dc5-4332-9f2e-03df45d84bc9": {
+    "x": 289.46,
+    "y": 31.47,
+    "scale": 0.6,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false,
+    "sourceId": "north-forest-1-0"
+  },
+  "north-forest-1-0::copy:4bddd556-775e-4e19-93b2-032de8ab3f93": {
+    "x": -336.23,
+    "y": -349.56,
+    "scale": 1,
+    "rotation": 0,
+    "layer": -1,
+    "hidden": false,
+    "sourceId": "north-forest-1-0"
+  },
+  "north-forest-1-0::copy:f724c43a-3c35-4187-ba11-513642d713d1": {
+    "x": -317.87,
+    "y": -312.58,
+    "scale": 1,
+    "rotation": 0,
+    "layer": -1,
+    "hidden": false,
+    "sourceId": "north-forest-1-0"
+  },
+  "north-forest-1-0::copy:6e5b2085-79a9-4524-8b26-3a353eed8ea5": {
+    "x": -284.98,
+    "y": -340.45,
+    "scale": 1,
+    "rotation": 0,
+    "layer": -2,
+    "hidden": false,
+    "sourceId": "north-forest-1-0"
+  },
+  "north-forest-0-0": {
+    "x": 30.26,
+    "y": -13.21,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
+  },
+  "north-forest-0-0::copy:7b4182e4-badb-4e99-a855-04478d4efe4a": {
+    "x": -292.7,
+    "y": -304.28,
+    "scale": 1,
+    "rotation": 210,
+    "layer": -1,
+    "hidden": false,
+    "sourceId": "north-forest-0-0"
+  },
+  "north-forest-0-0::copy:5c2ea2dd-9645-4a21-82e0-175dde03cb12": {
+    "x": -258.93,
+    "y": -278.68,
+    "scale": 1,
+    "rotation": 210,
+    "layer": -1,
+    "hidden": false,
+    "sourceId": "north-forest-0-0"
+  },
+  "desert-editable-dune": {
+    "x": -175.99,
+    "y": 2.31,
+    "scale": 0.6,
+    "rotation": 0,
+    "layer": -2,
+    "hidden": false
+  },
+  "desert-editable-dune::copy:b3ca85fd-90ba-4a06-be4b-ef22fcf50649": {
+    "x": -157.88,
+    "y": -37.19,
+    "scale": 0.6,
+    "rotation": 0,
+    "layer": -3,
+    "hidden": false,
+    "sourceId": "desert-editable-dune"
+  },
+  "desert-editable-dune::copy:8d07e75a-d51e-487a-bfd8-728fafe5a367": {
+    "x": -47.44,
+    "y": -19.01,
+    "scale": 0.8,
+    "rotation": 0,
+    "layer": -3,
+    "hidden": true,
+    "sourceId": "desert-editable-dune"
+  },
+  "desert-editable-dune::copy:50ea4b1f-c1de-4664-b902-606216445cc8": {
+    "x": -173.74,
+    "y": -68.69,
+    "scale": 0.7,
+    "rotation": 45,
+    "layer": -4,
+    "hidden": false,
+    "sourceId": "desert-editable-dune"
+  },
+  "desert-camel": {
+    "x": -11.69,
+    "y": 4.84,
+    "scale": 0.7,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
+  },
+  "desert-camel::copy:8b07f657-3b87-49c1-83f8-33f569e5264c": {
+    "x": 4.3,
+    "y": -34.61,
+    "scale": 0.55,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false,
+    "sourceId": "desert-camel"
+  },
+  "desert-camel::copy:1cf9e6d8-a31f-4fc7-8907-5f178bfc3626": {
+    "x": 157.76,
+    "y": -118.01,
+    "scale": 0.6,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false,
+    "sourceId": "desert-camel"
+  },
+  "paises-africanos": {
+    "x": -91.64,
+    "y": -1160.69,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
+  },
+  "coastal-forest-8-0": {
+    "x": 14.53,
+    "y": 14.34,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
+  },
+  "coastal-forest-8-1": {
+    "x": -3.21,
+    "y": -8.29,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
+  },
+  "valley-forest-grass-3/savannaGrass/0/0": {
+    "x": -237.3,
+    "y": -286,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
+  },
+  "paises-africanos/internationalAirport/100/140": {
+    "x": 174.73,
+    "y": 1156.72,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
+  },
+  "paula-whale/beachWhale/0/0": {
+    "x": 26.61,
+    "y": -14.95,
+    "scale": 0.8,
+    "rotation": 15,
+    "layer": 0,
+    "hidden": false
+  },
+  "paula-bather-3/beachBather2/0/0": {
+    "x": -150.27,
+    "y": 40.57,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
+  },
+  "beach-umbrella-6/beachUmbrella/0/0": {
+    "x": 0,
+    "y": 0,
+    "scale": 1,
+    "rotation": 0,
+    "layer": -1,
+    "hidden": false
+  },
+  "paula-bather-4/beachBather1/0/0": {
+    "x": 257.24,
+    "y": -108.63,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
+  },
+  "beach-umbrella-10/beachUmbrella/0/0": {
+    "x": 5.35,
+    "y": -1.26,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
+  },
+  "beach-rest-10/beachChair/0/0": {
+    "x": 6.92,
+    "y": 15.89,
+    "scale": 1,
+    "rotation": -15,
+    "layer": 0,
+    "hidden": false
+  },
+  "beach-feature-9/beachPalm/0/0": {
+    "x": 94.56,
+    "y": -31.49,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
+  },
+  "east-cafe/eastCafe/-40/-35": {
+    "x": -28.67,
+    "y": 20.8,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
+  },
+  "beach-shell-9/beachShell/0/0": {
+    "x": 68.71,
+    "y": -77.5,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
+  },
+  "paula-lotti": {
+    "x": 5.22,
+    "y": -0.06,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
+  },
+  "paula-sandcastle/beachSandcastle/0/0": {
+    "x": -47.51,
+    "y": 4.87,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
+  },
+  "paula-bather-1/beachBather1/0/0": {
+    "x": -2.16,
+    "y": -10.75,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
+  },
+  "beach-umbrella-8": {
+    "x": -42.65,
+    "y": 16.34,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
+  },
+  "paula-bather-2/beachBather2/0/0": {
+    "x": -43.13,
+    "y": 14.44,
+    "scale": 0.9,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
+  },
+  "beach-rest-8/coloridinBlanket/0/0": {
+    "x": -24.4,
+    "y": 12.03,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
+  },
+  "paula-shell-2/beachShell/0/0": {
+    "x": -35.73,
+    "y": -15.37,
+    "scale": 0.7,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
+  },
+  "paula-shell-4/beachShell/0/0": {
+    "x": 82.83,
+    "y": -113.91,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": true
+  },
+  "paula-shell-1/beachShell/0/0": {
+    "x": 0,
+    "y": 0,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": true
+  },
+  "paula-shell-3/beachShell/0/0": {
+    "x": 35.33,
+    "y": -42.58,
+    "scale": 0.5,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
+  },
+  "beach-shell-7/beachShell/0/0": {
+    "x": 14.66,
+    "y": -14.58,
+    "scale": 0.55,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
+  },
+  "beach-feature-7/beachBall/0/0": {
+    "x": 101.86,
+    "y": -17.75,
+    "scale": 0.65,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
+  },
+  "beach-feature-5/beachPalm/0/0": {
+    "x": 101.42,
+    "y": -36.07,
+    "scale": 0.85
+  },
+  "beach-shell-5/beachShell/0/0": {
+    "x": 58.52,
+    "y": -95.28,
+    "scale": 0.75
+  },
+  "beach-umbrella-4/beachUmbrella/0/0": {
+    "x": 59.76,
+    "y": -14.02
+  },
+  "beach-feature-3/beachBall/0/0": {
+    "x": 135.27,
+    "y": -71.54
+  },
+  "beach-shell-3/beachShell/0/0": {
+    "x": 86.37,
+    "y": -82.89
+  },
+  "beach-umbrella-2/beachUmbrella/0/0": {
+    "x": 97.51,
+    "y": -42.22
+  },
+  "beach-rest-2/beachChair/0/0": {
+    "x": 102.43,
+    "y": -20.26
+  },
+  "savanna-acacia-1/savannaAcacia/0/0": {
+    "x": 12.92,
+    "y": 15.58
+  },
+  "savanna-acacia-1/savannaAcacia/0/0::copy:3e28596b-9902-4ecc-8f79-aa54d70bb277": {
+    "x": 37.79,
+    "y": 40.58,
+    "sourceId": "savanna-acacia-1/savannaAcacia/0/0",
+    "hidden": false
+  },
+  "savanna-acacia-1/savannaAcacia/0/0::copy:ca5638c9-8489-428f-af06-f5caa0899335": {
+    "x": 62.92,
+    "y": 65.58,
+    "sourceId": "savanna-acacia-1/savannaAcacia/0/0",
+    "hidden": false,
+    "layer": 4
+  },
+  "savanna-acacia-1/savannaAcacia/0/0::copy:86fcbcd5-5cb2-4976-8f2f-6fdbe1ace93e": {
+    "x": -38.74,
+    "y": 41.74,
+    "sourceId": "savanna-acacia-1/savannaAcacia/0/0",
+    "hidden": false,
+    "layer": 1
+  },
+  "savanna-acacia-1/savannaAcacia/0/0::copy:e5e1cea2-d9a2-45b2-b5a0-c2fef21d2d0c": {
+    "x": -99.82,
+    "y": -81.29,
+    "sourceId": "savanna-acacia-1/savannaAcacia/0/0",
+    "hidden": false
+  },
+  "savanna-acacia-1/savannaAcacia/0/0::copy:926be1c2-3296-4b6b-8566-0dcb1f241807": {
+    "x": -74.82,
+    "y": -56.290000000000006,
+    "sourceId": "savanna-acacia-1/savannaAcacia/0/0",
+    "hidden": false
+  },
+  "savanna-acacia-1/savannaAcacia/0/0::copy:5020a031-aae0-4f79-8bf1-de3807a0d9bb": {
+    "x": -49.81999999999999,
+    "y": -31.290000000000006,
+    "sourceId": "savanna-acacia-1/savannaAcacia/0/0",
+    "hidden": false
+  },
+  "savanna-acacia-1/savannaAcacia/0/0::copy:551a2aee-b254-417b-a7c2-1492279d14d4": {
+    "x": -11.29,
+    "y": -17.32,
+    "sourceId": "savanna-acacia-1/savannaAcacia/0/0",
+    "hidden": false
+  },
+  "savanna-acacia-1/savannaAcacia/0/0::copy:e38f6be3-a5cd-45d6-96b6-7bd72fb0b46e": {
+    "x": 16.4,
+    "y": 13.58,
+    "sourceId": "savanna-acacia-1/savannaAcacia/0/0",
+    "hidden": false
+  },
+  "savanna-acacia-4/savannaAcacia/0/0": {
+    "x": -34.93,
+    "y": 11.09
+  },
+  "savanna-grass-69/savannaGrass/0/0": {
+    "x": 173.37,
+    "y": -4.17
+  },
+  "savanna-grass-4/savannaGrass/0/0": {
+    "x": -169.19,
+    "y": -5.9
+  },
+  "savanna-grass-199/savannaGrass/0/0": {
+    "x": 138.25,
+    "y": -1.8,
+    "layer": 1
+  },
+  "savannaElephant-2": {
+    "x": 0.83,
+    "y": 8.1
+  },
+  "savannaElephant-0/savannaElephant/0/0": {
+    "x": -64.19,
+    "y": 59.62,
+    "layer": 2
+  },
+  "savanna-acacia-1": {
+    "x": 0,
     "y": 0
+  },
+  "savanna-grass-197/savannaGrass/0/0": {
+    "x": 60.43,
+    "y": 4.97,
+    "layer": 2
+  },
+  "savanna-grass-197/savannaGrass/0/0::copy:51e57680-4dc8-4d84-8d44-8fd98289720d": {
+    "x": 85.43,
+    "y": 29.97,
+    "layer": 2,
+    "sourceId": "savanna-grass-197/savannaGrass/0/0",
+    "hidden": false
+  },
+  "savanna-grass-197/savannaGrass/0/0::copy:c97e5a06-1850-44ee-a79a-32b3a3a0e69b": {
+    "x": 78.64,
+    "y": 19.34,
+    "layer": 2,
+    "sourceId": "savanna-grass-197/savannaGrass/0/0",
+    "hidden": false
+  },
+  "savanna-grass-197/savannaGrass/0/0::copy:6847aa3e-378a-4f28-a6e7-c8266c0b9015": {
+    "x": 46.99,
+    "y": -6.69,
+    "layer": 2,
+    "sourceId": "savanna-grass-197/savannaGrass/0/0",
+    "hidden": false
+  },
+  "savanna-grass-197/savannaGrass/0/0::copy:0d3dba55-e73e-45c6-abbb-ac7e06ce8c2b": {
+    "x": 71.99000000000001,
+    "y": 18.31,
+    "layer": 2,
+    "sourceId": "savanna-grass-197/savannaGrass/0/0",
+    "hidden": false
+  },
+  "savanna-grass-197/savannaGrass/0/0::copy:0d5a4cee-6768-4ec9-9efe-e3dea2a234d7": {
+    "x": 96.99000000000001,
+    "y": 43.31,
+    "layer": 2,
+    "sourceId": "savanna-grass-197/savannaGrass/0/0",
+    "hidden": false
+  },
+  "savanna-grass-197/savannaGrass/0/0::copy:9bed54cf-3469-4ab0-8fd3-c34bb9dcd334": {
+    "x": 35.31,
+    "y": -13.32,
+    "layer": 2,
+    "sourceId": "savanna-grass-197/savannaGrass/0/0",
+    "hidden": false
+  },
+  "savanna-grass-212/savannaGrass/0/0": {
+    "x": 36.84,
+    "y": -53.8
+  },
+  "savanna-grass-39/savannaGrass/0/0": {
+    "x": 51.12,
+    "y": -97.73
+  },
+  "savanna-grass-9/savannaGrass/0/0": {
+    "x": 36.64,
+    "y": -93.75
+  },
+  "savanna-grass-214/savannaGrass/0/0": {
+    "x": -2.16,
+    "y": -67.22
+  },
+  "map/savannaOasis/0/0": {
+    "x": 28.99,
+    "y": -3.81,
+    "layer": 1
+  },
+  "savannaZebra-6": {
+    "x": 0.11,
+    "y": 0
+  },
+  "savanna-rhino/savannaRhino/0/0": {
+    "x": -72.6,
+    "y": 40.54,
+    "layer": 2
+  },
+  "car-pickup::copy:9efd0e5c-cbd4-420e-9173-6ca0cd848750": {
+    "x": 881.17,
+    "y": -119.28,
+    "sourceId": "car-pickup",
+    "hidden": false
+  },
+  "valley-ring/valleyRing/0/0": {
+    "x": -143.19,
+    "y": 82.33
+  },
+  "silicin-valley/valleyCampus/0/-70": {
+    "x": 101.35,
+    "y": -59.16,
+    "scale": 0.9,
+    "layer": -2
+  },
+  "silicin-valley": {
+    "x": 5.33,
+    "y": -4.71
+  },
+  "silicin-valley/valleyCycles/105/40": {
+    "x": 128.01,
+    "y": -66.24
+  },
+  "silicin-valley/valleyPrototype/-127/70": {
+    "x": 331.49,
+    "y": -12.73,
+    "layer": -1
+  },
+  "silicin-valley/valleyRobot/-18/147": {
+    "x": 102.99,
+    "y": -112.01
+  },
+  "valley-robot-vacuum-b": {
+    "x": -169.1,
+    "y": -61.69
+  },
+  "valley-robot-humanoid-c": {
+    "x": 84.13,
+    "y": -150.11
+  },
+  "valley-robot-walle-a": {
+    "x": 274.8,
+    "y": -137.71
+  },
+  "valley-robot-humanoid-a": {
+    "x": 98.13,
+    "y": -43.66,
+    "scale": 0.85
+  },
+  "valley-robot-walle-b": {
+    "x": 70.83,
+    "y": -18.73,
+    "hidden": true
+  },
+  "valley-robot-vacuum-a": {
+    "x": 186.42,
+    "y": -0.18
+  },
+  "valley-robot-vacuum-c": {
+    "x": 212.67,
+    "y": -214.33
+  },
+  "east-valley-lamp": {
+    "x": -8.94,
+    "y": 4.91
+  },
+  "elton-pavesi": {
+    "x": 31.38,
+    "y": -49.62
+  },
+  "beach-feature-17/beachPalm/0/0": {
+    "x": -16.29,
+    "y": 0.94
+  },
+  "beach-rest-18": {
+    "x": -60.68,
+    "y": -33.54
+  },
+  "beach-rest-18/beachChair/0/0": {
+    "x": 9.16,
+    "y": -19.77
+  },
+  "beach-umbrella-18/beachUmbrella/0/0": {
+    "x": -57.29,
+    "y": -52.64
+  },
+  "beach-rest-16/coloridinBlanket/0/0": {
+    "x": -0.52,
+    "y": 6.59
+  },
+  "beach-shell-17/beachShell/0/0": {
+    "x": -18.92,
+    "y": -60.95
+  },
+  "coastal-forest-9-5": {
+    "x": -34.26,
+    "y": 52.32
+  },
+  "coastal-forest-8-5": {
+    "x": -14.2,
+    "y": 23.53
+  },
+  "coastal-forest-10-4": {
+    "x": 30.03,
+    "y": 50.75
+  },
+  "forest-coast-grass-22/savannaGrass/0/0": {
+    "x": 38.92,
+    "y": -99.72
+  },
+  "forest-coast-grass-21/savannaGrass/0/0": {
+    "x": 22.42,
+    "y": -100.39
+  },
+  "forest-coast-grass-19/savannaGrass/0/0": {
+    "x": 50.69,
+    "y": -33.97
+  },
+  "forest-coast-grass-16/savannaGrass/0/0": {
+    "x": 33.05,
+    "y": 9.48
+  },
+  "forest-coast-grass-14/savannaGrass/0/0": {
+    "x": 8.04,
+    "y": 42.99
+  },
+  "forest-coast-grass-15/savannaGrass/0/0": {
+    "x": 11.72,
+    "y": 4.03
+  },
+  "forest-coast-grass-15/savannaGrass/0/0::copy:385edd1f-dcb1-4447-8c1d-6f9ed5b48b31": {
+    "x": 30.95,
+    "y": 0.15,
+    "sourceId": "forest-coast-grass-15/savannaGrass/0/0",
+    "hidden": false
+  },
+  "forest-coast-grass-17/savannaGrass/0/0": {
+    "x": 8.23,
+    "y": -27.73
+  },
+  "forest-coast-grass-18/savannaGrass/0/0": {
+    "x": 48.27,
+    "y": -44.04
+  },
+  "forest-coast-grass-20/savannaGrass/0/0": {
+    "x": 74.52,
+    "y": -61.72,
+    "scale": 1.65
+  },
+  "coastal-forest-10-3": {
+    "x": 42.91,
+    "y": 45.09
+  },
+  "coastal-forest-8-4": {
+    "x": 0.24,
+    "y": 0
+  },
+  "coastal-forest-8-4::copy:81f04dca-fb9e-4638-9d65-332760282e86": {
+    "x": -76.17,
+    "y": 23.5,
+    "sourceId": "coastal-forest-8-4",
+    "hidden": false
+  },
+  "coastal-forest-7-5": {
+    "x": -22.17,
+    "y": 17.88
+  },
+  "coastal-forest-5-1": {
+    "x": 19.16,
+    "y": 23.75
+  },
+  "coastal-forest-4-1": {
+    "x": -16.79,
+    "y": 15.62
+  },
+  "coastal-forest-3-0": {
+    "x": 18.9,
+    "y": 15.89
+  },
+  "coastal-forest-5-0": {
+    "x": 0.26,
+    "y": 2.4
+  },
+  "east-tav-tree": {
+    "x": -221.51,
+    "y": -66.6
+  },
+  "coastal-forest-10-6": {
+    "x": -4.5,
+    "y": 9.46
+  },
+  "forest-coast-grass-1/savannaGrass/0/0": {
+    "x": 0,
+    "y": -0.15
+  },
+  "forest-coast-grass-1/savannaGrass/0/0::copy:55465360-4379-4968-a02c-b113aff31d38": {
+    "x": 15.44,
+    "y": -3.68,
+    "sourceId": "forest-coast-grass-1/savannaGrass/0/0",
+    "hidden": false
+  },
+  "beach-feature-13/beachPalm/0/0": {
+    "x": 1.22,
+    "y": 28.08
+  },
+  "forest-coast-grass-5/savannaGrass/0/0": {
+    "x": 5.88,
+    "y": -14.81
+  },
+  "beach-feature-13": {
+    "x": -6.23,
+    "y": 2.62
+  },
+  "forest-coast-grass-4/savannaGrass/0/0": {
+    "x": -18.2,
+    "y": -15.18
+  },
+  "forest-coast-grass-3/savannaGrass/0/0": {
+    "x": 12.07,
+    "y": 18.85
+  },
+  "forest-coast-grass-6/savannaGrass/0/0": {
+    "x": -24.74,
+    "y": 1.59
+  },
+  "forest-coast-grass-8/savannaGrass/0/0": {
+    "x": -0.84,
+    "y": -32.86
+  },
+  "forest-coast-grass-9/savannaGrass/0/0": {
+    "x": 8.7,
+    "y": -48.47
+  },
+  "forest-coast-grass-10/savannaGrass/0/0": {
+    "x": -4.2,
+    "y": -46.66
+  },
+  "forest-coast-grass-11/savannaGrass/0/0": {
+    "x": -21.01,
+    "y": -35.71
+  },
+  "forest-coast-grass-13/savannaGrass/0/0": {
+    "x": -75.87,
+    "y": -95.83
+  },
+  "torre-mistica/torre/0/25": {
+    "x": 91.07,
+    "y": -420.71,
+    "layer": -1
+  },
+  "torre-mistica": {
+    "x": -30.41,
+    "y": 18.84
+  },
+  "north-forest-0-2": {
+    "x": -9.87,
+    "y": 1.21
+  },
+  "north-forest-4-2": {
+    "x": -32.58,
+    "y": -23.4
+  },
+  "north-forest-2-3": {
+    "x": 46.64,
+    "y": 14.59
+  },
+  "north-forest-0-4": {
+    "x": -12.96,
+    "y": 7.45
+  },
+  "north-forest-1-2": {
+    "x": 20.34,
+    "y": 22.45
+  },
+  "north-forest-0-1": {
+    "x": 23.77,
+    "y": 5.95
+  },
+  "north-forest-2-0": {
+    "x": -39.95,
+    "y": -34.01,
+    "layer": -2
+  },
+  "torre-mistica/tarot/138/-12": {
+    "x": -100.3,
+    "y": -424.1,
+    "scale": 0.9,
+    "layer": -1
+  },
+  "civic-tower-tree": {
+    "x": 151.48,
+    "y": 57.19
+  },
+  "ground-grass-organic": {
+    "x": 137.82,
+    "y": 123.46
+  },
+  "linkedin/linkedinBuilding/0/-55": {
+    "x": 235.19,
+    "y": -122.22
+  },
+  "ground-asphalt-square": {
+    "x": 476.12,
+    "y": -63.38
+  },
+  "ground-sand-square": {
+    "x": -121.09,
+    "y": 115.21
   }
 }

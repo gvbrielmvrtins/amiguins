@@ -1,3 +1,6 @@
+import {MovableMapElement,MapElementScope} from './map-layout-editor';
+import {useContext} from 'react';
+import {streetLanes} from './map-streets';
 import CivicRenderedProp from './civic-rendered-prop';
 import {mapPalette as p,type ModularDestination} from '@/lib/modular-map';
 import {projectGround} from '@/lib/map-projection';
@@ -7,8 +10,8 @@ function TavernFurniture(){return <g data-tavern-furniture="rendered">
   <CivicRenderedProp kind="tavernRoundTable" x={-20} y={145}/>
   <CivicRenderedProp kind="tavernRoundTable" x={85} y={120}/>
 </g>;}
-function TavernDucks(){return <g pointerEvents="none" data-tavern-ducks="decorative">
-  {[[-130,50],[-60,175],[100,160],[80,60]].map(([x,y],i)=><g key={`tavern-duck-${i}`} transform={`translate(${(x-y)*.5196152423} ${(x+y)*.3}) scale(${i%2?-1:1} 1)`}><image href="/images/modular/taverna-pato-v01.png" x="-13" y="-23" width="26" height="24"/></g>)}
+function TavernDucks(){const scope=useContext(MapElementScope);return <g pointerEvents="none" data-tavern-ducks="decorative">
+  {[[-130,50],[-60,175],[100,160],[80,60]].map(([x,y],i)=><MovableMapElement key={`tavern-duck-${i}`} id={`${scope}/duck/${i}`}><g transform={`translate(${(x-y)*.5196152423} ${(x+y)*.3}) scale(${i%2?-1:1} 1)`}><image href="/images/modular/taverna-pato-v01.png" x="-13" y="-23" width="26" height="24"/></g></MovableMapElement>)}
 </g>;}
 function Building({kind}:{kind:string}){return <g stroke={p.ink} strokeWidth="2" strokeLinejoin="round">
   {kind==='taverna-joguins' && <>
@@ -36,6 +39,10 @@ function Building({kind}:{kind:string}){return <g stroke={p.ink} strokeWidth="2"
 </g>;}
 export function EastGround(){return <g data-layer="east-district-study-ground" stroke={p.ink} strokeWidth="3">
   <defs>
+    <mask id="valley-clear-streets" maskUnits="userSpaceOnUse" x="0" y="0" width="4400" height="3600">
+      <rect width="4400" height="3600" fill="white" stroke="none"/>
+      <path d={streetLanes.join(' ')} fill="none" stroke="black" strokeWidth="116" strokeLinecap="round" strokeLinejoin="round"/>
+    </mask>
     <pattern id="valley-star-paving" width="68" height="68" patternUnits="userSpaceOnUse">
       <rect width="68" height="68" fill="#EAF0EC"/>
       <path d="M0 0H68V68H0Z M34 0V68 M0 34H68" fill="none" stroke="#CBD8DA" strokeWidth=".8"/>
@@ -44,13 +51,10 @@ export function EastGround(){return <g data-layer="east-district-study-ground" s
       <path d="M9 8l2-1m44 47 3 1m-40 5 2-1" stroke="#A7BDC5" opacity=".35" strokeWidth=".7"/>
     </pattern>
     <linearGradient id="tavern-road-edge" x1="0" y1="-130" x2="0" y2="-90" gradientUnits="userSpaceOnUse"><stop stopColor="white" stopOpacity="0"/><stop offset="1" stopColor="white"/></linearGradient><linearGradient id="tavern-road-side" x1="-255" y1="0" x2="-200" y2="0" gradientUnits="userSpaceOnUse"><stop stopColor="white" stopOpacity="0"/><stop offset="1" stopColor="white"/></linearGradient><linearGradient id="tavern-forest-tone" x1="120" y1="0" x2="325" y2="0" gradientUnits="userSpaceOnUse"><stop stopColor="#35513B" stopOpacity="0"/><stop offset="1" stopColor="#35513B" stopOpacity=".28"/></linearGradient><mask id="tavern-road-top-mask" x="-270" y="-140" width="630" height="380"><rect x="-270" y="-140" width="630" height="380" fill="url(#tavern-road-edge)"/></mask><mask id="tavern-road-side-mask" x="-270" y="-140" width="630" height="380"><rect x="-270" y="-140" width="630" height="380" fill="url(#tavern-road-side)"/></mask><radialGradient id="valley-ground-fade" cx=".43" cy=".4" r=".7"><stop offset=".58" stopColor="white"/><stop offset="1" stopColor="white" stopOpacity="0"/></radialGradient><mask id="valley-ground-soft-edge" x="-235" y="-245" width="510" height="510"><rect x="-235" y="-245" width="510" height="510" fill="url(#valley-ground-fade)"/></mask></defs>
-  {eastLots.map(l=><g key={l.id} transform={`translate(${l.x} ${l.y})`}>
+  {eastLots.map(l=><g key={l.id} mask={l.id==='valley-ring'||l.id==='silicin-valley'?'url(#valley-clear-streets)':undefined}><g transform={`translate(${l.x} ${l.y})`}>
     {l.id==='taverna-joguins'?<><g mask="url(#tavern-road-top-mask)"><g mask="url(#tavern-road-side-mask)"><path d="M-248-108Q-80-112 90-105L345-104V215L160 210Q20 188-100 205Q-222 206-244 145Z" fill="url(#civic-grass)" stroke="none"/><path d="M-248-108Q-80-112 90-105L345-104V215L160 210Q20 188-100 205Q-222 206-244 145Z" fill="url(#tavern-forest-tone)" stroke="none"/></g></g><path d="M-167 75Q-160 10-95-50Q-30-92 40-73L133-30Q170 60 112 117L-67 144Q-130 125-167 75Z" fill="#DAC9A5" stroke="none"/></>:l.id==='valley-ring'?<path d="M-210-72Q-190-95-95-85L180-85Q220-65 225 30L215 365Q100 395-140 365L-215 260Z" fill="url(#valley-star-paving)" stroke="none"/>:l.id==='silicin-valley'?<path d="M-210-165Q-170-220-55-208L130-205Q213-185 224-65L215 105Q195 180 90 207L-100 205Q-214 172-217 65Z" fill="url(#valley-star-paving)" stroke="none" mask="url(#valley-ground-soft-edge)"/>:<>
-      <rect x={-l.w/2+6} y={-l.h/2+6} width={l.w} height={l.h} rx="30" fill="#B6A487"/>
-      <rect x={-l.w/2} y={-l.h/2} width={l.w} height={l.h} rx="30" fill="#FFFAE9"/>
-      <rect x={-l.w/2+12} y={-l.h/2+12} width={l.w-24} height={l.h-24} rx="22" fill={l.id==='east-garden'?'url(#civic-grass)':'none'} stroke={l.color} strokeWidth="6"/>
     </>}
-  </g>)}
+  </g></g>)}
 </g>;}
 
 export function EastFiller({item}:{item:{id:string;x:number;y:number}}){const at=projectGround(item.x,item.y);return <g transform={`translate(${at.x} ${at.y})`} pointerEvents="none" aria-label={item.id==='east-cafe'?'Café de apoio renderizado':item.id.startsWith('valley-')?'Campus e robôs do silicIN valley':'Jardim de convivência'}><Building kind={item.id}/></g>;}

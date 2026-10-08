@@ -16,9 +16,6 @@ export default function PinkMapStudy() {
 
       {lots.map(lot=> {
         return <g key={lot.id} data-building-lot={lot.id}>
-          <rect x={lot.x+7} y={lot.y+7} width={lot.width} height={lot.height} rx="30" fill="#B6A487" stroke="#1C1C1C" strokeWidth="3"/>
-          <rect x={lot.x} y={lot.y} width={lot.width} height={lot.height} rx="30" fill="#FFFAE9" stroke="#1C1C1C" strokeWidth="3"/>
-          <rect x={lot.x+10} y={lot.y+10} width={lot.width-20} height={lot.height-20} rx="24" fill="none" stroke={lot.accent} strokeWidth="7"/>
           <rect data-reserved-bed={lot.id} x={lot.x+23} y={lot.y+23} width="84" height={lot.height-65} rx="25" fill={lot.id === 'mercado-vagas' || lot.id === 'livrinhoteca' ? 'url(#civic-grass)' : '#9CBA78'} stroke="#547653" strokeWidth="2"/>
           {[55,105,155,205].map((dy,i)=><g key={dy} stroke="#648D58" strokeWidth="2" fill="none"><path d={`M${lot.x+43+i%2*30} ${lot.y+dy}l-5-8m5 8l8-6`}/><path d={`M${lot.x+65} ${lot.y+dy+14}l-3-6m3 6l6-4`}/></g>)}
           {/* Small stepping stones lead to the side gardens, not across doorways. */}

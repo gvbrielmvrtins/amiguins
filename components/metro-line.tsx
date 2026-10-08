@@ -1,3 +1,5 @@
+import {MovableMapElement,MapElementScope} from './map-layout-editor';
+import {useContext} from 'react';
 import {projectGround, uprightProjection} from '@/lib/map-projection';
 
 export function MetroGround(){return <g data-layer="metro-track" pointerEvents="none" stroke="none" aria-label="Trilhos do metrô junto ao cantIN">
@@ -10,15 +12,16 @@ export function MetroGround(){return <g data-layer="metro-track" pointerEvents="
 
 const carriageProjection=uprightProjection(-.49,.42).transform;
 export default function MetroTrain(){
+  const scope=useContext(MapElementScope);
   return <g id="destination-vagao-feminino" role="group" aria-label="Metrô com um vagão feminino" pointerEvents="none">
     {[{x:260,file:'metro-vagao-feminino-v03.png'},{x:560,file:'metro-carro-frontal-v01.png'}].map(car=>{
       const at=projectGround(car.x,55);
-      return <g key={car.file} transform={`translate(${at.x} ${at.y})`}>
+      return <MovableMapElement key={car.file} id={`${scope}/carriage/${car.x}`}><g transform={`translate(${at.x} ${at.y})`}>
         <g transform={carriageProjection}><image href={`/images/modular/${car.file}`} x="-106.4" y="-99.4" width="215.04" height="143.36"/></g>
-      </g>;
+      </g></MovableMapElement>;
     })}
     {/* Share the carriage correction so the inset lid follows its roof axes. */}
-    <g data-metro-roof-hatch="locked" transform={`translate(${projectGround(260,55).x} ${projectGround(260,55).y})`}>
+    <MovableMapElement id={`${scope}/roof-hatch`}><g data-metro-roof-hatch="locked" transform={`translate(${projectGround(260,55).x} ${projectGround(260,55).y})`}>
       <g transform={`${carriageProjection} translate(9 -49)`} strokeLinejoin="round" strokeLinecap="round">
         <path d="M-12-3Q-10-8-2-8L14-1Q12 3 4 4Z" fill="#6B5945" opacity=".15"/>
         <path d="M-13-4Q-10-9-3-8.9L13-2.18Q10 2.6 3 2.72L3 3.7Q10 3.5 13-1.2L-3-7.9Q-10-8-13-2.9Z" fill="#A69A82" stroke="#39332C" strokeWidth=".65"/>
@@ -35,10 +38,12 @@ export default function MetroTrain(){
         <circle cx="6.3" cy="1.2" r=".4" fill="#443B2C"/>
       </g>
     </g>
-    <g data-metro-agent="decorative" transform={`translate(${projectGround(260,55).x+34} ${projectGround(260,55).y-43})`}>
+    </MovableMapElement>
+    <MovableMapElement id={`${scope}/agent`}><g data-metro-agent="decorative" transform={`translate(${projectGround(260,55).x+34} ${projectGround(260,55).y-43})`}>
       <ellipse cx="0" cy="-1" rx="7" ry="2" fill="#574F40" opacity=".18"/>
       <image href="/images/modular/agente-galinha-v02.png" x="-14" y="-26" width="28" height="27"/>
     </g>
+    </MovableMapElement>
   </g>;
 }
 

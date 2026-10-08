@@ -347,3 +347,8 @@ h1,h2,h3,h4,h5,h6,button,label,.eyebrow,.progress-label,.category-count,.map-top
 
 .map-editor-toolbar label { display:flex; align-items:center; gap:5px; font-size:13px; }
 .map-editor-toolbar input { width:68px; border:1px solid #1c1c1c; border-radius:5px; padding:5px; background:white; }
+
+.portrait-wrap .face-portrait { width:100%; height:100%; transform:none; overflow:hidden; border-radius:8px; }
+
+.sheriff-badge { position:absolute; left:-5px; bottom:-5px; width:23px; height:23px; display:grid; place-items:center; background:#fffef9; border-radius:50%; border:1px solid #c8b77b; z-index:1; }
+.sheriff-badge svg { width:20px; height:20px; overflow:visible; }

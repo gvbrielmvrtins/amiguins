@@ -25,3 +25,10 @@ Verificação desta expansão: TypeScript e `git diff --check` passaram. Intera�
 Última importação: versão 2 com 43 ajustes, incluindo escala, rotação e camadas. Os dois modelos de multidão da festa e uma cópia permanecem ocultos, conforme o arquivo exportado. Nenhum personagem jogável foi excluído.
 
 Importação de `amiguins-posicoes (2).json`: 48 ajustes. As novas instâncias dos foliões foram posicionadas e redimensionadas; uma cópia visível do segundo grupo foi preservada.
+
+Importação de `amiguins-posicoes (5).json`: 126 ajustes. Metrópole e montanha permanecem com suas transformações aplicadas e bloqueadas para seleção no editor.
+# Seleção individual dos elementos
+
+Conjuntos com elementos editáveis internos preservam suas transformações importadas, mas deixam de oferecer uma seleção coletiva. Cada peça interna mantém seu próprio controle. Os patos da taverna, os vagões, o alçapão, o agente galinha, os peixes e seu balão, e os animais, vasos, árvores e labirinto do jardim secreto possuem controles independentes. Os recortes do atlas do jardim usam limites explícitos para evitar selecionar a imagem inteira.
+
+Objetos desenhados juntos no mesmo PNG continuam sendo uma única ilustração; a separação desses desenhos exige novos arquivos de imagem. Os bloqueios da metrópole e da montanha permanecem conforme solicitado anteriormente.

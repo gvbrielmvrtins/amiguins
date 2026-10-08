@@ -37,11 +37,6 @@ function TarotArea() {return <g data-study="tarot-reading" aria-label="Espaço d
 export function CivicGround() {return <g data-layer="civic-study-ground" strokeWidth="3">
   <defs><pattern id="civic-grass" width="325" height="320" patternUnits="userSpaceOnUse"><rect width="325" height="320" fill="#9CBA78"/><image href="/images/modular/parque-grama-v01.png" width="325" height="320" preserveAspectRatio="none" opacity=".78"/></pattern></defs>
   {modularDestinations.filter(d=>civicIds.has(d.id)).map(d=>{const height=d.id==='pracinha'?550:civicLotSize;return <g key={d.id} transform={`translate(${d.x-100} ${d.y-100})`}>
-    <rect x={-civicLotSize/2+7} y={-civicLotSize/2+7} width={civicLotSize} height={height} rx="35" fill="#B6A487"/>
-    <rect x={-civicLotSize/2} y={-civicLotSize/2} width={civicLotSize} height={height} rx="35" fill="#FFFAE9" stroke={p.ink}/>
-    <rect x={-civicLotSize/2+12} y={-civicLotSize/2+12} width={civicLotSize-24} height={height-24} rx="28" fill="none" stroke={p[d.color]} strokeWidth="7"/>
-    {d.id==='pracinha' && <rect x="-177" y="-155" width="85" height="290" rx="30" fill="url(#civic-grass)" stroke="#547653"/>}
-    {d.id==='torre-mistica' && <rect x="-180" y="-150" width="75" height="285" rx="25" fill="url(#civic-grass)" stroke="#547653"/>}
   </g>;})}
 </g>;}
 

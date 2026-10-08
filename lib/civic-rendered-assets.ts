@@ -78,7 +78,7 @@ export const civicRenderedAssets:Record<string,CivicArt>={
   pergolado:{file:'pracinha-pergolado-v01.png',width:1415,height:1111,anchorX:710,anchorY:840,scale:.095,risingSlope:-.5,fallingSlope:.37},
   quiosque:{file:'pracinha-quiosque-v01.png',width:1415,height:1111,anchorX:770,anchorY:1030,scale:.065,risingSlope:-.50,fallingSlope:.44},
   fonte:{file:'pracinha-fonte-v01.png',width:1448,height:1086,anchorX:724,anchorY:760,scale:.08},
-  torre:{file:'torre-mistica-render-v01.png',width:1024,height:1536,anchorX:550,anchorY:1470,scale:.18,risingSlope:-.58,fallingSlope:.43},
+  torre:{file:'torre-feiticaria-v02.png',width:1024,height:1536,anchorX:550,anchorY:1470,scale:.18,risingSlope:-.58,fallingSlope:.43},
   prefeitura:{file:'prefeitura-render-v01.png',width:1415,height:1111,anchorX:850,anchorY:1010,scale:.16,mirror:true,risingSlope:-.58,fallingSlope:.34},
 };
 

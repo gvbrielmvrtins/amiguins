@@ -1,5 +1,5 @@
 // Ground-plane artwork: lots and the coastline render above the streets.
-const lanes=[
+export const streetLanes=[
   'M1150 55H2990',
   'M30 55V2580',
   'M500 55V2620',
@@ -9,7 +9,7 @@ const lanes=[
   'M2495 55V1270',
   'M30 465H2990',
   'M1005 575H2495',
-  'M30 965H2990',
+  'M30 965H2495',
   'M1005 1250H2495',
   'M30 1500H1890',
   'M30 2060H1690',
@@ -35,12 +35,12 @@ export default function MapStreets(){
       </pattern>
     </defs>
     <g fill="none" strokeLinecap="round" strokeLinejoin="round">
-      <path d={lanes.join(' ')} stroke="#BDB6A5" strokeWidth="116"/>
-      <path d={lanes.join(' ')} stroke="#4E5654" strokeWidth="104"/>
-      <path d={lanes.join(' ')} stroke="url(#street-asphalt)" strokeWidth="98"/>
+      <path d={streetLanes.join(' ')} stroke="#BDB6A5" strokeWidth="116"/>
+      <path d={streetLanes.join(' ')} stroke="#4E5654" strokeWidth="104"/>
+      <path d={streetLanes.join(' ')} stroke="url(#street-asphalt)" strokeWidth="98"/>
     </g>
     <g fill="none" stroke="#EACB76" strokeWidth="3" strokeDasharray="19 22" opacity=".8">
-      {lanes.map((d,i)=><path key={i} d={d}/>)}
+      {streetLanes.map((d,i)=><path key={i} d={d}/>)}
     </g>
     {crossings.map((p,i)=><g key={i} transform={`translate(${p.x} ${p.y}) rotate(${p.turn})`}>
       <rect x="-45" y="-35" width="90" height="70" fill="url(#street-asphalt)"/>

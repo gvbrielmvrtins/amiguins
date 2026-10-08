@@ -4,12 +4,6 @@ import { fillerRenderedAssets } from '@/lib/filler-rendered-assets';
 
 export function FillerGround() {
   return <g data-layer="filler-ground-study" pointerEvents="none" strokeWidth="2.5" strokeLinejoin="round">
-    <path d="M92-263H917Q947-263 947-223V-8Q947 17 917 17H92Z" fill="#B6A487" stroke="#1C1C1C" strokeWidth="3"/>
-    <path d="M85-270H910Q940-270 940-230V-15Q940 10 910 10H85Z" fill="#FFFAE9" stroke="#1C1C1C" strokeWidth="3"/>
-    <path d="M97-258H906Q928-258 928-228V-18Q928-2 906-2H97Z" fill="none" stroke="#F889BA" strokeWidth="7"/>
-    <path d="M-323 137Q-333 107-283 107H-28V867H-283Q-323 867-323 827Z" fill="#B6A487" stroke="#1C1C1C" strokeWidth="3"/>
-    <path d="M-330 130Q-340 100-290 100H-35V860H-290Q-330 860-330 820Z" fill="#FFFAE9" stroke="#1C1C1C" strokeWidth="3"/>
-    <path d="M-320 133Q-328 112-289 112H-47V848H-289Q-318 848-318 818Z" fill="none" stroke="#F77B5D" strokeWidth="7"/>
     <g transform="translate(-170 -155)">
       <rect x="-175" y="-150" width="350" height="300" rx="18" fill="#F4D7CC" stroke="#F0B981"/>
       {Array.from({length:100},(_,i)=><path key={i} d={`M${-160+(i%20)*16.5} ${-133+Math.floor(i/20)*60+Math.sin(i)*12}l4 3`} stroke={['#F77B5D','#FAD846','#3774FA','#A163BF','#63A77C'][i%5]} strokeWidth="3"/>)}

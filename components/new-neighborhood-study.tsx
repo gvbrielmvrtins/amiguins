@@ -83,9 +83,6 @@ export default function NeighborhoodStudy({destination:d,selected,onSelect}:{des
 
 {international?<>
   <g aria-label="Aeroporto dos amiguINs INternacionais"><CivicRenderedProp kind="internationalAirport" x={100} y={140}/></g>
-  <g transform="matrix(0.5196152423 0.3 -0.5196152423 0.3 0 0)">
-    <path d={internationalGround} transform={`translate(${-d.x} ${-d.y})`} fill="transparent" stroke="none"/>
-  </g>
 </>:<><g><CivicRenderedProp kind="coloridinBlanket" x={-120} y={77.5}/><CivicRenderedProp kind="coloridinBlanket" x={120} y={132.5}/></g>
   <g>
     <LocalLandscape item={{id:'coloridin-tree-back',kind:'tree',x:-150,y:-130,size:75}}/>

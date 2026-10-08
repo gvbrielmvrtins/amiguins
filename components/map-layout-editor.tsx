@@ -7,22 +7,24 @@ export type LayoutOffsets=Record<string,LayoutElement>;
 type EditorState={enabled:boolean;offsets:LayoutOffsets;selected:string|null;select:(id:string)=>void;move:(id:string,x:number,y:number,begin?:boolean)=>void};
 export const MapElementScope=createContext('map');
 export const MapEditorContext=createContext<EditorState>({enabled:false,offsets:{},selected:null,select:()=>{},move:()=>{}});
-export function MovableMapElement({id,children}:{id:string;children:ReactNode}){
+type SelectionBounds={x:number;y:number;width:number;height:number};
+export function MovableMapElement({id,children,locked=false,selectionBounds}:{id:string;children:ReactNode;locked?:boolean;selectionBounds?:SelectionBounds}){
   const editor=useContext(MapEditorContext);
-  return <><MovableInstance id={id}>{children}</MovableInstance>{Object.entries(editor.offsets).filter(([,p])=>p.sourceId===id).map(([copyId])=><MovableInstance key={copyId} id={copyId} duplicate>{children}</MovableInstance>)}</>;
+  return <><MovableInstance id={id} locked={locked} selectionBounds={selectionBounds}>{children}</MovableInstance>{Object.entries(editor.offsets).filter(([,p])=>p.sourceId===id).map(([copyId])=><MovableInstance key={copyId} id={copyId} duplicate locked={locked} selectionBounds={selectionBounds}>{children}</MovableInstance>)}</>;
 }
 export function MapLayoutLayers({front}:{front:boolean}){
   const editor=useContext(MapEditorContext);
   const layers=[...new Set(Object.values(editor.offsets).map(p=>p.layer??0))].filter(n=>front?n>0:n<0).sort((a,b)=>a-b);
   return <>{layers.map(layer=><g key={layer} data-layout-layer={layer}/>)}</>;
 }
-function MovableInstance({id,children,duplicate=false}:{id:string;children:ReactNode;duplicate?:boolean}){
+function MovableInstance({id,children,duplicate=false,locked=false,selectionBounds}:{id:string;children:ReactNode;duplicate?:boolean;locked?:boolean;selectionBounds?:SelectionBounds}){
   const editor=useContext(MapEditorContext),art=useRef<SVGGElement>(null),anchor=useRef<SVGGElement>(null);
   const [portal,setPortal]=useState<{target:Element;matrix:string}|null>(null);
   const [bounds,setBounds]=useState({x:0,y:0,width:0,height:0});
+  const [hasElements,setHasElements]=useState(false);
   const drag=useRef<{x:number;y:number;dx:number;dy:number}|null>(null);
   const offset=editor.offsets[id]??{x:0,y:0};
-  useLayoutEffect(()=>{if(art.current){const b=art.current.getBBox();setBounds({x:b.x,y:b.y,width:b.width,height:b.height});}},[editor.enabled,children]);
+  useLayoutEffect(()=>{if(art.current){const b=selectionBounds??art.current.getBBox();setBounds({x:b.x,y:b.y,width:b.width,height:b.height});setHasElements(Boolean(art.current.querySelector('[data-layout-element]')));}},[editor.enabled,children,selectionBounds]);
   useLayoutEffect(()=>{
     const a=anchor.current,svg=a?.ownerSVGElement,layer=offset.layer??0;
     if(!a||!svg||!layer){setPortal(null);return;}
@@ -38,7 +40,7 @@ function MovableInstance({id,children,duplicate=false}:{id:string;children:React
   function point(e:PointerEvent<SVGGElement>){const parent=e.currentTarget.parentElement?.parentElement as SVGGraphicsElement|null,m=parent?.getScreenCTM();return m?new DOMPoint(e.clientX,e.clientY).matrixTransform(m.inverse()):null;}
   const cx=bounds.x+bounds.width/2,cy=bounds.y+bounds.height/2;
   const content=offset.hidden?null:<g transform={`translate(${offset.x} ${offset.y}) translate(${cx} ${cy}) rotate(${offset.rotation??0}) scale(${offset.scale??1}) translate(${-cx} ${-cy})`} onClickCapture={duplicate&&!editor.enabled?e=>e.stopPropagation():undefined} onKeyDownCapture={duplicate&&!editor.enabled?e=>e.stopPropagation():undefined}>
-    {editor.enabled&&bounds.width>0&&<g className={`map-edit-handle ${editor.selected===id?'selected':''}`} role="button" tabIndex={0} aria-label={`Mover ${id}`} style={{touchAction:'none'}}
+    {editor.enabled&&!locked&&!hasElements&&bounds.width>0&&<g className={`map-edit-handle ${editor.selected===id?'selected':''}`} role="button" tabIndex={0} aria-label={`Mover ${id}`} style={{touchAction:'none'}}
       onTouchStart={e=>e.stopPropagation()} onTouchMove={e=>e.stopPropagation()} onTouchEnd={e=>e.stopPropagation()}
       onClick={e=>{e.stopPropagation();editor.select(id);}}
       onPointerDown={e=>{if(e.button!==0)return;e.stopPropagation();e.preventDefault();const p=point(e);if(!p)return;editor.select(id);editor.move(id,offset.x,offset.y,true);drag.current={x:p.x,y:p.y,dx:offset.x,dy:offset.y};e.currentTarget.setPointerCapture(e.pointerId);}}
@@ -50,5 +52,5 @@ function MovableInstance({id,children,duplicate=false}:{id:string;children:React
     </g>}
     <MapElementScope.Provider value={id}><g ref={art} pointerEvents={editor.enabled?"none":undefined}>{children}</g></MapElementScope.Provider>
   </g>;
-  return <><g ref={anchor}>{portal?null:content}</g>{portal&&createPortal(<g transform={portal.matrix}>{content}</g>,portal.target)}</>;
+  return <><g ref={anchor} data-layout-element={id}>{portal?null:content}</g>{portal&&createPortal(<g transform={portal.matrix}>{content}</g>,portal.target)}</>;
 }
