@@ -1,15 +1,18 @@
 {
   "espacin-coloridin/prideCrowd2/0/0": {
-    "x": 13.63,
-    "y": 4.68
+    "x": 4.87,
+    "y": 13.22,
+    "hidden": true
   },
   "espacin-coloridin/prideCrowd1/0/0": {
-    "x": 40.14,
-    "y": -4.82
+    "x": 28.75,
+    "y": 18.62,
+    "hidden": true
   },
   "espacin-coloridin/prideRainbow/0/0": {
-    "x": 16.06,
-    "y": 15.2
+    "x": -89.34,
+    "y": 14.57,
+    "layer": -2
   },
   "north-residence-coral": {
     "x": -34.5,
@@ -40,8 +43,8 @@
     "y": 144.11
   },
   "station-clock": {
-    "x": -90.47,
-    "y": 51.6
+    "x": -181.92,
+    "y": -97.9
   },
   "north-residence-pink": {
     "x": -60.56,
@@ -56,7 +59,160 @@
     "y": 42.81
   },
   "north-metropolis": {
-    "x": 87.78,
-    "y": 153.21
+    "x": 87.95,
+    "y": 152.86,
+    "layer": 0
+  },
+  "espacin-coloridin/prideCrowd1/0/0::copy:cffc5d70-57aa-4e40-bca8-bd0e69a062a0": {
+    "x": 90.16,
+    "y": 17.66,
+    "sourceId": "espacin-coloridin/prideCrowd1/0/0",
+    "hidden": true
+  },
+  "espacin-coloridin": {
+    "x": 0,
+    "y": 0
+  },
+  "west-townhouse": {
+    "x": -10.82,
+    "y": -6.32,
+    "rotation": 0
+  },
+  "filler-west-tree": {
+    "x": 140.54,
+    "y": -134.09
+  },
+  "west-workshop": {
+    "x": 24.14,
+    "y": 18.92
+  },
+  "filler-west-table": {
+    "x": 150.56,
+    "y": -35.78,
+    "layer": 0,
+    "scale": 0.75
+  },
+  "filler-west-lamp-end": {
+    "x": 446.41,
+    "y": -42.49
+  },
+  "filler-west-lamp-middle": {
+    "x": -135.09,
+    "y": -21.58
+  },
+  "west-small-shop": {
+    "x": -15.2,
+    "y": 3.4,
+    "layer": 0
+  },
+  "filler-west-lamp-park": {
+    "x": -135.18,
+    "y": -60.3
+  },
+  "filler-west-flowers": {
+    "x": 119.28,
+    "y": 72.23,
+    "layer": 1,
+    "scale": 0.85
+  },
+  "north-mountain": {
+    "x": 28.43,
+    "y": 11.8,
+    "layer": 0
+  },
+  "north-forest-4-0": {
+    "x": -11.91,
+    "y": -19.02
+  },
+  "north-forest-1-0": {
+    "x": -51.86,
+    "y": -34.11
+  },
+  "north-forest-2-1": {
+    "x": 561.61,
+    "y": 75.28
+  },
+  "north-forest-4-5": {
+    "x": 0,
+    "y": 0
+  },
+  "taverna-joguins/tavern/0/-55": {
+    "x": 6.58,
+    "y": -13.23,
+    "rotation": 0,
+    "scale": 1.15
+  },
+  "patrick-canuto": {
+    "x": 10.31,
+    "y": -0.38,
+    "scale": 1.25
+  },
+  "loisi-vieira": {
+    "x": -2.66,
+    "y": -23.6,
+    "scale": 1.15
+  },
+  "east-tav-lamp": {
+    "x": -79.56,
+    "y": -5.71
+  },
+  "taverna-joguins/tavernRoundTable/-115/120": {
+    "x": -12.14,
+    "y": 0.36
+  },
+  "taverna-joguins/tavernRoundTable/-20/145": {
+    "x": 6.64,
+    "y": 5.43
+  },
+  "coastal-forest-4-0": {
+    "x": 1.8,
+    "y": 1.7,
+    "layer": -1
+  },
+  "taverna-joguins/tavernRoundTable/85/120": {
+    "x": -30.13,
+    "y": -65.08
+  },
+  "taverna-joguins": {
+    "x": 0,
+    "y": 0.12,
+    "layer": 0
+  },
+  "coastal-forest-6-0": {
+    "x": 0,
+    "y": 0
+  },
+  "plaza-hispanica/plaza/10/-70": {
+    "x": 13.91,
+    "y": -2.03
+  },
+  "vagao-feminino": {
+    "x": 0,
+    "y": 0
+  },
+  "coloridin-folioes-b/prideCrowd2/0/0": {
+    "x": -53.29,
+    "y": -47.73,
+    "scale": 1.05
+  },
+  "coloridin-folioes-a/prideCrowd1/0/0": {
+    "x": 138.25,
+    "y": -17.93,
+    "scale": 1.1
+  },
+  "coloridin-folioes-b/prideCrowd2/0/0::copy:91753e50-3047-4e26-a86e-5bd76d2b80f3": {
+    "x": 65.11,
+    "y": 17.38,
+    "scale": 1,
+    "sourceId": "coloridin-folioes-b/prideCrowd2/0/0",
+    "hidden": false
+  },
+  "coloridin-folioes-b": {
+    "x": 1.69,
+    "y": 2.56
+  },
+  "station-tree": {
+    "x": 0,
+    "y": 0
   }
 }

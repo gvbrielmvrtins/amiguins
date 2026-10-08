@@ -7,7 +7,7 @@ import {boundedScroll} from '@/lib/map-camera';
 import {projectGround} from '@/lib/map-projection';
 import { ArrowUpRight, Check, ChevronDown, HelpCircle, Lightbulb, Maximize, Minus, MousePointer2, PawPrint, Plus, RotateCcw, Sparkles, Store, Users, X } from 'lucide-react';
 import ModularMap from '@/components/modular-map';
-import {MapEditorContext,type LayoutOffsets} from './map-layout-editor';
+import {MapEditorContext,type LayoutOffsets,type LayoutElement} from './map-layout-editor';
 import savedLayoutOffsets from '@/lib/map-layout-offsets.json';
 import { modularDestinations } from '@/lib/modular-map';
 import { mapCharacters } from '@/lib/map-characters';
@@ -31,16 +31,28 @@ export default function ExplorationGame() {
   useEffect(()=>{
     if(!localEditor)return;
     try{const parsed=JSON.parse(localStorage.getItem('amiguins-map-layout-v1')??'{}');
-      const valid:LayoutOffsets={...savedLayoutOffsets};for(const [id,p] of Object.entries(parsed)){const point=p as {x?:number;y?:number};if(point&&Number.isFinite(point.x)&&Number.isFinite(point.y))valid[id]={x:point.x!,y:point.y!};}setLayoutOffsets(valid);
+      const valid:LayoutOffsets={...savedLayoutOffsets};for(const [id,p] of Object.entries(parsed)){const point=p as LayoutElement;if(point&&Number.isFinite(point.x)&&Number.isFinite(point.y))valid[id]={x:point.x,y:point.y,scale:Number.isFinite(point.scale)?Math.max(.1,Math.min(4,point.scale!)):1,rotation:Number.isFinite(point.rotation)?point.rotation!%360:0,layer:Number.isFinite(point.layer)?Math.max(-100,Math.min(100,Math.round(point.layer!))):0,hidden:point.hidden===true,...(typeof point.sourceId==='string'?{sourceId:point.sourceId}:{})};}setLayoutOffsets(valid);
     }catch{}setLayoutReady(true);
   },[localEditor]);
   useEffect(()=>{if(localEditor&&layoutReady){try{localStorage.setItem('amiguins-map-layout-v1',JSON.stringify(layoutOffsets));}catch{}}},[layoutOffsets,layoutReady,localEditor]);
   function moveElement(id:string,x:number,y:number,begin=false){
     if(begin){layoutHistory.current.push(layoutOffsets);if(layoutHistory.current.length>100)layoutHistory.current.shift();}
-    setLayoutOffsets(prev=>({...prev,[id]:{x:Math.round(x*100)/100,y:Math.round(y*100)/100}}));
+    setLayoutOffsets(prev=>({...prev,[id]:{...prev[id],x:Math.round(x*100)/100,y:Math.round(y*100)/100}}));
   }
+  function editElement(patch:Partial<LayoutElement>){
+    if(!editingSelection)return;
+    layoutHistory.current.push(layoutOffsets);
+    setLayoutOffsets(prev=>({...prev,[editingSelection]:{...(prev[editingSelection]??{x:0,y:0}),...patch}}));
+  }
+  function duplicateElement(){
+    if(!editingSelection)return;
+    const original=layoutOffsets[editingSelection]??{x:0,y:0},sourceId=original.sourceId??editingSelection,id=`${sourceId}::copy:${crypto.randomUUID()}`;
+    layoutHistory.current.push(layoutOffsets);
+    setLayoutOffsets(prev=>({...prev,[id]:{...original,sourceId,x:original.x+25,y:original.y+25,hidden:false}}));setEditingSelection(id);
+  }
+  const editedElement=editingSelection?layoutOffsets[editingSelection]:undefined;
   function exportLayout(){
-    const blob=new Blob([JSON.stringify({version:1,coordinates:'svg-offsets',elements:layoutOffsets},null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');
+    const blob=new Blob([JSON.stringify({version:2,coordinates:'svg-offsets',elements:layoutOffsets},null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');
     a.href=url;a.download='amiguins-posicoes.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
   }
   const [found, setFound] = useState<string[]>([]);
@@ -155,7 +167,16 @@ export default function ExplorationGame() {
     {localEditor&&<div className="map-editor-toolbar">
       <button onClick={()=>setEditing(v=>!v)} aria-pressed={editing}>{editing?'Concluir edição':'Editar posições'}</button>
       {editing&&<><button disabled={!layoutHistory.current.length} onClick={()=>{const previous=layoutHistory.current.pop();if(previous)setLayoutOffsets(previous);}}>Desfazer</button>
-      <button onClick={exportLayout}>Exportar posições</button>
+      <button onClick={exportLayout}>Exportar alterações</button>
+      <button disabled={!editingSelection} onClick={duplicateElement}>Duplicar</button>
+      <button disabled={!editingSelection||editedElement?.hidden} onClick={()=>editElement({hidden:true})}>Excluir</button>
+      <label>Tamanho <input aria-label="Tamanho do elemento em porcentagem" type="number" min="10" max="400" step="5" disabled={!editingSelection} value={Math.round((editedElement?.scale??1)*100)} onChange={e=>{const n=Number(e.target.value);if(Number.isFinite(n)&&n>=10&&n<=400)editElement({scale:n/100});}}/>%</label>
+      <label>Rotação <input aria-label="Rotação do elemento em graus" type="number" min="-360" max="360" step="5" disabled={!editingSelection} value={editedElement?.rotation??0} onChange={e=>{const n=Number(e.target.value);if(Number.isFinite(n)&&Math.abs(n)<=360)editElement({rotation:n});}}/>°</label>
+      <button disabled={!editingSelection} onClick={()=>editElement({rotation:((editedElement?.rotation??0)-15)%360})}>↶ 15°</button>
+      <button disabled={!editingSelection} onClick={()=>editElement({rotation:((editedElement?.rotation??0)+15)%360})}>↷ 15°</button>
+      <label>Camada <input aria-label="Camada do elemento" type="number" min="-100" max="100" disabled={!editingSelection} value={editedElement?.layer??0} onChange={e=>{const n=Number(e.target.value);if(Number.isFinite(n)&&Math.abs(n)<=100)editElement({layer:Math.round(n)});}}/></label>
+      <button disabled={!editingSelection} onClick={()=>editElement({layer:Math.max(-100,(editedElement?.layer??0)-1)})}>Para trás</button>
+      <button disabled={!editingSelection} onClick={()=>editElement({layer:Math.min(100,(editedElement?.layer??0)+1)})}>Para frente</button>
       <button disabled={!editingSelection||!layoutOffsets[editingSelection]} onClick={()=>{if(editingSelection){layoutHistory.current.push(layoutOffsets);setLayoutOffsets(prev=>{const next={...prev};if(editingSelection in savedLayoutOffsets){next[editingSelection]=savedLayoutOffsets[editingSelection as keyof typeof savedLayoutOffsets];}else{delete next[editingSelection];}return next;});}}}>Restaurar elemento</button>
       <span>{editingSelection??'Selecione e arraste um elemento'} · setas ajustam; Shift move mais · salvo neste navegador</span></>}
     </div>}

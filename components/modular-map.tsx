@@ -1,4 +1,4 @@
-import {MovableMapElement} from './map-layout-editor';
+import {MovableMapElement,MapLayoutLayers} from './map-layout-editor';
 import NorthMetropolis, {MetropolisTransitionGround} from './north-metropolis';
 import NorthMountain from './north-mountain';
 import NorthDesert from './north-desert';
@@ -71,6 +71,7 @@ export default function ModularMap({ selected, onSelect }: { selected: string | 
     <MetroUnderpass/>
     <MovableMapElement id="north-mountain"><NorthMountain/></MovableMapElement>
     <g data-layer="destinations-depth-sorted">
+    <MapLayoutLayers front={false}/>
     <SeaCharacters/>
     <g transform="translate(1095.588457269 1459)" pointerEvents="none" aria-label="Buraco que Paula está cavando"><ellipse cx="-7" cy="0" rx="11" ry="5" fill="#AB7F48" stroke="#CDA260" strokeWidth="2"/><path d="M-15 0Q-7-5 2 0" fill="none" stroke="#735733" strokeWidth="2"/><path d="M-22 3Q-18-5-13 1L-10 5Z" fill="#D8B87B" stroke="#BE965B" strokeWidth="1"/></g>
     {savannaProps.filter(item=>item.kind==='savannaOasis').map(item=><SavannaProp key={item.id} item={item}/>)}
@@ -120,6 +121,7 @@ export default function ModularMap({ selected, onSelect }: { selected: string | 
       };
       return <MovableMapElement key={destination.id} id={destination.id}>{render()}</MovableMapElement>;
     })}
+    <MapLayoutLayers front/>
     </g>
   </svg>;
 }
