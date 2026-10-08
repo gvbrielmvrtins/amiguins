@@ -1,25 +1,26 @@
 'use client';
 
 import { useState, useRef,useEffect, useLayoutEffect, useCallback, type TouchEvent, type PointerEvent } from 'react';
-import {communityLots} from '@/lib/community-study';
-import {commerceLots} from '@/lib/commerce-study';
 import {boundedScroll} from '@/lib/map-camera';
-import {projectGround} from '@/lib/map-projection';
 import { ArrowUpRight, Check, ChevronDown, HelpCircle, Lightbulb, Maximize, Minus, MousePointer2, PawPrint, Plus, RotateCcw, Sparkles, Store, Users, X } from 'lucide-react';
 import ModularMap from '@/components/modular-map';
 import {MapEditorContext,type LayoutOffsets,type LayoutElement} from './map-layout-editor';
 import savedLayoutOffsets from '@/lib/map-layout-offsets.json';
 import { modularDestinations } from '@/lib/modular-map';
+import {eastFillers} from '@/lib/east-district-study';
 import { mapCharacters } from '@/lib/map-characters';
 import {type Target} from '@/lib/game-data';
 const sheriffIds=new Set(mapCharacters.filter(p=>p.isSheriff).map(p=>p.id));
 const placeListPriority: Record<string, number> = { 'pracinha': 0, 'prefeintura': 1, 'departamento-xerifins': 2 };
 const categories=[{id:'people',label:'AMIGUINS'},{id:'places',label:'Espacins'}] as const;
-const targets:Target[]=[...mapCharacters, ...modularDestinations.map<Target>(d=>({id:d.id,name:d.name,article:'o',category:'places',x:d.x,y:d.y,width:0,height:0,clue:'Procure '+d.name+' no mapa.'}))];
+const cafeLocation=eastFillers.find(item=>item.id==='east-cafe')!;
+const targets:Target[]=[...mapCharacters, ...modularDestinations.map<Target>(d=>({id:d.id,name:d.name,article:'o',category:'places',x:d.x,y:d.y,width:0,height:0,clue:'Procure '+d.name+' no mapa.'})),{id:'east-cafe',name:'cafézIN',article:'o',category:'places',x:cafeLocation.x,y:cafeLocation.y,width:0,height:0,clue:'Procure o cafézIN no mapa.'}];
 
-const destinationPortraits:Record<string,string>={"vagao-feminino":"metro-vagao-feminino-v03.png","livrinhoteca":"livrinhoteca-isometrico-v01.png","cineminha":"cineminha-isometrico-v01.png","mercado-vagas":"mercado-vagas-isometrico-v01.png","prefeintura":"prefeitura-render-v01.png","taverna-joguins":"taverna-medieval-games-v04.png","pracinha":"praca-central-circular-v01.png","espacin-coloridin":"coloridin-arco-iris-frontal-v02.png","linkedin":"linkedin-predio-v02.png","jardim-secreto":"rosa-arvore-isometrica-v01.png","estudio-criativins":"estudio-render-v02.png","silicin-valley":"silicin-campus-v01.png","departamento-xerifins":"xerifins-departamento-v01.png","inglish-pub":"inglish-pub-render-v02.png","oficina-vendinhas":"feira-roupas-v01.png","torre-mistica":"torre-feiticaria-v02.png","plaza-hispanica":"plaza-arcada-v01.png","academia-marombins":"academia-render-v02.png","binstro":"binstro-render-v02.png","paises-africanos":"aeroporto-internacional-v02.png"};
+const destinationPortraits:Record<string,string>={"east-cafe":"cafe-apoio-render-v01.png","colabin":"colabin-laboratorio-v02.png","vagao-feminino":"metro-vagao-feminino-v04.png","livrinhoteca":"livrinhoteca-isometrico-v01.png","cineminha":"cineminha-isometrico-v01.png","mercado-vagas":"mercado-vagas-isometrico-v01.png","prefeintura":"prefeitura-render-v02.png","taverna-joguins":"taverna-medieval-games-v04.png","pracinha":"praca-central-circular-v01.png","espacin-coloridin":"coloridin-arco-iris-frontal-v02.png","linkedin":"linkedin-predio-v02.png","jardim-secreto":"rosa-arvore-isometrica-v01.png","estudio-criativins":"estudio-render-v02.png","silicin-valley":"silicin-campus-v01.png","departamento-xerifins":"xerifins-departamento-v01.png","inglish-pub":"inglish-pub-render-v02.png","oficina-vendinhas":"feira-roupas-v01.png","torre-mistica":"torre-feiticaria-v02.png","plaza-hispanica":"plaza-arcada-v01.png","academia-marombins":"academia-render-v02.png","binstro":"binstro-render-v02.png","paises-africanos":"aeroporto-internacional-v02.png"};
 // Crop the existing illustration to the head without exposing the map pose or props.
 const facePortraits:Record<string,{width:number;height:number;crop:[number,number,number]}>= {
+  'luara-nardelli':{width:1024,height:1536,crop:[300,115,405]},
+  'naiane-de-mello':{width:1024,height:1536,crop:[325,15,430]},
   'diego-ungari':{width:1388,height:1133,crop:[490,15,255]},
   'elton-pavesi':{width:1024,height:1536,crop:[235,10,490]},
   'davi-cabeca':{width:1254,height:1254,crop:[110,10,1140]},
@@ -83,6 +84,16 @@ export default function ExplorationGame() {
   const wheelZoom=useRef(zoom);
   useLayoutEffect(()=>{wheelZoom.current=zoom;},[zoom]);
   const [message, setMessage] = useState('');
+  const [destinationMessageVersion,setDestinationMessageVersion]=useState(0);
+  function showDestinationMessage(name:string){
+    setMessage(`Você está em ${name}.`);
+    setDestinationMessageVersion(version=>version+1);
+  }
+  useEffect(()=>{
+    if(!message.startsWith('Você está em '))return;
+    const timer=window.setTimeout(()=>setMessage(''),8000);
+    return()=>window.clearTimeout(timer);
+  },[message,destinationMessageVersion]);
   const [filter, setFilter] = useState<'all' | 'remaining'>('all');
   const help = useRef<HTMLDialogElement>(null);
   const reset = useRef<HTMLDialogElement>(null);
@@ -165,21 +176,22 @@ export default function ExplorationGame() {
     return()=>v.removeEventListener('wheel',wheel,true);
   },[viewportNode]);
   function locateDestination(id:string){
-    setSelected(id);const v=viewport.current,d=targets.find(item=>item.id===id);if(!v||!d)return;
-    if(id==='pracinha'){
-      const square=v.querySelector<SVGImageElement>('image[href="/images/modular/praca-central-circular-v01.png"]');
-      if(square){
-        const rect=square.getBoundingClientRect(),frame=v.getBoundingClientRect();
-        const next=boundedScroll(v.scrollLeft+rect.left-frame.left+rect.width/2-v.clientWidth/2,v.scrollTop+rect.top-frame.top+rect.height/2-v.clientHeight/2,v.clientWidth,v.clientHeight,v.scrollWidth,v.scrollHeight);
-        v.scrollTo({left:next.left,top:next.top,behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});
-        return;
-      }
-    }
-    const lot=[...communityLots,...commerceLots].find(item=>item.id===id);
-    const at=projectGround(lot?.x??d.x,lot?.y??d.y),scale=v.scrollWidth/2700;
-    const next=boundedScroll(at.x*scale-v.clientWidth/2,(at.y+70)*scale-v.clientHeight/2,v.clientWidth,v.clientHeight,v.scrollWidth,v.scrollHeight);
+    setSelected(id);const v=viewport.current,d=targets.find(item=>item.id===id);if(!v||!d)return false;
+    // Follow rendered artwork rather than the original lot coordinates. The
+    // browser bounds include editor translations, rotation, scale and portals.
+    const file=id==='jardim-secreto'?'jardim-labirinto-unificado-v01.png':destinationPortraits[id];
+    const images=Array.from(v.querySelectorAll<SVGImageElement>(`image[href="/images/modular/${file}"]`));
+    const image=images.find(node=>{
+      const rect=node.getBoundingClientRect();
+      return rect.width>0&&rect.height>0;
+    });
+    if(!image){setMessage(`O elemento principal de ${d.name} está oculto ou foi excluído do mapa.`);return false;}
+    const rect=image.getBoundingClientRect(),frame=v.getBoundingClientRect();
+    const next=boundedScroll(v.scrollLeft+rect.left-frame.left+rect.width/2-v.clientWidth/2,v.scrollTop+rect.top-frame.top+rect.height/2-v.clientHeight/2,v.clientWidth,v.clientHeight,v.scrollWidth,v.scrollHeight);
     v.scrollTo({left:next.left,top:next.top,behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});
+    return true;
   }
+
   function changeZoom(next:number){
     const v=viewport.current;
     if(!v){setZoom(next);return;}
@@ -239,7 +251,7 @@ export default function ExplorationGame() {
           if (category.id === 'places') items.sort((a, b) => (placeListPriority[a.id] ?? 3) - (placeListPriority[b.id] ?? 3));
           const count = items.filter(t => found.includes(t.id)).length;
           const Icon = Store;
-          return <section className="category" key={category.id}><button className="category-heading" aria-expanded={!collapsed.includes(category.id)} onClick={() => setCollapsed(prev => prev.includes(category.id) ? prev.filter(c => c !== category.id) : [...prev, category.id])}><strong>{category.label}</strong>{category.id === 'people' && <span className="category-count">{count}<span>/{items.length}</span></span>}<ChevronDown size={15} className={collapsed.includes(category.id) ? 'closed' : ''} /></button>{!collapsed.includes(category.id) && <div className={`target-grid ${category.id === 'places' ? 'places-grid' : ''}`}>{items.filter(t => category.id === 'places' || filter !== 'remaining' || !found.includes(t.id)).map(target => <button key={target.id} className={`target-card ${selected === target.id ? 'selected' : ''} ${found.includes(target.id) ? 'found' : ''}`} aria-label={target.category === 'places' ? `Ir para ${target.name}` : `Procurar ${target.name}${sheriffIds.has(target.id)?', xerifIN':''}${found.includes(target.id) ? ', encontrado' : ''}`} aria-pressed={selected === target.id} onClick={() => { if(target.category === 'places'){locateDestination(target.id);setMessage(`Você está em ${target.name}.`);return;} setSelected(target.id); setMessage(found.includes(target.id) ? `${target.name} já foi encontrado!` : `Procurando ${target.name}. Encontre no mapa!`); }}><span className="portrait-wrap"><Portrait target={target}/>{sheriffIds.has(target.id)&&<span className="sheriff-badge" role="img" aria-label="xerifIN"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l3 6 6.6 1-4.8 4.7 1.1 6.6L12 18.2l-5.9 3.1 1.1-6.6L2.4 10 9 9Z" fill="#FAD846" stroke="#604722" strokeWidth="1.4"/>{[[12,3],[21.6,10],[17.9,21.3],[6.1,21.3],[2.4,10]].map(([x,y],i)=><circle key={i} cx={x} cy={y} r="1.5" fill="#FFE888" stroke="#604722" strokeWidth=".8"/>)}</svg></span>}{found.includes(target.id) && <span className="found-check"><Check size={12} /></span>}</span><span>{target.name}</span></button>)}</div>}</section>;
+          return <section className="category" key={category.id}><button className="category-heading" aria-expanded={!collapsed.includes(category.id)} onClick={() => setCollapsed(prev => prev.includes(category.id) ? prev.filter(c => c !== category.id) : [...prev, category.id])}><strong>{category.label}</strong>{category.id === 'people' && <span className="category-count">{count}<span>/{items.length}</span></span>}<ChevronDown size={15} className={collapsed.includes(category.id) ? 'closed' : ''} /></button>{!collapsed.includes(category.id) && <div className={`target-grid ${category.id === 'places' ? 'places-grid' : ''}`}>{items.filter(t => category.id === 'places' || filter !== 'remaining' || !found.includes(t.id)).map(target => <button key={target.id} className={`target-card ${selected === target.id ? 'selected' : ''} ${found.includes(target.id) ? 'found' : ''}`} aria-label={target.category === 'places' ? `Ir para ${target.name}` : `Procurar ${target.name}${sheriffIds.has(target.id)?', xerifIN':''}${found.includes(target.id) ? ', encontrado' : ''}`} aria-pressed={selected === target.id} onClick={() => { if(target.category === 'places'){if(locateDestination(target.id))showDestinationMessage(target.name);return;} setSelected(target.id); setMessage(found.includes(target.id) ? `${target.name} já foi encontrado!` : `Procurando ${target.name}. Encontre no mapa!`); }}><span className="portrait-wrap"><Portrait target={target}/>{sheriffIds.has(target.id)&&<span className="sheriff-badge" role="img" aria-label="xerifIN"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l3 6 6.6 1-4.8 4.7 1.1 6.6L12 18.2l-5.9 3.1 1.1-6.6L2.4 10 9 9Z" fill="#FAD846" stroke="#604722" strokeWidth="1.4"/>{[[12,3],[21.6,10],[17.9,21.3],[6.1,21.3],[2.4,10]].map(([x,y],i)=><circle key={i} cx={x} cy={y} r="1.5" fill="#FFE888" stroke="#604722" strokeWidth=".8"/>)}</svg></span>}{found.includes(target.id) && <span className="found-check"><Check size={12} /></span>}</span><span>{target.name}</span></button>)}</div>}</section>;
         })}</div>
 
 
@@ -248,7 +260,7 @@ export default function ExplorationGame() {
         <div className="map-topbar" aria-hidden="true"/>
         <div className="map-frame">
           <div className="map-viewport" ref={attachViewport} onTouchStart={e=>{if(e.touches.length===1)didDrag.current=false;beginTouch(e);}} onTouchMove={moveTouch} onTouchEnd={endTouch} onTouchCancel={()=>{touchGesture.current=null;drag.current=null;}} onScroll={constrainCamera} onPointerDown={startDrag} onPointerMove={moveDrag} onPointerUp={() => { drag.current = null; }} onPointerLeave={() => { drag.current = null; }}>
-            <div className="map-world modular-world" style={{width:`${mapScale*100}%`,minWidth:`${740*mapScale}px`}}><ModularMap selected={selected} onSelect={(id,keyboard)=>{if(keyboard||!didDrag.current){const target=targets.find(t=>t.id===id);if(target?.category === 'people')discover(target);else if(target){locateDestination(id);setMessage(`Você está em ${target.name}.`);}}}}/></div>
+            <div className="map-world modular-world" style={{width:`${mapScale*100}%`,minWidth:`${740*mapScale}px`}}><ModularMap selected={selected} onSelect={(id,keyboard)=>{if(keyboard||!didDrag.current){const target=targets.find(t=>t.id===id);if(target?.category === 'people')discover(target);else if(target){locateDestination(id);showDestinationMessage(target.name);}}}}/></div>
           </div>
 
           <div className="map-controls"><button aria-label="Aumentar zoom" disabled={zoom >= 5} onClick={() => changeZoom(Math.min(5, zoom + .25))}><Plus size={19} /></button><span>{Math.round(zoom * 100)}%</span><button aria-label="Diminuir zoom" disabled={zoom <= .25} onClick={() => changeZoom(Math.max(.25, zoom - .25))}><Minus size={19} /></button><div /><button aria-label="Ajustar mapa à tela" onClick={() => { setZoom(1); viewport.current?.scrollTo({ top: 0, left: 0 }); }}><Maximize size={17} /></button></div>

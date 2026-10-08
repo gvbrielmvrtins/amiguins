@@ -14,7 +14,7 @@ const carriageProjection=uprightProjection(-.49,.42).transform;
 export default function MetroTrain(){
   const scope=useContext(MapElementScope);
   return <g id="destination-vagao-feminino" role="group" aria-label="Metrô com um vagão feminino" pointerEvents="none">
-    {[{x:260,file:'metro-vagao-feminino-v03.png'},{x:560,file:'metro-carro-frontal-v01.png'}].map(car=>{
+    {[{x:260,file:'metro-vagao-feminino-v04.png'},{x:560,file:'metro-carro-frontal-v01.png'}].map(car=>{
       const at=projectGround(car.x,55);
       return <MovableMapElement key={car.file} id={`${scope}/carriage/${car.x}`}><g transform={`translate(${at.x} ${at.y})`}>
         <g transform={carriageProjection}><image href={`/images/modular/${car.file}`} x="-106.4" y="-99.4" width="215.04" height="143.36"/></g>
