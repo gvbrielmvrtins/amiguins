@@ -17,5 +17,5 @@ export function uprightProjection(risingSlope: number, fallingSlope: number) {
   };
 }
 export function projectGround(x: number, y: number) {
-  return { x: 1080 + (x - y) * 0.5196152423, y: 220 + (x + y) * 0.3 };
+  return { x: Number((1080 + (x - y) * 0.5196152423).toFixed(6)), y: Number((220 + (x + y) * 0.3).toFixed(6)) };
 }

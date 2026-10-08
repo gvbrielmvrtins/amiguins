@@ -329,7 +329,7 @@
     "hidden": false
   },
   "plaza-hispanica/plaza/10/-70": {
-    "x": -691.65,
+    "x": -690.34,
     "y": -204.54,
     "scale": 1.6,
     "rotation": 0,
@@ -2919,7 +2919,7 @@
     "y": -72.2,
     "scale": 1,
     "rotation": 0,
-    "layer": 0,
+    "layer": -2,
     "hidden": false
   },
   "civic-plaza-flowers": {
@@ -2931,8 +2931,8 @@
     "hidden": false
   },
   "plaza-hispanica/fonte/35/105": {
-    "x": -749.98,
-    "y": -168.9,
+    "x": -884.34,
+    "y": -41.7,
     "scale": 1,
     "rotation": 0,
     "layer": 0,
@@ -3012,10 +3012,10 @@
   },
   "central-circular-square": {
     "x": 453.02,
-    "y": -38.32,
+    "y": -38.52,
     "scale": 1.45,
     "rotation": 0,
-    "layer": 0,
+    "layer": -1,
     "hidden": false
   },
   "pracinha/pergolado/-100/250": {
@@ -3047,7 +3047,7 @@
     "y": -471.55,
     "scale": 1.15,
     "rotation": 0,
-    "layer": 1,
+    "layer": 0,
     "hidden": false
   },
   "civic-plaza-bench": {
@@ -3084,11 +3084,11 @@
     "hidden": false
   },
   "departamento-xerifins/sheriffBuilding/-20/-70": {
-    "x": 904.69,
+    "x": 904.89,
     "y": -117.53,
     "scale": 1.05,
     "rotation": 0,
-    "layer": 0,
+    "layer": -2,
     "hidden": false
   },
   "academia-marombins/commerceGym/-55/-80": {
@@ -3144,7 +3144,7 @@
     "y": -146.87,
     "scale": 1.3,
     "rotation": 0,
-    "layer": 0,
+    "layer": -3,
     "hidden": false
   },
   "east-garden-tree-b": {
@@ -3158,596 +3158,1058 @@
   "beach-feature-1/beachPalm/0/0": {
     "x": 261.66,
     "y": -80.01,
-    "layer": -1
+    "scale": 1,
+    "rotation": 0,
+    "layer": -1,
+    "hidden": false
   },
   "savannaElephant-2/savannaElephant/0/0": {
     "x": -43.91,
     "y": 37.29,
-    "layer": 1
+    "scale": 1,
+    "rotation": 0,
+    "layer": 1,
+    "hidden": false
   },
   "savannaElephant-3/savannaElephant/0/0": {
     "x": -173.11,
     "y": 15.57,
     "scale": 0.8,
-    "layer": 1
+    "rotation": 0,
+    "layer": 1,
+    "hidden": false
   },
   "savannaElephant-4/savannaElephant/0/0": {
     "x": 33.78,
-    "y": -17.05
+    "y": -17.05,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "savannaZebra-9/savannaZebra/0/0": {
     "x": -18.59,
     "y": -20.13,
-    "layer": 0
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "savanna-acacia-0/savannaAcacia/0/0": {
     "x": 36.33,
     "y": -37.44,
+    "scale": 1.5,
+    "rotation": 0,
     "layer": -1,
-    "scale": 1.5
+    "hidden": false
   },
   "savannaGiraffe-0/savannaGiraffe/0/0": {
     "x": 60.66,
     "y": 8.85,
-    "layer": -3
+    "scale": 1,
+    "rotation": 0,
+    "layer": -3,
+    "hidden": false
   },
   "savanna-acacia-behind-jeep/savannaAcacia/0/0": {
     "x": -8.19,
     "y": -11.15,
-    "layer": -3
+    "scale": 1,
+    "rotation": 0,
+    "layer": -3,
+    "hidden": false
   },
   "savanna-acacia-5/savannaAcacia/0/0": {
     "x": 12.5,
     "y": 5.42,
-    "layer": -4
+    "scale": 1,
+    "rotation": 0,
+    "layer": -4,
+    "hidden": false
   },
   "savanna-acacia-3/savannaAcacia/0/0": {
     "x": 19.72,
-    "y": 12.54
+    "y": 12.54,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "savanna-acacia-2/savannaAcacia/0/0": {
     "x": 6.79,
-    "y": 5.07
+    "y": 5.07,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "savanna-visitor-3/savannaVisitor3/0/0": {
     "x": -10.47,
-    "y": 20.36
+    "y": 20.36,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "savannaImpala-5/savannaImpala/0/0": {
     "x": 3.8,
-    "y": 42.17
+    "y": 42.17,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "savannaGiraffe-2/savannaGiraffe/0/0": {
     "x": -85.34,
-    "y": -4.66
+    "y": -4.66,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "savannaGiraffe-4/savannaGiraffe/0/0": {
     "x": -47.39,
     "y": -43.54,
-    "layer": 0
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "savannaGiraffe-1/savannaGiraffe/0/0": {
     "x": -48.35,
-    "y": -23.07
+    "y": -23.07,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "savannaImpala-1/savannaImpala/0/0": {
     "x": -47.69,
     "y": 10.97,
-    "layer": 1
+    "scale": 1,
+    "rotation": 0,
+    "layer": 1,
+    "hidden": false
   },
   "savannaImpala-2/savannaImpala/0/0": {
     "x": -9.44,
-    "y": -4
+    "y": -4,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "savannaImpala-6/savannaImpala/0/0": {
     "x": 79.29,
-    "y": 27.33
+    "y": 27.33,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "savannaImpala-0/savannaImpala/0/0": {
     "x": 35.27,
-    "y": 38.55
+    "y": 38.55,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "savannaImpala-4/savannaImpala/0/0": {
     "x": -106.94,
     "y": 6.8,
-    "layer": 1
+    "scale": 1,
+    "rotation": 0,
+    "layer": 1,
+    "hidden": false
   },
   "savannaImpala-8/savannaImpala/0/0": {
     "x": 5.39,
     "y": 5.3,
-    "layer": 1
+    "scale": 1,
+    "rotation": 0,
+    "layer": 1,
+    "hidden": false
   },
   "savannaImpala-10/savannaImpala/0/0": {
     "x": -130.95,
-    "y": 18.15
+    "y": 18.15,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "savanna-grass-113/savannaGrass/0/0": {
     "x": -125.18,
-    "y": -41.55
+    "y": -41.55,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "savannaImpala-7/savannaImpala/0/0": {
     "x": -227.58,
     "y": -86.07,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
     "hidden": true
   },
   "savannaImpala-9/savannaImpala/0/0": {
     "x": 199.43,
     "y": -20.66,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
     "hidden": true
   },
   "savannaImpala-11/savannaImpala/0/0": {
     "x": 172.99,
-    "y": -87.23
+    "y": -87.23,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "savanna-grass-67/savannaGrass/0/0": {
     "x": 0,
     "y": 0,
-    "layer": 1
+    "scale": 1,
+    "rotation": 0,
+    "layer": 1,
+    "hidden": false
   },
   "savanna-grass-97/savannaGrass/0/0": {
     "x": -57.05,
-    "y": 75.15
+    "y": 75.15,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "savanna-grass-98/savannaGrass/0/0": {
     "x": 105.24,
-    "y": 16.32
+    "y": 16.32,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "savanna-grass-114/savannaGrass/0/0": {
     "x": 69.18,
-    "y": 53.33
+    "y": 53.33,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "savanna-grass-99/savannaGrass/0/0": {
     "x": -65.15,
-    "y": 9.64
+    "y": 9.64,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "savanna-grass-83/savannaGrass/0/0": {
     "x": -91.36,
-    "y": 37.15
+    "y": 37.15,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "savanna-grass-82/savannaGrass/0/0": {
     "x": 80.35,
-    "y": 72.65
+    "y": 72.65,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "savannaImpala-3/savannaImpala/0/0": {
     "x": 105.33,
-    "y": 86.95
+    "y": 86.95,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "savanna-grass-109/savannaGrass/0/0": {
     "x": 6.86,
-    "y": 12.16
+    "y": 12.16,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "savannaZebra-5/savannaZebra/0/0": {
     "x": 97.86,
     "y": 43.03,
-    "layer": 1
+    "scale": 1,
+    "rotation": 0,
+    "layer": 1,
+    "hidden": false
   },
   "savanna-grass-125/savannaGrass/0/0": {
     "x": -4.35,
-    "y": 28.74
+    "y": 28.74,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "savannaGiraffe-3/savannaGiraffe/0/0": {
     "x": 105.44,
     "y": 29.89,
-    "layer": 1
+    "scale": 1,
+    "rotation": 0,
+    "layer": 1,
+    "hidden": false
   },
   "savanna-visitor-1/savannaVisitor1/0/0": {
     "x": 18.8,
-    "y": 30.98
+    "y": 30.98,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "savannaLion-0/savannaLion/0/0": {
     "x": -1.88,
-    "y": 1.62
+    "y": 1.62,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "savanna-lioness/savannaLioness/0/0": {
     "x": 12.53,
     "y": -27.57,
+    "scale": 0.9,
+    "rotation": 0,
     "layer": -1,
-    "scale": 0.9
+    "hidden": false
   },
   "savannaZebra-2/savannaZebra/0/0": {
     "x": 42.37,
-    "y": 93.24
+    "y": 93.24,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "savanna-grass-143/savannaGrass/0/0": {
     "x": -0.67,
-    "y": 5.55
+    "y": 5.55,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "savanna-grass-141/savannaGrass/0/0": {
     "x": 3.71,
-    "y": 9.21
+    "y": 9.21,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "savanna-grass-126/savannaGrass/0/0": {
     "x": 3.63,
-    "y": 17.36
+    "y": 17.36,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "savannaLion-4/savannaLion/0/0": {
     "x": -30.82,
-    "y": -47.52
+    "y": -47.52,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "savannaLion-3/savannaLion/0/0": {
     "x": 0,
     "y": 0,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
     "hidden": true
   },
   "savanna-grass-128/savannaGrass/0/0": {
     "x": 0,
-    "y": 0
+    "y": 0,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "savannaLion-2/savannaLion/0/0": {
     "x": 0,
     "y": 0,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
     "hidden": true
   },
   "savannaLion-1/savannaLion/0/0": {
     "x": -0.14,
     "y": 0.67,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
     "hidden": true
   },
   "savanna-visitor-4/savannaVisitor4/0/0": {
     "x": -112.09,
-    "y": -57.12
+    "y": -57.12,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "savanna-visitor-2/savannaVisitor2/0/0": {
     "x": -52.2,
-    "y": -106.45
+    "y": -106.45,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "savannaZebra-1/savannaZebra/0/0": {
     "x": -17.71,
-    "y": 4.36
+    "y": 4.36,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "savannaZebra-4/savannaZebra/0/0": {
     "x": 46.82,
     "y": -33.05,
-    "layer": -1
+    "scale": 1,
+    "rotation": 0,
+    "layer": -1,
+    "hidden": false
   },
   "savanna-grass-124/savannaGrass/0/0": {
     "x": -2.37,
-    "y": 107.81
+    "y": 107.81,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "savanna-grass-146/savannaGrass/0/0": {
     "x": -15.58,
-    "y": 7.89
+    "y": 7.89,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "savanna-grass-145/savannaGrass/0/0": {
     "x": -2.2,
-    "y": 1.13
+    "y": 1.13,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "savanna-coastal-grass-8/savannaGrass/0/0": {
     "x": -98.81,
     "y": 23.2,
-    "layer": 1
+    "scale": 1,
+    "rotation": 0,
+    "layer": 1,
+    "hidden": false
   },
   "savanna-angel-lamb/savannaLamb/0/0": {
     "x": -0.28,
     "y": 0.76,
     "scale": 0.85,
-    "layer": -1
+    "rotation": 0,
+    "layer": -1,
+    "hidden": false
   },
   "kauana-moreira": {
     "x": 1.09,
     "y": 6.25,
     "scale": 1.1,
-    "layer": 0
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "savanna-coastal-grass-5/savannaGrass/0/0": {
     "x": -29.84,
-    "y": 44.3
+    "y": 44.3,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "savannaZebra-0/savannaZebra/0/0": {
     "x": 6.97,
     "y": 4.06,
-    "layer": 1
+    "scale": 1,
+    "rotation": 0,
+    "layer": 1,
+    "hidden": false
   },
   "savanna-coastal-grass-3/savannaGrass/0/0": {
     "x": 154.81,
     "y": 73.96,
-    "layer": 1
+    "scale": 1,
+    "rotation": 0,
+    "layer": 1,
+    "hidden": false
   },
   "savanna-grass-122/savannaGrass/0/0": {
     "x": 117.49,
     "y": 25.53,
-    "layer": 1
+    "scale": 1,
+    "rotation": 0,
+    "layer": 1,
+    "hidden": false
   },
   "savanna-coastal-grass-4/savannaGrass/0/0": {
     "x": -191.39,
     "y": 104.14,
-    "layer": 1
+    "scale": 1,
+    "rotation": 0,
+    "layer": 1,
+    "hidden": false
   },
   "savanna-grass-120/savannaGrass/0/0": {
     "x": 203.49,
     "y": 168.18,
-    "layer": 1
+    "scale": 1,
+    "rotation": 0,
+    "layer": 1,
+    "hidden": false
   },
   "savanna-grass-105/savannaGrass/0/0": {
     "x": -7.75,
-    "y": 3.4
+    "y": 3.4,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "savannaZebra-6/savannaZebra/0/0": {
     "x": -2.98,
-    "y": 0.6
+    "y": 0.6,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "savanna-grass-140/savannaGrass/0/0": {
     "x": 48.84,
-    "y": -3.75
+    "y": -3.75,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "savanna-grass-138/savannaGrass/0/0": {
     "x": 9.37,
-    "y": 13.31
+    "y": 13.31,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "savanna-grass-123/savannaGrass/0/0": {
     "x": -12.98,
     "y": -6.37,
-    "layer": 1
+    "scale": 1,
+    "rotation": 0,
+    "layer": 1,
+    "hidden": false
   },
   "savannaZebra-3/savannaZebra/0/0": {
     "x": 9.92,
-    "y": 1.86
+    "y": 1.86,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "savanna-grass-154/savannaGrass/0/0": {
     "x": 8.05,
-    "y": -10.38
+    "y": -10.38,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "savanna-safari/savannaSafari/0/0": {
     "x": 0,
     "y": 0,
-    "layer": -2
+    "scale": 1,
+    "rotation": 0,
+    "layer": -2,
+    "hidden": false
   },
   "savanna-coastal-grass-0/savannaGrass/0/0": {
     "x": -206.55,
-    "y": -60.73
+    "y": -60.73,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "savanna-grass-46/savannaGrass/0/0": {
     "x": 202.47,
-    "y": -58.22
+    "y": -58.22,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "savanna-grass-47/savannaGrass/0/0": {
     "x": -167.83,
-    "y": -47.49
+    "y": -47.49,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "savanna-coastal-grass-6/savannaGrass/0/0": {
     "x": -6.28,
     "y": 4.76,
     "scale": 1.45,
-    "layer": -4
+    "rotation": 0,
+    "layer": -4,
+    "hidden": false
   },
   "savanna-grass-78/savannaGrass/0/0": {
     "x": 239.48,
-    "y": -85.19
+    "y": -85.19,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "savanna-grass-63/savannaGrass/0/0": {
     "x": -245.33,
-    "y": -89.04
+    "y": -89.04,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "beach-rest-12/coloridinBlanket/0/0": {
     "x": 1.53,
-    "y": 7.17
+    "y": 7.17,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "beach-umbrella-12/beachUmbrella/0/0": {
     "x": 21.87,
     "y": 4.11,
-    "layer": 1
+    "scale": 1,
+    "rotation": 0,
+    "layer": 1,
+    "hidden": false
   },
   "beach-shell-13/beachShell/0/0": {
     "x": -65.63,
     "y": -69.12,
-    "scale": 0.8
+    "scale": 0.8,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "beach-umbrella-14/beachUmbrella/0/0": {
     "x": -20.4,
-    "y": -10.11
+    "y": -10.11,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "beach-rest-14/beachChair/0/0": {
     "x": -16.32,
-    "y": -2.9
+    "y": -2.9,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "beach-feature-15/beachBall/0/0": {
     "x": 4.81,
     "y": -16.71,
-    "scale": 0.75
+    "scale": 0.75,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "beach-shell-15/beachShell/0/0": {
     "x": 2.66,
     "y": -47.3,
-    "scale": 0.9
+    "scale": 0.9,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "estudio-criativins-lamp": {
     "x": 253.43,
-    "y": -135.75
+    "y": -135.75,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "estudio-criativins/creativeBench/-120/25": {
     "x": 716.61,
-    "y": 196.23
+    "y": 196.23,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "estudio-criativins/creativeEasel/-115/105": {
     "x": 789.28,
-    "y": 146.97
+    "y": 146.97,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "estudio-criativins/creativeEasel/0/135": {
     "x": 901.56,
     "y": 169.58,
-    "layer": 2
+    "scale": 1,
+    "rotation": 0,
+    "layer": 2,
+    "hidden": false
   },
   "estudio-criativins/creativeSculpture/100/85": {
     "x": 760.27,
-    "y": 181.85
+    "y": 181.85,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "estudio-criativins-planter": {
     "x": -124.93,
-    "y": -198.35
+    "y": -198.35,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "naiane-de-mello": {
     "x": 2.08,
     "y": -3.82,
-    "scale": 1.55
+    "scale": 1.55,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "livrinhoteca/building": {
     "x": 32.46,
     "y": -25.95,
-    "scale": 1.1
+    "scale": 1.1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "livrinhoteca-banco": {
     "x": 96.33,
     "y": -55.44,
     "scale": 1.05,
-    "rotation": 0
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "livrinhoteca-livros": {
     "x": 51.51,
     "y": -40.62,
+    "scale": 1.75,
     "rotation": 0,
-    "scale": 1.75
+    "layer": 0,
+    "hidden": false
   },
   "luara-nardelli": {
     "x": 17.44,
     "y": -14.34,
-    "scale": 1.3
+    "scale": 1.3,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "inglish-pub/inglishPub/-20/-70": {
     "x": 774.85,
-    "y": -72.82
+    "y": -72.82,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "car-suv": {
     "x": 1182.22,
-    "y": 44.37
+    "y": 44.37,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "binstro-terrace-b": {
     "x": 414.69,
     "y": -52.36,
-    "scale": 1.15
+    "scale": 1.15,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "academia-marombins/commerceRig/-115/110": {
     "x": 794.89,
-    "y": -41.93
+    "y": -41.93,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "academia-marombins/commerceWeights/35/110": {
     "x": 671.92,
-    "y": -63.02
+    "y": -63.02,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "nathan-machado": {
     "x": 721.2,
-    "y": -111.39
+    "y": -111.39,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "binstro-terrace-a": {
     "x": 751.81,
-    "y": 292.42
+    "y": 292.42,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "car-sedan": {
     "x": 506,
-    "y": 125.8
+    "y": 125.8,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "departamento-xerifins-tree": {
     "x": 470.65,
     "y": -66.01,
+    "scale": 1.25,
+    "rotation": 0,
     "layer": 1,
-    "scale": 1.25
+    "hidden": false
   },
   "departamento-xerifins-lamp": {
-    "x": 549.98,
-    "y": 24.68
+    "x": 576.42,
+    "y": 215.38,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "car-hatch": {
     "x": -149.15,
-    "y": -103.81
+    "y": -103.81,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "binstro-tree": {
     "x": 436.02,
-    "y": 65.52
+    "y": 65.52,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "binstro-flowers": {
-    "x": -13.84,
-    "y": -162.22
+    "x": -31.93,
+    "y": 9.97,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "binstro-lamp": {
     "x": -148.37,
     "y": -390.23,
-    "layer": 1
+    "scale": 1,
+    "rotation": 0,
+    "layer": 1,
+    "hidden": false
   },
   "inglish-pub-tree": {
     "x": 840.05,
     "y": -190.89,
+    "scale": 1.15,
+    "rotation": 0,
     "layer": 1,
-    "scale": 1.15
+    "hidden": false
   },
   "academia-marombins-tree": {
     "x": -367.59,
     "y": -376.58,
-    "layer": 1
+    "scale": 1,
+    "rotation": 0,
+    "layer": 1,
+    "hidden": false
   },
   "inglish-pub/pubSpeaker/-130/30": {
     "x": 1102.07,
     "y": -146.24,
-    "scale": 0.85
+    "scale": 0.85,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "inglish-pub/tavernRoundTable/-105/115": {
     "x": 1464.89,
-    "y": 55.65
+    "y": 55.65,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "inglish-pub/tavernRoundTable/20/135": {
     "x": 2272.44,
     "y": -40.66,
-    "layer": -2
+    "scale": 1,
+    "rotation": 0,
+    "layer": -2,
+    "hidden": false
   },
   "inglish-pub/pubMicrophone/110/45": {
     "x": 959.48,
-    "y": -218.34
+    "y": -218.34,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "inglish-pub/pubStage/110/45": {
     "x": 819.48,
     "y": -11.23,
-    "scale": 2.65
+    "scale": 2.65,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "inglish-pub-planter": {
-    "x": 456.62,
-    "y": -231.98
+    "x": 194.96,
+    "y": -195.91,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "inglish-pub-lamp": {
     "x": 657.64,
     "y": -473.49,
-    "layer": 1
+    "scale": 1,
+    "rotation": 0,
+    "layer": 1,
+    "hidden": false
   },
   "oficina-vendinhas/fairClothes/-105/-115": {
     "x": 653.61,
     "y": -321.74,
-    "layer": 1
+    "scale": 1,
+    "rotation": 0,
+    "layer": 1,
+    "hidden": false
   },
   "oficina-vendinhas/fairBooks/80/-115": {
     "x": 499.88,
     "y": -406.54,
-    "layer": 1
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "oficina-vendinhas/fairCeramics/-105/30": {
     "x": 670.11,
     "y": -330.24,
-    "layer": 1
+    "scale": 1,
+    "rotation": 0,
+    "layer": 1,
+    "hidden": false
   },
   "oficina-vendinhas/fairElectronics/95/35": {
     "x": 623.12,
     "y": -359.9,
-    "layer": 1
+    "scale": 1,
+    "rotation": 0,
+    "layer": 1,
+    "hidden": false
   },
   "oficina-vendinhas-lamp": {
     "x": 1376.93,
-    "y": -240.7
+    "y": -240.7,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "oficina-vendinhas-tree": {
     "x": 444.95,
-    "y": 58.94
+    "y": 58.94,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "oficina-vendinhas/fairProduce/-115/145": {
     "x": 666.6,
-    "y": -403.03
+    "y": -403.03,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "oficina-vendinhas-flowers": {
     "x": 459.1,
-    "y": -76.67
+    "y": -76.67,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "academia-marombins-lamp": {
     "x": 257.75,
-    "y": -380.88
+    "y": -380.88,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "taverna-joguins/duck/2": {
     "x": 0,
-    "y": 0
+    "y": 0,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "ground-grass-organic::copy:7554a651-6393-43f4-8e5b-5c5dec52e5c8": {
     "x": 536.99,
@@ -3778,30 +4240,52 @@
   },
   "coastal-forest-10-7": {
     "x": -6.47,
-    "y": 2.8
+    "y": 2.8,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "coastal-forest-9-8": {
     "x": -8.87,
-    "y": 15.37
+    "y": 15.37,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "coastal-forest-9-7": {
     "x": -15.43,
-    "y": 7.95
+    "y": 7.95,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "departamento-xerifins-lamp::copy:949ca515-7065-4843-bc6f-27183a127292": {
-    "x": 729.7,
-    "y": 125.39,
-    "sourceId": "departamento-xerifins-lamp",
+    "x": 531.87,
+    "y": 178.06,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 1,
     "hidden": false,
-    "layer": 1
+    "sourceId": "departamento-xerifins-lamp"
   },
   "academia-marombins-flowers": {
     "x": 248.56,
-    "y": 136.65
+    "y": 136.65,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "car-pickup": {
     "x": 467.04,
-    "y": -367.65
+    "y": -367.65,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "market-tree::copy:a4696e55-b264-4076-aaca-d0cac7233a97": {
     "x": -393.37,
@@ -3829,5 +4313,39 @@
     "layer": 0,
     "hidden": false,
     "sourceId": "west-small-shop"
+  },
+  "editable-residential-building": {
+    "x": -413.33,
+    "y": -439.32,
+    "scale": 1.8,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
+  },
+  "editable-residential-building::copy:90abcf27-ba6b-4fa2-b092-13b2802ac9b6": {
+    "x": -171.01,
+    "y": -850.29,
+    "scale": 1.8,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false,
+    "sourceId": "editable-residential-building"
+  },
+  "editable-residential-building::copy:646aec75-04ef-4f29-9f2f-f9003a8f7404": {
+    "x": 598.11,
+    "y": -929.14,
+    "scale": 1.8,
+    "rotation": 0,
+    "layer": -2,
+    "hidden": false,
+    "sourceId": "editable-residential-building"
+  },
+  "plaza-rbd-stage": {
+    "x": -375.23,
+    "y": -19.16,
+    "scale": 0.8,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   }
 }

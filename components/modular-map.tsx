@@ -141,6 +141,8 @@ export default function ModularMap({ selected, onSelect }: { selected: string | 
       };
       return <MovableMapElement key={destination.id} id={destination.id}>{render()}</MovableMapElement>;
     })}
+    <MovableMapElement id="plaza-rbd-stage"><image href="/images/modular/plaza-palco-rbd-v01.png" x="1000" y="730" width="200" height="157" pointerEvents="none"/></MovableMapElement>
+    <MovableMapElement id="editable-residential-building"><image href="/images/modular/metropole-residencial-v01.png" x="780" y="860" width="95" height="120" pointerEvents="none"/></MovableMapElement>
     <MovableMapElement id="central-circular-square"><image href="/images/modular/praca-central-circular-v01.png" x="760" y="720" width="300" height="224.8" pointerEvents="none"/></MovableMapElement>
     <MovableMapElement id="linkedin-building-reimport-v02"><image href="/images/modular/linkedin-predio-v02.png" x="1100" y="750" width="175" height="137.4" pointerEvents="none"/></MovableMapElement>
     <MovableMapElement id="desert-camel"><image href="/images/modular/deserto-camelo-v01.png" x="1550" y="35" width="78" height="65" pointerEvents="none"/></MovableMapElement>
@@ -150,7 +152,6 @@ export default function ModularMap({ selected, onSelect }: { selected: string | 
     </g>
   </svg>;
 }
-
 
 
 

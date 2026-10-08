@@ -1,0 +1,7488 @@
+{
+  "viewBox": [
+    380,
+    -70,
+    2320,
+    1800
+  ],
+  "places": [
+    {
+      "file": "deserto-dunas-v01.png?v=1",
+      "x": 1050,
+      "y": -200,
+      "width": 400,
+      "height": 232
+    },
+    {
+      "file": "deserto-dunas-v01.png?v=1",
+      "x": 1350,
+      "y": -240,
+      "width": 460,
+      "height": 266.8
+    },
+    {
+      "file": "deserto-dunas-v01.png?v=1",
+      "x": 1670,
+      "y": -250,
+      "width": 470,
+      "height": 272.6
+    },
+    {
+      "file": "deserto-dunas-v01.png?v=1",
+      "x": 1190,
+      "y": -65,
+      "width": 350,
+      "height": 203
+    },
+    {
+      "file": "deserto-dunas-v01.png?v=1",
+      "x": 1480,
+      "y": -70,
+      "width": 400,
+      "height": 232
+    },
+    {
+      "file": "deserto-dunas-v01.png?v=1",
+      "x": 1760,
+      "y": -115,
+      "width": 420,
+      "height": 243.6
+    },
+    {
+      "file": "rosa-arvore-isometrica-v01.png",
+      "x": -100,
+      "y": 495,
+      "width": 80,
+      "height": 60
+    },
+    {
+      "file": "rosa-arvore-isometrica-v01.png",
+      "x": -78.387,
+      "y": 525.902,
+      "width": 80,
+      "height": 60
+    },
+    {
+      "file": "parque-banco-v01.png",
+      "x": -38.774,
+      "y": 485.414,
+      "width": 44,
+      "height": 35
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": -16.161,
+      "y": 470.544,
+      "width": 42,
+      "height": 28
+    },
+    {
+      "file": "rosa-arvore-isometrica-v01.png",
+      "x": -13.548,
+      "y": 488.334,
+      "width": 80,
+      "height": 60
+    },
+    {
+      "file": "rosa-arvore-isometrica-v01.png",
+      "x": 8.065,
+      "y": 462.309,
+      "width": 80,
+      "height": 60
+    },
+    {
+      "file": "parque-banco-v01.png",
+      "x": 47.677,
+      "y": 422.801,
+      "width": 44,
+      "height": 35
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 70.29,
+      "y": 464.412,
+      "width": 42,
+      "height": 28
+    },
+    {
+      "file": "rosa-arvore-isometrica-v01.png",
+      "x": 72.903,
+      "y": 455.558,
+      "width": 80,
+      "height": 60
+    },
+    {
+      "file": "rosa-arvore-isometrica-v01.png",
+      "x": 94.516,
+      "y": 385.158,
+      "width": 80,
+      "height": 60
+    },
+    {
+      "file": "parque-banco-v01.png",
+      "x": 134.129,
+      "y": 392.459,
+      "width": 44,
+      "height": 35
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 156.742,
+      "y": 457.174,
+      "width": 42,
+      "height": 28
+    },
+    {
+      "file": "rosa-arvore-isometrica-v01.png",
+      "x": 159.355,
+      "y": 391.013,
+      "width": 80,
+      "height": 60
+    },
+    {
+      "file": "rosa-arvore-isometrica-v01.png",
+      "x": 180.968,
+      "y": 323.55,
+      "width": 80,
+      "height": 60
+    },
+    {
+      "file": "parque-banco-v01.png",
+      "x": 220.581,
+      "y": 386.823,
+      "width": 44,
+      "height": 35
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 243.194,
+      "y": 423.168,
+      "width": 42,
+      "height": 28
+    },
+    {
+      "file": "rosa-arvore-isometrica-v01.png",
+      "x": 245.806,
+      "y": 313.925,
+      "width": 80,
+      "height": 60
+    },
+    {
+      "file": "rosa-arvore-isometrica-v01.png",
+      "x": 267.419,
+      "y": 294.409,
+      "width": 80,
+      "height": 60
+    },
+    {
+      "file": "parque-banco-v01.png",
+      "x": 307.032,
+      "y": 378.976,
+      "width": 44,
+      "height": 35
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 329.645,
+      "y": 357.698,
+      "width": 42,
+      "height": 28
+    },
+    {
+      "file": "rosa-arvore-isometrica-v01.png",
+      "x": 332.258,
+      "y": 253.345,
+      "width": 80,
+      "height": 60
+    },
+    {
+      "file": "rosa-arvore-isometrica-v01.png",
+      "x": 353.871,
+      "y": 289.23,
+      "width": 80,
+      "height": 60
+    },
+    {
+      "file": "parque-banco-v01.png",
+      "x": 393.484,
+      "y": 343.733,
+      "width": 44,
+      "height": 35
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 416.097,
+      "y": 280.715,
+      "width": 42,
+      "height": 28
+    },
+    {
+      "file": "rosa-arvore-isometrica-v01.png",
+      "x": 418.71,
+      "y": 225.394,
+      "width": 80,
+      "height": 60
+    },
+    {
+      "file": "rosa-arvore-isometrica-v01.png",
+      "x": 440.323,
+      "y": 280.738,
+      "width": 80,
+      "height": 60
+    },
+    {
+      "file": "parque-banco-v01.png",
+      "x": 479.936,
+      "y": 277.367,
+      "width": 44,
+      "height": 35
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 502.548,
+      "y": 221.188,
+      "width": 42,
+      "height": 28
+    },
+    {
+      "file": "rosa-arvore-isometrica-v01.png",
+      "x": 505.161,
+      "y": 220.633,
+      "width": 80,
+      "height": 60
+    },
+    {
+      "file": "rosa-arvore-isometrica-v01.png",
+      "x": 526.774,
+      "y": 244.252,
+      "width": 80,
+      "height": 60
+    },
+    {
+      "file": "parque-banco-v01.png",
+      "x": 566.387,
+      "y": 200.531,
+      "width": 44,
+      "height": 35
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 589,
+      "y": 194.412,
+      "width": 42,
+      "height": 28
+    },
+    {
+      "file": "parque-grama-v01.png",
+      "x": 913.723,
+      "y": 220,
+      "width": 335.152,
+      "height": 193.5
+    },
+    {
+      "file": "rio-agua-textura-v02.png",
+      "x": 809.8,
+      "y": 220,
+      "width": 540.4,
+      "height": 312
+    },
+    {
+      "file": "parque-grama-v01.png",
+      "x": 913.723,
+      "y": 220,
+      "width": 335.152,
+      "height": 193.5
+    },
+    {
+      "file": "parque-grama-v01.png",
+      "x": 913.723,
+      "y": 220,
+      "width": 335.152,
+      "height": 193.5
+    },
+    {
+      "file": "parque-grama-v01.png",
+      "x": 913.723,
+      "y": 220,
+      "width": 335.152,
+      "height": 193.5
+    },
+    {
+      "file": "metropole-escritorios-v01.png",
+      "x": -215.776,
+      "y": -261.763,
+      "width": 327.052,
+      "height": 256.788
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": -7.05,
+      "y": -43.14,
+      "width": 20,
+      "height": 30
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": -92.05,
+      "y": -7.14,
+      "width": 27,
+      "height": 18
+    },
+    {
+      "file": "metropole-escritorios-v01.png",
+      "x": -56.814,
+      "y": -186.366,
+      "width": 228.269,
+      "height": 179.227
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": 100.95,
+      "y": -43.14,
+      "width": 20,
+      "height": 30
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 15.95,
+      "y": -7.14,
+      "width": 27,
+      "height": 18
+    },
+    {
+      "file": "metropole-residencial-v01.png",
+      "x": 85.643,
+      "y": -218.563,
+      "width": 162.927,
+      "height": 209.962
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": 208.95,
+      "y": -43.14,
+      "width": 20,
+      "height": 30
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 123.95,
+      "y": -7.14,
+      "width": 27,
+      "height": 18
+    },
+    {
+      "file": "metropole-escritorios-v01.png",
+      "x": 116.488,
+      "y": -249.536,
+      "width": 311.033,
+      "height": 244.21
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": 316.95,
+      "y": -43.14,
+      "width": 20,
+      "height": 30
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 231.95,
+      "y": -7.14,
+      "width": 27,
+      "height": 18
+    },
+    {
+      "file": "metropole-escritorios-v01.png",
+      "x": 275.45,
+      "y": -174.14,
+      "width": 212.25,
+      "height": 166.65
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": 424.95,
+      "y": -43.14,
+      "width": 20,
+      "height": 30
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 339.95,
+      "y": -7.14,
+      "width": 27,
+      "height": 18
+    },
+    {
+      "file": "metropole-residencial-v01.png",
+      "x": 414.592,
+      "y": -206.301,
+      "width": 153.248,
+      "height": 197.489
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": 532.95,
+      "y": -43.14,
+      "width": 20,
+      "height": 30
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 447.95,
+      "y": -7.14,
+      "width": 27,
+      "height": 18
+    },
+    {
+      "file": "metropole-escritorios-v01.png",
+      "x": 448.752,
+      "y": -237.31,
+      "width": 295.014,
+      "height": 231.633
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": 640.95,
+      "y": -43.14,
+      "width": 20,
+      "height": 30
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 555.95,
+      "y": -7.14,
+      "width": 27,
+      "height": 18
+    },
+    {
+      "file": "metropole-escritorios-v01.png",
+      "x": 535.403,
+      "y": -268.895,
+      "width": 336.396,
+      "height": 264.125
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": 748.95,
+      "y": -43.14,
+      "width": 20,
+      "height": 30
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 663.95,
+      "y": -7.14,
+      "width": 27,
+      "height": 18
+    },
+    {
+      "file": "metropole-residencial-v01.png",
+      "x": 743.541,
+      "y": -194.038,
+      "width": 143.569,
+      "height": 185.016
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": 856.95,
+      "y": -43.14,
+      "width": 20,
+      "height": 30
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 771.95,
+      "y": -7.14,
+      "width": 27,
+      "height": 18
+    },
+    {
+      "file": "metropole-escritorios-v01.png",
+      "x": 781.016,
+      "y": -225.083,
+      "width": 278.995,
+      "height": 219.056
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": 964.95,
+      "y": -43.14,
+      "width": 20,
+      "height": 30
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 879.95,
+      "y": -7.14,
+      "width": 27,
+      "height": 18
+    },
+    {
+      "file": "metropole-escritorios-v01.png",
+      "x": 867.667,
+      "y": -256.668,
+      "width": 320.377,
+      "height": 251.547
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": 1072.95,
+      "y": -43.14,
+      "width": 20,
+      "height": 30
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 987.95,
+      "y": -7.14,
+      "width": 27,
+      "height": 18
+    },
+    {
+      "file": "metropole-residencial-v01.png",
+      "x": 1072.49,
+      "y": -181.775,
+      "width": 133.891,
+      "height": 172.543
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": 1180.95,
+      "y": -43.14,
+      "width": 20,
+      "height": 30
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 1095.95,
+      "y": -7.14,
+      "width": 27,
+      "height": 18
+    },
+    {
+      "file": "metropole-escritorios-v01.png",
+      "x": 1113.28,
+      "y": -212.857,
+      "width": 262.976,
+      "height": 206.478
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": 1288.95,
+      "y": -43.14,
+      "width": 20,
+      "height": 30
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 1203.95,
+      "y": -7.14,
+      "width": 27,
+      "height": 18
+    },
+    {
+      "file": "metropole-escritorios-v01.png",
+      "x": 1199.931,
+      "y": -244.442,
+      "width": 304.358,
+      "height": 238.97
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": 1396.95,
+      "y": -43.14,
+      "width": 20,
+      "height": 30
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 1311.95,
+      "y": -7.14,
+      "width": 27,
+      "height": 18
+    },
+    {
+      "file": "metropole-residencial-v01.png",
+      "x": -165.254,
+      "y": -143.089,
+      "width": 182.285,
+      "height": 234.908
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": -32.05,
+      "y": 56.86,
+      "width": 20,
+      "height": 30
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": -117.05,
+      "y": 92.86,
+      "width": 27,
+      "height": 18
+    },
+    {
+      "file": "metropole-escritorios-v01.png",
+      "x": -68.729,
+      "y": -67.008,
+      "width": 202.906,
+      "height": 159.313
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": 75.95,
+      "y": 56.86,
+      "width": 20,
+      "height": 30
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": -9.05,
+      "y": 92.86,
+      "width": 27,
+      "height": 18
+    },
+    {
+      "file": "metropole-escritorios-v01.png",
+      "x": 17.922,
+      "y": -98.593,
+      "width": 244.288,
+      "height": 191.805
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": 183.95,
+      "y": 56.86,
+      "width": 20,
+      "height": 30
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 98.95,
+      "y": 92.86,
+      "width": 27,
+      "height": 18
+    },
+    {
+      "file": "metropole-residencial-v01.png",
+      "x": 163.695,
+      "y": -130.826,
+      "width": 172.606,
+      "height": 222.435
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": 291.95,
+      "y": 56.86,
+      "width": 20,
+      "height": 30
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 206.95,
+      "y": 92.86,
+      "width": 27,
+      "height": 18
+    },
+    {
+      "file": "metropole-escritorios-v01.png",
+      "x": 191.224,
+      "y": -161.763,
+      "width": 327.052,
+      "height": 256.788
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": 399.95,
+      "y": 56.86,
+      "width": 20,
+      "height": 30
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 314.95,
+      "y": 92.86,
+      "width": 27,
+      "height": 18
+    },
+    {
+      "file": "metropole-escritorios-v01.png",
+      "x": 350.186,
+      "y": -86.366,
+      "width": 228.269,
+      "height": 179.227
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": 507.95,
+      "y": 56.86,
+      "width": 20,
+      "height": 30
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 422.95,
+      "y": 92.86,
+      "width": 27,
+      "height": 18
+    },
+    {
+      "file": "metropole-residencial-v01.png",
+      "x": 492.643,
+      "y": -118.563,
+      "width": 162.927,
+      "height": 209.962
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": 615.95,
+      "y": 56.86,
+      "width": 20,
+      "height": 30
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 530.95,
+      "y": 92.86,
+      "width": 27,
+      "height": 18
+    },
+    {
+      "file": "metropole-escritorios-v01.png",
+      "x": 523.488,
+      "y": -149.536,
+      "width": 311.033,
+      "height": 244.21
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": 723.95,
+      "y": 56.86,
+      "width": 20,
+      "height": 30
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 638.95,
+      "y": 92.86,
+      "width": 27,
+      "height": 18
+    },
+    {
+      "file": "metropole-escritorios-v01.png",
+      "x": 682.45,
+      "y": -74.14,
+      "width": 212.25,
+      "height": 166.65
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": 831.95,
+      "y": 56.86,
+      "width": 20,
+      "height": 30
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 746.95,
+      "y": 92.86,
+      "width": 27,
+      "height": 18
+    },
+    {
+      "file": "metropole-residencial-v01.png",
+      "x": 821.592,
+      "y": -106.301,
+      "width": 153.248,
+      "height": 197.489
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": 939.95,
+      "y": 56.86,
+      "width": 20,
+      "height": 30
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 854.95,
+      "y": 92.86,
+      "width": 27,
+      "height": 18
+    },
+    {
+      "file": "metropole-escritorios-v01.png",
+      "x": 855.752,
+      "y": -137.31,
+      "width": 295.014,
+      "height": 231.633
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": 1047.95,
+      "y": 56.86,
+      "width": 20,
+      "height": 30
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 962.95,
+      "y": 92.86,
+      "width": 27,
+      "height": 18
+    },
+    {
+      "file": "metropole-escritorios-v01.png",
+      "x": 942.403,
+      "y": -168.895,
+      "width": 336.396,
+      "height": 264.125
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": 1155.95,
+      "y": 56.86,
+      "width": 20,
+      "height": 30
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 1070.95,
+      "y": 92.86,
+      "width": 27,
+      "height": 18
+    },
+    {
+      "file": "metropole-residencial-v01.png",
+      "x": 1150.541,
+      "y": -94.038,
+      "width": 143.569,
+      "height": 185.016
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": 1263.95,
+      "y": 56.86,
+      "width": 20,
+      "height": 30
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 1178.95,
+      "y": 92.86,
+      "width": 27,
+      "height": 18
+    },
+    {
+      "file": "metropole-escritorios-v01.png",
+      "x": 1188.016,
+      "y": -125.083,
+      "width": 278.995,
+      "height": 219.056
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": 1371.95,
+      "y": 56.86,
+      "width": 20,
+      "height": 30
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 1286.95,
+      "y": 92.86,
+      "width": 27,
+      "height": 18
+    },
+    {
+      "file": "metropole-escritorios-v01.png",
+      "x": -189.607,
+      "y": -23.046,
+      "width": 276.325,
+      "height": 216.959
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": -7.05,
+      "y": 156.86,
+      "width": 20,
+      "height": 30
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": -92.05,
+      "y": 192.86,
+      "width": 27,
+      "height": 18
+    },
+    {
+      "file": "metropole-residencial-v01.png",
+      "x": -37.203,
+      "y": -55.352,
+      "width": 191.964,
+      "height": 247.381
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": 100.95,
+      "y": 156.86,
+      "width": 20,
+      "height": 30
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 15.95,
+      "y": 192.86,
+      "width": 27,
+      "height": 18
+    },
+    {
+      "file": "metropole-escritorios-v01.png",
+      "x": 56.007,
+      "y": 20.766,
+      "width": 218.925,
+      "height": 171.891
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": 208.95,
+      "y": 156.86,
+      "width": 20,
+      "height": 30
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 123.95,
+      "y": 192.86,
+      "width": 27,
+      "height": 18
+    },
+    {
+      "file": "metropole-escritorios-v01.png",
+      "x": 142.658,
+      "y": -10.819,
+      "width": 260.307,
+      "height": 204.382
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": 316.95,
+      "y": 156.86,
+      "width": 20,
+      "height": 30
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 231.95,
+      "y": 192.86,
+      "width": 27,
+      "height": 18
+    },
+    {
+      "file": "metropole-residencial-v01.png",
+      "x": 291.746,
+      "y": -43.089,
+      "width": 182.285,
+      "height": 234.908
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": 424.95,
+      "y": 156.86,
+      "width": 20,
+      "height": 30
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 339.95,
+      "y": 192.86,
+      "width": 27,
+      "height": 18
+    },
+    {
+      "file": "metropole-escritorios-v01.png",
+      "x": 388.271,
+      "y": 32.992,
+      "width": 202.906,
+      "height": 159.313
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": 532.95,
+      "y": 156.86,
+      "width": 20,
+      "height": 30
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 447.95,
+      "y": 192.86,
+      "width": 27,
+      "height": 18
+    },
+    {
+      "file": "metropole-escritorios-v01.png",
+      "x": 474.922,
+      "y": 1.407,
+      "width": 244.288,
+      "height": 191.805
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": 640.95,
+      "y": 156.86,
+      "width": 20,
+      "height": 30
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 555.95,
+      "y": 192.86,
+      "width": 27,
+      "height": 18
+    },
+    {
+      "file": "metropole-escritorios-v01.png",
+      "x": 980.488,
+      "y": -49.536,
+      "width": 311.033,
+      "height": 244.21
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": 1180.95,
+      "y": 156.86,
+      "width": 20,
+      "height": 30
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 1095.95,
+      "y": 192.86,
+      "width": 27,
+      "height": 18
+    },
+    {
+      "file": "metropole-escritorios-v01.png",
+      "x": 1139.45,
+      "y": 25.86,
+      "width": 212.25,
+      "height": 166.65
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": 1288.95,
+      "y": 156.86,
+      "width": 20,
+      "height": 30
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 1203.95,
+      "y": 192.86,
+      "width": 27,
+      "height": 18
+    },
+    {
+      "file": "metropole-residencial-v01.png",
+      "x": 1278.592,
+      "y": -6.301,
+      "width": 153.248,
+      "height": 197.489
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": 1396.95,
+      "y": 156.86,
+      "width": 20,
+      "height": 30
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 1311.95,
+      "y": 192.86,
+      "width": 27,
+      "height": 18
+    },
+    {
+      "file": "metropole-escritorios-v01.png",
+      "x": -201.522,
+      "y": 96.313,
+      "width": 250.962,
+      "height": 197.045
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": -32.05,
+      "y": 256.86,
+      "width": 20,
+      "height": 30
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": -117.05,
+      "y": 292.86,
+      "width": 27,
+      "height": 18
+    },
+    {
+      "file": "metropole-escritorios-v01.png",
+      "x": -114.871,
+      "y": 64.728,
+      "width": 292.344,
+      "height": 229.537
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": 75.95,
+      "y": 256.86,
+      "width": 20,
+      "height": 30
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": -9.05,
+      "y": 292.86,
+      "width": 27,
+      "height": 18
+    },
+    {
+      "file": "metropole-residencial-v01.png",
+      "x": 40.848,
+      "y": 32.386,
+      "width": 201.642,
+      "height": 259.854
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": 183.95,
+      "y": 256.86,
+      "width": 20,
+      "height": 30
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 98.95,
+      "y": 292.86,
+      "width": 27,
+      "height": 18
+    },
+    {
+      "file": "metropole-escritorios-v01.png",
+      "x": 130.742,
+      "y": 108.539,
+      "width": 234.943,
+      "height": 184.468
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": 291.95,
+      "y": 256.86,
+      "width": 20,
+      "height": 30
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 206.95,
+      "y": 292.86,
+      "width": 27,
+      "height": 18
+    },
+    {
+      "file": "metropole-escritorios-v01.png",
+      "x": 217.393,
+      "y": 76.954,
+      "width": 276.325,
+      "height": 216.959
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": 399.95,
+      "y": 256.86,
+      "width": 20,
+      "height": 30
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 314.95,
+      "y": 292.86,
+      "width": 27,
+      "height": 18
+    },
+    {
+      "file": "metropole-residencial-v01.png",
+      "x": 369.797,
+      "y": 44.648,
+      "width": 191.964,
+      "height": 247.381
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": 507.95,
+      "y": 256.86,
+      "width": 20,
+      "height": 30
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 422.95,
+      "y": 292.86,
+      "width": 27,
+      "height": 18
+    },
+    {
+      "file": "metropole-escritorios-v01.png",
+      "x": 463.007,
+      "y": 120.766,
+      "width": 218.925,
+      "height": 171.891
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": 615.95,
+      "y": 256.86,
+      "width": 20,
+      "height": 30
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 530.95,
+      "y": 292.86,
+      "width": 27,
+      "height": 18
+    },
+    {
+      "file": "metropole-escritorios-v01.png",
+      "x": 549.658,
+      "y": 89.181,
+      "width": 260.307,
+      "height": 204.382
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": 723.95,
+      "y": 256.86,
+      "width": 20,
+      "height": 30
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 638.95,
+      "y": 292.86,
+      "width": 27,
+      "height": 18
+    },
+    {
+      "file": "metropole-residencial-v01.png",
+      "x": -116.747,
+      "y": 215.159,
+      "width": 136.31,
+      "height": 175.661
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": -7.05,
+      "y": 356.86,
+      "width": 20,
+      "height": 30
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": -92.05,
+      "y": 392.86,
+      "width": 27,
+      "height": 18
+    },
+    {
+      "file": "metropole-escritorios-v01.png",
+      "x": -76.786,
+      "y": 184.086,
+      "width": 266.981,
+      "height": 209.623
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": 100.95,
+      "y": 356.86,
+      "width": 20,
+      "height": 30
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 15.95,
+      "y": 392.86,
+      "width": 27,
+      "height": 18
+    },
+    {
+      "file": "metropole-escritorios-v01.png",
+      "x": 9.865,
+      "y": 152.501,
+      "width": 308.363,
+      "height": 242.114
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": 208.95,
+      "y": 356.86,
+      "width": 20,
+      "height": 30
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 123.95,
+      "y": 392.86,
+      "width": 27,
+      "height": 18
+    },
+    {
+      "file": "metropole-residencial-v01.png",
+      "x": 212.202,
+      "y": 227.422,
+      "width": 126.631,
+      "height": 163.188
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": 316.95,
+      "y": 356.86,
+      "width": 20,
+      "height": 30
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 231.95,
+      "y": 392.86,
+      "width": 27,
+      "height": 18
+    },
+    {
+      "file": "metropole-escritorios-v01.png",
+      "x": 255.478,
+      "y": 196.313,
+      "width": 250.962,
+      "height": 197.045
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": 424.95,
+      "y": 356.86,
+      "width": 20,
+      "height": 30
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 339.95,
+      "y": 392.86,
+      "width": 27,
+      "height": 18
+    },
+    {
+      "file": "metropole-escritorios-v01.png",
+      "x": 342.129,
+      "y": 164.728,
+      "width": 292.344,
+      "height": 229.537
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": 532.95,
+      "y": 356.86,
+      "width": 20,
+      "height": 30
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 447.95,
+      "y": 392.86,
+      "width": 27,
+      "height": 18
+    },
+    {
+      "file": "metropole-residencial-v01.png",
+      "x": 497.848,
+      "y": 132.386,
+      "width": 201.642,
+      "height": 259.854
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": 640.95,
+      "y": 356.86,
+      "width": 20,
+      "height": 30
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 555.95,
+      "y": 392.86,
+      "width": 27,
+      "height": 18
+    },
+    {
+      "file": "metropole-escritorios-v01.png",
+      "x": -175.352,
+      "y": 335.03,
+      "width": 200.236,
+      "height": 157.217
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": -32.05,
+      "y": 456.86,
+      "width": 20,
+      "height": 30
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": -117.05,
+      "y": 492.86,
+      "width": 27,
+      "height": 18
+    },
+    {
+      "file": "metropole-residencial-v01.png",
+      "x": -38.696,
+      "y": 302.896,
+      "width": 145.989,
+      "height": 188.134
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": 75.95,
+      "y": 456.86,
+      "width": 20,
+      "height": 30
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": -9.05,
+      "y": 492.86,
+      "width": 27,
+      "height": 18
+    },
+    {
+      "file": "metropole-escritorios-v01.png",
+      "x": -2.05,
+      "y": 271.86,
+      "width": 283,
+      "height": 222.2
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": 183.95,
+      "y": 456.86,
+      "width": 20,
+      "height": 30
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 98.95,
+      "y": 492.86,
+      "width": 27,
+      "height": 18
+    },
+    {
+      "file": "metropole-escritorios-v01.png",
+      "x": 84.601,
+      "y": 240.275,
+      "width": 324.382,
+      "height": 254.692
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": 291.95,
+      "y": 456.86,
+      "width": 20,
+      "height": 30
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 206.95,
+      "y": 492.86,
+      "width": 27,
+      "height": 18
+    },
+    {
+      "file": "metropole-residencial-v01.png",
+      "x": 290.253,
+      "y": 315.159,
+      "width": 136.31,
+      "height": 175.661
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": 399.95,
+      "y": 456.86,
+      "width": 20,
+      "height": 30
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 314.95,
+      "y": 492.86,
+      "width": 27,
+      "height": 18
+    },
+    {
+      "file": "metropole-escritorios-v01.png",
+      "x": 330.214,
+      "y": 284.086,
+      "width": 266.981,
+      "height": 209.623
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": 507.95,
+      "y": 456.86,
+      "width": 20,
+      "height": 30
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 422.95,
+      "y": 492.86,
+      "width": 27,
+      "height": 18
+    },
+    {
+      "file": "metropole-escritorios-v01.png",
+      "x": 416.865,
+      "y": 252.501,
+      "width": 308.363,
+      "height": 242.114
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": 615.95,
+      "y": 456.86,
+      "width": 20,
+      "height": 30
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 530.95,
+      "y": 492.86,
+      "width": 27,
+      "height": 18
+    },
+    {
+      "file": "loja-amarela-norte-v01.png",
+      "x": -67.829,
+      "y": 462.082,
+      "width": 65.571,
+      "height": 69.686
+    },
+    {
+      "file": "residencia-coral-norte-v01.png",
+      "x": 34.862,
+      "y": 452.147,
+      "width": 74.702,
+      "height": 78.269
+    },
+    {
+      "file": "loja-amarela-norte-v01.png",
+      "x": 148.171,
+      "y": 462.082,
+      "width": 65.571,
+      "height": 69.686
+    },
+    {
+      "file": "residencia-coral-norte-v01.png",
+      "x": 250.862,
+      "y": 452.147,
+      "width": 74.702,
+      "height": 78.269
+    },
+    {
+      "file": "loja-amarela-norte-v01.png",
+      "x": 364.171,
+      "y": 462.082,
+      "width": 65.571,
+      "height": 69.686
+    },
+    {
+      "file": "residencia-coral-norte-v01.png",
+      "x": 466.862,
+      "y": 452.147,
+      "width": 74.702,
+      "height": 78.269
+    },
+    {
+      "file": "rosa-arvore-isometrica-v01.png",
+      "x": -12.05,
+      "y": 647.86,
+      "width": 80,
+      "height": 60
+    },
+    {
+      "file": "rosa-arvore-isometrica-v01.png",
+      "x": 9.563,
+      "y": 678.762,
+      "width": 80,
+      "height": 60
+    },
+    {
+      "file": "parque-banco-v01.png",
+      "x": 49.176,
+      "y": 638.274,
+      "width": 44,
+      "height": 35
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 71.789,
+      "y": 623.404,
+      "width": 42,
+      "height": 28
+    },
+    {
+      "file": "rosa-arvore-isometrica-v01.png",
+      "x": 74.402,
+      "y": 641.194,
+      "width": 80,
+      "height": 60
+    },
+    {
+      "file": "rosa-arvore-isometrica-v01.png",
+      "x": 96.015,
+      "y": 615.169,
+      "width": 80,
+      "height": 60
+    },
+    {
+      "file": "parque-banco-v01.png",
+      "x": 135.627,
+      "y": 575.661,
+      "width": 44,
+      "height": 35
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 158.24,
+      "y": 617.272,
+      "width": 42,
+      "height": 28
+    },
+    {
+      "file": "rosa-arvore-isometrica-v01.png",
+      "x": 160.853,
+      "y": 608.418,
+      "width": 80,
+      "height": 60
+    },
+    {
+      "file": "rosa-arvore-isometrica-v01.png",
+      "x": 182.466,
+      "y": 538.018,
+      "width": 80,
+      "height": 60
+    },
+    {
+      "file": "parque-banco-v01.png",
+      "x": 222.079,
+      "y": 545.319,
+      "width": 44,
+      "height": 35
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 244.692,
+      "y": 610.034,
+      "width": 42,
+      "height": 28
+    },
+    {
+      "file": "rosa-arvore-isometrica-v01.png",
+      "x": 247.305,
+      "y": 543.872,
+      "width": 80,
+      "height": 60
+    },
+    {
+      "file": "rosa-arvore-isometrica-v01.png",
+      "x": 268.918,
+      "y": 476.41,
+      "width": 80,
+      "height": 60
+    },
+    {
+      "file": "parque-banco-v01.png",
+      "x": 308.531,
+      "y": 539.683,
+      "width": 44,
+      "height": 35
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 331.144,
+      "y": 576.028,
+      "width": 42,
+      "height": 28
+    },
+    {
+      "file": "rosa-arvore-isometrica-v01.png",
+      "x": 333.756,
+      "y": 466.785,
+      "width": 80,
+      "height": 60
+    },
+    {
+      "file": "rosa-arvore-isometrica-v01.png",
+      "x": 355.369,
+      "y": 447.269,
+      "width": 80,
+      "height": 60
+    },
+    {
+      "file": "parque-banco-v01.png",
+      "x": 394.982,
+      "y": 531.836,
+      "width": 44,
+      "height": 35
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 417.595,
+      "y": 510.558,
+      "width": 42,
+      "height": 28
+    },
+    {
+      "file": "rosa-arvore-isometrica-v01.png",
+      "x": 420.208,
+      "y": 406.205,
+      "width": 80,
+      "height": 60
+    },
+    {
+      "file": "rosa-arvore-isometrica-v01.png",
+      "x": 441.821,
+      "y": 442.09,
+      "width": 80,
+      "height": 60
+    },
+    {
+      "file": "parque-banco-v01.png",
+      "x": 481.434,
+      "y": 496.592,
+      "width": 44,
+      "height": 35
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 504.047,
+      "y": 433.575,
+      "width": 42,
+      "height": 28
+    },
+    {
+      "file": "rosa-arvore-isometrica-v01.png",
+      "x": 506.66,
+      "y": 378.254,
+      "width": 80,
+      "height": 60
+    },
+    {
+      "file": "rosa-arvore-isometrica-v01.png",
+      "x": 528.273,
+      "y": 433.598,
+      "width": 80,
+      "height": 60
+    },
+    {
+      "file": "parque-banco-v01.png",
+      "x": 567.885,
+      "y": 430.227,
+      "width": 44,
+      "height": 35
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 590.498,
+      "y": 374.048,
+      "width": 42,
+      "height": 28
+    },
+    {
+      "file": "rosa-arvore-isometrica-v01.png",
+      "x": 593.111,
+      "y": 373.493,
+      "width": 80,
+      "height": 60
+    },
+    {
+      "file": "rosa-arvore-isometrica-v01.png",
+      "x": 614.724,
+      "y": 397.112,
+      "width": 80,
+      "height": 60
+    },
+    {
+      "file": "parque-banco-v01.png",
+      "x": 654.337,
+      "y": 353.391,
+      "width": 44,
+      "height": 35
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 676.95,
+      "y": 347.272,
+      "width": 42,
+      "height": 28
+    },
+    {
+      "file": "montanha-letreiro-integrado-v02.png",
+      "x": 1358.43,
+      "y": -218.2,
+      "width": 1700,
+      "height": 642.82
+    },
+    {
+      "file": "savana-acacia-v01.png",
+      "x": 1239.042,
+      "y": 1495.762,
+      "width": 73.848,
+      "height": 55.386
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1234.6,
+      "y": 1530.614,
+      "width": 39.263,
+      "height": 29.447
+    },
+    {
+      "file": "deserto-dunas-v01.png",
+      "x": 1373.854,
+      "y": -163.596,
+      "width": 264.811,
+      "height": 264.811
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1685.636,
+      "y": 360.674,
+      "width": 70.529,
+      "height": 52.897
+    },
+    {
+      "file": "savana-acacia-v01.png",
+      "x": 1191.318,
+      "y": 1503.29,
+      "width": 86.156,
+      "height": 64.617
+    },
+    {
+      "file": "savana-girafa-v01.png",
+      "x": 1228.31,
+      "y": 1517.25,
+      "width": 91.975,
+      "height": 72.215
+    },
+    {
+      "file": "deserto-dunas-v01.png",
+      "x": 1420.12,
+      "y": -58.19,
+      "width": 204,
+      "height": 117
+    },
+    {
+      "file": "caminho-pedrinhas-v01.png",
+      "x": 2239.08,
+      "y": 440.83,
+      "width": 90,
+      "height": 60
+    },
+    {
+      "file": "coloridin-arco-iris-frontal-v02.png",
+      "x": 904.766,
+      "y": 19.07,
+      "width": 155.65,
+      "height": 122.21
+    },
+    {
+      "file": "parque-pinheiro-v01.png",
+      "x": 2165.849,
+      "y": 276.495,
+      "width": 147.189,
+      "height": 110.392
+    },
+    {
+      "file": "rosa-arvore-isometrica-v01.png",
+      "x": 771.968,
+      "y": 119.325,
+      "width": 103.5,
+      "height": 77.625
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 1701.691,
+      "y": 313.994,
+      "width": 154.178,
+      "height": 121.055
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2291.146,
+      "y": 363.261,
+      "width": 163.008,
+      "height": 127.987
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 1420.2,
+      "y": 48.765,
+      "width": 171.838,
+      "height": 134.92
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2322.071,
+      "y": 451.519,
+      "width": 97.805,
+      "height": 76.792
+    },
+    {
+      "file": "taverna-mesa-redonda-v01.png",
+      "x": 2435.966,
+      "y": 1114.14,
+      "width": 60.845,
+      "height": 47.773
+    },
+    {
+      "file": "silicin-campus-v01.png",
+      "x": 2081.22,
+      "y": 1092.469,
+      "width": 202.724,
+      "height": 181.396
+    },
+    {
+      "file": "savana-carro-safari-v01.png",
+      "x": 1205.414,
+      "y": 1542.593,
+      "width": 72.946,
+      "height": 66.683
+    },
+    {
+      "file": "deserto-dunas-v01.png",
+      "x": 1402.01,
+      "y": -18.69,
+      "width": 204,
+      "height": 117
+    },
+    {
+      "file": "parque-pinheiro-v01.png",
+      "x": 2118.962,
+      "y": 318.938,
+      "width": 174.013,
+      "height": 130.51
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 1368.95,
+      "y": 39.655,
+      "width": 171.838,
+      "height": 134.92
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 1387.31,
+      "y": 76.635,
+      "width": 171.838,
+      "height": 134.92
+    },
+    {
+      "file": "parque-betula-v01.png",
+      "x": 2113.647,
+      "y": 414.848,
+      "width": 129.306,
+      "height": 96.98
+    },
+    {
+      "file": "parque-betula-v01.png",
+      "x": 2270.385,
+      "y": 429.886,
+      "width": 129.306,
+      "height": 96.98
+    },
+    {
+      "file": "parque-betula-v01.png",
+      "x": 1320.032,
+      "y": 111.718,
+      "width": 160.473,
+      "height": 148.64
+    },
+    {
+      "file": "parque-betula-v01.png",
+      "x": 1353.802,
+      "y": 137.318,
+      "width": 160.473,
+      "height": 148.64
+    },
+    {
+      "file": "parque-betula-v01.png",
+      "x": 725.76,
+      "y": 102.937,
+      "width": 116.376,
+      "height": 87.282
+    },
+    {
+      "file": "casinha-sitio-v01.png",
+      "x": 2214.239,
+      "y": 382.55,
+      "width": 94.5,
+      "height": 73.5
+    },
+    {
+      "file": "parque-pinheiro-v01.png",
+      "x": 2190.555,
+      "y": 473.955,
+      "width": 138.248,
+      "height": 103.686
+    },
+    {
+      "file": "rosa-arvore-isometrica-v01.png",
+      "x": 609.637,
+      "y": 241.005,
+      "width": 157.5,
+      "height": 118.125
+    },
+    {
+      "file": "torre-feiticaria-v02.png",
+      "x": 1778.13,
+      "y": 155.771,
+      "width": 172.385,
+      "height": 310.404
+    },
+    {
+      "file": "torre-taro-render-v02.png",
+      "x": 1699.918,
+      "y": 376.663,
+      "width": 140.614,
+      "height": 119.786
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 1753.67,
+      "y": 1041.438,
+      "width": 70.656,
+      "height": 47.104
+    },
+    {
+      "file": "parque-betula-v01.png",
+      "x": 2514.096,
+      "y": 966.256,
+      "width": 129.306,
+      "height": 96.98
+    },
+    {
+      "file": "parque-pinheiro-v01.png",
+      "x": 2373.921,
+      "y": 1135.802,
+      "width": 165.072,
+      "height": 123.804
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 2519.856,
+      "y": 1014.883,
+      "width": 92.733,
+      "height": 69.55
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 2563.906,
+      "y": 1044.017,
+      "width": 92.733,
+      "height": 69.55
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 2534.345,
+      "y": 1032.784,
+      "width": 92.733,
+      "height": 69.55
+    },
+    {
+      "file": "silicin-prototipos-v01.png",
+      "x": 2233.579,
+      "y": 1199.313,
+      "width": 86.469,
+      "height": 102.701
+    },
+    {
+      "file": "praia-guarda-sol-v01.png",
+      "x": 868.328,
+      "y": 1458.774,
+      "width": 77.825,
+      "height": 61.105
+    },
+    {
+      "file": "savana-ovelha-anjo-v01.png",
+      "x": 1202.804,
+      "y": 1588.14,
+      "width": 25.258,
+      "height": 19.831
+    },
+    {
+      "file": "savana-acacia-v01.png",
+      "x": 1120.421,
+      "y": 1520.399,
+      "width": 110.772,
+      "height": 83.079
+    },
+    {
+      "file": "savana-zebra-v01.png",
+      "x": 1109.621,
+      "y": 1581.149,
+      "width": 50.94,
+      "height": 39.996
+    },
+    {
+      "file": "savana-leoa-v01.png",
+      "x": 1188.675,
+      "y": 1636.355,
+      "width": 45.612,
+      "height": 34.209
+    },
+    {
+      "file": "praia-coqueiro-v01.png",
+      "x": 526.87,
+      "y": 1590.822,
+      "width": 134.425,
+      "height": 105.545
+    },
+    {
+      "file": "parque-grama-v01.png",
+      "x": 0,
+      "y": 0,
+      "width": 240,
+      "height": 240
+    },
+    {
+      "file": "glub-peixe-masculino-v01.png",
+      "x": 1283.808,
+      "y": 1423,
+      "width": 67.584,
+      "height": 45.056
+    },
+    {
+      "file": "glub-peixe-feminino-v01.png",
+      "x": 1331.808,
+      "y": 1443,
+      "width": 61.44,
+      "height": 40.96
+    },
+    {
+      "file": "rosa-arvore-isometrica-v01.png",
+      "x": 341.796,
+      "y": 524,
+      "width": 65,
+      "height": 48.75
+    },
+    {
+      "file": "rosa-arvore-isometrica-v01.png",
+      "x": 237.873,
+      "y": 584,
+      "width": 65,
+      "height": 48.75
+    },
+    {
+      "file": "rosa-arvore-isometrica-v01.png",
+      "x": 154.735,
+      "y": 632,
+      "width": 65,
+      "height": 48.75
+    },
+    {
+      "file": "livrinhoteca-banco-isometrico-v01.png",
+      "x": 301.406,
+      "y": 561.5,
+      "width": 55.5,
+      "height": 35.03
+    },
+    {
+      "file": "livrinhoteca-banco-isometrico-v01.png",
+      "x": 202.679,
+      "y": 618.5,
+      "width": 55.5,
+      "height": 35.03
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 271.175,
+      "y": 574.3,
+      "width": 61.44,
+      "height": 40.96
+    },
+    {
+      "file": "coloridin-folioes-1-v01.png",
+      "x": 1000.327,
+      "y": 132.165,
+      "width": 64.75,
+      "height": 50.839
+    },
+    {
+      "file": "coloridin-folioes-2-v01.png",
+      "x": 957.859,
+      "y": 107.789,
+      "width": 57.308,
+      "height": 52.372
+    },
+    {
+      "file": "coloridin-folioes-2-v01.png",
+      "x": 1053.944,
+      "y": 161.124,
+      "width": 54.579,
+      "height": 49.878
+    },
+    {
+      "file": "davi-cabeca-v01.png",
+      "x": 1022.614,
+      "y": 91.519,
+      "width": 20.925,
+      "height": 23.25
+    },
+    {
+      "file": "loja-coral-isometrica-v01.png",
+      "x": 811.478,
+      "y": 131.731,
+      "width": 138.954,
+      "height": 152.533
+    },
+    {
+      "file": "loja-coral-isometrica-v01.png",
+      "x": 527.158,
+      "y": 370.211,
+      "width": 138.954,
+      "height": 152.533
+    },
+    {
+      "file": "rosa-arvore-isometrica-v01.png",
+      "x": 1148.667,
+      "y": 170.1,
+      "width": 82,
+      "height": 61.5
+    },
+    {
+      "file": "residencia-coral-norte-v01.png",
+      "x": 1231.065,
+      "y": 111.991,
+      "width": 155.628,
+      "height": 163.06
+    },
+    {
+      "file": "rosa-arvore-isometrica-v01.png",
+      "x": 857.927,
+      "y": 60.01,
+      "width": 82,
+      "height": 61.5
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": 731.986,
+      "y": 89.62,
+      "width": 73.728,
+      "height": 110.592
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": 1106.319,
+      "y": 104.64,
+      "width": 73.728,
+      "height": 110.592
+    },
+    {
+      "file": "sobrado-rosa-isometrico-v01.png",
+      "x": 701.874,
+      "y": 165.079,
+      "width": 144.458,
+      "height": 166.834
+    },
+    {
+      "file": "sobrado-rosa-isometrico-v01.png",
+      "x": 432.344,
+      "y": 390.769,
+      "width": 144.458,
+      "height": 166.834
+    },
+    {
+      "file": "rosa-arvore-isometrica-v01.png",
+      "x": 1132.95,
+      "y": 151.1,
+      "width": 112,
+      "height": 84
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 1519.868,
+      "y": 391.42,
+      "width": 61.44,
+      "height": 40.96
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 1485.418,
+      "y": 407.84,
+      "width": 61.44,
+      "height": 40.96
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 669.592,
+      "y": 96.538,
+      "width": 24.576,
+      "height": 16.384
+    },
+    {
+      "file": "relogio-detalhado-v01.png",
+      "x": 923.836,
+      "y": 157.03,
+      "width": 58.368,
+      "height": 87.552
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": 648.445,
+      "y": 18.399,
+      "width": 58.982,
+      "height": 88.474
+    },
+    {
+      "file": "cafeteria-mesa-tenda-v01.png",
+      "x": 824.001,
+      "y": 266.732,
+      "width": 63.675,
+      "height": 49.995
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": 1628.839,
+      "y": 576.77,
+      "width": 73.728,
+      "height": 110.592
+    },
+    {
+      "file": "loja-amarela-isometrica-v01.png",
+      "x": 634.367,
+      "y": 274.776,
+      "width": 134.314,
+      "height": 148.138
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2754.738,
+      "y": 262.191,
+      "width": 136.519,
+      "height": 107.189
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2097.862,
+      "y": 269.99,
+      "width": 136.519,
+      "height": 107.189
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2436.291,
+      "y": 246.666,
+      "width": 171.838,
+      "height": 134.92
+    },
+    {
+      "file": "parque-pinheiro-v01.png",
+      "x": 2670.333,
+      "y": 271.528,
+      "width": 156.131,
+      "height": 117.098
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2008.903,
+      "y": 272.486,
+      "width": 154.178,
+      "height": 121.055
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2262.732,
+      "y": 282.668,
+      "width": 136.519,
+      "height": 107.189
+    },
+    {
+      "file": "cafeteria-mesa-tenda-v01.png",
+      "x": 1248.865,
+      "y": 242.18,
+      "width": 84.9,
+      "height": 66.66
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 1936.062,
+      "y": 271.571,
+      "width": 163.008,
+      "height": 127.987
+    },
+    {
+      "file": "parque-pinheiro-v01.png",
+      "x": 2323.298,
+      "y": 261.729,
+      "width": 182.955,
+      "height": 137.216
+    },
+    {
+      "file": "parque-pinheiro-v01.png",
+      "x": 2476.431,
+      "y": 267.904,
+      "width": 182.955,
+      "height": 137.216
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2568.217,
+      "y": 284.298,
+      "width": 163.008,
+      "height": 127.987
+    },
+    {
+      "file": "metro-vagao-feminino-v04.png",
+      "x": 1073.655,
+      "y": 188.565,
+      "width": 190.9,
+      "height": 169.967
+    },
+    {
+      "file": "metro-carro-frontal-v01.png",
+      "x": 1234.56,
+      "y": 285.655,
+      "width": 190.9,
+      "height": 169.967
+    },
+    {
+      "file": "agente-galinha-v02.png",
+      "x": 1190.431,
+      "y": 237.4,
+      "width": 16.8,
+      "height": 16.2
+    },
+    {
+      "file": "henrique-hardman-v02.png",
+      "x": 1150.431,
+      "y": 213.13,
+      "width": 25.5,
+      "height": 28.5
+    },
+    {
+      "file": "naiane-de-mello-v01.png",
+      "x": 1140.418,
+      "y": 261.874,
+      "width": 26.737,
+      "height": 46.5
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 1874.359,
+      "y": 308.3,
+      "width": 180.667,
+      "height": 141.852
+    },
+    {
+      "file": "parque-betula-v01.png",
+      "x": 2391.124,
+      "y": 320.357,
+      "width": 129.306,
+      "height": 96.98
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2736.188,
+      "y": 299.54,
+      "width": 163.008,
+      "height": 127.987
+    },
+    {
+      "file": "parque-pinheiro-v01.png",
+      "x": 1992.962,
+      "y": 300.345,
+      "width": 174.013,
+      "height": 130.51
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": 1045.648,
+      "y": 196.22,
+      "width": 73.728,
+      "height": 110.592
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2073.339,
+      "y": 310.318,
+      "width": 163.008,
+      "height": 127.987
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2615.07,
+      "y": 309.953,
+      "width": 171.838,
+      "height": 134.92
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": 911.547,
+      "y": 268.61,
+      "width": 73.728,
+      "height": 110.592
+    },
+    {
+      "file": "parque-betula-v01.png",
+      "x": 1916.696,
+      "y": 347.047,
+      "width": 129.306,
+      "height": 96.98
+    },
+    {
+      "file": "parque-pinheiro-v01.png",
+      "x": 2327.448,
+      "y": 338.11,
+      "width": 147.189,
+      "height": 110.392
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2228.906,
+      "y": 310.337,
+      "width": 154.178,
+      "height": 121.055
+    },
+    {
+      "file": "parque-betula-v01.png",
+      "x": 2562.988,
+      "y": 352.575,
+      "width": 129.306,
+      "height": 96.98
+    },
+    {
+      "file": "rosa-arvore-isometrica-v01.png",
+      "x": 929.468,
+      "y": 302,
+      "width": 105,
+      "height": 78.75
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2502.876,
+      "y": 355.541,
+      "width": 136.519,
+      "height": 107.189
+    },
+    {
+      "file": "parque-pinheiro-v01.png",
+      "x": 1827.353,
+      "y": 360.442,
+      "width": 138.248,
+      "height": 103.686
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2033.625,
+      "y": 328.273,
+      "width": 180.667,
+      "height": 141.852
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": 1211.319,
+      "y": 111.36,
+      "width": 73.728,
+      "height": 110.592
+    },
+    {
+      "file": "parque-pinheiro-v01.png",
+      "x": 2678.93,
+      "y": 335.995,
+      "width": 182.955,
+      "height": 137.216
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2408.41,
+      "y": 352.433,
+      "width": 154.178,
+      "height": 121.055
+    },
+    {
+      "file": "parque-pinheiro-v01.png",
+      "x": 1970.317,
+      "y": 359.223,
+      "width": 138.248,
+      "height": 103.686
+    },
+    {
+      "file": "diego-ungari-v02.png",
+      "x": 2220.374,
+      "y": 446.43,
+      "width": 41.4,
+      "height": 33.637
+    },
+    {
+      "file": "parque-pinheiro-v01.png",
+      "x": 2546.812,
+      "y": 389.519,
+      "width": 147.189,
+      "height": 110.392
+    },
+    {
+      "file": "parque-pinheiro-v01.png",
+      "x": 2400.785,
+      "y": 420.486,
+      "width": 99.043,
+      "height": 74.282
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2358.352,
+      "y": 416.283,
+      "width": 102.559,
+      "height": 80.525
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2627.351,
+      "y": 392.588,
+      "width": 136.519,
+      "height": 107.189
+    },
+    {
+      "file": "pipoca-detalhada-v01.png",
+      "x": 906.979,
+      "y": 444.31,
+      "width": 87.73,
+      "height": 68.882
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 1881.781,
+      "y": 392.692,
+      "width": 145.349,
+      "height": 114.122
+    },
+    {
+      "file": "parque-pinheiro-v01.png",
+      "x": 2355.759,
+      "y": 458.205,
+      "width": 165.072,
+      "height": 123.804
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2037.941,
+      "y": 400.229,
+      "width": 145.349,
+      "height": 114.122
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2440.873,
+      "y": 387.518,
+      "width": 163.008,
+      "height": 127.987
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 1391.93,
+      "y": 548.09,
+      "width": 61.44,
+      "height": 40.96
+    },
+    {
+      "file": "diego-cachorro-v01.png",
+      "x": 2243.38,
+      "y": 457.62,
+      "width": 18,
+      "height": 19.5
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 1317.76,
+      "y": 111.555,
+      "width": 171.838,
+      "height": 134.92
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2029.008,
+      "y": 447.669,
+      "width": 103.103,
+      "height": 80.952
+    },
+    {
+      "file": "parque-pinheiro-v01.png",
+      "x": 2668.446,
+      "y": 413.415,
+      "width": 147.189,
+      "height": 110.392
+    },
+    {
+      "file": "parque-pinheiro-v01.png",
+      "x": 2354.037,
+      "y": 395.699,
+      "width": 174.013,
+      "height": 130.51
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2591.309,
+      "y": 408.42,
+      "width": 154.178,
+      "height": 121.055
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 1010.712,
+      "y": 285.43,
+      "width": 61.44,
+      "height": 40.96
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2435.852,
+      "y": 448.158,
+      "width": 102.559,
+      "height": 80.525
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 1931.295,
+      "y": 412.34,
+      "width": 154.178,
+      "height": 121.055
+    },
+    {
+      "file": "parque-pinheiro-v01.png",
+      "x": 2366.922,
+      "y": 482.245,
+      "width": 68.78,
+      "height": 51.585
+    },
+    {
+      "file": "parque-betula-v01.png",
+      "x": 1658.575,
+      "y": 428.618,
+      "width": 129.306,
+      "height": 96.98
+    },
+    {
+      "file": "parque-pinheiro-v01.png",
+      "x": 2487.103,
+      "y": 421.176,
+      "width": 174.013,
+      "height": 130.51
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2419.456,
+      "y": 498.588,
+      "width": 71.316,
+      "height": 55.994
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2348.739,
+      "y": 515.154,
+      "width": 84.9,
+      "height": 66.66
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 1779.374,
+      "y": 438.034,
+      "width": 180.667,
+      "height": 141.852
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 1878.157,
+      "y": 437.591,
+      "width": 171.838,
+      "height": 134.92
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2459.672,
+      "y": 495.102,
+      "width": 107.314,
+      "height": 84.258
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2258.142,
+      "y": 473.052,
+      "width": 107.314,
+      "height": 84.258
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2104.925,
+      "y": 458.131,
+      "width": 154.178,
+      "height": 121.055
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2756.89,
+      "y": 452.428,
+      "width": 154.178,
+      "height": 121.055
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 1712.65,
+      "y": 471.541,
+      "width": 136.519,
+      "height": 107.189
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2539.943,
+      "y": 477.048,
+      "width": 180.667,
+      "height": 141.852
+    },
+    {
+      "file": "parque-pinheiro-v01.png",
+      "x": 2025.933,
+      "y": 452.733,
+      "width": 165.072,
+      "height": 123.804
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2429.482,
+      "y": 538.366,
+      "width": 74.712,
+      "height": 58.661
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2310.952,
+      "y": 498.486,
+      "width": 74.712,
+      "height": 58.661
+    },
+    {
+      "file": "cineminha-isometrico-v01.png",
+      "x": 765.168,
+      "y": 372.073,
+      "width": 171.479,
+      "height": 189.995
+    },
+    {
+      "file": "cineminha-cartaz-isometrico-v01.png",
+      "x": 759.335,
+      "y": 462.21,
+      "width": 31.5,
+      "height": 40.95
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2664.498,
+      "y": 457.044,
+      "width": 163.008,
+      "height": 127.987
+    },
+    {
+      "file": "balizador-detalhado-v01.png",
+      "x": 905.364,
+      "y": 471.043,
+      "width": 22.374,
+      "height": 33.562
+    },
+    {
+      "file": "parque-betula-v01.png",
+      "x": 1866.735,
+      "y": 507.394,
+      "width": 129.306,
+      "height": 96.98
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 1962.928,
+      "y": 477.019,
+      "width": 180.667,
+      "height": 141.852
+    },
+    {
+      "file": "livrinhoteca-isometrico-v01.png",
+      "x": 934.752,
+      "y": 250.862,
+      "width": 243.243,
+      "height": 220.099
+    },
+    {
+      "file": "livrinhoteca-livros-isometrico-v01.png",
+      "x": 1140.146,
+      "y": 333.327,
+      "width": 57.75,
+      "height": 47.225
+    },
+    {
+      "file": "livrinhoteca-banco-isometrico-v01.png",
+      "x": 986.22,
+      "y": 278.332,
+      "width": 64.102,
+      "height": 40.463
+    },
+    {
+      "file": "rosa-arvore-isometrica-v01.png",
+      "x": 623.522,
+      "y": 432.243,
+      "width": 141.75,
+      "height": 106.313
+    },
+    {
+      "file": "luara-nardelli-v01.png",
+      "x": 1213.238,
+      "y": 328.585,
+      "width": 29.25,
+      "height": 43.875
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2516.081,
+      "y": 527.179,
+      "width": 97.805,
+      "height": 76.792
+    },
+    {
+      "file": "parque-pinheiro-v01.png",
+      "x": 2243.374,
+      "y": 512.686,
+      "width": 103.858,
+      "height": 77.893
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2459.109,
+      "y": 556.06,
+      "width": 67.92,
+      "height": 53.328
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2292.181,
+      "y": 534.879,
+      "width": 89.145,
+      "height": 69.993
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2077.141,
+      "y": 489.094,
+      "width": 171.838,
+      "height": 134.92
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": 715.303,
+      "y": 409.25,
+      "width": 73.728,
+      "height": 110.592
+    },
+    {
+      "file": "parque-pinheiro-v01.png",
+      "x": 2155.752,
+      "y": 505.318,
+      "width": 165.072,
+      "height": 123.804
+    },
+    {
+      "file": "parque-pinheiro-v01.png",
+      "x": 2697.876,
+      "y": 480.856,
+      "width": 174.013,
+      "height": 130.51
+    },
+    {
+      "file": "mural-detalhado-v01.png",
+      "x": 1362.76,
+      "y": 458.23,
+      "width": 73.58,
+      "height": 57.772
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 1769.13,
+      "y": 504.548,
+      "width": 145.349,
+      "height": 114.122
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2495.956,
+      "y": 560.088,
+      "width": 71.316,
+      "height": 55.994
+    },
+    {
+      "file": "parque-pinheiro-v01.png",
+      "x": 2294.562,
+      "y": 563.075,
+      "width": 68.78,
+      "height": 51.585
+    },
+    {
+      "file": "parque-pinheiro-v01.png",
+      "x": 2553.374,
+      "y": 544.561,
+      "width": 103.858,
+      "height": 77.893
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2205.821,
+      "y": 547.244,
+      "width": 97.805,
+      "height": 76.792
+    },
+    {
+      "file": "parque-betula-v01.png",
+      "x": 2665.104,
+      "y": 527.982,
+      "width": 129.306,
+      "height": 96.98
+    },
+    {
+      "file": "parque-betula-v01.png",
+      "x": 2038.18,
+      "y": 532.428,
+      "width": 129.306,
+      "height": 96.98
+    },
+    {
+      "file": "parque-pinheiro-v01.png",
+      "x": 1821.266,
+      "y": 540.694,
+      "width": 156.131,
+      "height": 117.098
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2519.692,
+      "y": 578.116,
+      "width": 74.712,
+      "height": 58.661
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2264.692,
+      "y": 578.116,
+      "width": 74.712,
+      "height": 58.661
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": 1149.422,
+      "y": 413.21,
+      "width": 73.728,
+      "height": 110.592
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 1926.166,
+      "y": 533.907,
+      "width": 136.519,
+      "height": 107.189
+    },
+    {
+      "file": "cafeteria-mesa-tenda-v01.png",
+      "x": 1309.069,
+      "y": 504.86,
+      "width": 84.9,
+      "height": 66.66
+    },
+    {
+      "file": "rosa-arvore-isometrica-v01.png",
+      "x": 1510.646,
+      "y": 535.69,
+      "width": 120,
+      "height": 90
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2588.382,
+      "y": 572.197,
+      "width": 107.314,
+      "height": 84.258
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2162.132,
+      "y": 572.197,
+      "width": 107.314,
+      "height": 84.258
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 967.883,
+      "y": 489.32,
+      "width": 61.44,
+      "height": 40.96
+    },
+    {
+      "file": "parque-pinheiro-v01.png",
+      "x": 2549.562,
+      "y": 604.075,
+      "width": 68.78,
+      "height": 51.585
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2240.956,
+      "y": 601.088,
+      "width": 71.316,
+      "height": 55.994
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2073.048,
+      "y": 574.548,
+      "width": 136.519,
+      "height": 107.189
+    },
+    {
+      "file": "parque-pinheiro-v01.png",
+      "x": 2713.646,
+      "y": 560.257,
+      "width": 138.248,
+      "height": 103.686
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2620.432,
+      "y": 552.88,
+      "width": 145.349,
+      "height": 114.122
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 1964.896,
+      "y": 559.856,
+      "width": 145.349,
+      "height": 114.122
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2572.456,
+      "y": 621.588,
+      "width": 71.316,
+      "height": 55.994
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2217.22,
+      "y": 624.06,
+      "width": 67.92,
+      "height": 53.328
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 1881.282,
+      "y": 565.214,
+      "width": 163.008,
+      "height": 127.987
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2632.071,
+      "y": 610.994,
+      "width": 97.805,
+      "height": 76.792
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2125.852,
+      "y": 607.533,
+      "width": 102.559,
+      "height": 80.525
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2596.192,
+      "y": 639.616,
+      "width": 74.712,
+      "height": 58.661
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2188.192,
+      "y": 639.616,
+      "width": 74.712,
+      "height": 58.661
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2758.221,
+      "y": 589.323,
+      "width": 145.349,
+      "height": 114.122
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2689.852,
+      "y": 585.558,
+      "width": 154.178,
+      "height": 121.055
+    },
+    {
+      "file": "jardim-labirinto-unificado-v01.png",
+      "x": 2206.264,
+      "y": 549.794,
+      "width": 445.411,
+      "height": 280.289
+    },
+    {
+      "file": "jardim-animais-vasos-v01.png",
+      "x": 2575.324,
+      "y": 673.395,
+      "width": 98.56,
+      "height": 73.92
+    },
+    {
+      "file": "jardim-animais-vasos-v01.png",
+      "x": 2249.235,
+      "y": 669.826,
+      "width": 89.6,
+      "height": 67.2
+    },
+    {
+      "file": "jardim-animais-vasos-v01.png",
+      "x": 2348.458,
+      "y": 578.873,
+      "width": 89.6,
+      "height": 67.2
+    },
+    {
+      "file": "jardim-animais-vasos-v01.png",
+      "x": 2474.768,
+      "y": 588.81,
+      "width": 89.6,
+      "height": 67.2
+    },
+    {
+      "file": "jardim-animais-vasos-v01.png",
+      "x": 2455.016,
+      "y": 644.916,
+      "width": 80.64,
+      "height": 60.48
+    },
+    {
+      "file": "jardim-animais-vasos-v01.png",
+      "x": 2487.502,
+      "y": 594.928,
+      "width": 80.64,
+      "height": 60.48
+    },
+    {
+      "file": "jardim-animais-vasos-v01.png",
+      "x": 2286.64,
+      "y": 566.612,
+      "width": 85.12,
+      "height": 63.84
+    },
+    {
+      "file": "jardim-animais-vasos-v01.png",
+      "x": 2292.054,
+      "y": 626.451,
+      "width": 89.6,
+      "height": 67.2
+    },
+    {
+      "file": "jardim-animais-vasos-v01.png",
+      "x": 2429.949,
+      "y": 729.423,
+      "width": 89.6,
+      "height": 67.2
+    },
+    {
+      "file": "jardim-animais-vasos-v01.png",
+      "x": 2395.983,
+      "y": 596.902,
+      "width": 89.6,
+      "height": 67.2
+    },
+    {
+      "file": "jardim-animais-vasos-v01.png",
+      "x": 2242.37,
+      "y": 621.343,
+      "width": 89.6,
+      "height": 67.2
+    },
+    {
+      "file": "jardim-animais-vasos-v01.png",
+      "x": 2365.131,
+      "y": 699.764,
+      "width": 76.16,
+      "height": 57.12
+    },
+    {
+      "file": "jardim-animais-vasos-v01.png",
+      "x": 2280.837,
+      "y": 650.427,
+      "width": 71.68,
+      "height": 53.76
+    },
+    {
+      "file": "jardim-animais-vasos-v01.png",
+      "x": 2313.142,
+      "y": 568.587,
+      "width": 92.16,
+      "height": 69.12
+    },
+    {
+      "file": "jardim-animais-vasos-v01.png",
+      "x": 2272.431,
+      "y": 667.6,
+      "width": 81.92,
+      "height": 61.44
+    },
+    {
+      "file": "jardim-animais-vasos-v01.png",
+      "x": 2292.003,
+      "y": 683.661,
+      "width": 97.28,
+      "height": 72.96
+    },
+    {
+      "file": "jardim-animais-vasos-v01.png",
+      "x": 2313.904,
+      "y": 713.886,
+      "width": 87.04,
+      "height": 65.28
+    },
+    {
+      "file": "jardim-animais-vasos-v01.png",
+      "x": 2422.618,
+      "y": 739.571,
+      "width": 87.04,
+      "height": 65.28
+    },
+    {
+      "file": "jardim-animais-vasos-v01.png",
+      "x": 2392.505,
+      "y": 706.125,
+      "width": 102.4,
+      "height": 76.8
+    },
+    {
+      "file": "jardim-animais-vasos-v01.png",
+      "x": 2396.741,
+      "y": 690.23,
+      "width": 102.4,
+      "height": 76.8
+    },
+    {
+      "file": "jardim-animais-vasos-v01.png",
+      "x": 2439.531,
+      "y": 688.315,
+      "width": 92.16,
+      "height": 69.12
+    },
+    {
+      "file": "jardim-animais-vasos-v01.png",
+      "x": 2533.802,
+      "y": 638.892,
+      "width": 102.4,
+      "height": 76.8
+    },
+    {
+      "file": "jardim-animais-vasos-v01.png",
+      "x": 2588.337,
+      "y": 627.585,
+      "width": 102.4,
+      "height": 76.8
+    },
+    {
+      "file": "jardim-animais-vasos-v01.png",
+      "x": 2322.848,
+      "y": 530.445,
+      "width": 102.4,
+      "height": 76.8
+    },
+    {
+      "file": "jardim-animais-vasos-v01.png",
+      "x": 2506.383,
+      "y": 552.892,
+      "width": 102.4,
+      "height": 76.8
+    },
+    {
+      "file": "jardim-animais-vasos-v01.png",
+      "x": 2243.065,
+      "y": 600.4,
+      "width": 102.4,
+      "height": 76.8
+    },
+    {
+      "file": "jardim-animais-vasos-v01.png",
+      "x": 2361.725,
+      "y": 580.15,
+      "width": 102.4,
+      "height": 76.8
+    },
+    {
+      "file": "jardim-relogio-sol-v01.png",
+      "x": 2437.479,
+      "y": 692.088,
+      "width": 41.984,
+      "height": 38.368
+    },
+    {
+      "file": "parque-pinheiro-v01.png",
+      "x": 2023.64,
+      "y": 593.885,
+      "width": 156.131,
+      "height": 117.098
+    },
+    {
+      "file": "mercado-vagas-isometrico-v01.png",
+      "x": 1144.661,
+      "y": 374.382,
+      "width": 249.905,
+      "height": 185.945
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2668.352,
+      "y": 639.408,
+      "width": 102.559,
+      "height": 80.525
+    },
+    {
+      "file": "parque-pinheiro-v01.png",
+      "x": 2090.785,
+      "y": 643.611,
+      "width": 99.043,
+      "height": 74.282
+    },
+    {
+      "file": "parque-betula-v01.png",
+      "x": 2622.975,
+      "y": 665.1,
+      "width": 68.78,
+      "height": 51.585
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2164.456,
+      "y": 662.588,
+      "width": 71.316,
+      "height": 55.994
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 1948.936,
+      "y": 595.439,
+      "width": 171.838,
+      "height": 134.92
+    },
+    {
+      "file": "rosa-arvore-isometrica-v01.png",
+      "x": 1038.745,
+      "y": 514.555,
+      "width": 110.5,
+      "height": 82.875
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2648.956,
+      "y": 683.088,
+      "width": 71.316,
+      "height": 55.994
+    },
+    {
+      "file": "parque-pinheiro-v01.png",
+      "x": 2141.562,
+      "y": 686.075,
+      "width": 68.78,
+      "height": 51.585
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 1431.5,
+      "y": 632.6,
+      "width": 61.44,
+      "height": 40.96
+    },
+    {
+      "file": "parque-pinheiro-v01.png",
+      "x": 2667.213,
+      "y": 666.449,
+      "width": 108.672,
+      "height": 81.504
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2084.632,
+      "y": 665.635,
+      "width": 107.314,
+      "height": 84.258
+    },
+    {
+      "file": "parque-pinheiro-v01.png",
+      "x": 2757.482,
+      "y": 627.012,
+      "width": 165.072,
+      "height": 123.804
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2647.959,
+      "y": 614.285,
+      "width": 180.667,
+      "height": 141.852
+    },
+    {
+      "file": "prefeitura-render-v02.png",
+      "x": 1644.224,
+      "y": 526.005,
+      "width": 242.503,
+      "height": 275.501
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2179.486,
+      "y": 699.683,
+      "width": 82.183,
+      "height": 64.527
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2611.972,
+      "y": 697.996,
+      "width": 74.712,
+      "height": 58.661
+    },
+    {
+      "file": "parque-pinheiro-v01.png",
+      "x": 1990.634,
+      "y": 619.755,
+      "width": 182.955,
+      "height": 137.216
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2189.956,
+      "y": 713.088,
+      "width": 71.316,
+      "height": 55.994
+    },
+    {
+      "file": "parque-pinheiro-v01.png",
+      "x": 2600.562,
+      "y": 716.075,
+      "width": 68.78,
+      "height": 51.585
+    },
+    {
+      "file": "rosa-arvore-isometrica-v01.png",
+      "x": 1404.15,
+      "y": 478.17,
+      "width": 100,
+      "height": 75
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2645.211,
+      "y": 717.926,
+      "width": 97.805,
+      "height": 76.792
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2070.046,
+      "y": 672.897,
+      "width": 148.711,
+      "height": 116.762
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2574.915,
+      "y": 715.668,
+      "width": 71.316,
+      "height": 55.994
+    },
+    {
+      "file": "parque-betula-v01.png",
+      "x": 2188.054,
+      "y": 714.158,
+      "width": 137.56,
+      "height": 103.17
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": 1841.908,
+      "y": 665.36,
+      "width": 73.728,
+      "height": 110.592
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2257.202,
+      "y": 733.056,
+      "width": 74.712,
+      "height": 58.661
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2538.722,
+      "y": 737.496,
+      "width": 74.712,
+      "height": 58.661
+    },
+    {
+      "file": "parque-betula-v01.png",
+      "x": 2760.607,
+      "y": 702.411,
+      "width": 129.306,
+      "height": 96.98
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2588.012,
+      "y": 735.766,
+      "width": 102.559,
+      "height": 80.525
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2170.321,
+      "y": 749.226,
+      "width": 97.805,
+      "height": 76.792
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": 902.504,
+      "y": 564.07,
+      "width": 73.728,
+      "height": 110.592
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": 617.085,
+      "y": 724.5,
+      "width": 73.728,
+      "height": 110.592
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2266.456,
+      "y": 758.088,
+      "width": 71.316,
+      "height": 55.994
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2523.22,
+      "y": 760.56,
+      "width": 67.92,
+      "height": 53.328
+    },
+    {
+      "file": "estudio-cavalete-v02.png",
+      "x": 1493.417,
+      "y": 896.07,
+      "width": 34.808,
+      "height": 65.246
+    },
+    {
+      "file": "estudio-escultura-v02.png",
+      "x": 1570.064,
+      "y": 986.294,
+      "width": 67.562,
+      "height": 70.39
+    },
+    {
+      "file": "estudio-bancada-v02.png",
+      "x": 1441.943,
+      "y": 929.156,
+      "width": 70.39,
+      "height": 68.85
+    },
+    {
+      "file": "xerifins-departamento-v01.png",
+      "x": 1083.237,
+      "y": 509.857,
+      "width": 197.113,
+      "height": 208.639
+    },
+    {
+      "file": "xerifins-guarita-v01.png",
+      "x": 1067.433,
+      "y": 696.789,
+      "width": 54.977,
+      "height": 55.261
+    },
+    {
+      "file": "xerifins-viatura-v01.png",
+      "x": 968.534,
+      "y": 615.39,
+      "width": 74.563,
+      "height": 61.908
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 816.549,
+      "y": 576.95,
+      "width": 61.44,
+      "height": 40.96
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 1680.23,
+      "y": 970.36,
+      "width": 61.44,
+      "height": 40.96
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2651.78,
+      "y": 714.915,
+      "width": 136.519,
+      "height": 107.189
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2462.105,
+      "y": 759.951,
+      "width": 146.198,
+      "height": 114.789
+    },
+    {
+      "file": "parque-pinheiro-v01.png",
+      "x": 2264.211,
+      "y": 748.422,
+      "width": 134.121,
+      "height": 100.591
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2544.652,
+      "y": 772.575,
+      "width": 107.314,
+      "height": 84.258
+    },
+    {
+      "file": "parque-pinheiro-v01.png",
+      "x": 2127.223,
+      "y": 724.709,
+      "width": 108.672,
+      "height": 81.504
+    },
+    {
+      "file": "mural-detalhado-v01.png",
+      "x": 1033.194,
+      "y": 581.56,
+      "width": 73.58,
+      "height": 57.772
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2697.424,
+      "y": 727.783,
+      "width": 145.349,
+      "height": 114.122
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2446.075,
+      "y": 784.417,
+      "width": 97.126,
+      "height": 76.259
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2325.611,
+      "y": 778.066,
+      "width": 74.712,
+      "height": 58.661
+    },
+    {
+      "file": "cafeteria-mesa-tenda-v01.png",
+      "x": 1063.841,
+      "y": 1203.06,
+      "width": 84.9,
+      "height": 66.66
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2214.162,
+      "y": 770.496,
+      "width": 102.559,
+      "height": 80.525
+    },
+    {
+      "file": "parque-pinheiro-v01.png",
+      "x": 2539.198,
+      "y": 792.02,
+      "width": 153.517,
+      "height": 115.138
+    },
+    {
+      "file": "parque-pinheiro-v01.png",
+      "x": 2447.562,
+      "y": 806.075,
+      "width": 68.78,
+      "height": 51.585
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2342.956,
+      "y": 803.088,
+      "width": 71.316,
+      "height": 55.994
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2619.466,
+      "y": 749.132,
+      "width": 163.008,
+      "height": 127.987
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2419.456,
+      "y": 818.088,
+      "width": 71.316,
+      "height": 55.994
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2362.496,
+      "y": 801.454,
+      "width": 95.088,
+      "height": 74.659
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2491.754,
+      "y": 833.094,
+      "width": 138.455,
+      "height": 108.709
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2256.091,
+      "y": 794.117,
+      "width": 117.366,
+      "height": 92.151
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2390.012,
+      "y": 838.506,
+      "width": 74.712,
+      "height": 58.661
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2665.418,
+      "y": 768.307,
+      "width": 171.838,
+      "height": 134.92
+    },
+    {
+      "file": "rosa-arvore-isometrica-v01.png",
+      "x": 910.184,
+      "y": 896.02,
+      "width": 90,
+      "height": 67.5
+    },
+    {
+      "file": "parque-pinheiro-v01.png",
+      "x": 2557.289,
+      "y": 789.103,
+      "width": 182.955,
+      "height": 137.216
+    },
+    {
+      "file": "pracinha-fonte-v01.png",
+      "x": 1514.876,
+      "y": 626.09,
+      "width": 115.84,
+      "height": 86.88
+    },
+    {
+      "file": "pracinha-quiosque-v01.png",
+      "x": 1624.111,
+      "y": 1133.901,
+      "width": 112.03,
+      "height": 112.18
+    },
+    {
+      "file": "pracinha-jogos-v01.png",
+      "x": 1514.077,
+      "y": 957.559,
+      "width": 84.167,
+      "height": 66.125
+    },
+    {
+      "file": "pracinha-palco-v01.png",
+      "x": 1004.624,
+      "y": 1164.061,
+      "width": 86.49,
+      "height": 72.194
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 1943.841,
+      "y": 928.05,
+      "width": 61.44,
+      "height": 40.96
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2448.762,
+      "y": 830.035,
+      "width": 107.314,
+      "height": 84.258
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2311.302,
+      "y": 829.535,
+      "width": 107.314,
+      "height": 84.258
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": 1587.764,
+      "y": 1063.76,
+      "width": 73.728,
+      "height": 110.592
+    },
+    {
+      "file": "parque-pinheiro-v01.png",
+      "x": 2739.761,
+      "y": 797.3,
+      "width": 182.955,
+      "height": 137.216
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": 1846.752,
+      "y": 813.62,
+      "width": 73.728,
+      "height": 110.592
+    },
+    {
+      "file": "rosa-arvore-isometrica-v01.png",
+      "x": 1644.777,
+      "y": 1021.218,
+      "width": 147.25,
+      "height": 110.437
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2399.571,
+      "y": 865.056,
+      "width": 97.805,
+      "height": 76.792
+    },
+    {
+      "file": "parque-pinheiro-v01.png",
+      "x": 2359.624,
+      "y": 862.373,
+      "width": 103.858,
+      "height": 77.893
+    },
+    {
+      "file": "parque-betula-v01.png",
+      "x": 2670.418,
+      "y": 853.28,
+      "width": 129.306,
+      "height": 96.98
+    },
+    {
+      "file": "parque-pinheiro-v01.png",
+      "x": 2592.572,
+      "y": 843.06,
+      "width": 147.189,
+      "height": 110.392
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 647.047,
+      "y": 778.08,
+      "width": 61.44,
+      "height": 40.96
+    },
+    {
+      "file": "binstro-render-v02.png",
+      "x": 1771.217,
+      "y": 965.355,
+      "width": 237.615,
+      "height": 229.546
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2730.843,
+      "y": 886.681,
+      "width": 136.519,
+      "height": 107.189
+    },
+    {
+      "file": "parque-pinheiro-v01.png",
+      "x": 2403.729,
+      "y": 863.122,
+      "width": 174.013,
+      "height": 130.51
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2641.136,
+      "y": 875.475,
+      "width": 154.178,
+      "height": 121.055
+    },
+    {
+      "file": "cafeteria-mesa-tenda-v01.png",
+      "x": 1135.593,
+      "y": 1225.52,
+      "width": 84.9,
+      "height": 66.66
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2553.885,
+      "y": 883.163,
+      "width": 163.008,
+      "height": 127.987
+    },
+    {
+      "file": "parque-pinheiro-v01.png",
+      "x": 2781.884,
+      "y": 907.411,
+      "width": 147.189,
+      "height": 110.392
+    },
+    {
+      "file": "cafeteria-mesa-tenda-v01.png",
+      "x": 1759.771,
+      "y": 1103.21,
+      "width": 84.9,
+      "height": 66.66
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2449.504,
+      "y": 890.753,
+      "width": 180.667,
+      "height": 141.852
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2551.534,
+      "y": 950.963,
+      "width": 180.667,
+      "height": 141.852
+    },
+    {
+      "file": "cafeteria-mesa-tenda-v01.png",
+      "x": 893.43,
+      "y": 922.24,
+      "width": 97.635,
+      "height": 76.659
+    },
+    {
+      "file": "parque-pinheiro-v01.png",
+      "x": 2629.24,
+      "y": 914.72,
+      "width": 174.013,
+      "height": 130.51
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2710.214,
+      "y": 921.739,
+      "width": 163.008,
+      "height": 127.987
+    },
+    {
+      "file": "plaza-arcada-v01.png",
+      "x": 780.939,
+      "y": 619.33,
+      "width": 253.639,
+      "height": 230.418
+    },
+    {
+      "file": "pracinha-fonte-v01.png",
+      "x": 713.773,
+      "y": 806.3,
+      "width": 115.84,
+      "height": 86.88
+    },
+    {
+      "file": "plaza-letreiro-rbd-v01.png",
+      "x": 1152.046,
+      "y": 1093.78,
+      "width": 91.975,
+      "height": 72.215
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2667.525,
+      "y": 933.744,
+      "width": 180.667,
+      "height": 141.852
+    },
+    {
+      "file": "parque-pinheiro-v01.png",
+      "x": 2746.495,
+      "y": 942.326,
+      "width": 174.013,
+      "height": 130.51
+    },
+    {
+      "file": "parque-pinheiro-v01.png",
+      "x": 2622.768,
+      "y": 1002.999,
+      "width": 138.248,
+      "height": 103.686
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": 1672.798,
+      "y": 875.44,
+      "width": 73.728,
+      "height": 110.592
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": 2236.635,
+      "y": 886.27,
+      "width": 73.728,
+      "height": 110.592
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2671.821,
+      "y": 1011.81,
+      "width": 145.349,
+      "height": 114.122
+    },
+    {
+      "file": "taverna-medieval-games-v04.png",
+      "x": 2327.423,
+      "y": 913.58,
+      "width": 252.802,
+      "height": 197.583
+    },
+    {
+      "file": "taverna-mesa-redonda-v01.png",
+      "x": 2255.828,
+      "y": 1083.28,
+      "width": 60.845,
+      "height": 47.773
+    },
+    {
+      "file": "taverna-mesa-redonda-v01.png",
+      "x": 2310.981,
+      "y": 1124.35,
+      "width": 60.845,
+      "height": 47.773
+    },
+    {
+      "file": "taverna-mesa-redonda-v01.png",
+      "x": 2341.761,
+      "y": 1077.84,
+      "width": 60.845,
+      "height": 47.773
+    },
+    {
+      "file": "taverna-pato-v01.png",
+      "x": 2314.077,
+      "y": 1073.12,
+      "width": 26,
+      "height": 24
+    },
+    {
+      "file": "taverna-pato-v01.png",
+      "x": 2285.498,
+      "y": 1131.62,
+      "width": 26,
+      "height": 24
+    },
+    {
+      "file": "taverna-pato-v01.png",
+      "x": 2376.431,
+      "y": 1175.12,
+      "width": 26,
+      "height": 24
+    },
+    {
+      "file": "taverna-pato-v01.png",
+      "x": 2418,
+      "y": 1139.12,
+      "width": 26,
+      "height": 24
+    },
+    {
+      "file": "parque-betula-v01.png",
+      "x": 2771.003,
+      "y": 1027.794,
+      "width": 129.306,
+      "height": 96.98
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": 2185.517,
+      "y": 1012.11,
+      "width": 73.728,
+      "height": 110.592
+    },
+    {
+      "file": "rosa-arvore-isometrica-v01.png",
+      "x": 2305.161,
+      "y": 999.9,
+      "width": 85,
+      "height": 63.75
+    },
+    {
+      "file": "patrick-canuto-v01.png",
+      "x": 2478.169,
+      "y": 1069.708,
+      "width": 28.125,
+      "height": 42.188
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 1200.431,
+      "y": 1244.95,
+      "width": 61.44,
+      "height": 40.96
+    },
+    {
+      "file": "loisi-vieira-v01.png",
+      "x": 2326.668,
+      "y": 1041.312,
+      "width": 42.262,
+      "height": 38.812
+    },
+    {
+      "file": "inglish-pub-render-v02.png",
+      "x": 952.52,
+      "y": 906.342,
+      "width": 207.486,
+      "height": 195.939
+    },
+    {
+      "file": "taverna-mesa-redonda-v01.png",
+      "x": 1573.856,
+      "y": 1166.95,
+      "width": 60.845,
+      "height": 47.773
+    },
+    {
+      "file": "pub-caixa-som-v01.png",
+      "x": 1250.455,
+      "y": 930.368,
+      "width": 43.914,
+      "height": 46.066
+    },
+    {
+      "file": "pracinha-palco-v01.png",
+      "x": 1055.446,
+      "y": 1135.25,
+      "width": 103.14,
+      "height": 86.092
+    },
+    {
+      "file": "pub-microfone-v01.png",
+      "x": 1228.347,
+      "y": 924.76,
+      "width": 36.864,
+      "height": 55.296
+    },
+    {
+      "file": "academia-render-v02.png",
+      "x": 1304.41,
+      "y": 924.977,
+      "width": 195.373,
+      "height": 200.259
+    },
+    {
+      "file": "academia-barra-v01.png",
+      "x": 1472.759,
+      "y": 1045.203,
+      "width": 78.238,
+      "height": 77.601
+    },
+    {
+      "file": "academia-pesos-v01.png",
+      "x": 1435.823,
+      "y": 1081.721,
+      "width": 62.697,
+      "height": 62.054
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 816.13,
+      "y": 879.32,
+      "width": 61.44,
+      "height": 40.96
+    },
+    {
+      "file": "parque-pinheiro-v01.png",
+      "x": 2586.574,
+      "y": 1056.821,
+      "width": 129.306,
+      "height": 96.98
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2743.192,
+      "y": 1051.573,
+      "width": 154.178,
+      "height": 121.055
+    },
+    {
+      "file": "linkedin-totem-v01.png",
+      "x": 1995.275,
+      "y": 888.172,
+      "width": 67.496,
+      "height": 94.832
+    },
+    {
+      "file": "linkedin-credenciamento-v01.png",
+      "x": 2091.868,
+      "y": 960.707,
+      "width": 90.378,
+      "height": 96.163
+    },
+    {
+      "file": "rosa-arvore-isometrica-v01.png",
+      "x": 1256.366,
+      "y": 985.84,
+      "width": 90,
+      "height": 67.5
+    },
+    {
+      "file": "elton-pavesi-v02.png",
+      "x": 2258.177,
+      "y": 1080.798,
+      "width": 23.625,
+      "height": 35.437
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2628.927,
+      "y": 1065.077,
+      "width": 154.178,
+      "height": 121.055
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2551.961,
+      "y": 1089.083,
+      "width": 136.519,
+      "height": 107.189
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2473.231,
+      "y": 1094.244,
+      "width": 145.349,
+      "height": 114.122
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2707.337,
+      "y": 1107.767,
+      "width": 136.519,
+      "height": 107.189
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2601.031,
+      "y": 1098.052,
+      "width": 163.008,
+      "height": 127.987
+    },
+    {
+      "file": "jacu-v01.png",
+      "x": 2153.664,
+      "y": 351.21,
+      "width": 20,
+      "height": 18
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2550.107,
+      "y": 1136.311,
+      "width": 127.69,
+      "height": 100.257
+    },
+    {
+      "file": "rosa-arvore-isometrica-v01.png",
+      "x": 919.114,
+      "y": 1225.44,
+      "width": 90,
+      "height": 67.5
+    },
+    {
+      "file": "nathan-machado-v01.png",
+      "x": 1493.769,
+      "y": 1086.61,
+      "width": 22.5,
+      "height": 33.75
+    },
+    {
+      "file": "diego-cachorro-2-v01.png",
+      "x": 2219.358,
+      "y": 461.94,
+      "width": 21,
+      "height": 18.2
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2463.458,
+      "y": 1142.955,
+      "width": 154.178,
+      "height": 121.055
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2767.308,
+      "y": 1124.601,
+      "width": 163.008,
+      "height": 127.987
+    },
+    {
+      "file": "jacu-v01.png",
+      "x": 2327.965,
+      "y": 464.24,
+      "width": 20,
+      "height": 18
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": 1073.101,
+      "y": 759.94,
+      "width": 73.728,
+      "height": 110.592
+    },
+    {
+      "file": "rosa-arvore-isometrica-v01.png",
+      "x": 1699.227,
+      "y": 1179.34,
+      "width": 119,
+      "height": 89.25
+    },
+    {
+      "file": "parque-betula-v01.png",
+      "x": 2677.856,
+      "y": 1143.149,
+      "width": 147.189,
+      "height": 110.392
+    },
+    {
+      "file": "parque-pinheiro-v01.png",
+      "x": 2612.036,
+      "y": 1153.232,
+      "width": 156.131,
+      "height": 117.098
+    },
+    {
+      "file": "jacu-v01.png",
+      "x": 2291.846,
+      "y": 431.85,
+      "width": 15,
+      "height": 13.5
+    },
+    {
+      "file": "parque-pinheiro-v01.png",
+      "x": 2526.913,
+      "y": 1172.185,
+      "width": 138.248,
+      "height": 103.686
+    },
+    {
+      "file": "silicin-campus-circular-v01.png",
+      "x": 1980.124,
+      "y": 1242.23,
+      "width": 199.68,
+      "height": 133.12
+    },
+    {
+      "file": "cafe-apoio-render-v01.png",
+      "x": 1863.436,
+      "y": 731.345,
+      "width": 123.394,
+      "height": 121.833
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2436.021,
+      "y": 1195.3,
+      "width": 145.349,
+      "height": 114.122
+    },
+    {
+      "file": "parque-pinheiro-v01.png",
+      "x": 2765.587,
+      "y": 1195.838,
+      "width": 129.306,
+      "height": 96.98
+    },
+    {
+      "file": "praia-bola-v01.png",
+      "x": 1585.043,
+      "y": 1262.087,
+      "width": 33.775,
+      "height": 29.1
+    },
+    {
+      "file": "jacu-v01.png",
+      "x": 2249.807,
+      "y": 379.38,
+      "width": 18,
+      "height": 16.2
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2368.076,
+      "y": 1201.806,
+      "width": 127.69,
+      "height": 100.257
+    },
+    {
+      "file": "praia-espreguicadeira-v01.png",
+      "x": 1365.34,
+      "y": 1267.466,
+      "width": 74.445,
+      "height": 64.772
+    },
+    {
+      "file": "praia-concha-v01.png",
+      "x": 1585.757,
+      "y": 1292.328,
+      "width": 28.96,
+      "height": 13.032
+    },
+    {
+      "file": "praia-guarda-sol-v01.png",
+      "x": 1343.214,
+      "y": 1248.739,
+      "width": 77.825,
+      "height": 61.105
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2688.056,
+      "y": 1206.098,
+      "width": 136.519,
+      "height": 107.189
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2295.414,
+      "y": 1207.463,
+      "width": 136.519,
+      "height": 107.189
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2584.43,
+      "y": 1189.839,
+      "width": 163.008,
+      "height": 127.987
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": 1832.651,
+      "y": 1210.23,
+      "width": 73.728,
+      "height": 110.592
+    },
+    {
+      "file": "jacu-v01.png",
+      "x": 2329.118,
+      "y": 374.05,
+      "width": 20,
+      "height": 18
+    },
+    {
+      "file": "cafeteria-mesa-tenda-v01.png",
+      "x": 1826.55,
+      "y": 1142.76,
+      "width": 84.9,
+      "height": 66.66
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 1119.987,
+      "y": 1199.63,
+      "width": 61.44,
+      "height": 40.96
+    },
+    {
+      "file": "feira-hortifruti-v01.png",
+      "x": 1033.941,
+      "y": 875.205,
+      "width": 81.323,
+      "height": 62.456
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 2252.38,
+      "y": 1314.635,
+      "width": 18.476,
+      "height": 13.857
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2532.16,
+      "y": 1233.006,
+      "width": 127.69,
+      "height": 100.257
+    },
+    {
+      "file": "parque-betula-v01.png",
+      "x": 2441.627,
+      "y": 1240.899,
+      "width": 156.131,
+      "height": 117.098
+    },
+    {
+      "file": "silicin-walle-v01.png?v=1",
+      "x": 2219.95,
+      "y": 1164.29,
+      "width": 26,
+      "height": 32
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 2256.217,
+      "y": 1327.462,
+      "width": 21.025,
+      "height": 15.769
+    },
+    {
+      "file": "praia-coqueiro-v01.png",
+      "x": 1266.672,
+      "y": 1214.037,
+      "width": 134.425,
+      "height": 105.545
+    },
+    {
+      "file": "coloridin-pano-piquenique-v01.png",
+      "x": 1769.197,
+      "y": 1321.54,
+      "width": 71.489,
+      "height": 59.841
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2353.047,
+      "y": 1227.828,
+      "width": 163.008,
+      "height": 127.987
+    },
+    {
+      "file": "parque-betula-v01.png",
+      "x": 2726.028,
+      "y": 1229.096,
+      "width": 165.072,
+      "height": 123.804
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2270.502,
+      "y": 1244.409,
+      "width": 145.349,
+      "height": 114.122
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2657.682,
+      "y": 1245.118,
+      "width": 145.349,
+      "height": 114.122
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 2257.299,
+      "y": 1338.665,
+      "width": 23.573,
+      "height": 17.68
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 2222.087,
+      "y": 1342.746,
+      "width": 18.476,
+      "height": 13.857
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 2189.582,
+      "y": 1345.168,
+      "width": 23.573,
+      "height": 17.68
+    },
+    {
+      "file": "silicin-humanoide-v01.png?v=1",
+      "x": 2168.584,
+      "y": 1329,
+      "width": 26,
+      "height": 32
+    },
+    {
+      "file": "silicin-aspirador-v01.png?v=1",
+      "x": 1941.13,
+      "y": 1288.31,
+      "width": 18,
+      "height": 11
+    },
+    {
+      "file": "silicin-humanoide-v01.png?v=1",
+      "x": 2066.014,
+      "y": 1290.74,
+      "width": 22.1,
+      "height": 27.2
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 2222.129,
+      "y": 1353.381,
+      "width": 21.025,
+      "height": 15.769
+    },
+    {
+      "file": "parque-pinheiro-v01.png",
+      "x": 2213.039,
+      "y": 1270.371,
+      "width": 156.131,
+      "height": 117.098
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2577.329,
+      "y": 1256.195,
+      "width": 154.178,
+      "height": 121.055
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2502.607,
+      "y": 1272.019,
+      "width": 136.519,
+      "height": 107.189
+    },
+    {
+      "file": "praia-concha-v01.png",
+      "x": 1328.758,
+      "y": 1316.659,
+      "width": 28.96,
+      "height": 13.032
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 2193.758,
+      "y": 1358.195,
+      "width": 26.122,
+      "height": 19.591
+    },
+    {
+      "file": "silicin-robo-v01.png",
+      "x": 2010.638,
+      "y": 1176.212,
+      "width": 113.066,
+      "height": 78.249
+    },
+    {
+      "file": "silicin-bicicletario-v02.png",
+      "x": 2156.845,
+      "y": 1231.247,
+      "width": 102.23,
+      "height": 87.491
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 2163.723,
+      "y": 1365.26,
+      "width": 21.025,
+      "height": 15.769
+    },
+    {
+      "file": "silicin-aspirador-v01.png?v=1",
+      "x": 2114.785,
+      "y": 1370.82,
+      "width": 18,
+      "height": 11
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 2200.899,
+      "y": 1376.113,
+      "width": 18.476,
+      "height": 13.857
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": 1968.847,
+      "y": 1044.12,
+      "width": 73.728,
+      "height": 110.592
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 2161.08,
+      "y": 1374.312,
+      "width": 23.573,
+      "height": 17.68
+    },
+    {
+      "file": "parque-pinheiro-v01.png",
+      "x": 2424.813,
+      "y": 1284.382,
+      "width": 147.189,
+      "height": 110.392
+    },
+    {
+      "file": "silicin-humanoide-v01.png?v=1",
+      "x": 2117.614,
+      "y": 1208.89,
+      "width": 26,
+      "height": 32
+    },
+    {
+      "file": "silicin-aspirador-v01.png?v=1",
+      "x": 2198.193,
+      "y": 1165.67,
+      "width": 18,
+      "height": 11
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2719.585,
+      "y": 1298.6,
+      "width": 127.69,
+      "height": 100.257
+    },
+    {
+      "file": "parque-pinheiro-v01.png",
+      "x": 2348.82,
+      "y": 1299.867,
+      "width": 129.306,
+      "height": 96.98
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 2131.956,
+      "y": 1381.908,
+      "width": 18.476,
+      "height": 13.857
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 2160.192,
+      "y": 1384.415,
+      "width": 26.122,
+      "height": 19.591
+    },
+    {
+      "file": "praia-concha-v01.png",
+      "x": 1141.723,
+      "y": 1389.613,
+      "width": 20.272,
+      "height": 9.122
+    },
+    {
+      "file": "parque-pinheiro-v01.png",
+      "x": 2637.999,
+      "y": 1308.263,
+      "width": 138.248,
+      "height": 103.686
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 2136.213,
+      "y": 1394.977,
+      "width": 21.025,
+      "height": 15.769
+    },
+    {
+      "file": "coloridin-pano-piquenique-v01.png",
+      "x": 1108.082,
+      "y": 1389.566,
+      "width": 71.489,
+      "height": 59.841
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2265.224,
+      "y": 1301.987,
+      "width": 136.519,
+      "height": 107.189
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 2102.801,
+      "y": 1396.881,
+      "width": 26.122,
+      "height": 19.591
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 2123.301,
+      "y": 1417.381,
+      "width": 26.122,
+      "height": 19.591
+    },
+    {
+      "file": "parque-pinheiro-v01.png",
+      "x": 2545.054,
+      "y": 1295.284,
+      "width": 165.072,
+      "height": 123.804
+    },
+    {
+      "file": "praia-concha-v01.png",
+      "x": 1810.105,
+      "y": 1367.158,
+      "width": 23.168,
+      "height": 10.426
+    },
+    {
+      "file": "praia-guarda-sol-v01.png",
+      "x": 1067.654,
+      "y": 1379.467,
+      "width": 77.825,
+      "height": 61.105
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 2139.122,
+      "y": 1407.235,
+      "width": 23.573,
+      "height": 17.68
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 2105.32,
+      "y": 1412.13,
+      "width": 18.476,
+      "height": 13.857
+    },
+    {
+      "file": "parque-pinheiro-v01.png",
+      "x": 2756.756,
+      "y": 1314.666,
+      "width": 156.131,
+      "height": 117.098
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1526.312,
+      "y": 380.383,
+      "width": 39.024,
+      "height": 29.268
+    },
+    {
+      "file": "parque-betula-v01.png",
+      "x": 2478.617,
+      "y": 1335.353,
+      "width": 129.306,
+      "height": 96.98
+    },
+    {
+      "file": "praia-banhista-2-v01.png",
+      "x": 1109.925,
+      "y": 1414.35,
+      "width": 20.275,
+      "height": 30.413
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 2142.677,
+      "y": 1417.176,
+      "width": 25.485,
+      "height": 19.114
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 2155.029,
+      "y": 1414.352,
+      "width": 25.485,
+      "height": 19.114
+    },
+    {
+      "file": "praia-banhista-1-v01.png",
+      "x": 1358.168,
+      "y": 1291.81,
+      "width": 22.528,
+      "height": 33.792
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2389.275,
+      "y": 1321.479,
+      "width": 154.178,
+      "height": 121.055
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 2170.058,
+      "y": 1420.264,
+      "width": 28.67,
+      "height": 21.503
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2673.467,
+      "y": 1319.361,
+      "width": 163.008,
+      "height": 127.987
+    },
+    {
+      "file": "praia-castelo-areia-v01.png",
+      "x": 1060.359,
+      "y": 1416.15,
+      "width": 45.28,
+      "height": 35.552
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 2209.923,
+      "y": 1442.591,
+      "width": 22.299,
+      "height": 16.724
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2601.045,
+      "y": 1342.159,
+      "width": 145.349,
+      "height": 114.122
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2306.422,
+      "y": 1331.02,
+      "width": 163.008,
+      "height": 127.987
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2258.629,
+      "y": 1381.4,
+      "width": 100.522,
+      "height": 78.925
+    },
+    {
+      "file": "paula-lotti-v02.png",
+      "x": 1089.558,
+      "y": 1425.94,
+      "width": 22.5,
+      "height": 33.75
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2519.083,
+      "y": 1348.355,
+      "width": 154.178,
+      "height": 121.055
+    },
+    {
+      "file": "praia-guarda-sol-v01.png",
+      "x": 1962.434,
+      "y": 1401.007,
+      "width": 77.825,
+      "height": 61.105
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2743.927,
+      "y": 1360.412,
+      "width": 145.349,
+      "height": 114.122
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2447.392,
+      "y": 1370.671,
+      "width": 136.519,
+      "height": 107.189
+    },
+    {
+      "file": "praia-banhista-1-v01.png",
+      "x": 1051.768,
+      "y": 1427.69,
+      "width": 22.528,
+      "height": 33.792
+    },
+    {
+      "file": "praia-bola-v01.png",
+      "x": 1127.818,
+      "y": 1432.888,
+      "width": 21.954,
+      "height": 18.915
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 2198.346,
+      "y": 1446.238,
+      "width": 25.485,
+      "height": 19.114
+    },
+    {
+      "file": "praia-espreguicadeira-v01.png",
+      "x": 1986.39,
+      "y": 1434.995,
+      "width": 63.675,
+      "height": 49.995
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2664.814,
+      "y": 1384.344,
+      "width": 127.69,
+      "height": 100.257
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 2214.229,
+      "y": 1449.266,
+      "width": 28.67,
+      "height": 21.503
+    },
+    {
+      "file": "praia-concha-v01.png",
+      "x": 1116.679,
+      "y": 1449.59,
+      "width": 14.48,
+      "height": 6.516
+    },
+    {
+      "file": "praia-concha-v01.png",
+      "x": 1057.764,
+      "y": 1467.226,
+      "width": 15.928,
+      "height": 7.168
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2364.937,
+      "y": 1377.246,
+      "width": 145.349,
+      "height": 114.122
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 2255.538,
+      "y": 1474.111,
+      "width": 22.299,
+      "height": 16.724
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2587.672,
+      "y": 1389.49,
+      "width": 136.519,
+      "height": 107.189
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2301.606,
+      "y": 1409.898,
+      "width": 112.747,
+      "height": 88.524
+    },
+    {
+      "file": "praia-banhista-2-v01.png",
+      "x": 881.658,
+      "y": 1499.79,
+      "width": 22.528,
+      "height": 33.792
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 2262.002,
+      "y": 1478.004,
+      "width": 25.485,
+      "height": 19.114
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2486.729,
+      "y": 1381.37,
+      "width": 163.008,
+      "height": 127.987
+    },
+    {
+      "file": "praia-baleia-encalhada-v01.png",
+      "x": 962.67,
+      "y": 1425.222,
+      "width": 96.753,
+      "height": 82.009
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2717.385,
+      "y": 1393.866,
+      "width": 154.178,
+      "height": 121.055
+    },
+    {
+      "file": "parque-pinheiro-v01.png",
+      "x": 2433.524,
+      "y": 1419.594,
+      "width": 129.306,
+      "height": 96.98
+    },
+    {
+      "file": "parque-pinheiro-v01.png",
+      "x": 2357.114,
+      "y": 1443.094,
+      "width": 129.306,
+      "height": 96.98
+    },
+    {
+      "file": "parque-pinheiro-v01.png",
+      "x": 2646.454,
+      "y": 1401.981,
+      "width": 165.072,
+      "height": 123.804
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 2242.465,
+      "y": 1478.923,
+      "width": 28.67,
+      "height": 21.503
+    },
+    {
+      "file": "parque-pinheiro-v01.png",
+      "x": 2540.096,
+      "y": 1441.65,
+      "width": 147.189,
+      "height": 110.392
+    },
+    {
+      "file": "praia-bola-v01.png",
+      "x": 2102.215,
+      "y": 1490.803,
+      "width": 25.331,
+      "height": 21.825
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 2275.511,
+      "y": 1485.837,
+      "width": 22.299,
+      "height": 16.724
+    },
+    {
+      "file": "praia-coqueiro-v01.png",
+      "x": 2026.337,
+      "y": 1400.123,
+      "width": 134.425,
+      "height": 105.545
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2313.404,
+      "y": 1496.139,
+      "width": 120.626,
+      "height": 94.711
+    },
+    {
+      "file": "praia-concha-v01.png",
+      "x": 2081.599,
+      "y": 1501.178,
+      "width": 26.064,
+      "height": 11.729
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 2295.633,
+      "y": 1488.019,
+      "width": 25.485,
+      "height": 19.114
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2472.893,
+      "y": 1452.669,
+      "width": 154.178,
+      "height": 121.055
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1309.145,
+      "y": 1528.76,
+      "width": 23.892,
+      "height": 17.919
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1305.918,
+      "y": 1531.51,
+      "width": 23.892,
+      "height": 17.919
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 2296.198,
+      "y": 1498.759,
+      "width": 28.67,
+      "height": 21.503
+    },
+    {
+      "file": "savana-acacia-v01.png",
+      "x": 1286.671,
+      "y": 1506.034,
+      "width": 73.848,
+      "height": 55.386
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2422.457,
+      "y": 1477.792,
+      "width": 100.522,
+      "height": 78.925
+    },
+    {
+      "file": "praia-coqueiro-v01.png",
+      "x": 818.205,
+      "y": 1427.164,
+      "width": 114.261,
+      "height": 89.713
+    },
+    {
+      "file": "aeroporto-internacional-v02.png",
+      "x": 1405.884,
+      "y": 1358.964,
+      "width": 432.854,
+      "height": 381.935
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2727.035,
+      "y": 1450.719,
+      "width": 145.349,
+      "height": 114.122
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1405.212,
+      "y": 1488.624,
+      "width": 33.449,
+      "height": 25.087
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1269.092,
+      "y": 1544.637,
+      "width": 27.078,
+      "height": 20.308
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2642.773,
+      "y": 1468.621,
+      "width": 127.69,
+      "height": 100.257
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1409.085,
+      "y": 1492.266,
+      "width": 28.67,
+      "height": 21.503
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1147.02,
+      "y": 1546.137,
+      "width": 27.078,
+      "height": 20.308
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2376.835,
+      "y": 1532.173,
+      "width": 112.747,
+      "height": 88.524
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1271.993,
+      "y": 1552.014,
+      "width": 23.892,
+      "height": 17.919
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1306.028,
+      "y": 1546.723,
+      "width": 33.449,
+      "height": 25.087
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1403.128,
+      "y": 1499.017,
+      "width": 27.078,
+      "height": 20.308
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1270.539,
+      "y": 1553.719,
+      "width": 23.892,
+      "height": 17.919
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1302.212,
+      "y": 1548.625,
+      "width": 33.449,
+      "height": 25.087
+    },
+    {
+      "file": "safari-visitante-3-v01.png",
+      "x": 1337.402,
+      "y": 1554.84,
+      "width": 24.576,
+      "height": 36.864
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1299.856,
+      "y": 1555.214,
+      "width": 28.67,
+      "height": 21.503
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2570.006,
+      "y": 1478.045,
+      "width": 136.519,
+      "height": 107.189
+    },
+    {
+      "file": "savana-acacia-v01.png",
+      "x": 1280.161,
+      "y": 1531.552,
+      "width": 73.848,
+      "height": 55.386
+    },
+    {
+      "file": "praia-concha-v01.png",
+      "x": 862.381,
+      "y": 1514.959,
+      "width": 21.72,
+      "height": 9.774
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 2299.403,
+      "y": 1567.274,
+      "width": 22.299,
+      "height": 16.724
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2428.146,
+      "y": 1516.728,
+      "width": 163.008,
+      "height": 127.987
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1275.607,
+      "y": 1568.614,
+      "width": 28.67,
+      "height": 21.503
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1269.98,
+      "y": 1566.951,
+      "width": 33.449,
+      "height": 25.087
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 2262.233,
+      "y": 1495.764,
+      "width": 25.485,
+      "height": 19.114
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1420.441,
+      "y": 1507.507,
+      "width": 23.892,
+      "height": 17.919
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1191.15,
+      "y": 1574.637,
+      "width": 27.078,
+      "height": 20.308
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1413.042,
+      "y": 1512.952,
+      "width": 23.892,
+      "height": 17.919
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1264.711,
+      "y": 1574.206,
+      "width": 28.67,
+      "height": 21.503
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1150.708,
+      "y": 1579.753,
+      "width": 23.892,
+      "height": 17.919
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1261.879,
+      "y": 1571.474,
+      "width": 33.449,
+      "height": 25.087
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 2339.846,
+      "y": 1615.951,
+      "width": 28.67,
+      "height": 21.503
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1314.99,
+      "y": 1580.448,
+      "width": 23.892,
+      "height": 17.919
+    },
+    {
+      "file": "kauana-moreira-v01.png",
+      "x": 1188.226,
+      "y": 1568.525,
+      "width": 24.75,
+      "height": 37.125
+    },
+    {
+      "file": "praia-guarda-sol-v01.png",
+      "x": 2152.456,
+      "y": 1543.81,
+      "width": 77.825,
+      "height": 61.105
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 2384.836,
+      "y": 1590.289,
+      "width": 22.299,
+      "height": 16.724
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 2398.297,
+      "y": 1587.573,
+      "width": 22.299,
+      "height": 16.724
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2700.208,
+      "y": 1489.139,
+      "width": 154.178,
+      "height": 121.055
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1148.672,
+      "y": 1586.867,
+      "width": 28.67,
+      "height": 21.503
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1144.155,
+      "y": 1588.665,
+      "width": 28.67,
+      "height": 21.503
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1176.178,
+      "y": 1627.292,
+      "width": 27.078,
+      "height": 20.308
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1235.404,
+      "y": 1586.626,
+      "width": 33.449,
+      "height": 25.087
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1234.017,
+      "y": 1591.226,
+      "width": 28.67,
+      "height": 21.503
+    },
+    {
+      "file": "coloridin-pano-piquenique-v01.png",
+      "x": 2169.241,
+      "y": 1583.663,
+      "width": 71.489,
+      "height": 59.841
+    },
+    {
+      "file": "safari-visitante-1-v01.png",
+      "x": 1351.084,
+      "y": 1604.46,
+      "width": 24.576,
+      "height": 36.864
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1313.072,
+      "y": 1594.257,
+      "width": 33.449,
+      "height": 25.087
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1281.631,
+      "y": 1600.549,
+      "width": 23.892,
+      "height": 17.919
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1310.045,
+      "y": 1595.811,
+      "width": 33.449,
+      "height": 25.087
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1105.094,
+      "y": 1601.601,
+      "width": 23.892,
+      "height": 17.919
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1280.013,
+      "y": 1602.334,
+      "width": 23.892,
+      "height": 17.919
+    },
+    {
+      "file": "savana-impala-v01.png",
+      "x": 1307.238,
+      "y": 1618.44,
+      "width": 52.355,
+      "height": 41.107
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1126.134,
+      "y": 1597.83,
+      "width": 33.449,
+      "height": 25.087
+    },
+    {
+      "file": "parque-betula-v01.png",
+      "x": 2618.131,
+      "y": 1500.589,
+      "width": 165.072,
+      "height": 123.804
+    },
+    {
+      "file": "coloridin-pano-piquenique-v01.png",
+      "x": 679.636,
+      "y": 1588.325,
+      "width": 71.489,
+      "height": 59.841
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2543.803,
+      "y": 1516.158,
+      "width": 145.349,
+      "height": 114.122
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1095.861,
+      "y": 1607.546,
+      "width": 23.892,
+      "height": 17.919
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1111.782,
+      "y": 1606.473,
+      "width": 28.67,
+      "height": 21.503
+    },
+    {
+      "file": "savana-girafa-v01.png",
+      "x": 1327.401,
+      "y": 1534.413,
+      "width": 91.975,
+      "height": 72.215
+    },
+    {
+      "file": "savana-impala-v01.png",
+      "x": 1318.871,
+      "y": 1584.818,
+      "width": 52.355,
+      "height": 41.107
+    },
+    {
+      "file": "savana-zebra-v01.png",
+      "x": 1217.179,
+      "y": 1598.423,
+      "width": 50.94,
+      "height": 39.996
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1102.594,
+      "y": 1610.92,
+      "width": 28.67,
+      "height": 21.503
+    },
+    {
+      "file": "praia-guarda-sol-v01.png",
+      "x": 718.559,
+      "y": 1560.862,
+      "width": 77.825,
+      "height": 61.105
+    },
+    {
+      "file": "savana-impala-v01.png",
+      "x": 1344.311,
+      "y": 1664.636,
+      "width": 37.696,
+      "height": 29.597
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1187.38,
+      "y": 1623.957,
+      "width": 28.67,
+      "height": 21.503
+    },
+    {
+      "file": "savana-zebra-v01.png",
+      "x": 1149.86,
+      "y": 1607.216,
+      "width": 36.677,
+      "height": 28.797
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1188.327,
+      "y": 1710.968,
+      "width": 28.67,
+      "height": 21.503
+    },
+    {
+      "file": "savana-zebra-v01.png",
+      "x": 1265.389,
+      "y": 1690.948,
+      "width": 50.94,
+      "height": 39.996
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 2332.089,
+      "y": 1624.279,
+      "width": 25.485,
+      "height": 19.114
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1355.359,
+      "y": 1680.331,
+      "width": 28.67,
+      "height": 21.503
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1372.795,
+      "y": 1653.91,
+      "width": 33.449,
+      "height": 25.087
+    },
+    {
+      "file": "savana-impala-v01.png",
+      "x": 1332.781,
+      "y": 1626.381,
+      "width": 52.355,
+      "height": 41.107
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1245.489,
+      "y": 1623.046,
+      "width": 23.892,
+      "height": 17.919
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 2392.107,
+      "y": 1595.361,
+      "width": 28.67,
+      "height": 21.503
+    },
+    {
+      "file": "savana-girafa-v01.png",
+      "x": 1230.104,
+      "y": 1565.468,
+      "width": 91.975,
+      "height": 72.215
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1092.024,
+      "y": 1617.753,
+      "width": 33.449,
+      "height": 25.087
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1380.88,
+      "y": 1635.743,
+      "width": 33.449,
+      "height": 25.087
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1321.546,
+      "y": 1689.244,
+      "width": 28.67,
+      "height": 21.503
+    },
+    {
+      "file": "savana-acacia-v01.png",
+      "x": 970.254,
+      "y": 1584.205,
+      "width": 92.31,
+      "height": 69.233
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1184.47,
+      "y": 1649.012,
+      "width": 33.449,
+      "height": 25.087
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1090.064,
+      "y": 1619.24,
+      "width": 33.449,
+      "height": 25.087
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1162.12,
+      "y": 1635.029,
+      "width": 23.892,
+      "height": 17.919
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1243.255,
+      "y": 1625.114,
+      "width": 23.892,
+      "height": 17.919
+    },
+    {
+      "file": "parque-pinheiro-v01.png",
+      "x": 2492.52,
+      "y": 1576.656,
+      "width": 101.794,
+      "height": 76.346
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1082.067,
+      "y": 1625.463,
+      "width": 23.892,
+      "height": 17.919
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1082.067,
+      "y": 1625.463,
+      "width": 23.892,
+      "height": 17.919
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1065.85,
+      "y": 1625.469,
+      "width": 23.892,
+      "height": 17.919
+    },
+    {
+      "file": "savana-zebra-v01.png",
+      "x": 1118.31,
+      "y": 1608.541,
+      "width": 50.94,
+      "height": 39.996
+    },
+    {
+      "file": "savana-impala-v01.png",
+      "x": 1307.417,
+      "y": 1646.308,
+      "width": 52.355,
+      "height": 41.107
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1075.991,
+      "y": 1625.36,
+      "width": 28.67,
+      "height": 21.503
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 2382.61,
+      "y": 1598.499,
+      "width": 22.299,
+      "height": 16.724
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1061.673,
+      "y": 1628.376,
+      "width": 23.892,
+      "height": 17.919
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2769.841,
+      "y": 1544.58,
+      "width": 136.519,
+      "height": 107.189
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1219.379,
+      "y": 1621.884,
+      "width": 33.449,
+      "height": 25.087
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 2484.366,
+      "y": 1605.059,
+      "width": 25.485,
+      "height": 19.114
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1136.791,
+      "y": 1636.254,
+      "width": 23.892,
+      "height": 17.919
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1060.102,
+      "y": 1633.651,
+      "width": 28.67,
+      "height": 21.503
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1154.595,
+      "y": 1633.804,
+      "width": 28.67,
+      "height": 21.503
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1158.016,
+      "y": 1625.762,
+      "width": 28.67,
+      "height": 21.503
+    },
+    {
+      "file": "savana-girafa-v01.png",
+      "x": 1267.825,
+      "y": 1543.079,
+      "width": 91.975,
+      "height": 72.215
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1241.022,
+      "y": 1637.62,
+      "width": 28.67,
+      "height": 21.503
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1373.719,
+      "y": 1591.29,
+      "width": 33.449,
+      "height": 25.087
+    },
+    {
+      "file": "savana-impala-v01.png",
+      "x": 1366.112,
+      "y": 1636.981,
+      "width": 52.355,
+      "height": 41.107
+    },
+    {
+      "file": "savana-zebra-v01.png",
+      "x": 1076.264,
+      "y": 1603.168,
+      "width": 50.94,
+      "height": 39.996
+    },
+    {
+      "file": "praia-coqueiro-v01.png",
+      "x": 2206.436,
+      "y": 1560.791,
+      "width": 134.425,
+      "height": 105.545
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1234.095,
+      "y": 1640.798,
+      "width": 28.67,
+      "height": 21.503
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1213.57,
+      "y": 1657.54,
+      "width": 23.892,
+      "height": 17.919
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1055.238,
+      "y": 1639.719,
+      "width": 33.449,
+      "height": 25.087
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1080.753,
+      "y": 1642.975,
+      "width": 28.67,
+      "height": 21.503
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1080.753,
+      "y": 1642.975,
+      "width": 28.67,
+      "height": 21.503
+    },
+    {
+      "file": "parque-pinheiro-v01.png",
+      "x": 2689.999,
+      "y": 1556.224,
+      "width": 147.189,
+      "height": 110.392
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1040.709,
+      "y": 1643.917,
+      "width": 28.67,
+      "height": 21.503
+    },
+    {
+      "file": "savana-zebra-v01.png",
+      "x": 1131.12,
+      "y": 1637.003,
+      "width": 36.677,
+      "height": 28.797
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1229.871,
+      "y": 1642.192,
+      "width": 33.449,
+      "height": 25.087
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1139.696,
+      "y": 1642.517,
+      "width": 33.449,
+      "height": 25.087
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1027.711,
+      "y": 1648.454,
+      "width": 23.892,
+      "height": 17.919
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1202.037,
+      "y": 1655.592,
+      "width": 23.892,
+      "height": 17.919
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1340.221,
+      "y": 1656.167,
+      "width": 23.892,
+      "height": 17.919
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1115.007,
+      "y": 1649.376,
+      "width": 23.892,
+      "height": 17.919
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1025.751,
+      "y": 1649.95,
+      "width": 23.892,
+      "height": 17.919
+    },
+    {
+      "file": "parque-pinheiro-v01.png",
+      "x": 2601.466,
+      "y": 1580.51,
+      "width": 129.306,
+      "height": 96.98
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1341.021,
+      "y": 1690.949,
+      "width": 23.892,
+      "height": 17.919
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1133.91,
+      "y": 1646.173,
+      "width": 33.449,
+      "height": 25.087
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1030.625,
+      "y": 1655.162,
+      "width": 23.892,
+      "height": 17.919
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1030.625,
+      "y": 1655.162,
+      "width": 23.892,
+      "height": 17.919
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1030.625,
+      "y": 1655.162,
+      "width": 23.892,
+      "height": 17.919
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1103.825,
+      "y": 1656.355,
+      "width": 23.892,
+      "height": 17.919
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1117.195,
+      "y": 1653.613,
+      "width": 28.67,
+      "height": 21.503
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1136.66,
+      "y": 1656.963,
+      "width": 23.892,
+      "height": 17.919
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1017.428,
+      "y": 1656.478,
+      "width": 28.67,
+      "height": 21.503
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1109.522,
+      "y": 1657.114,
+      "width": 28.67,
+      "height": 21.503
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1209.456,
+      "y": 1660.451,
+      "width": 33.449,
+      "height": 25.087
+    },
+    {
+      "file": "savana-zebra-v01.png",
+      "x": 1154.854,
+      "y": 1642.095,
+      "width": 50.94,
+      "height": 39.996
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1200.017,
+      "y": 1659.581,
+      "width": 28.67,
+      "height": 21.503
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 2351.699,
+      "y": 1597.556,
+      "width": 47.306,
+      "height": 35.48
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1196.531,
+      "y": 1660.729,
+      "width": 28.67,
+      "height": 21.503
+    },
+    {
+      "file": "praia-concha-v01.png",
+      "x": 2210.028,
+      "y": 1632.91,
+      "width": 28.96,
+      "height": 13.032
+    },
+    {
+      "file": "savana-elefante-v01.png",
+      "x": 1087.182,
+      "y": 1626.283,
+      "width": 79.64,
+      "height": 59.73
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1177.371,
+      "y": 1665.124,
+      "width": 23.892,
+      "height": 17.919
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1005.24,
+      "y": 1662.598,
+      "width": 28.67,
+      "height": 21.503
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1046.459,
+      "y": 1662.775,
+      "width": 28.67,
+      "height": 21.503
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1079.361,
+      "y": 1660.487,
+      "width": 33.449,
+      "height": 25.087
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1079.361,
+      "y": 1660.487,
+      "width": 33.449,
+      "height": 25.087
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1058.989,
+      "y": 1604.391,
+      "width": 33.449,
+      "height": 25.087
+    },
+    {
+      "file": "savana-impala-v01.png",
+      "x": 1383.467,
+      "y": 1591.437,
+      "width": 37.696,
+      "height": 29.597
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2540.176,
+      "y": 1602.54,
+      "width": 112.747,
+      "height": 88.524
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 2476.691,
+      "y": 1598.087,
+      "width": 22.299,
+      "height": 16.724
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1185.408,
+      "y": 1662.287,
+      "width": 33.449,
+      "height": 25.087
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 990.968,
+      "y": 1670.364,
+      "width": 23.892,
+      "height": 17.919
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1013.799,
+      "y": 1665.255,
+      "width": 33.449,
+      "height": 25.087
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1100.886,
+      "y": 1665.678,
+      "width": 33.449,
+      "height": 25.087
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1254.578,
+      "y": 1671.628,
+      "width": 23.892,
+      "height": 17.919
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 2458.178,
+      "y": 1591.01,
+      "width": 25.485,
+      "height": 19.114
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1189.173,
+      "y": 1666.187,
+      "width": 33.449,
+      "height": 25.087
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1165.115,
+      "y": 1672.771,
+      "width": 23.892,
+      "height": 17.919
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1098.574,
+      "y": 1667.465,
+      "width": 33.449,
+      "height": 25.087
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1075.246,
+      "y": 1673.273,
+      "width": 23.892,
+      "height": 17.919
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1252.694,
+      "y": 1673.352,
+      "width": 23.892,
+      "height": 17.919
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 2517.491,
+      "y": 1673.251,
+      "width": 28.67,
+      "height": 21.503
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1069.757,
+      "y": 1676.831,
+      "width": 23.892,
+      "height": 17.919
+    },
+    {
+      "file": "praia-bola-v01.png",
+      "x": 719.705,
+      "y": 1593.723,
+      "width": 33.775,
+      "height": 29.1
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1135.273,
+      "y": 1674.475,
+      "width": 28.67,
+      "height": 21.503
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1135.273,
+      "y": 1674.475,
+      "width": 28.67,
+      "height": 21.503
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1175.559,
+      "y": 1674.431,
+      "width": 33.449,
+      "height": 25.087
+    },
+    {
+      "file": "savana-leao-v01.png",
+      "x": 1200.572,
+      "y": 1669.62,
+      "width": 45.28,
+      "height": 35.552
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1065.268,
+      "y": 1619.234,
+      "width": 28.67,
+      "height": 21.503
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2746.273,
+      "y": 1604.124,
+      "width": 127.69,
+      "height": 100.257
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1160.495,
+      "y": 1680.61,
+      "width": 28.67,
+      "height": 21.503
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1157.277,
+      "y": 1681.584,
+      "width": 28.67,
+      "height": 21.503
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1144.462,
+      "y": 1685.166,
+      "width": 23.892,
+      "height": 17.919
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1057.738,
+      "y": 1616.35,
+      "width": 23.892,
+      "height": 17.919
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1046.878,
+      "y": 1613.365,
+      "width": 23.892,
+      "height": 17.919
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 955.19,
+      "y": 1683.535,
+      "width": 23.892,
+      "height": 17.919
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1250.054,
+      "y": 1684.899,
+      "width": 28.67,
+      "height": 21.503
+    },
+    {
+      "file": "praia-concha-v01.png",
+      "x": 688.542,
+      "y": 1642.446,
+      "width": 28.96,
+      "height": 13.032
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1233.091,
+      "y": 1691.636,
+      "width": 33.449,
+      "height": 25.087
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2644.22,
+      "y": 1607.556,
+      "width": 154.178,
+      "height": 121.055
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 948.708,
+      "y": 1688.965,
+      "width": 28.67,
+      "height": 21.503
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1133.966,
+      "y": 1691.987,
+      "width": 33.449,
+      "height": 25.087
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 2506.628,
+      "y": 1706.833,
+      "width": 22.299,
+      "height": 16.724
+    },
+    {
+      "file": "savana-leao-v01.png",
+      "x": 1237.167,
+      "y": 1647.699,
+      "width": 45.28,
+      "height": 35.552
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 2534.135,
+      "y": 1709.688,
+      "width": 25.485,
+      "height": 19.114
+    },
+    {
+      "file": "praia-espreguicadeira-v01.png",
+      "x": 562.312,
+      "y": 1667.488,
+      "width": 63.675,
+      "height": 49.995
+    },
+    {
+      "file": "savana-acacia-v01.png",
+      "x": 846.392,
+      "y": 1670.715,
+      "width": 104.618,
+      "height": 78.464
+    },
+    {
+      "file": "savana-acacia-v01.png",
+      "x": 825.252,
+      "y": 1691.965,
+      "width": 104.618,
+      "height": 78.464
+    },
+    {
+      "file": "savana-acacia-v01.png",
+      "x": 942.221,
+      "y": 1588.376,
+      "width": 104.618,
+      "height": 78.464
+    },
+    {
+      "file": "savana-acacia-v01.png",
+      "x": 920.971,
+      "y": 1609.626,
+      "width": 104.618,
+      "height": 78.464
+    },
+    {
+      "file": "savana-acacia-v01.png",
+      "x": 899.721,
+      "y": 1630.876,
+      "width": 104.618,
+      "height": 78.464
+    },
+    {
+      "file": "savana-acacia-v01.png",
+      "x": 866.97,
+      "y": 1642.75,
+      "width": 104.618,
+      "height": 78.464
+    },
+    {
+      "file": "savana-acacia-v01.png",
+      "x": 843.434,
+      "y": 1669.015,
+      "width": 104.618,
+      "height": 78.464
+    },
+    {
+      "file": "praia-guarda-sol-v01.png",
+      "x": 2267.946,
+      "y": 1622.493,
+      "width": 77.825,
+      "height": 61.105
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 2561.126,
+      "y": 1712.881,
+      "width": 28.67,
+      "height": 21.503
+    },
+    {
+      "file": "safari-visitante-2-v01.png",
+      "x": 1285.28,
+      "y": 1590.03,
+      "width": 24.576,
+      "height": 36.864
+    },
+    {
+      "file": "praia-guarda-sol-v01.png",
+      "x": 534.285,
+      "y": 1638.763,
+      "width": 77.825,
+      "height": 61.105
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 2592.124,
+      "y": 1722.254,
+      "width": 22.299,
+      "height": 16.724
+    },
+    {
+      "file": "parque-betula-v01.png",
+      "x": 2707.19,
+      "y": 1638.31,
+      "width": 138.248,
+      "height": 103.686
+    },
+    {
+      "file": "praia-espreguicadeira-v01.png",
+      "x": 2293.592,
+      "y": 1648.602,
+      "width": 63.675,
+      "height": 49.995
+    },
+    {
+      "file": "safari-visitante-4-v01.png",
+      "x": 1134.668,
+      "y": 1647.84,
+      "width": 49.232,
+      "height": 36.924
+    },
+    {
+      "file": "savana-elefante-v01.png",
+      "x": 1142.38,
+      "y": 1674.15,
+      "width": 79.64,
+      "height": 59.73
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2654.235,
+      "y": 1676.461,
+      "width": 100.522,
+      "height": 78.925
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2755.851,
+      "y": 1647.418,
+      "width": 163.008,
+      "height": 127.987
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 2573.958,
+      "y": 1751.517,
+      "width": 25.485,
+      "height": 19.114
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 2598.49,
+      "y": 1756.086,
+      "width": 28.67,
+      "height": 21.503
+    },
+    {
+      "file": "parque-pinheiro-v01.png",
+      "x": 2712.331,
+      "y": 1696.682,
+      "width": 114.175,
+      "height": 85.631
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 2627.034,
+      "y": 1766.916,
+      "width": 22.299,
+      "height": 16.724
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 2649.925,
+      "y": 1772.437,
+      "width": 25.485,
+      "height": 19.114
+    },
+    {
+      "file": "praia-bola-v01.png",
+      "x": 2441.206,
+      "y": 1765.453,
+      "width": 33.775,
+      "height": 29.1
+    },
+    {
+      "file": "praia-concha-v01.png",
+      "x": 360.497,
+      "y": 1785.115,
+      "width": 28.96,
+      "height": 13.032
+    },
+    {
+      "file": "praia-concha-v01.png",
+      "x": 2425.514,
+      "y": 1790.484,
+      "width": 28.96,
+      "height": 13.032
+    },
+    {
+      "file": "parque-betula-v01.png",
+      "x": 2756.869,
+      "y": 1698.032,
+      "width": 156.131,
+      "height": 117.098
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 2628.537,
+      "y": 1803.562,
+      "width": 28.67,
+      "height": 21.503
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 2654.99,
+      "y": 1815.558,
+      "width": 22.299,
+      "height": 16.724
+    },
+    {
+      "file": "coloridin-pano-piquenique-v01.png",
+      "x": 234.269,
+      "y": 1799.034,
+      "width": 71.489,
+      "height": 59.841
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 2676.405,
+      "y": 1821.968,
+      "width": 25.485,
+      "height": 19.114
+    },
+    {
+      "file": "praia-guarda-sol-v01.png",
+      "x": 213.892,
+      "y": 1785.884,
+      "width": 77.825,
+      "height": 61.105
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 2697.669,
+      "y": 1828.426,
+      "width": 28.67,
+      "height": 21.503
+    },
+    {
+      "file": "parque-carvalho-v01.png",
+      "x": 2769.667,
+      "y": 1780.079,
+      "width": 100.522,
+      "height": 78.925
+    },
+    {
+      "file": "praia-guarda-sol-v01.png",
+      "x": 2504.982,
+      "y": 1803.434,
+      "width": 77.825,
+      "height": 61.105
+    },
+    {
+      "file": "coloridin-pano-piquenique-v01.png",
+      "x": 2522.287,
+      "y": 1836.697,
+      "width": 71.489,
+      "height": 59.841
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 2680.293,
+      "y": 1865.767,
+      "width": 22.299,
+      "height": 16.724
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 2702.125,
+      "y": 1871.899,
+      "width": 25.485,
+      "height": 19.114
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 2724.616,
+      "y": 1877.691,
+      "width": 28.67,
+      "height": 21.503
+    },
+    {
+      "file": "praia-coqueiro-v01.png",
+      "x": 2562.28,
+      "y": 1825.103,
+      "width": 134.425,
+      "height": 105.545
+    },
+    {
+      "file": "praia-concha-v01.png",
+      "x": 2568.501,
+      "y": 1934.732,
+      "width": 28.96,
+      "height": 13.032
+    },
+    {
+      "file": "plaza-palco-rbd-v01.png",
+      "x": 1000,
+      "y": 730,
+      "width": 200,
+      "height": 157
+    },
+    {
+      "file": "metropole-residencial-v01.png",
+      "x": 780,
+      "y": 860,
+      "width": 95,
+      "height": 120
+    },
+    {
+      "file": "praca-central-circular-v01.png",
+      "x": 1145.52,
+      "y": 631.1,
+      "width": 435,
+      "height": 325.96
+    },
+    {
+      "file": "linkedin-predio-v02.png",
+      "x": 2031.785,
+      "y": 837.995,
+      "width": 201.25,
+      "height": 158.01
+    },
+    {
+      "file": "deserto-camelo-v01.png",
+      "x": 1550.01,
+      "y": 49.59,
+      "width": 54.6,
+      "height": 45.5
+    },
+    {
+      "file": "deserto-camelo-v01.png",
+      "x": 1571.85,
+      "y": 15.015,
+      "width": 42.9,
+      "height": 35.75
+    },
+    {
+      "file": "deserto-camelo-v01.png",
+      "x": 1723.36,
+      "y": -70.01,
+      "width": 46.8,
+      "height": 39
+    },
+    {
+      "file": "carro-hatch-v01.png",
+      "x": 435.196,
+      "y": 715.95,
+      "width": 56,
+      "height": 42
+    },
+    {
+      "file": "carro-sedan-v01.png",
+      "x": 1243.231,
+      "y": 1035.56,
+      "width": 62,
+      "height": 42
+    },
+    {
+      "file": "carro-suv-v01.png",
+      "x": 2076.335,
+      "y": 1041.97,
+      "width": 60,
+      "height": 45
+    },
+    {
+      "file": "carro-picape-v01.png",
+      "x": 1644.944,
+      "y": 792.79,
+      "width": 64,
+      "height": 48
+    },
+    {
+      "file": "carro-picape-v01.png",
+      "x": 960.924,
+      "y": 1020.71,
+      "width": 64,
+      "height": 48
+    },
+    {
+      "file": "savana-oasis-v01.png",
+      "x": 1014.867,
+      "y": 1656.19,
+      "width": 115.2,
+      "height": 76.8
+    },
+    {
+      "file": "floreira-detalhada-v01.png",
+      "x": 954.88,
+      "y": 223.332,
+      "width": 52.224,
+      "height": 34.816
+    },
+    {
+      "file": "gabriel-martins-v02.png",
+      "x": 880.527,
+      "y": 484.838,
+      "width": 23.625,
+      "height": 35.437
+    },
+    {
+      "file": "parque-betula-v01.png",
+      "x": 2327.401,
+      "y": 523.343,
+      "width": 90.514,
+      "height": 67.886
+    },
+    {
+      "file": "balizador-detalhado-v01.png",
+      "x": 823.17,
+      "y": 517.59,
+      "width": 23.552,
+      "height": 35.328
+    },
+    {
+      "file": "mural-detalhado-v01.png",
+      "x": 1753.828,
+      "y": 757.003,
+      "width": 88.296,
+      "height": 69.326
+    },
+    {
+      "file": "rosa-arvore-isometrica-v01.png",
+      "x": 656.221,
+      "y": 597.177,
+      "width": 106.25,
+      "height": 79.688
+    },
+    {
+      "file": "rosa-arvore-isometrica-v01.png",
+      "x": 1935.607,
+      "y": 762.84,
+      "width": 114,
+      "height": 85.5
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": 796.805,
+      "y": 825.21,
+      "width": 73.728,
+      "height": 110.592
+    },
+    {
+      "file": "estudio-render-v02.png",
+      "x": 1514.283,
+      "y": 831.389,
+      "width": 190.412,
+      "height": 176.244
+    },
+    {
+      "file": "pracinha-pergolado-v01.png",
+      "x": 491.6,
+      "y": 649.465,
+      "width": 116.682,
+      "height": 131.66
+    },
+    {
+      "file": "rosa-arvore-isometrica-v01.png",
+      "x": 397.558,
+      "y": 621.92,
+      "width": 90,
+      "height": 67.5
+    },
+    {
+      "file": "rosa-arvore-isometrica-v01.png",
+      "x": 1029.871,
+      "y": 811.823,
+      "width": 97.75,
+      "height": 73.312
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": 375.997,
+      "y": 582.59,
+      "width": 73.728,
+      "height": 110.592
+    },
+    {
+      "file": "colabin-laboratorio-v02.png",
+      "x": 486.765,
+      "y": 480.135,
+      "width": 230,
+      "height": 195.5
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": 724.745,
+      "y": 562.33,
+      "width": 73.728,
+      "height": 110.592
+    },
+    {
+      "file": "feira-roupas-v01.png",
+      "x": 1157.659,
+      "y": 850.99,
+      "width": 91.331,
+      "height": 97.311
+    },
+    {
+      "file": "feira-ceramica-v01.png",
+      "x": 1098.814,
+      "y": 884.842,
+      "width": 91.331,
+      "height": 97.311
+    },
+    {
+      "file": "feira-livros-v01.png",
+      "x": 1100.057,
+      "y": 820.925,
+      "width": 91.331,
+      "height": 97.311
+    },
+    {
+      "file": "feira-eletronicos-v01.png",
+      "x": 1153.149,
+      "y": 916.682,
+      "width": 91.331,
+      "height": 97.311
+    },
+    {
+      "file": "praia-guarda-sol-v01.png",
+      "x": 1766.805,
+      "y": 1288.528,
+      "width": 77.825,
+      "height": 61.105
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1270.777,
+      "y": 1628.503,
+      "width": 27.078,
+      "height": 20.308
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1194.636,
+      "y": 1595.857,
+      "width": 27.078,
+      "height": 20.308
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1281.415,
+      "y": 1713.346,
+      "width": 23.892,
+      "height": 17.919
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1291.515,
+      "y": 1678.157,
+      "width": 27.078,
+      "height": 20.308
+    },
+    {
+      "file": "savana-zebra-v01.png",
+      "x": 1160.137,
+      "y": 1585.04,
+      "width": 50.94,
+      "height": 39.996
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1254.046,
+      "y": 1621.802,
+      "width": 33.449,
+      "height": 25.087
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1305.356,
+      "y": 1602.821,
+      "width": 28.67,
+      "height": 21.503
+    },
+    {
+      "file": "savana-impala-v01.png",
+      "x": 1359.211,
+      "y": 1600.043,
+      "width": 52.355,
+      "height": 41.107
+    },
+    {
+      "file": "savana-girafa-v01.png",
+      "x": 1270.424,
+      "y": 1600.22,
+      "width": 66.222,
+      "height": 51.995
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1179.122,
+      "y": 1611.36,
+      "width": 23.892,
+      "height": 17.919
+    },
+    {
+      "file": "savana-impala-v01.png",
+      "x": 1382.188,
+      "y": 1612.109,
+      "width": 52.355,
+      "height": 41.107
+    },
+    {
+      "file": "savana-zebra-v01.png",
+      "x": 1289.431,
+      "y": 1659.958,
+      "width": 50.94,
+      "height": 39.996
+    },
+    {
+      "file": "savana-impala-v01.png",
+      "x": 1279.046,
+      "y": 1630.705,
+      "width": 52.355,
+      "height": 41.107
+    },
+    {
+      "file": "savana-elefante-v01.png",
+      "x": 1076.464,
+      "y": 1681.318,
+      "width": 79.64,
+      "height": 59.73
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 956.663,
+      "y": 1671.026,
+      "width": 28.67,
+      "height": 21.503
+    },
+    {
+      "file": "savana-elefante-v01.png",
+      "x": 1025.322,
+      "y": 1697.495,
+      "width": 45.873,
+      "height": 34.404
+    },
+    {
+      "file": "savana-acacia-v01.png",
+      "x": 890.303,
+      "y": 1692.951,
+      "width": 104.618,
+      "height": 78.464
+    },
+    {
+      "file": "loja-amarela-norte-v01.png",
+      "x": 1320.887,
+      "y": 206.44,
+      "width": 136.606,
+      "height": 145.18
+    },
+    {
+      "file": "sobrado-comercio-rosa-norte-v01.png",
+      "x": 1404.159,
+      "y": 244.462,
+      "width": 164.283,
+      "height": 173.755
+    },
+    {
+      "file": "estudio-cavalete-v02.png",
+      "x": 1649.865,
+      "y": 962.18,
+      "width": 34.808,
+      "height": 65.246
+    },
+    {
+      "file": "savana-rinoceronte-v01.png",
+      "x": 1018.665,
+      "y": 1620.29,
+      "width": 70.75,
+      "height": 55.55
+    },
+    {
+      "file": "savana-elefante-v01.png",
+      "x": 964.718,
+      "y": 1666.82,
+      "width": 79.64,
+      "height": 59.73
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 989.119,
+      "y": 1646.97,
+      "width": 33.449,
+      "height": 25.087
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 962.869,
+      "y": 1673.22,
+      "width": 33.449,
+      "height": 25.087
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 969.998,
+      "y": 1662.058,
+      "width": 33.449,
+      "height": 25.087
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1003.231,
+      "y": 1634.727,
+      "width": 33.449,
+      "height": 25.087
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 976.981,
+      "y": 1660.977,
+      "width": 33.449,
+      "height": 25.087
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 950.731,
+      "y": 1687.227,
+      "width": 33.449,
+      "height": 25.087
+    },
+    {
+      "file": "savana-vegetacao-baixa-v01.png",
+      "x": 1015.495,
+      "y": 1627.765,
+      "width": 33.449,
+      "height": 25.087
+    },
+    {
+      "file": "rosa-arvore-isometrica-v01.png",
+      "x": 1437.717,
+      "y": 386.49,
+      "width": 99,
+      "height": 74.25
+    },
+    {
+      "file": "poste-detalhado-v01.png",
+      "x": 1463.398,
+      "y": 438,
+      "width": 73.728,
+      "height": 110.592
+    },
+    {
+      "file": "savana-acacia-v01.png",
+      "x": 803.892,
+      "y": 1713.215,
+      "width": 104.618,
+      "height": 78.464
+    }
+  ],
+  "characters": [
+    {
+      "id": "davi-cabeca",
+      "x": 1022.614,
+      "y": 91.519,
+      "width": 20.925,
+      "height": 24.412
+    },
+    {
+      "id": "henrique-hardman",
+      "x": 1150.431,
+      "y": 213.13,
+      "width": 25.5,
+      "height": 29.25
+    },
+    {
+      "id": "naiane-de-mello",
+      "x": 1140.418,
+      "y": 261.874,
+      "width": 26.737,
+      "height": 47.662
+    },
+    {
+      "id": "diego-ungari",
+      "x": 2220.374,
+      "y": 446.43,
+      "width": 41.4,
+      "height": 34.5
+    },
+    {
+      "id": "luara-nardelli",
+      "x": 1213.238,
+      "y": 328.585,
+      "width": 29.25,
+      "height": 44.85
+    },
+    {
+      "id": "patrick-canuto",
+      "x": 2478.169,
+      "y": 1069.708,
+      "width": 28.125,
+      "height": 43.125
+    },
+    {
+      "id": "loisi-vieira",
+      "x": 2326.668,
+      "y": 1041.312,
+      "width": 42.262,
+      "height": 39.675
+    },
+    {
+      "id": "elton-pavesi",
+      "x": 2258.177,
+      "y": 1080.798,
+      "width": 23.625,
+      "height": 36.225
+    },
+    {
+      "id": "nathan-machado",
+      "x": 1493.769,
+      "y": 1086.61,
+      "width": 22.5,
+      "height": 34.5
+    },
+    {
+      "id": "paula-lotti",
+      "x": 1089.558,
+      "y": 1425.94,
+      "width": 22.5,
+      "height": 34.5
+    },
+    {
+      "id": "kauana-moreira",
+      "x": 1188.226,
+      "y": 1568.525,
+      "width": 24.75,
+      "height": 37.95
+    },
+    {
+      "id": "gabriel-martins",
+      "x": 880.527,
+      "y": 484.838,
+      "width": 23.625,
+      "height": 36.225
+    }
+  ],
+  "levels": [
+    {
+      "scale": 1,
+      "width": 2320,
+      "height": 1800,
+      "size": 512,
+      "cols": 5,
+      "rows": 4
+    },
+    {
+      "scale": 2,
+      "width": 4640,
+      "height": 3600,
+      "size": 512,
+      "cols": 10,
+      "rows": 8
+    },
+    {
+      "scale": 4,
+      "width": 9280,
+      "height": 7200,
+      "size": 512,
+      "cols": 19,
+      "rows": 15
+    }
+  ],
+  "bytes": 14448898,
+  "generatedAt": "2026-10-08T22:42:40.290Z"
+}

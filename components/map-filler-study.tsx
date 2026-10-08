@@ -6,7 +6,7 @@ export function FillerGround() {
   return <g data-layer="filler-ground-study" pointerEvents="none" strokeWidth="2.5" strokeLinejoin="round">
     <g transform="translate(-170 -155)">
       <rect x="-175" y="-150" width="350" height="300" rx="18" fill="#F4D7CC" stroke="#F0B981"/>
-      {Array.from({length:100},(_,i)=><path key={i} d={`M${-160+(i%20)*16.5} ${-133+Math.floor(i/20)*60+Math.sin(i)*12}l4 3`} stroke={['#F77B5D','#FAD846','#3774FA','#A163BF','#63A77C'][i%5]} strokeWidth="3"/>)}
+      {Array.from({length:100},(_,i)=><path key={i} d={`M${-160+(i%20)*16.5} ${(-133+Math.floor(i/20)*60+Math.sin(i)*12).toFixed(4)}l4 3`} stroke={['#F77B5D','#FAD846','#3774FA','#A163BF','#63A77C'][i%5]} strokeWidth="3"/>)}
     </g>
 
   </g>;

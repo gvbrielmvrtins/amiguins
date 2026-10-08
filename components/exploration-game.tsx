@@ -2,8 +2,10 @@
 
 import { useState, useRef,useEffect, useLayoutEffect, useCallback, type TouchEvent, type PointerEvent } from 'react';
 import {boundedScroll} from '@/lib/map-camera';
-import { ArrowUpRight, Check, ChevronDown, HelpCircle, Lightbulb, Maximize, Minus, MousePointer2, PawPrint, Plus, RotateCcw, Sparkles, Store, Users, X } from 'lucide-react';
-import ModularMap from '@/components/modular-map';
+import { ArrowUpRight, Check, ChevronDown, HelpCircle, Maximize, Minus, MousePointer2, PawPrint, Plus, RotateCcw, Sparkles, Store, Users, X } from 'lucide-react';
+import dynamic from 'next/dynamic';
+import OptimizedMap from './optimized-map';
+const ModularMap=dynamic(()=>import('@/components/modular-map'));
 import {MapEditorContext,type LayoutOffsets,type LayoutElement} from './map-layout-editor';
 import savedLayoutOffsets from '@/lib/map-layout-offsets.json';
 import { modularDestinations } from '@/lib/modular-map';
@@ -32,16 +34,17 @@ const facePortraits:Record<string,{width:number;height:number;crop:[number,numbe
   'nathan-machado':{width:1024,height:1536,crop:[250,35,490]},
   'kauana-moreira':{width:1024,height:1536,crop:[285,0,440]},
 };
-function Portrait({target}:{target:Target}){
+function Portrait({target,optimized=false}:{target:Target;optimized?:boolean}){
+  if(optimized)return <img className="portrait" aria-hidden="true" alt="" src={`/images/menu-portraits/${target.id}.webp`} style={{objectFit:'contain'}}/>;
   const person=mapCharacters.find(p=>p.id===target.id),face=facePortraits[target.id];
   if(person&&face){const [x,y,size]=face.crop;return <svg className="portrait face-portrait" aria-hidden="true" viewBox={`${x} ${y} ${size} ${size}`}><image href={person.file} width={face.width} height={face.height}/></svg>;}
   return <img className="portrait" aria-hidden="true" alt="" src={`/images/modular/${destinationPortraits[target.id]}`} style={{objectFit:'contain'}}/>;
 }
 
-export default function ExplorationGame() {
+export default function ExplorationGame({optimized=false}:{optimized?:boolean}) {
 
 
-  const localEditor=process.env.NODE_ENV==='development';
+  const localEditor=process.env.NODE_ENV==='development'&&!optimized;
   const [editing,setEditing]=useState(false);
   const [layoutOffsets,setLayoutOffsets]=useState<LayoutOffsets>(savedLayoutOffsets);
   const [editingSelection,setEditingSelection]=useState<string|null>(null);
@@ -84,16 +87,16 @@ export default function ExplorationGame() {
   const wheelZoom=useRef(zoom);
   useLayoutEffect(()=>{wheelZoom.current=zoom;},[zoom]);
   const [message, setMessage] = useState('');
-  const [destinationMessageVersion,setDestinationMessageVersion]=useState(0);
-  function showDestinationMessage(name:string){
-    setMessage(`Você está em ${name}.`);
-    setDestinationMessageVersion(version=>version+1);
+  const [messageVersion,setMessageVersion]=useState(0);
+  function showMessage(text:string){
+    setMessage(text);
+    setMessageVersion(version=>version+1);
   }
   useEffect(()=>{
-    if(!message.startsWith('Você está em '))return;
-    const timer=window.setTimeout(()=>setMessage(''),8000);
+    if(!message)return;
+    const timer=window.setTimeout(()=>setMessage(''),5000);
     return()=>window.clearTimeout(timer);
-  },[message,destinationMessageVersion]);
+  },[message,messageVersion]);
   const [filter, setFilter] = useState<'all' | 'remaining'>('all');
   const help = useRef<HTMLDialogElement>(null);
   const reset = useRef<HTMLDialogElement>(null);
@@ -184,7 +187,7 @@ export default function ExplorationGame() {
     // Follow rendered artwork rather than the original lot coordinates. The
     // browser bounds include editor translations, rotation, scale and portals.
     const file=id==='jardim-secreto'?'jardim-labirinto-unificado-v01.png':destinationPortraits[id];
-    const images=Array.from(v.querySelectorAll<SVGImageElement>(`image[href="/images/modular/${file}"]`));
+    const images=Array.from(v.querySelectorAll<SVGImageElement>(`image[href="/images/modular/${file}"], [data-place-file="${file}"]`));
     const image=images.find(node=>{
       const rect=node.getBoundingClientRect();
       return rect.width>0&&rect.height>0;
@@ -206,7 +209,7 @@ export default function ExplorationGame() {
   function discover(target: Target) {
     if (target.category !== 'people' || found.includes(target.id)) return;
     setFound(prev => [...prev, target.id]);
-    setMessage(`Você encontrou ${target.name}!`);
+    showMessage(`Você encontrou ${target.name}!`);
     if (selected === target.id) setSelected(null);
   }
   function startDrag(e: PointerEvent<HTMLDivElement>) {
@@ -223,13 +226,8 @@ export default function ExplorationGame() {
     viewport.current.scrollTop = drag.current.top - dy;
     constrainCamera();
   }
-  function giveHint() {
-    const remaining = mapCharacters.filter(t => !found.includes(t.id));
-    if (!remaining.length) return;
-    const next = remaining[Math.floor(Math.random() * remaining.length)];
-    locateDestination(next.id); setSelected(next.id); setMessage(`Procure ${next.name} nesta região do mapa.`);
-  }
   return <MapEditorContext.Provider value={{enabled:localEditor&&editing,offsets:localEditor?layoutOffsets:savedLayoutOffsets,selected:editingSelection,select:setEditingSelection,move:moveElement}}><main className="game-shell">
+    {process.env.NODE_ENV==='development'&&<div className="map-preview-links"><a href={optimized?'/':'/?map=optimized'}>{optimized?'Voltar ao editor local':'Testar mapa otimizado'}</a>{optimized&&<span>Prévia otimizada · posições salvas</span>}</div>}
     {localEditor&&<div className="map-editor-toolbar">
       <button onClick={()=>setEditing(v=>!v)} aria-pressed={editing}>{editing?'Concluir edição':'Editar posições'}</button>
       {editing&&<><button disabled={!layoutHistory.current.length} onClick={()=>{const previous=layoutHistory.current.pop();if(previous)setLayoutOffsets(previous);}}>Desfazer</button>
@@ -255,7 +253,7 @@ export default function ExplorationGame() {
           if (category.id === 'places') items.sort((a, b) => (placeListPriority[a.id] ?? 3) - (placeListPriority[b.id] ?? 3));
           const count = items.filter(t => found.includes(t.id)).length;
           const Icon = Store;
-          return <section className="category" key={category.id}><button className="category-heading" aria-expanded={!collapsed.includes(category.id)} onClick={() => setCollapsed(prev => prev.includes(category.id) ? prev.filter(c => c !== category.id) : [...prev, category.id])}><strong>{category.label}</strong>{category.id === 'people' && <span className="category-count">{count}<span>/{items.length}</span></span>}<ChevronDown size={15} className={collapsed.includes(category.id) ? 'closed' : ''} /></button>{!collapsed.includes(category.id) && <div className={`target-grid ${category.id === 'places' ? 'places-grid' : ''}`}>{items.filter(t => category.id === 'places' || filter !== 'remaining' || !found.includes(t.id)).map(target => <button key={target.id} className={`target-card ${selected === target.id ? 'selected' : ''} ${found.includes(target.id) ? 'found' : ''}`} aria-label={target.category === 'places' ? `Ir para ${target.name}` : `Procurar ${target.name}${sheriffIds.has(target.id)?', xerifIN':''}${found.includes(target.id) ? ', encontrado' : ''}`} aria-pressed={selected === target.id} onClick={() => { if(target.category === 'places'){if(locateDestination(target.id))showDestinationMessage(target.name);return;} setSelected(target.id); setMessage(found.includes(target.id) ? `${target.name} já foi encontrado!` : `Procurando ${target.name}. Encontre no mapa!`); }}><span className="portrait-wrap"><Portrait target={target}/>{sheriffIds.has(target.id)&&<span className="sheriff-badge" role="img" aria-label="xerifIN"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l3 6 6.6 1-4.8 4.7 1.1 6.6L12 18.2l-5.9 3.1 1.1-6.6L2.4 10 9 9Z" fill="#FAD846" stroke="#604722" strokeWidth="1.4"/>{[[12,3],[21.6,10],[17.9,21.3],[6.1,21.3],[2.4,10]].map(([x,y],i)=><circle key={i} cx={x} cy={y} r="1.5" fill="#FFE888" stroke="#604722" strokeWidth=".8"/>)}</svg></span>}{found.includes(target.id) && <span className="found-check"><Check size={12} /></span>}</span><span>{target.name}</span></button>)}</div>}</section>;
+          return <section className="category" key={category.id}><button className="category-heading" aria-expanded={!collapsed.includes(category.id)} onClick={() => setCollapsed(prev => prev.includes(category.id) ? prev.filter(c => c !== category.id) : [...prev, category.id])}><strong>{category.label}</strong>{category.id === 'people' && <span className="category-count">{count}<span>/{items.length}</span></span>}<ChevronDown size={15} className={collapsed.includes(category.id) ? 'closed' : ''} /></button>{!collapsed.includes(category.id) && <div className={`target-grid ${category.id === 'places' ? 'places-grid' : ''}`}>{items.filter(t => category.id === 'places' || filter !== 'remaining' || !found.includes(t.id)).map(target => <button key={target.id} className={`target-card ${selected === target.id ? 'selected' : ''} ${found.includes(target.id) ? 'found' : ''}`} aria-label={target.category === 'places' ? `Ir para ${target.name}` : `Procurar ${target.name}${sheriffIds.has(target.id)?', xerifIN':''}${found.includes(target.id) ? ', encontrado' : ''}`} aria-pressed={selected === target.id} onClick={() => { if(target.category === 'places'){if(locateDestination(target.id))showMessage(`Você está em ${target.name}.`);return;} setSelected(target.id); showMessage(found.includes(target.id) ? `${target.name} já foi encontrado!` : `Procurando ${target.name}. Encontre no mapa!`); }}><span className="portrait-wrap"><Portrait target={target} optimized={optimized}/>{sheriffIds.has(target.id)&&<span className="sheriff-badge" role="img" aria-label="xerifIN"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l3 6 6.6 1-4.8 4.7 1.1 6.6L12 18.2l-5.9 3.1 1.1-6.6L2.4 10 9 9Z" fill="#FAD846" stroke="#604722" strokeWidth="1.4"/>{[[12,3],[21.6,10],[17.9,21.3],[6.1,21.3],[2.4,10]].map(([x,y],i)=><circle key={i} cx={x} cy={y} r="1.5" fill="#FFE888" stroke="#604722" strokeWidth=".8"/>)}</svg></span>}{found.includes(target.id) && <span className="found-check"><Check size={12} /></span>}</span><span>{target.name}</span></button>)}</div>}</section>;
         })}</div>
 
 
@@ -264,18 +262,18 @@ export default function ExplorationGame() {
         <div className="map-topbar" aria-hidden="true"/>
         <div className="map-frame">
           <div className="map-viewport" ref={attachViewport} onTouchStart={e=>{if(e.touches.length===1)didDrag.current=false;beginTouch(e);}} onTouchMove={moveTouch} onTouchEnd={endTouch} onTouchCancel={()=>{touchGesture.current=null;drag.current=null;}} onScroll={constrainCamera} onPointerDown={startDrag} onPointerMove={moveDrag} onPointerUp={() => { drag.current = null; }} onPointerLeave={() => { drag.current = null; }}>
-            <div className="map-world modular-world" style={{width:`${mapScale*100}%`,minWidth:`${740*mapScale}px`}}><ModularMap selected={selected} onSelect={(id,keyboard)=>{if(keyboard||!didDrag.current){const target=targets.find(t=>t.id===id);if(target?.category === 'people')discover(target);else if(target){locateDestination(id);showDestinationMessage(target.name);}}}}/></div>
+            <div className="map-world modular-world" style={{width:`${mapScale*100}%`,minWidth:`${740*mapScale}px`}}>{optimized?<OptimizedMap onSelect={(id,keyboard)=>{if(keyboard||!didDrag.current){const target=targets.find(t=>t.id===id);if(target?.category === 'people')discover(target);else if(target){locateDestination(id);showMessage(`Você está em ${target.name}.`);}}}}/>:<ModularMap selected={selected} onSelect={(id,keyboard)=>{if(keyboard||!didDrag.current){const target=targets.find(t=>t.id===id);if(target?.category === 'people')discover(target);else if(target){locateDestination(id);showMessage(`Você está em ${target.name}.`);}}}}/>}</div>
           </div>
 
           <div className="map-controls"><button aria-label="Aumentar zoom" disabled={zoom >= 5} onClick={() => changeZoom(Math.min(5, zoom + .25))}><Plus size={19} /></button><span>{Math.round(zoom * 100)}%</span><button aria-label="Diminuir zoom" disabled={zoom <= .25} onClick={() => changeZoom(Math.max(.25, zoom - .25))}><Minus size={19} /></button><div /><button aria-label="Ajustar mapa à tela" onClick={() => { setZoom(1); viewport.current?.scrollTo({ top: 0, left: 0 }); }}><Maximize size={17} /></button></div>
           {<div className="map-actions"><button className="help-button" aria-label="Como jogar" onClick={() => help.current?.showModal()}><HelpCircle size={17} /></button><button className="help-button" aria-label="Recomeçar" onClick={() => reset.current?.showModal()}><RotateCcw size={17} /></button></div>}
-{<button className="hint-button" aria-label="Uma ajudinha?" disabled={complete} onClick={giveHint}><Lightbulb size={18} /></button>}
-          {(message || complete) && <div className={`game-message ${complete ? 'complete' : ''}`} role="status"><Sparkles size={19} /><span>{complete ? `Você encontrou todas as ${mapCharacters.length} pessoas da vila! Que tal explorar de novo?` : message}</span><button aria-label="Fechar mensagem" onClick={() => setMessage('')}><X size={15} /></button></div>}
+
+          {message && <div className={`game-message ${complete ? 'complete' : ''}`} role="status"><Sparkles size={19} /><span>{complete ? `Você encontrou todas as ${mapCharacters.length} pessoas da vila! Que tal explorar de novo?` : message}</span><button aria-label="Fechar mensagem" onClick={() => setMessage('')}><X size={15} /></button></div>}
         </div>
         <div className="map-footer"><span>{mapCharacters.length} pessoas para encontrar · clique nos EspacINs para navegar · use o zoom e arraste para explorar</span></div>
       </section>
     </div>
-    <dialog ref={help} className="game-dialog"><button className="dialog-close" aria-label="Fechar instruções" onClick={() => help.current?.close()}><X /></button><h2>Explore a Vila AmiguINs</h2><ol><li>Escolha uma pessoa na lista para procurar.</li><li>Clique na pessoa no mapa para registrar a descoberta.</li><li>Clique em um EspacIN na lista para ir até ele no mapa.</li><li>Use a rodinha do mouse para ampliar ou reduzir e arraste o mapa para explorar. No celular, aproxime ou afaste dois dedos para ajustar o zoom.</li><li>Se precisar, peça uma ajudinha!</li></ol><button className="dialog-primary" onClick={() => help.current?.close()}>Vamos explorar <ArrowUpRight size={17} /></button></dialog>
+    <dialog ref={help} className="game-dialog"><button className="dialog-close" aria-label="Fechar instruções" onClick={() => help.current?.close()}><X /></button><h2>Explore a amiguINlândia</h2><ol><li>Escolha um amiguIN para procurar.</li><li>Ao encontrar, clique no amiguIN no mapa para registrar a descoberta.</li><li>Clique em um espacIN da lista para ir até ele no mapa.</li><li>Use o mouse (no computador) ou gesto de pinça nos dedos (no celular) para ampliar ou reduzir; arraste o mapa para explorar.</li><li>Eles não são registráveis, mas o mapa está cheio de easter eggs... encontrou todos? 👀</li></ol><button className="dialog-primary" onClick={() => help.current?.close()}>Vamos explorar <ArrowUpRight size={17} /></button></dialog>
     <dialog ref={reset} className="game-dialog"><h2>Mais uma volta?</h2><p>As descobertas desta rodada serão apagadas e as pessoas poderão ser encontradas novamente.</p><div className="dialog-actions"><button onClick={() => reset.current?.close()}>Continuar jogando</button><button className="dialog-primary" onClick={() => { setFound([]); setSelected(null); setMessage(''); setZoom(1); reset.current?.close(); }}>Recomeçar</button></div></dialog>
   </main></MapEditorContext.Provider>;
 }
