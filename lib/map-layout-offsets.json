@@ -329,9 +329,9 @@
     "hidden": false
   },
   "plaza-hispanica/plaza/10/-70": {
-    "x": -690.34,
-    "y": -204.54,
-    "scale": 1.6,
+    "x": -684.51,
+    "y": -190.96,
+    "scale": 1.4,
     "rotation": 0,
     "layer": 0,
     "hidden": false
@@ -460,7 +460,7 @@
     "y": 2.31,
     "scale": 0.6,
     "rotation": 0,
-    "layer": -2,
+    "layer": -3,
     "hidden": false
   },
   "desert-editable-dune::copy:b3ca85fd-90ba-4a06-be4b-ef22fcf50649": {
@@ -3996,11 +3996,11 @@
     "hidden": false
   },
   "binstro-terrace-a": {
-    "x": 751.81,
-    "y": 292.42,
+    "x": 1434.04,
+    "y": -124.19,
     "scale": 1,
     "rotation": 0,
-    "layer": 0,
+    "layer": -1,
     "hidden": false
   },
   "car-sedan": {
@@ -4333,7 +4333,7 @@
   },
   "editable-residential-building::copy:646aec75-04ef-4f29-9f2f-f9003a8f7404": {
     "x": 598.11,
-    "y": -929.14,
+    "y": -929.51,
     "scale": 1.8,
     "rotation": 0,
     "layer": -2,
@@ -4341,11 +4341,60 @@
     "sourceId": "editable-residential-building"
   },
   "plaza-rbd-stage": {
-    "x": -375.23,
-    "y": -19.16,
-    "scale": 0.8,
+    "x": -400.98,
+    "y": -6.27,
+    "scale": 0.65,
     "rotation": 0,
     "layer": 0,
     "hidden": false
+  },
+  "plaza-argentine-obelisk": {
+    "x": -13.77,
+    "y": -107.52,
+    "scale": 0.85,
+    "rotation": 0,
+    "layer": -1,
+    "hidden": false
+  },
+  "plaza-peruvian-food-cart": {
+    "x": -113.77,
+    "y": 46.57,
+    "scale": 0.7,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
+  },
+  "maria-fernanda-figueiroa": {
+    "x": -68.87,
+    "y": -16.29,
+    "scale": 1.55,
+    "rotation": 0,
+    "layer": 1,
+    "hidden": false
+  },
+  "plaza-tecidos": {
+    "x": -97.73,
+    "y": 35.68,
+    "scale": 0.9
+  },
+  "plaza-tango": {
+    "x": -13.78,
+    "y": -151.33,
+    "scale": 0.65
+  },
+  "plaza-mariachis": {
+    "x": 81.28,
+    "y": -40.22,
+    "scale": 0.9
+  },
+  "plaza-arepas": {
+    "x": 35.49,
+    "y": -214.16,
+    "scale": 0.7
+  },
+  "children-action-figures": {
+    "x": 1492.66,
+    "y": 156.62,
+    "scale": 0.5
   }
 }
