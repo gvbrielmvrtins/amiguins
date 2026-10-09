@@ -141,6 +141,7 @@ export default function ModularMap({ selected, onSelect }: { selected: string | 
       };
       return <MovableMapElement key={destination.id} id={destination.id}>{render()}</MovableMapElement>;
     })}
+    <MovableMapElement id="hens-foraging-group"><image href="/images/modular/galinhas-ciscando-v01.png" x="870" y="1045" width="60" height="40" pointerEvents="none"/></MovableMapElement>
     <MovableMapElement id="children-action-figures"><image href="/images/modular/criancas-bonequinhos-v01.png" x="850" y="975" width="75" height="55" pointerEvents="none"/></MovableMapElement>
     <MovableMapElement id="plaza-mariachis"><image href="/images/modular/plaza-mariachis-v01.png" x="710" y="840" width="75" height="55.15" pointerEvents="none"/></MovableMapElement>
     <MovableMapElement id="plaza-tango"><image href="/images/modular/plaza-tango-v01.png" x="800" y="875" width="48" height="67.64" pointerEvents="none"/></MovableMapElement>

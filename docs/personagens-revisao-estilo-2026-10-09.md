@@ -1,0 +1,17 @@
+# Revisão de Naiane, Diego e Loisi
+
+Gerados via imagegen integrado usando os sprites anteriores para identidade/pose e Nathan e Gabriel como referências explícitas de estilo. Fotos originais indisponíveis nos caminhos anteriores; características registradas das fotos complementam as referências. Arquivos novos: `public/images/characters/naiane-de-mello-v02.png`, `diego-ungari-v03.png`, `loisi-vieira-v02.png`. Mantidos identificadores e posições salvas.
+
+## Prompts
+
+### naiane
+
+Redraw reference1 existing character in STRICT SAME cartoon style as Nathan and Gabriel (references2 and3). Preserve this specific person's facial identity and pose/clothing/props, do NOT copy face from style references. Bold clean black outlines, expressive large simple cartoon eyes, oversized head relative to compact body, simplified facial features, flat vibrant colors and restrained cel shading EXACTLY matching Nathan and Gabriel. No glossy glamour, no photo-realistic skin, no fine hair strand rendering. Correct limbs, preserve overall composition silhouette, fullbody uncropped and actual transparent background, no background glow/floor/text. Naiane de Mello: short black pixie haircut with short fringe, round tortoiseshell glasses, broad toothy smile, septum and nostril rings, hoop earrings, visible colorful chest tattoo. Black blazer and dark trousers, gold sheriff star on chest. Stepping forward and waving hello as she exits the train (do not draw train).
+
+### diego
+
+Redraw reference1 existing character in STRICT SAME cartoon style as Nathan and Gabriel (references2 and3). Preserve this specific person's facial identity and pose/clothing/props, do NOT copy face from style references. Bold clean black outlines, expressive large simple cartoon eyes, oversized head relative to compact body, simplified facial features, flat vibrant colors and restrained cel shading EXACTLY matching Nathan and Gabriel. No glossy glamour, no photo-realistic skin, no fine hair strand rendering. Correct limbs, preserve overall composition silhouette, fullbody uncropped and actual transparent background, no background glow/floor/text. Diego Ungari: broad softly oval face, dark curly hair swept asymmetrically, moustache and sparse short jaw/chin beard, friendly toothy smile matching portrait. Seated on diagonal fallen log, salmon pink hoodie with white trefoil emblem, black trousers with yellow piping, green rubber boots, holding white mug. Include log, no dog.
+
+### loisi
+
+Redraw reference1 existing character in STRICT SAME cartoon style as Nathan and Gabriel (references2 and3). Preserve this specific person's facial identity and pose/clothing/props, do NOT copy face from style references. Bold clean black outlines, expressive large simple cartoon eyes, oversized head relative to compact body, simplified facial features, flat vibrant colors and restrained cel shading EXACTLY matching Nathan and Gabriel. No glossy glamour, no photo-realistic skin, no fine hair strand rendering. Correct limbs, preserve overall composition silhouette, fullbody uncropped and actual transparent background, no background glow/floor/text. Loisi Vieira: distinct photo likeness, softly rounded face, dark brown shoulder-length hair partly pulled back, brown eyes, gold hoop earrings, small confident closed-lip smile. Black blouse with gold sheriff star, dark trousers and shoes, walking pushing supermarket trolley to right with both hands, trolley filled with groceries.

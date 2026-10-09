@@ -18,3 +18,7 @@ Diretriz do usuário em 03/10/2026: seguir [a estratégia de composição](docs/
 - Integrar e conferir cada substituição no mapa antes de avançar; preservar os recuos e as áreas livres definidos na composição. Não tratar o modelo simplificado como acabamento final.
 - A sequência de trabalho não exige aprovação intermediária adicional; respeitar o escopo e as instruções do pedido atual.
 - Basear sempre as novas composições nas referências visuais do cenário já construído: escala, paleta, isometria e relação entre edificações e áreas livres. As demarcações de terrenos são guias flexíveis; preenchimentos podem incluir residências, comércios e parques sem criar destinos específicos da vila.
+
+## Estilo dos personagens
+
+Diretriz do usuário em 09/10/2026: Nathan e Gabriel são as referências principais de estilo para personagens (`public/images/characters/nathan-machado-v01.png` e `gabriel-martins-v02.png`). Usá-los explicitamente nas gerações: contornos pretos definidos, proporções cartoon, olhos expressivos e sombreamento controlado. Usar a foto de cada pessoa como referência de identidade facial; não reutilizar o rosto de outro personagem. Preservar identidades ilustradas preexistentes quando solicitado pelo usuário.

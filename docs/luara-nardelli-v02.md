@@ -1,0 +1,8 @@
+# Luara Nardelli — revisão v02
+
+Arquivo: `public/images/characters/luara-nardelli-v02.png`. Gerado via imagegen integrado. Foto enviada em 09/10/2026 como referência de identidade; Nathan e Gabriel como referências explícitas de estilo. Mantidos identificador, posição e transformações salvas. Retrato do menu atualizado.
+
+## Prompt executado
+
+Redraw fullbody game sprite of Luara Nardelli. Reference1 photo is SOLE facial identity source: young adult woman with elongated softly oval face, large dark brown eyes, naturally full fairly straight dark brows, modest straight nose, gentle closed-lip smile, light-medium warm skin, long dark brown hair parted slightly off-center with broad waves mostly flowing to one side. Do not use any other female face or a generic glamour face. References2 Nathan and3 Gabriel are STRICT STYLE targets: same bold clean black outlines, simple expressive large cartoon eyes, oversized head relative to compact body, simple nose and mouth, flat vibrant colors with restrained cel shading. Must look like character from SAME set as Nathan and Gabriel, not detailed realistic portrait, not glossy Disney glamour, no fine hair strands or realistic skin. Preserve Luara role: purple blouse with clearly visible gold sheriff star on chest, dark trousers and simple shoes; left arm hugging exactly two books red and blue to chest; right hand holds old revolver with wooden grip pointing vertically UP with small cartoon muzzle flash. Standing fullbody with exactly two feet, no floor or stack of books in sprite (existing map books supply platform). Entire object uncropped, actual transparent background. No text, no environment, no extra people. Illustration of non-graphic celebratory upward shot, nobody targeted.
+

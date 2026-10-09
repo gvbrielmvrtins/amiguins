@@ -22,10 +22,10 @@ const destinationPortraits:Record<string,string>={"east-cafe":"cafe-apoio-render
 // Crop the existing illustration to the head without exposing the map pose or props.
 const facePortraits:Record<string,{width:number;height:number;crop:[number,number,number]}>= {
   'maria-fernanda-figueiroa':{width:1024,height:1536,crop:[340,45,390]},
-  'luara-nardelli':{width:1024,height:1536,crop:[300,115,405]},
-  'naiane-de-mello':{width:1024,height:1536,crop:[325,15,430]},
-  'diego-ungari':{width:1388,height:1133,crop:[490,15,255]},
-  'elton-pavesi':{width:1024,height:1536,crop:[235,10,490]},
+  'luara-nardelli':{width:1024,height:1536,crop:[290,70,540]},
+  'naiane-de-mello':{width:1024,height:1536,crop:[270,0,530]},
+  'diego-ungari':{width:1388,height:1133,crop:[445,0,350]},
+  'elton-pavesi':{width:1024,height:1536,crop:[210,0,560]},
   'davi-cabeca':{width:1254,height:1254,crop:[110,10,1140]},
   'loisi-vieira':{width:1310,height:1200,crop:[275,20,410]},
   'henrique-hardman':{width:1199,height:1312,crop:[450,15,540]},
@@ -36,9 +36,10 @@ const facePortraits:Record<string,{width:number;height:number;crop:[number,numbe
   'kauana-moreira':{width:1024,height:1536,crop:[285,0,440]},
 };
 function Portrait({target,optimized=false}:{target:Target;optimized?:boolean}){
-  if(optimized)return <img className="portrait" aria-hidden="true" alt="" src={`/images/menu-portraits/${target.id}.webp`} style={{objectFit:'contain'}}/>;
+  const mirrored=target.id==='naiane-de-mello'||target.id==='luara-nardelli';
+  if(optimized)return <img className="portrait" aria-hidden="true" alt="" src={`/images/menu-portraits/${target.id}.webp`} style={{objectFit:'contain',transform:mirrored?'scaleX(-1)':undefined}}/>;
   const person=mapCharacters.find(p=>p.id===target.id),face=facePortraits[target.id];
-  if(person&&face){const [x,y,size]=face.crop;return <svg className="portrait face-portrait" aria-hidden="true" viewBox={`${x} ${y} ${size} ${size}`}><image href={person.file} width={face.width} height={face.height}/></svg>;}
+  if(person&&face){const [x,y,size]=face.crop;return <svg className="portrait face-portrait" style={{transform:mirrored?'scaleX(-1)':undefined}} aria-hidden="true" viewBox={`${x} ${y} ${size} ${size}`}><image href={person.file} width={face.width} height={face.height}/></svg>;}
   return <img className="portrait" aria-hidden="true" alt="" src={`/images/modular/${destinationPortraits[target.id]}`} style={{objectFit:'contain'}}/>;
 }
 
