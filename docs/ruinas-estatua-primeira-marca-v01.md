@@ -1,0 +1,9 @@
+# Estátua da primeira logomarca
+
+Asset `public/images/modular/ruinas-estatua-primeira-marca-v01.png`, gerado via imagegen integrado, com transparência preservada e margens aparadas. Elemento independente editável `ruins-first-logo-statue`, integrado às ruínas em `components/archaeological-ruins.tsx`.
+
+Referências: `Amiguins.png` fornecido pelo usuário para identidade; arco quebrado para pedra e desgaste; cinema e árvore originais para estilo.
+
+Prompt executado:
+
+Create ONE isolated ancient ruined stone STATUE of the exact mascot/logo in reference1 for an archaeological site in this illustrated town. Preserve its unmistakable tall rounded arch-shaped silhouette with two rounded legs, open arch under top, the two inward-facing circular curled eye/face details within opening, and lower arch-shaped gap between the legs. It is a solid thick THREE-DIMENSIONAL carved sandstone sculpture, standing upright on a small cracked stone plinth. Recognizable faded ancient paint: BLUE on left half and CORAL RED on right half, worn away in patches revealing pale sandstone. Cracks, chipped edges, a missing small chunk from one lower leg with fragment lying beside base, sparse moss in cracks. Keep overall logo silhouette clearly identifiable; avoid breaking it beyond recognition. Elevated three-quarter isometric view, front visible, verticals vertical, visible thickness and side surfaces. Reference2 establishes same archaeological stone as surrounding ruins; cinema and tree are explicit STYLE references for polished detailed retro-pop cartoon, defined dark outlines, natural material detail and controlled shadows. Entire statue and small fragments visible uncropped. Actual transparent background, no ground square/platform beyond small statue plinth, no people, buildings, lettering, watermark or extra statues.

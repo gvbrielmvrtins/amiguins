@@ -1,4 +1,5 @@
 import {northForestGround,coastalForestGround,forestCoastEdge} from '@/lib/north-forest';
+import {streetLanes} from './map-streets';
 import {MazeGround} from './secret-garden-maze';
 import {projectGround} from '@/lib/map-projection';
 import {mapPalette as p,type ModularDestination} from '@/lib/modular-map';
@@ -12,8 +13,20 @@ export function ForestGround(){return <g data-layer="forest-ground" stroke="none
   <path d={northForestGround} fill="url(#civic-grass)" stroke="none" aria-label="Floresta densa que continua além da borda do mapa"/>
   <path d={northForestGround} fill="#35513B" opacity=".28" stroke="none"/>
   <defs>
+    <filter id="forest-road-verge-soften" x="-.1" y="-.5" width="1.2" height="2"><feGaussianBlur stdDeviation="14"/></filter>
+    <mask id="forest-road-verge-shape" maskUnits="userSpaceOnUse" x="600" y="-700" width="2440" height="770"><path d="M650-600H2990V16Q2895 4 2805 13T2600 8T2400 16T2200 6T2000 14T1750 7T1500 12T1200 6L650 7Z" fill="white" filter="url(#forest-road-verge-soften)"/></mask>
+    <linearGradient id="forest-road-verge-fade" x1="0" y1="-32" x2="0" y2="7" gradientUnits="userSpaceOnUse"><stop stopColor="white"/><stop offset="1" stopColor="white" stopOpacity="0"/></linearGradient>
+    <mask id="forest-road-verge-mask" maskUnits="userSpaceOnUse" x="650" y="-650" width="2340" height="690">
+      <rect x="650" y="-650" width="2340" height="690" fill="url(#forest-road-verge-fade)"/>
+      <path d={['M1750 55H2990',...streetLanes.slice(1).map(lane=>lane==='M1005 55V2620'?'M1005 135V2620':lane)].join(' ')} fill="none" stroke="black" strokeWidth="120" strokeLinecap="round"/>
+      <rect x="-340" y="7" width="1390" height="96" fill="black"/>
+    </mask>
     <linearGradient id="valley-forest-blend" x1="2945" y1="0" x2="3080" y2="0" gradientUnits="userSpaceOnUse"><stop stopColor="#CDD3A9"/><stop offset=".48" stopColor="#AFC08D"/><stop offset="1" stopColor="#8EAA73" stopOpacity="0"/></linearGradient>
     <clipPath id="forest-coast-transition"><path d={coastalForestGround}/></clipPath></defs>
+  <g mask="url(#forest-road-verge-mask)"><g mask="url(#forest-road-verge-shape)">
+    <path d="M650-600H2990V16Q2895 4 2805 13T2600 8T2400 16T2200 6T2000 14T1750 7T1500 12T1200 6L650 7Z" fill="url(#civic-grass)"/>
+    <path d="M650-600H2990V16Q2895 4 2805 13T2600 8T2400 16T2200 6T2000 14T1750 7T1500 12T1200 6L650 7Z" fill="#35513B" opacity=".28"/>
+  </g></g>
   <path d="M2945 662Q3018 658 3058 714L3078 952Q3070 1040 3032 1117Q2978 1180 2860 1180H2550L2550 1100H2912Q2960 1100 2960 1055V722Q2960 690 2945 690Z" fill="url(#civic-grass)" opacity=".8"/>
   <path d="M2945 662Q3018 658 3058 714L3078 952Q3070 1040 3032 1117Q2978 1180 2860 1180H2550L2550 1100H2912Q2960 1100 2960 1055V722Q2960 690 2945 690Z" fill="url(#valley-forest-blend)"/>
   <g clipPath="url(#forest-coast-transition)" fill="none">
@@ -42,7 +55,6 @@ export default function SecretGarden({destination:d,selected,onSelect}:{destinat
 
   </g>;
 }
-
 
 
 

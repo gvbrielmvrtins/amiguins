@@ -1,4 +1,9 @@
 import ForestClearingProp,{forestClearingItems} from './forest-clearing';
+import ConstructionSite from './construction-site';
+import EditableTrafficProps from './editable-traffic-props';
+import ArchaeologicalRuins from './archaeological-ruins';
+import CinemaPosterEasels from './cinema-poster-easels';
+import ExtraBeachgoers from './extra-beachgoers';
 import MapCars from './map-cars';
 import EditableGroundPatches from './editable-ground-patches';
 import {MovableMapElement,MapLayoutLayers} from './map-layout-editor';
@@ -41,6 +46,7 @@ import { pilotLandscape } from '@/lib/pilot-landscape';
 import PilotLandscapeProp from '@/components/pilot-landscape-prop';
 
 const mainland = 'M-5000-5000H8000V8000H-5000Z';
+const forestTreeIds=new Set(northForestTrees.map(tree=>tree.id));
 export default function ModularMap({ selected, onSelect }: { selected: string | null; onSelect: (id: string, keyboard?: boolean) => void }) {
   return <svg className="modular-map" viewBox="380 -70 2320 1800" aria-label="mapa da amiguINlândia" aria-describedby="modular-map-description">
 
@@ -54,6 +60,15 @@ export default function ModularMap({ selected, onSelect }: { selected: string | 
       <pattern id="map-checks" width="64" height="64" patternUnits="userSpaceOnUse" ><rect width="64" height="64" fill={p.cream}/><path d="M0 0H32V32H0ZM32 32H64V64H32Z" fill={p.coral}/></pattern>
       <pattern id="map-stripes" width="30" height="30" patternUnits="userSpaceOnUse" patternTransform="rotate(25)"><rect width="30" height="30" fill={p.yellow}/><rect width="10" height="30" fill={p.pink}/></pattern>
       <clipPath id="map-land"><path d={mainland}/></clipPath>
+      <pattern id="pamonha-earth-texture" patternUnits="userSpaceOnUse" width="47" height="43">
+        <rect width="47" height="43" fill="#B9A278"/>
+        <path d="M3 9l5-2m18 7l4 1m-15 20l6-2m17-8l4 2" stroke="#957B55" strokeWidth="1.3" opacity=".45"/>
+        <path d="M7 27l4 1m20-24l5 1m-4 30l3-1" stroke="#DDC69D" strokeWidth="1.5" opacity=".6"/>
+        <circle cx="19" cy="8" r="1" fill="#806A4D" opacity=".35"/>
+        <circle cx="41" cy="39" r="1.2" fill="#D9C5A4"/>
+      </pattern>
+      <linearGradient id="pamonha-earth-edge"><stop offset="0" stopColor="white"/><stop offset=".65" stopColor="white"/><stop offset="1" stopColor="black"/></linearGradient>
+      <mask id="pamonha-earth-fade" maskUnits="userSpaceOnUse" x="300" y="680" width="230" height="1020"><rect x="300" y="680" width="230" height="1020" fill="url(#pamonha-earth-edge)"/></mask>
     </defs>
     <g data-layer="terrain">
     <rect x="0" y="-100" width="3000" height="2100" fill="url(#map-base-texture)"/>
@@ -79,8 +94,20 @@ export default function ModularMap({ selected, onSelect }: { selected: string | 
     <MetroUnderpass/>
     <MovableMapElement id="north-mountain" locked><NorthMountain/></MovableMapElement>
     <g data-layer="destinations-depth-sorted">
+    <MovableMapElement id="pamonha-cornfield-ground"><path d="M300 686Q404 682 447 704Q495 731 470 790Q456 846 483 895Q506 946 475 1005Q461 1048 481 1104Q503 1170 468 1220Q446 1270 474 1325Q497 1380 468 1433Q448 1480 480 1532Q510 1598 459 1648Q422 1674 300 1668Z" fill="url(#pamonha-earth-texture)" mask="url(#pamonha-earth-fade)" pointerEvents="none"/></MovableMapElement>
     <MapLayoutLayers front={false}/>
+    <g pointerEvents="none" fill="url(#pamonha-earth-texture)">
+      {[{x:558,y:1558,width:389},{x:1063,y:2118,width:384}].map(lot=><polygon key={lot.y} points={[[lot.x,lot.y],[lot.x+lot.width,lot.y],[lot.x+lot.width,lot.y+444],[lot.x,lot.y+444]].map(([x,y])=>{const p=projectGround(x,y);return `${p.x},${p.y}`;}).join(' ')}/>)}
+    </g>
+    <MovableMapElement id="pamonha-earth-organic"><path d="M483 1480C472 1454 493 1428 523 1424C547 1409 579 1417 595 1430C624 1434 639 1454 628 1473C640 1494 615 1515 589 1514C565 1532 534 1524 516 1515C489 1517 475 1500 483 1480Z" fill="url(#pamonha-earth-texture)" pointerEvents="none"/></MovableMapElement>
     <EditableGroundPatches/>
+    <ConstructionSite/>
+    <EditableTrafficProps/>
+    <ArchaeologicalRuins/>
+    <CinemaPosterEasels/>
+    <ExtraBeachgoers/>
+    <MovableMapElement id="cyclist-pedaling"><image href="/images/modular/ciclista-pedalando-v02.png" x="1450" y="1190" width="27" height="40" pointerEvents="none"/></MovableMapElement>
+    <MovableMapElement id="spoiled-spilled-milk"><image href="/images/modular/leite-derramado-estragado-v01.png" x="745" y="1345" width="40" height="31" pointerEvents="none"/></MovableMapElement>
     <MovableMapElement id="cottage-stone-path"><image href="/images/modular/caminho-pedrinhas-v01.png" x="1117" y="1185" width="90" height="60" pointerEvents="none"/></MovableMapElement>
     <SeaCharacters/>
     <g transform="translate(1095.588457269 1459)" pointerEvents="none" aria-label="Buraco que Paula está cavando"><ellipse cx="-7" cy="0" rx="11" ry="5" fill="#AB7F48" stroke="#CDA260" strokeWidth="2"/><path d="M-15 0Q-7-5 2 0" fill="none" stroke="#735733" strokeWidth="2"/><path d="M-22 3Q-18-5-13 1L-10 5Z" fill="#D8B87B" stroke="#BE965B" strokeWidth="1"/></g>
@@ -139,7 +166,7 @@ export default function ModularMap({ selected, onSelect }: { selected: string | 
         </g>
       </g>;
       };
-      return <MovableMapElement key={destination.id} id={destination.id}>{render()}</MovableMapElement>;
+      return <MovableMapElement key={destination.id} id={destination.id} locked={forestTreeIds.has(destination.id)}>{render()}</MovableMapElement>;
     })}
     <MovableMapElement id="hens-foraging-group"><image href="/images/modular/galinhas-ciscando-v01.png" x="870" y="1045" width="60" height="40" pointerEvents="none"/></MovableMapElement>
     <MovableMapElement id="children-action-figures"><image href="/images/modular/criancas-bonequinhos-v01.png" x="850" y="975" width="75" height="55" pointerEvents="none"/></MovableMapElement>
@@ -156,10 +183,13 @@ export default function ModularMap({ selected, onSelect }: { selected: string | 
     <MovableMapElement id="desert-camel"><image href="/images/modular/deserto-camelo-v01.png" x="1550" y="35" width="78" height="65" pointerEvents="none"/></MovableMapElement>
     <MovableMapElement id="desert-editable-dune"><image href="/images/modular/deserto-dunas-v01.png" x="1510" y="-60" width="340" height="195" pointerEvents="none"/></MovableMapElement>
     <MapCars/>
+    {Array.from({length:29},(_,i)=>{
+      const row=i<13?0:1,index=i<13?i:i-13;
+      const jitter=[-8,5,-2,9,-5,3,-7][index%7];
+      const width=[86,94,81,91,88][index%5];
+      return <MovableMapElement key={`pamonha-cornfield-${i}`} id={`pamonha-cornfield-${i}`}><image href="/images/modular/milharal-pamonhas-v01.png" x={row===0?352+jitter:390+jitter} y={(row===0?708:680)+index*(row===0?69:59)} width={width} height={+(width*1185/1186).toFixed(2)} pointerEvents="none"/></MovableMapElement>;
+    })}
     <MapLayoutLayers front/>
     </g>
   </svg>;
 }
-
-
-

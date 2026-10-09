@@ -69,7 +69,7 @@ export const civicRenderedAssets:Record<string,CivicArt>={
   linkedinTalks:{file:'linkedin-arquibancada-v01.png',width:1415,height:1111,anchorX:740,anchorY:790,scale:.072,risingSlope:-.58,fallingSlope:.43},
   linkedinCheckin:{file:'linkedin-credenciamento-v01.png',width:1416,height:1111,anchorX:725,anchorY:865,scale:.07,mirror:true,risingSlope:-.38,fallingSlope:.58},
   valleyRing:{file:'silicin-campus-circular-v01.png',width:1536,height:1024,anchorX:768,anchorY:870,scale:.13},
-  valleyCampus:{file:'silicin-campus-v01.png',width:1536,height:1024,anchorX:780,anchorY:780,scale:.16,risingSlope:-.57,fallingSlope:.40},
+  valleyCampus:{file:'silicin-campus-v02.png',width:1536,height:1024,anchorX:780,anchorY:780,scale:.16,risingSlope:-.57,fallingSlope:.40},
   letreiro:{file:'plaza-letreiro-rbd-v01.png',width:1415,height:1111,anchorX:710,anchorY:1030,scale:.065},
   tarot:{file:'torre-taro-render-v02.png',width:1359,height:1157,anchorX:680,anchorY:900,scale:.115,risingSlope:-.577,fallingSlope:.577},
   plaza:{file:'plaza-arcada-bandeiras-v02.png',width:1536,height:1024,anchorX:770,anchorY:800,scale:.115,risingSlope:-.53,fallingSlope:.40},

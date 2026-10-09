@@ -267,7 +267,7 @@
   "loisi-vieira": {
     "x": -2.66,
     "y": -23.6,
-    "scale": 1.15,
+    "scale": 1.25,
     "rotation": 0,
     "layer": 0,
     "hidden": false
@@ -541,11 +541,11 @@
     "hidden": false
   },
   "valley-forest-grass-3/savannaGrass/0/0": {
-    "x": -623.88,
-    "y": -1158.64,
+    "x": -621.95,
+    "y": -1153.38,
     "scale": 2.7,
     "rotation": 0,
-    "layer": -3,
+    "layer": -2,
     "hidden": false
   },
   "paises-africanos/internationalAirport/100/140": {
@@ -581,9 +581,9 @@
     "hidden": false
   },
   "paula-bather-4/beachBather1/0/0": {
-    "x": 257.24,
-    "y": -108.63,
-    "scale": 1,
+    "x": 661.85,
+    "y": -77.07,
+    "scale": 1.1,
     "rotation": 0,
     "layer": 0,
     "hidden": false
@@ -605,8 +605,8 @@
     "hidden": false
   },
   "beach-feature-9/beachPalm/0/0": {
-    "x": 94.56,
-    "y": -31.49,
+    "x": 97.31,
+    "y": -32.44,
     "scale": 1,
     "rotation": 0,
     "layer": 0,
@@ -661,9 +661,9 @@
     "hidden": false
   },
   "paula-bather-2/beachBather2/0/0": {
-    "x": -43.13,
+    "x": -43.21,
     "y": 14.44,
-    "scale": 0.9,
+    "scale": 0.95,
     "rotation": 0,
     "layer": 0,
     "hidden": false
@@ -1076,9 +1076,9 @@
     "hidden": false
   },
   "silicin-valley/valleyPrototype/-127/70": {
-    "x": 331.49,
-    "y": -12.73,
-    "scale": 1,
+    "x": 334.33,
+    "y": -3.35,
+    "scale": 0.85,
     "rotation": 0,
     "layer": -1,
     "hidden": false
@@ -1101,8 +1101,8 @@
   },
   "valley-robot-humanoid-c": {
     "x": 84.13,
-    "y": -150.11,
-    "scale": 1,
+    "y": -150.24,
+    "scale": 1.05,
     "rotation": 0,
     "layer": 0,
     "hidden": false
@@ -1607,16 +1607,16 @@
     "hidden": true
   },
   "ground-asphalt-square": {
-    "x": -108.04,
-    "y": -617.09,
+    "x": -108.06,
+    "y": -615.58,
     "scale": 0.85,
     "rotation": 0,
     "layer": 0,
     "hidden": false
   },
   "ground-sand-square": {
-    "x": -571.93,
-    "y": 166.85,
+    "x": -690.81,
+    "y": 444.78,
     "scale": 1,
     "rotation": 0,
     "layer": 0,
@@ -2237,7 +2237,7 @@
   },
   "north-forest-6-5": {
     "x": -20.21,
-    "y": -0.92,
+    "y": -1.15,
     "scale": 1,
     "rotation": 0,
     "layer": -1,
@@ -2683,8 +2683,8 @@
     "hidden": false
   },
   "cinema-queue-a": {
-    "x": -102.16,
-    "y": -6.56,
+    "x": -103.91,
+    "y": -8.14,
     "scale": 1,
     "rotation": 0,
     "layer": 1,
@@ -2931,11 +2931,11 @@
     "hidden": false
   },
   "plaza-hispanica/fonte/35/105": {
-    "x": -884.34,
-    "y": -41.7,
+    "x": -918.9,
+    "y": -318.66,
     "scale": 1,
     "rotation": 0,
-    "layer": 0,
+    "layer": 1,
     "hidden": false
   },
   "civic-plaza-lamp": {
@@ -2947,12 +2947,12 @@
     "hidden": false
   },
   "ground-grass-square": {
-    "x": -770.16,
-    "y": 227.46,
-    "scale": 1,
+    "x": 31.98,
+    "y": -454.17,
+    "scale": 1.7,
     "rotation": 0,
-    "layer": 0,
-    "hidden": false
+    "layer": -3,
+    "hidden": true
   },
   "civic-plaza-tree": {
     "x": 191.31,
@@ -2963,8 +2963,8 @@
     "hidden": false
   },
   "plaza-hispanica/letreiro/-115/40": {
-    "x": -279.31,
-    "y": 189.23,
+    "x": -445.18,
+    "y": 327.71,
     "scale": 1,
     "rotation": 0,
     "layer": 0,
@@ -3003,12 +3003,12 @@
     "hidden": false
   },
   "pracinha/palco/125/125": {
-    "x": -245.06,
-    "y": 292.99,
+    "x": -246.19,
+    "y": 294.11,
     "scale": 1,
     "rotation": 0,
     "layer": 0,
-    "hidden": false
+    "hidden": true
   },
   "central-circular-square": {
     "x": 453.02,
@@ -3019,11 +3019,11 @@
     "hidden": false
   },
   "pracinha/pergolado/-100/250": {
-    "x": -561.03,
-    "y": -139.55,
+    "x": -588.16,
+    "y": -128.61,
     "scale": 1,
     "rotation": 0,
-    "layer": 1,
+    "layer": 2,
     "hidden": false
   },
   "pracinha/jogos/97/235": {
@@ -3035,8 +3035,8 @@
     "hidden": false
   },
   "ground-sidewalk-square": {
-    "x": -489.85,
-    "y": 51.3,
+    "x": -512.95,
+    "y": 357.9,
     "scale": 1,
     "rotation": 0,
     "layer": 0,
@@ -3059,8 +3059,8 @@
     "hidden": false
   },
   "ground-grass-square::copy:c72eb878-2540-40f2-bf7b-cf4d8bcb23d3": {
-    "x": -655.43,
-    "y": 278.41,
+    "x": -843.21,
+    "y": 559.52,
     "scale": 0.95,
     "rotation": 0,
     "layer": 0,
@@ -3761,23 +3761,23 @@
     "scale": 1,
     "rotation": 0,
     "layer": 0,
-    "hidden": false
+    "hidden": true
   },
   "savanna-grass-46/savannaGrass/0/0": {
-    "x": 202.47,
-    "y": -58.22,
+    "x": 202.67,
+    "y": -58.12,
     "scale": 1,
     "rotation": 0,
     "layer": 0,
-    "hidden": false
+    "hidden": true
   },
   "savanna-grass-47/savannaGrass/0/0": {
     "x": -167.83,
-    "y": -47.49,
+    "y": -47.58,
     "scale": 1,
     "rotation": 0,
     "layer": 0,
-    "hidden": false
+    "hidden": true
   },
   "savanna-coastal-grass-6/savannaGrass/0/0": {
     "x": -6.28,
@@ -3793,30 +3793,30 @@
     "scale": 1,
     "rotation": 0,
     "layer": 0,
-    "hidden": false
+    "hidden": true
   },
   "savanna-grass-63/savannaGrass/0/0": {
     "x": -245.33,
-    "y": -89.04,
+    "y": -89.41,
     "scale": 1,
     "rotation": 0,
     "layer": 0,
-    "hidden": false
+    "hidden": true
   },
   "beach-rest-12/coloridinBlanket/0/0": {
     "x": 1.53,
     "y": 7.17,
     "scale": 1,
     "rotation": 0,
-    "layer": 0,
+    "layer": -1,
     "hidden": false
   },
   "beach-umbrella-12/beachUmbrella/0/0": {
-    "x": 21.87,
-    "y": 4.11,
+    "x": 16.95,
+    "y": 6.62,
     "scale": 1,
     "rotation": 0,
-    "layer": 1,
+    "layer": 0,
     "hidden": false
   },
   "beach-shell-13/beachShell/0/0": {
@@ -3956,8 +3956,8 @@
     "hidden": false
   },
   "car-suv": {
-    "x": 1182.22,
-    "y": 44.37,
+    "x": 1178.07,
+    "y": 43.32,
     "scale": 1,
     "rotation": 0,
     "layer": 0,
@@ -4020,16 +4020,16 @@
     "hidden": false
   },
   "departamento-xerifins-lamp": {
-    "x": 576.42,
-    "y": 215.38,
+    "x": 896.38,
+    "y": 178.09,
     "scale": 1,
     "rotation": 0,
     "layer": 0,
     "hidden": false
   },
   "car-hatch": {
-    "x": -149.15,
-    "y": -103.81,
+    "x": 484.83,
+    "y": 472.13,
     "scale": 1,
     "rotation": 0,
     "layer": 0,
@@ -4044,8 +4044,8 @@
     "hidden": false
   },
   "binstro-flowers": {
-    "x": -31.93,
-    "y": 9.97,
+    "x": 242.76,
+    "y": 317.63,
     "scale": 1,
     "rotation": 0,
     "layer": 0,
@@ -4068,8 +4068,8 @@
     "hidden": false
   },
   "academia-marombins-tree": {
-    "x": -367.59,
-    "y": -376.58,
+    "x": -371.3,
+    "y": -363.52,
     "scale": 1,
     "rotation": 0,
     "layer": 1,
@@ -4108,16 +4108,16 @@
     "hidden": false
   },
   "inglish-pub/pubStage/110/45": {
-    "x": 819.48,
-    "y": -11.23,
-    "scale": 2.65,
+    "x": 1019.62,
+    "y": 60.01,
+    "scale": 4,
     "rotation": 0,
     "layer": 0,
     "hidden": false
   },
   "inglish-pub-planter": {
-    "x": 194.96,
-    "y": -195.91,
+    "x": 614.65,
+    "y": 198.04,
     "scale": 1,
     "rotation": 0,
     "layer": 0,
@@ -4172,9 +4172,9 @@
     "hidden": false
   },
   "oficina-vendinhas-tree": {
-    "x": 444.95,
-    "y": 58.94,
-    "scale": 1,
+    "x": 943.31,
+    "y": 6.85,
+    "scale": 1.4,
     "rotation": 0,
     "layer": 0,
     "hidden": false
@@ -4263,17 +4263,17 @@
     "hidden": false
   },
   "departamento-xerifins-lamp::copy:949ca515-7065-4843-bc6f-27183a127292": {
-    "x": 531.87,
-    "y": 178.06,
+    "x": 928.04,
+    "y": 12.84,
     "scale": 1,
     "rotation": 0,
-    "layer": 1,
+    "layer": 0,
     "hidden": false,
     "sourceId": "departamento-xerifins-lamp"
   },
   "academia-marombins-flowers": {
-    "x": 248.56,
-    "y": 136.65,
+    "x": 175.38,
+    "y": 149.58,
     "scale": 1,
     "rotation": 0,
     "layer": 0,
@@ -4375,26 +4375,453 @@
   "plaza-tecidos": {
     "x": -97.73,
     "y": 35.68,
-    "scale": 0.9
+    "scale": 0.9,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "plaza-tango": {
     "x": -13.78,
     "y": -151.33,
-    "scale": 0.65
+    "scale": 0.65,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "plaza-mariachis": {
     "x": 81.28,
     "y": -40.22,
-    "scale": 0.9
+    "scale": 0.9,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "plaza-arepas": {
     "x": 35.49,
     "y": -214.16,
-    "scale": 0.7
+    "scale": 0.7,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "children-action-figures": {
     "x": 1492.66,
     "y": 156.62,
-    "scale": 0.5
+    "scale": 0.5,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
+  },
+  "pamonha-cornfield-13": {
+    "x": -46.76,
+    "y": -7.17
+  },
+  "pamonha-cornfield-14": {
+    "x": -15.82,
+    "y": -15
+  },
+  "pamonha-cornfield-15": {
+    "x": -30.15,
+    "y": 1.48
+  },
+  "pamonha-cornfield-16": {
+    "x": 4.16,
+    "y": -66.32
+  },
+  "pamonha-cornfield-17": {
+    "x": 37.28,
+    "y": 131.75
+  },
+  "pamonha-cornfield-18": {
+    "x": -9.51,
+    "y": 38.76,
+    "scale": 0.9
+  },
+  "pamonha-cornfield-19": {
+    "x": -30.2,
+    "y": 10.17
+  },
+  "pamonha-cornfield-20": {
+    "x": 10.88,
+    "y": 19.25,
+    "layer": 0
+  },
+  "pamonha-cornfield-21": {
+    "x": -76.01,
+    "y": 20.15,
+    "layer": -1
+  },
+  "pamonha-cornfield-22": {
+    "x": 336.36,
+    "y": 120.61,
+    "layer": 1,
+    "hidden": true
+  },
+  "pamonha-cornfield-23": {
+    "x": 307.18,
+    "y": 97.14,
+    "hidden": true
+  },
+  "pamonha-cornfield-24": {
+    "x": -8.61,
+    "y": 3.29,
+    "layer": 1
+  },
+  "pamonha-cornfield-26": {
+    "x": -16.64,
+    "y": -0.27
+  },
+  "pamonha-cornfield-25": {
+    "x": -11.61,
+    "y": -3.07
+  },
+  "pamonha-cornfield-27": {
+    "x": 5.52,
+    "y": 9.73
+  },
+  "pamonha-cornfield-28": {
+    "x": -28.14,
+    "y": 6.27
+  },
+  "pamonha-earth-organic": {
+    "x": -170.65,
+    "y": 224.52,
+    "scale": 1.45
+  },
+  "pamonha-earth-organic::copy:891c01e0-4ff2-42f7-ad25-8ed52742c5b4": {
+    "x": -131.7,
+    "y": -663.64,
+    "scale": 1.65,
+    "sourceId": "pamonha-earth-organic",
+    "hidden": false,
+    "rotation": 45
+  },
+  "pamonha-earth-organic::copy:52f5fa08-2c65-4ace-b108-f810d81aac20": {
+    "x": -47.83,
+    "y": -641.54,
+    "scale": 1.2,
+    "sourceId": "pamonha-earth-organic",
+    "hidden": false,
+    "rotation": 45,
+    "layer": -2
+  },
+  "traffic-barrier-falling": {
+    "x": 38.37,
+    "y": -507.86,
+    "scale": 0.85,
+    "layer": -2
+  },
+  "traffic-barrier-rising": {
+    "x": 108.21,
+    "y": -409.07,
+    "scale": 0.8,
+    "layer": -1
+  },
+  "construction-sign": {
+    "x": 0,
+    "y": -0.21,
+    "hidden": true
+  },
+  "construction-tractor": {
+    "x": 66.8,
+    "y": -43.62,
+    "scale": 1.75
+  },
+  "construction-worker-shovel": {
+    "x": -96.43,
+    "y": 6.86,
+    "scale": 0.95
+  },
+  "construction-worker-barrow": {
+    "x": 28.94,
+    "y": -9.77,
+    "scale": 1.1
+  },
+  "construction-materials": {
+    "x": 6.42,
+    "y": 0.22,
+    "scale": 1.05
+  },
+  "traffic-barrier-falling::copy:23c07e40-ebda-4323-a614-2a92bbf7e2ab": {
+    "x": 14.39,
+    "y": -193.36,
+    "scale": 0.85,
+    "layer": 0,
+    "sourceId": "traffic-barrier-falling",
+    "hidden": false
+  },
+  "traffic-barrier-rising::copy:2266d461-9491-46da-8447-ffde78381c83": {
+    "x": 77.17,
+    "y": -86.48,
+    "scale": 0.8,
+    "layer": 0,
+    "sourceId": "traffic-barrier-rising",
+    "hidden": false
+  },
+  "pamonha-earth-organic::copy:77e1b0ee-3bee-4bbe-a9fd-3b1900ecf625": {
+    "x": -124.31,
+    "y": -371.88,
+    "scale": 1.65,
+    "sourceId": "pamonha-earth-organic",
+    "hidden": false,
+    "rotation": 45,
+    "layer": 0
+  },
+  "traffic-light-rising": {
+    "x": 442.77,
+    "y": -86.39
+  },
+  "traffic-light-falling": {
+    "x": 581.81,
+    "y": -185.03
+  },
+  "construction-men-working-sign": {
+    "x": -7.98,
+    "y": -116.69,
+    "layer": 0,
+    "scale": 0.8
+  },
+  "construction-hoarding-front-east-2": {
+    "x": 0,
+    "y": 0,
+    "layer": 1
+  },
+  "hens-foraging-group": {
+    "x": -363.76,
+    "y": -255.22,
+    "scale": 0.7
+  },
+  "railway-crossing-gate": {
+    "x": 901.54,
+    "y": -599.69,
+    "scale": 0.9
+  },
+  "ruins-standing-wall": {
+    "x": 7.34,
+    "y": 54.31,
+    "scale": 1.15,
+    "layer": 1
+  },
+  "ruins-rubble": {
+    "x": -9.61,
+    "y": -66.05,
+    "scale": 1.45,
+    "layer": 0,
+    "rotation": -15
+  },
+  "ruins-broken-arch": {
+    "x": -86.32,
+    "y": -106.71,
+    "scale": 2.6,
+    "layer": 1,
+    "rotation": 0
+  },
+  "ruins-rubble-east": {
+    "x": -211.93,
+    "y": 6.06,
+    "scale": 2.5
+  },
+  "pamonha-cornfield-3": {
+    "x": 66.91,
+    "y": 174.96
+  },
+  "pamonha-cornfield-8": {
+    "x": 365.31,
+    "y": 113.7,
+    "hidden": true
+  },
+  "pamonha-cornfield-7": {
+    "x": 245.22,
+    "y": 246,
+    "hidden": true
+  },
+  "ruins-first-logo-statue": {
+    "x": -31.95,
+    "y": 2.31,
+    "layer": 0,
+    "scale": 1.05
+  },
+  "ruins-caution-front-east-1": {
+    "x": 0.48,
+    "y": 2.62,
+    "layer": 0
+  },
+  "ruins-caution-front-west-1": {
+    "x": 0,
+    "y": -0.32,
+    "layer": 1
+  },
+  "ruins-caution-front-east-0": {
+    "x": 0,
+    "y": -0.16,
+    "layer": 1
+  },
+  "traffic-barrier-falling::copy:f4b55f77-38b1-475d-8f35-086f3e72f8fc": {
+    "x": -0.72,
+    "y": 116.16,
+    "scale": 0.85,
+    "layer": 0,
+    "sourceId": "traffic-barrier-falling",
+    "hidden": false
+  },
+  "pamonha-earth-organic::copy:1e41e4b1-c083-4901-ac81-b67b4a9d1f5c": {
+    "x": -120.56,
+    "y": 4.94,
+    "scale": 1.45,
+    "sourceId": "pamonha-earth-organic",
+    "hidden": false
+  },
+  "spoiled-spilled-milk": {
+    "x": 887.27,
+    "y": -670.22,
+    "scale": 0.6
+  },
+  "cinema-poster-la-la-land": {
+    "x": 2.23,
+    "y": 10.89,
+    "scale": 1.1,
+    "layer": 1
+  },
+  "cinema-poster-ultima-casa": {
+    "x": 58.79,
+    "y": 10.96,
+    "layer": 1,
+    "scale": 1.1
+  },
+  "pamonha-cornfield-26::copy:65b9c313-1b1e-47b7-aaa7-8813344c336e": {
+    "x": 49.73,
+    "y": -43.74,
+    "sourceId": "pamonha-cornfield-26",
+    "hidden": false
+  },
+  "pamonha-cornfield-26::copy:8bd162b5-199e-48b2-a64e-617e7793ba62": {
+    "x": 31.05,
+    "y": -2.13,
+    "sourceId": "pamonha-cornfield-26",
+    "hidden": false
+  },
+  "pamonha-cornfield-28::copy:5bfe0807-e1d3-4daa-93ae-d1a6e28c145a": {
+    "x": -2.47,
+    "y": 38.87,
+    "sourceId": "pamonha-cornfield-28",
+    "hidden": false
+  },
+  "pamonha-cornfield-28::copy:9a31f781-18df-45f0-bc07-846c406f8f4e": {
+    "x": 6.39,
+    "y": 91.04,
+    "sourceId": "pamonha-cornfield-28",
+    "hidden": false
+  },
+  "pamonha-cornfield-28::copy:31f51551-a5bd-476a-b607-a4a5f48a2369": {
+    "x": -51.67,
+    "y": 77.81,
+    "sourceId": "pamonha-cornfield-28",
+    "hidden": false
+  },
+  "tavern-pizza-delivery-man": {
+    "x": -158.53,
+    "y": -9.57,
+    "scale": 0.75,
+    "layer": 1
+  },
+  "tavern-roof-pizza-slice": {
+    "x": -11.24,
+    "y": -0.79,
+    "scale": 0.4
+  },
+  "beach-feature-11/beachBall/0/0": {
+    "x": 17.98,
+    "y": 1.27
+  },
+  "ground-grass-organic::copy:ce00d922-6e4b-4275-87b9-c403cce55815": {
+    "x": 16.44,
+    "y": -428.4,
+    "scale": 3.25,
+    "rotation": 5,
+    "layer": -3,
+    "hidden": true,
+    "sourceId": "ground-grass-organic"
+  },
+  "ground-grass-organic::copy:7b46e5cc-5b45-4038-aba6-43130b2d8351": {
+    "x": -35.2,
+    "y": -464.67,
+    "scale": 1.45,
+    "rotation": -340,
+    "layer": -3,
+    "hidden": true,
+    "sourceId": "ground-grass-organic"
+  },
+  "cottage-stone-path::copy:779257e4-f0ea-452f-8556-b2d28aeff505": {
+    "x": 791.13,
+    "y": -530.29,
+    "scale": 1,
+    "rotation": 0,
+    "layer": -2,
+    "hidden": false,
+    "sourceId": "cottage-stone-path"
+  },
+  "cottage-stone-path::copy:aeed0d5d-5ef5-4dd9-b921-b3e94e8b36b7": {
+    "x": 962.31,
+    "y": -432.65,
+    "scale": 1,
+    "rotation": 0,
+    "layer": -2,
+    "hidden": false,
+    "sourceId": "cottage-stone-path"
+  },
+  "cottage-stone-path::copy:0ac47f4d-f60d-4e7f-9800-123226b44913": {
+    "x": 1135.42,
+    "y": -337.87,
+    "scale": 1,
+    "rotation": 0,
+    "layer": -2,
+    "hidden": false,
+    "sourceId": "cottage-stone-path"
+  },
+  "cottage-stone-path::copy:eaf59d6d-0939-4338-94a8-a17d7e42d610": {
+    "x": 499.22,
+    "y": -755.66,
+    "scale": 2.65,
+    "rotation": 0,
+    "layer": -3,
+    "hidden": false,
+    "sourceId": "cottage-stone-path"
+  },
+  "valley-forest-grass-3/savannaGrass/0/0::copy:39405198-f863-4f43-8a02-f5d5a10c6534": {
+    "x": -766.39,
+    "y": -1001.89,
+    "scale": 2,
+    "rotation": 0,
+    "layer": -2,
+    "hidden": false,
+    "sourceId": "valley-forest-grass-3/savannaGrass/0/0"
+  },
+  "cyclist-pedaling": {
+    "x": -26.51,
+    "y": 25.13,
+    "scale": 1.1,
+    "rotation": 0,
+    "layer": 1
+  },
+  "beachgoer-towel": {
+    "x": -466.91,
+    "y": -54.12,
+    "layer": 1,
+    "scale": 1.2
+  },
+  "beachgoer-ball": {
+    "x": -829.54,
+    "y": 115.14,
+    "scale": 1.25
+  },
+  "beachgoer-surfer": {
+    "x": -294.28,
+    "y": -126.71,
+    "scale": 1.2
+  },
+  "valley-robot-humanoid-b": {
+    "x": 0,
+    "y": -0.13,
+    "scale": 1.05
   }
 }

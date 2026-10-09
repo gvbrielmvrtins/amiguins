@@ -1,0 +1,7 @@
+# Placa de obra ilustrada
+
+Asset: `public/images/modular/placa-homens-trabalhando-v01.png`, gerado via imagegen integrado, fundo transparente preservado e margens aparadas. Substitui a placa SVG no mesmo elemento editável `construction-men-working-sign`.
+
+Referências: cinema, árvore e materiais do canteiro.
+
+Prompt: Create one standalone small construction warning sign for this illustrated isometric town. A naturally crafted slightly weathered orange wooden rectangular signboard, visible thickness, rounded imperfect corners, dark warm outline, little bolts, mounted on one sturdy wooden post with small timber foot. Elevated three-quarter view with vertical post, perspective matching the reference town. On the board a clear black silhouette of a worker digging with a shovel, and exact readable Portuguese wording in TWO lines: 'HOMENS' and 'TRABALHANDO'. Warm orange painted wood, fine grain, subtle scuffs, layered highlights and controlled shadows, charming polished retro-pop cartoon craftsmanship. Explicit STYLE references: cinema and tree establish the map's defined dark outlines, detailed materials and finish; construction materials establish harmonious wood/orange palette. Whole sign uncropped. Actual transparent background, no terrain platform, people, extra signs, watermark or background. Avoid flat vector icon or generic geometric UI appearance. The sign must feel like a physical illustrated object belonging to this map.
