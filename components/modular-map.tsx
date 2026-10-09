@@ -141,6 +141,12 @@ export default function ModularMap({ selected, onSelect }: { selected: string | 
       };
       return <MovableMapElement key={destination.id} id={destination.id}>{render()}</MovableMapElement>;
     })}
+    <MovableMapElement id="plaza-mariachis"><image href="/images/modular/plaza-mariachis-v01.png" x="710" y="840" width="75" height="55.15" pointerEvents="none"/></MovableMapElement>
+    <MovableMapElement id="plaza-tango"><image href="/images/modular/plaza-tango-v01.png" x="800" y="875" width="48" height="67.64" pointerEvents="none"/></MovableMapElement>
+    <MovableMapElement id="plaza-tecidos"><image href="/images/modular/plaza-tecidos-v01.png" x="960" y="760" width="90" height="87.43" pointerEvents="none"/></MovableMapElement>
+    <MovableMapElement id="plaza-arepas"><image href="/images/modular/plaza-arepas-v01.png" x="690" y="925" width="75" height="89.92" pointerEvents="none"/></MovableMapElement>
+    <MovableMapElement id="plaza-peruvian-food-cart"><image href="/images/modular/plaza-carrinho-peruano-cuy-v02.png" x="880" y="780" width="80" height="100" pointerEvents="none"/></MovableMapElement>
+    <MovableMapElement id="plaza-argentine-obelisk"><image href="/images/modular/plaza-obelisco-argentino-v01.png" x="790" y="700" width="57" height="180" pointerEvents="none"/></MovableMapElement>
     <MovableMapElement id="plaza-rbd-stage"><image href="/images/modular/plaza-palco-rbd-v01.png" x="1000" y="730" width="200" height="157" pointerEvents="none"/></MovableMapElement>
     <MovableMapElement id="editable-residential-building"><image href="/images/modular/metropole-residencial-v01.png" x="780" y="860" width="95" height="120" pointerEvents="none"/></MovableMapElement>
     <MovableMapElement id="central-circular-square"><image href="/images/modular/praca-central-circular-v01.png" x="760" y="720" width="300" height="224.8" pointerEvents="none"/></MovableMapElement>

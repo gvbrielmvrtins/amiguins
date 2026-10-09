@@ -1,0 +1,8 @@
+# Obelisco argentino
+
+Arquivo: `public/images/modular/plaza-obelisco-argentino-v01.png`.
+Elemento editável independente: `plaza-argentine-obelisk`, na área livre da plaza hispânica. Implantação provisória conferida no navegador antes da renderização; substituição final preserva verticais e deixa espaço para o palco. Gerado com imagegen integrado, fundo transparente; margens transparentes aparadas para facilitar a seleção.
+
+Referências explícitas de estilo: cinema e árvore originais (`cineminha-isometrico-v01.png`, `rosa-arvore-isometrica-v01.png`).
+
+Prompt: Create ONE isolated game asset of the Obelisco de Buenos Aires, Argentina, recognizable slender pale ivory stone four-sided tapered shaft with pyramidal pointed tip, tiny dark rectangular observation openings just below tip and understated stone panel seams, small doorway near foot, resting on its compact low square stone plinth. Entire monument visible, tall and elegant, true obelisk proportions. Elevated isometric view, ground axes +/-30 degrees, verticals straight. Reference images cinema and tree are STYLE REFERENCES ONLY: match their polished retro-pop cartoon game illustration, confident dark outlines, controlled warm shading and restrained highlights, readable volumes; do not reproduce cinema or tree. Stone ivory with subtle warm pale beige shadow face. Not photorealistic, not a simplified geometric icon. No people, vegetation, lettering, flag, city background, roads, surrounding plaza or large ground platform. Tight framing with small transparent margins, genuinely transparent background. Single modular object that can be moved individually on the existing illustrated map.

@@ -72,7 +72,7 @@ export const civicRenderedAssets:Record<string,CivicArt>={
   valleyCampus:{file:'silicin-campus-v01.png',width:1536,height:1024,anchorX:780,anchorY:780,scale:.16,risingSlope:-.57,fallingSlope:.40},
   letreiro:{file:'plaza-letreiro-rbd-v01.png',width:1415,height:1111,anchorX:710,anchorY:1030,scale:.065},
   tarot:{file:'torre-taro-render-v02.png',width:1359,height:1157,anchorX:680,anchorY:900,scale:.115,risingSlope:-.577,fallingSlope:.577},
-  plaza:{file:'plaza-arcada-v01.png',width:1536,height:1024,anchorX:770,anchorY:800,scale:.115,risingSlope:-.53,fallingSlope:.40},
+  plaza:{file:'plaza-arcada-bandeiras-v02.png',width:1536,height:1024,anchorX:770,anchorY:800,scale:.115,risingSlope:-.53,fallingSlope:.40},
   palco:{file:'pracinha-palco-v01.png',width:1536,height:1024,anchorX:770,anchorY:650,scale:.06,risingSlope:-.577,fallingSlope:.44},
   jogos:{file:'pracinha-jogos-v01.png',width:1415,height:1111,anchorX:700,anchorY:750,scale:.07,risingSlope:-.577,fallingSlope:.577},
   pergolado:{file:'pracinha-pergolado-v01.png',width:1415,height:1111,anchorX:710,anchorY:840,scale:.095,risingSlope:-.5,fallingSlope:.37},

@@ -1,6 +1,7 @@
 import type { Target } from './game-data';
 
 export const mapCharacters: (Target & { file: string; elevation?: number; isSheriff?: boolean })[] = [
+  { id: 'maria-fernanda-figueiroa', name: 'Maffer Figueiroa', article: 'a', category: 'people', x: 1010, y: 1356, width: 30, height: 45, file: '/images/characters/maria-fernanda-figueiroa-v01.png', clue: 'María está na rua perto da plaza hispânica, comendo um espetinho de cuy, com cabelo roxo curto e óculos redondos.' },
   { id: 'luara-nardelli', name: 'Luara Nardelli', article: 'a', category: 'people', isSheriff: true, x: 394, y: 143, width: 30, height: 45, file: '/images/characters/luara-nardelli-v01.png', clue: 'Luara está sobre os livros em frente à livrINhoteca, de blusa roxa, abraçando dois livros e disparando seu revólver antigo para cima.' },
   { id: 'naiane-de-mello', name: 'Naiane de Mello', article: 'a', category: 'people', isSheriff: true, x: 228, y: 90, elevation: 12, width: 23, height: 40, file: '/images/characters/naiane-de-mello-v01.png', clue: 'Naiane é uma xerifinha de cabelo curto e óculos, saindo pela porta do vagão feminino e acenando para você.' },
   { id: 'diego-ungari', name: 'Diego Ungari', article: 'o', category: 'people', x: 1600, y: -730, width: 48, height: 39, file: '/images/characters/diego-ungari-v02.png', clue: 'Diego mora na casinha da clareira e está sentado em um tronco, de moletom rosa, botas verdes e caneca na mão, perto de seu cachorro.' },
