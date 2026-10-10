@@ -1655,8 +1655,8 @@
     "hidden": false
   },
   "civic-tower-flowers": {
-    "x": 194.36,
-    "y": 58.25,
+    "x": 187.05,
+    "y": 59.03,
     "scale": 1,
     "rotation": 0,
     "layer": 0,
@@ -2883,35 +2883,35 @@
     "hidden": false
   },
   "linkedin/linkedinTerminal/143/30": {
-    "x": 97.04,
-    "y": -186.03,
-    "scale": 1,
+    "x": -630.72,
+    "y": 48.29,
+    "scale": 0.8,
     "rotation": 0,
-    "layer": 0,
+    "layer": 1,
     "hidden": false
   },
   "linkedin/linkedinCheckin/120/148": {
-    "x": 275.51,
-    "y": -152.72,
-    "scale": 1,
+    "x": -507.71,
+    "y": 21.59,
+    "scale": 0.8,
     "rotation": 0,
-    "layer": 0,
+    "layer": 1,
     "hidden": false
   },
   "east-in-lamp": {
-    "x": 535.34,
-    "y": -121.05,
+    "x": 456.71,
+    "y": -155.88,
     "scale": 1,
     "rotation": 0,
     "layer": 0,
     "hidden": false
   },
   "linkedin-building-reimport-v02": {
-    "x": 944.91,
-    "y": 98.3,
-    "scale": 1.15,
+    "x": 48.44,
+    "y": 285.85,
+    "scale": 1,
     "rotation": 0,
-    "layer": 0,
+    "layer": 1,
     "hidden": false
   },
   "civic-city-flowers": {
@@ -4004,11 +4004,11 @@
     "hidden": false
   },
   "car-sedan": {
-    "x": 506,
-    "y": 125.8,
+    "x": 377.55,
+    "y": 203.67,
     "scale": 1,
     "rotation": 0,
-    "layer": 0,
+    "layer": 1,
     "hidden": false
   },
   "departamento-xerifins-tree": {
@@ -4028,9 +4028,9 @@
     "hidden": false
   },
   "car-hatch": {
-    "x": 484.83,
-    "y": 472.13,
-    "scale": 1,
+    "x": 133.87,
+    "y": 61.27,
+    "scale": 1.15,
     "rotation": 0,
     "layer": 0,
     "hidden": false
@@ -4568,12 +4568,13 @@
     "layer": 0
   },
   "traffic-light-rising": {
-    "x": 442.77,
-    "y": -86.39
+    "x": 726.05,
+    "y": -341.25,
+    "layer": 0
   },
   "traffic-light-falling": {
-    "x": 581.81,
-    "y": -185.03
+    "x": 350.08,
+    "y": -984.04
   },
   "construction-men-working-sign": {
     "x": -7.98,
@@ -4823,5 +4824,22 @@
     "x": 0,
     "y": -0.13,
     "scale": 1.05
+  },
+  "construction-beam-structure": {
+    "x": -18,
+    "y": 67.3,
+    "scale": 1.4
+  },
+  "pingos-nos-ins": {
+    "x": 1248.72,
+    "y": -478.16,
+    "scale": 0.95
+  },
+  "hens-foraging-group::copy:2a12abaa-d2fc-41d6-96eb-ae9a16a1b9df": {
+    "x": 434.05,
+    "y": -215.83,
+    "scale": 0.55,
+    "sourceId": "hens-foraging-group",
+    "hidden": false
   }
 }
