@@ -133,7 +133,7 @@ export default function ModularMap({ selected, onSelect }: { selected: string | 
       if(destination.id==='pingos-nos-ins'){
         const at=projectGround(destination.x,destination.y);
         return <g id="destination-pingos-nos-ins" aria-label="pINgos nos INs — redação de jornal, comunicação e marketing" pointerEvents="none">
-          <image href="/images/modular/pingos-nos-ins-redacao-v01.png" x={at.x-100} y={at.y-158} width="200" height="160.58"/>
+          <image href="/images/modular/pingos-nos-ins-redacao-v04.png" x={at.x-100} y={at.y-158} width="200" height="160.58"/>
         </g>;
       }
       if(destination.id==='colabin'){
