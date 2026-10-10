@@ -3100,11 +3100,11 @@
     "hidden": false
   },
   "departamento-xerifins-planter": {
-    "x": 1320.72,
-    "y": 195.06,
-    "scale": 1,
+    "x": 1331.73,
+    "y": 195.72,
+    "scale": 0.85,
     "rotation": 0,
-    "layer": 0,
+    "layer": 1,
     "hidden": false
   },
   "departamento-xerifins/sheriffBooth/100/-5": {
@@ -3884,12 +3884,12 @@
     "hidden": false
   },
   "estudio-criativins/creativeEasel/0/135": {
-    "x": 901.56,
-    "y": 169.58,
+    "x": 899.55,
+    "y": 177.91,
     "scale": 1,
     "rotation": 0,
     "layer": 2,
-    "hidden": false
+    "hidden": true
   },
   "estudio-criativins/creativeSculpture/100/85": {
     "x": 760.27,
@@ -4766,7 +4766,7 @@
     "y": 2.62,
     "scale": 1,
     "rotation": 0,
-    "layer": 0,
+    "layer": 1,
     "hidden": false
   },
   "ruins-caution-front-west-1": {
@@ -5205,5 +5205,16 @@
     "rotation": 0,
     "layer": 0,
     "hidden": false
+  },
+  "ingrid-lima": {
+    "x": 623.69,
+    "y": 89.98,
+    "layer": 1,
+    "scale": 1.45
+  },
+  "melissa-augustin": {
+    "x": 29.79,
+    "y": -106.54,
+    "scale": 1.4
   }
 }

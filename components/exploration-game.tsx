@@ -21,6 +21,8 @@ const targets:Target[]=[...mapCharacters, ...modularDestinations.map<Target>(d=>
 const destinationPortraits:Record<string,string>={"pingos-nos-ins":"pingos-nos-ins-redacao-v04.png","east-cafe":"cafe-apoio-render-v01.png","colabin":"colabin-laboratorio-v02.png","vagao-feminino":"metro-vagao-feminino-v04.png","livrinhoteca":"livrinhoteca-isometrico-v01.png","cineminha":"cineminha-isometrico-v01.png","mercado-vagas":"mercado-vagas-isometrico-v01.png","prefeintura":"prefeitura-render-v02.png","taverna-joguins":"taverna-medieval-games-v04.png","pracinha":"praca-central-circular-v01.png","espacin-coloridin":"coloridin-arco-iris-frontal-v02.png","linkedin":"linkedin-predio-v02.png","jardim-secreto":"rosa-arvore-isometrica-v01.png","estudio-criativins":"estudio-render-v02.png","silicin-valley":"silicin-campus-v02.png","departamento-xerifins":"xerifins-departamento-v01.png","inglish-pub":"inglish-pub-render-v02.png","oficina-vendinhas":"feira-roupas-v01.png","torre-mistica":"torre-feiticaria-v02.png","plaza-hispanica":"plaza-arcada-bandeiras-v02.png","academia-marombins":"academia-render-v02.png","binstro":"binstro-render-v02.png","paises-africanos":"aeroporto-internacional-v02.png"};
 // Crop the existing illustration to the head without exposing the map pose or props.
 const facePortraits:Record<string,{width:number;height:number;crop:[number,number,number]}>= {
+  'melissa-augustin':{width:1024,height:1536,crop:[170,15,470]},
+  'ingrid-lima':{width:1024,height:1536,crop:[45,65,520]},
   'rebeca-araujo':{width:1024,height:1536,crop:[250,15,590]},
   'adriane-costa':{width:1024,height:1536,crop:[235,60,500]},
   'maria-fernanda-figueiroa':{width:1024,height:1536,crop:[340,45,390]},
@@ -266,6 +268,7 @@ export default function ExplorationGame({optimized=false}:{optimized?:boolean}) 
         <div className="progress-section"><div className="progress-label"><span>Você encontrou</span><strong>{found.length}<span> / {mapCharacters.length}</span></strong></div><div className="progress-track" role="progressbar" aria-label="Pessoas encontradas" aria-valuenow={found.length} aria-valuemin={0} aria-valuemax={mapCharacters.length}><span style={{ width: `${found.length / Math.max(1,mapCharacters.length) * 100}%` }} /></div></div>
         <div className="category-list">{categories.map(category => {
           const items = targets.filter(t => t.category === category.id);
+          if (category.id === 'people') items.sort((a, b) => a.name.localeCompare(b.name, 'pt-BR', { sensitivity: 'base' }));
           if (category.id === 'places') items.sort((a, b) => (placeListPriority[a.id] ?? 3) - (placeListPriority[b.id] ?? 3));
           const count = items.filter(t => found.includes(t.id)).length;
           const Icon = Store;
@@ -293,9 +296,6 @@ export default function ExplorationGame({optimized=false}:{optimized?:boolean}) 
     <dialog ref={reset} className="game-dialog"><h2>Mais uma volta?</h2><p>As descobertas desta rodada serão apagadas e as pessoas poderão ser encontradas novamente.</p><div className="dialog-actions"><button onClick={() => reset.current?.close()}>Continuar jogando</button><button className="dialog-primary" onClick={() => { setFound([]); setSelected(null); setMessage(''); setZoom(1); reset.current?.close(); }}>Recomeçar</button></div></dialog>
   </main></MapEditorContext.Provider>;
 }
-
-
-
 
 
 
