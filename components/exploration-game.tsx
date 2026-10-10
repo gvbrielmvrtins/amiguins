@@ -18,9 +18,10 @@ const categories=[{id:'people',label:'AMIGUINS'},{id:'places',label:'Espacins'}]
 const cafeLocation=eastFillers.find(item=>item.id==='east-cafe')!;
 const targets:Target[]=[...mapCharacters, ...modularDestinations.map<Target>(d=>({id:d.id,name:d.name,article:'o',category:'places',x:d.x,y:d.y,width:0,height:0,clue:'Procure '+d.name+' no mapa.'})),{id:'east-cafe',name:'cafézIN',article:'o',category:'places',x:cafeLocation.x,y:cafeLocation.y,width:0,height:0,clue:'Procure o cafézIN no mapa.'}];
 
-const destinationPortraits:Record<string,string>={"east-cafe":"cafe-apoio-render-v01.png","colabin":"colabin-laboratorio-v02.png","vagao-feminino":"metro-vagao-feminino-v04.png","livrinhoteca":"livrinhoteca-isometrico-v01.png","cineminha":"cineminha-isometrico-v01.png","mercado-vagas":"mercado-vagas-isometrico-v01.png","prefeintura":"prefeitura-render-v02.png","taverna-joguins":"taverna-medieval-games-v04.png","pracinha":"praca-central-circular-v01.png","espacin-coloridin":"coloridin-arco-iris-frontal-v02.png","linkedin":"linkedin-predio-v02.png","jardim-secreto":"rosa-arvore-isometrica-v01.png","estudio-criativins":"estudio-render-v02.png","silicin-valley":"silicin-campus-v02.png","departamento-xerifins":"xerifins-departamento-v01.png","inglish-pub":"inglish-pub-render-v02.png","oficina-vendinhas":"feira-roupas-v01.png","torre-mistica":"torre-feiticaria-v02.png","plaza-hispanica":"plaza-arcada-bandeiras-v02.png","academia-marombins":"academia-render-v02.png","binstro":"binstro-render-v02.png","paises-africanos":"aeroporto-internacional-v02.png"};
+const destinationPortraits:Record<string,string>={"pingos-nos-ins":"pingos-nos-ins-redacao-v01.png","east-cafe":"cafe-apoio-render-v01.png","colabin":"colabin-laboratorio-v02.png","vagao-feminino":"metro-vagao-feminino-v04.png","livrinhoteca":"livrinhoteca-isometrico-v01.png","cineminha":"cineminha-isometrico-v01.png","mercado-vagas":"mercado-vagas-isometrico-v01.png","prefeintura":"prefeitura-render-v02.png","taverna-joguins":"taverna-medieval-games-v04.png","pracinha":"praca-central-circular-v01.png","espacin-coloridin":"coloridin-arco-iris-frontal-v02.png","linkedin":"linkedin-predio-v02.png","jardim-secreto":"rosa-arvore-isometrica-v01.png","estudio-criativins":"estudio-render-v02.png","silicin-valley":"silicin-campus-v02.png","departamento-xerifins":"xerifins-departamento-v01.png","inglish-pub":"inglish-pub-render-v02.png","oficina-vendinhas":"feira-roupas-v01.png","torre-mistica":"torre-feiticaria-v02.png","plaza-hispanica":"plaza-arcada-bandeiras-v02.png","academia-marombins":"academia-render-v02.png","binstro":"binstro-render-v02.png","paises-africanos":"aeroporto-internacional-v02.png"};
 // Crop the existing illustration to the head without exposing the map pose or props.
 const facePortraits:Record<string,{width:number;height:number;crop:[number,number,number]}>= {
+  'adriane-costa':{width:1024,height:1536,crop:[235,60,500]},
   'maria-fernanda-figueiroa':{width:1024,height:1536,crop:[340,45,390]},
   'luara-nardelli':{width:1024,height:1536,crop:[290,70,540]},
   'naiane-de-mello':{width:1024,height:1536,crop:[270,0,530]},
@@ -279,7 +280,6 @@ export default function ExplorationGame({optimized=false}:{optimized?:boolean}) 
     <dialog ref={reset} className="game-dialog"><h2>Mais uma volta?</h2><p>As descobertas desta rodada serão apagadas e as pessoas poderão ser encontradas novamente.</p><div className="dialog-actions"><button onClick={() => reset.current?.close()}>Continuar jogando</button><button className="dialog-primary" onClick={() => { setFound([]); setSelected(null); setMessage(''); setZoom(1); reset.current?.close(); }}>Recomeçar</button></div></dialog>
   </main></MapEditorContext.Provider>;
 }
-
 
 
 
