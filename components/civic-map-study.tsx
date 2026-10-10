@@ -17,8 +17,8 @@ function Arch({x,y}:{x:number;y:number}) {
   const at=point(x,y).split(',');
   return <g transform={`matrix(.5196152423 .3 0 -1 ${at[0]} ${at[1]})`}><path d="M0 0V36Q0 59 17 59Q34 59 34 36V0Z" fill="#A5CADA"/></g>;
 }
-function Fountain({x=0,y=0}:{x?:number;y?:number}) {
-  if(civicRenderedAssets.fonte) return <CivicRenderedProp kind="fonte" x={x} y={y}/>;
+function Fountain({x=0,y=0,locked=false}:{x?:number;y?:number;locked?:boolean}) {
+  if(civicRenderedAssets.fonte) return <CivicRenderedProp kind="fonte" x={x} y={y} locked={locked}/>;
   const at=point(x,y).split(',');
   return <g transform={`translate(${at[0]} ${at[1]})`}>
     <ellipse rx="44" ry="25" fill="#D5C6AA"/><ellipse cy="-5" rx="40" ry="23" fill="#87B9D0"/>
@@ -46,7 +46,7 @@ export default function CivicMapStudy({destination:d,selected,onSelect}:{destina
 
 
     <g stroke={p.ink} strokeWidth="2" strokeLinejoin="round">
-      {d.id==='pracinha' && <><Fountain x={10} y={20}/><CivicRenderedProp kind="quiosque" x={120} y={-65}/></>}
+      {d.id==='pracinha' && <><Fountain x={10} y={20} locked/><CivicRenderedProp kind="quiosque" x={120} y={-65}/></>}
       {d.id==='pracinha' && <GatheringArea/>}
       {d.id==='prefeintura' && civicRenderedAssets.prefeitura && <CivicRenderedProp kind="prefeitura" y={20}/>}
       {d.id==='prefeintura' && !civicRenderedAssets.prefeitura && <>
@@ -76,12 +76,11 @@ export default function CivicMapStudy({destination:d,selected,onSelect}:{destina
       </>}
       {d.id==='plaza-hispanica' && <>
         <CivicRenderedProp kind="plaza" x={10} y={-70}/>
-        <Fountain x={35} y={105}/><g aria-label="show do rbd 28/10"><CivicRenderedProp kind="letreiro" x={-115} y={40}/></g>
+        <Fountain x={35} y={105}/><g aria-label="Igreja do Pastor Vittar"><CivicRenderedProp kind="letreiro" x={-115} y={40}/></g>
       </>}
     </g>
   </g>;
 }
-
 
 
 

@@ -1,0 +1,7 @@
+# Cemitério em imagem única
+
+Imagegen integrado. Sprite único móvel, com piso interno e muro baixo, exterior transparente. Referências: cinema e árvore originais, igreja evangélica v01 para escala e materiais. Arquivo: `public/images/modular/cemiterio-v01.png`. ID editável: `cemetery-single-image`. Implantado inicialmente ao lado da igreja, sem destino no menu.
+
+## Prompt executado
+
+Use case: stylized-concept. One complete detailed cemetery isometric sprite for existing retro-pop cartoon town map. Explicit style references image1 original cinema architecture and image2 original tree vegetation, image3 neighboring small church for matching scale and materials. Compact rectangular cemetery with low cream weathered stone perimeter wall, blue iron entrance gate open, two short gate pillars, tasteful variety of gravestones crosses and rounded headstones, several raised stone tombs, one tiny mausoleum, bouquets of coral pink yellow flowers, some candles, gravel paths, patches of grass, two slender cypresses, small bench. Beautiful carefully illustrated rich details but coherent readable map-scale arrangement. No ghosts no people no gore. Single integrated image including ground within boundary, outside perimeter truly transparent. Elevated isometric view with ground axes ±30 degrees, vertical walls. Front entry lower right, low walls let graves show. Bold dark contours, controlled cel shadows and highlights, natural greens cream stone and restrained blue/coral accents same as references. Whole cemetery fully inside frame no cut off. No text or signage.

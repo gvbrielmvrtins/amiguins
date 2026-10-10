@@ -1,4 +1,4 @@
-import {cityShorePath} from '@/lib/beach-layout';
+import {cityShorePath, cityShorePoints} from '@/lib/beach-layout';
 import {mapPalette as p,type ModularDestination} from '@/lib/modular-map';
 import {projectGround} from '@/lib/map-projection';
 import PilotLandscapeProp from './pilot-landscape-prop';
@@ -27,6 +27,17 @@ const internationalGround = `${coastPath}L4400 3600H2200Z`;
 const beachPath=cityShorePath(170);
 const foamPath=cityShorePath(104);
 const promenadePath=cityShorePath(262);
+// Widen only the inland side beside the football field; reuse the coastal
+// samples and pattern coordinates so the mosaic continues without a seam.
+const fieldPromenadePoints=cityShorePoints(262).filter(point=>point.y>=1400&&point.y<=1950);
+const fieldPromenadeInner=fieldPromenadePoints.map(point=>{
+  const blend=Math.min(1,Math.max(0,(point.y-1400)/80),Math.max(0,(1950-point.y)/80));
+  return {x:point.x+(Math.min(point.x,1915)-point.x)*blend,y:point.y};
+});
+const fieldPromenadeBorder=fieldPromenadeInner.map((point,i)=>`${i?'L':'M'}${point.x} ${point.y}`).join(' ');
+const fieldPromenadeJoin=fieldPromenadePoints.length
+  ? `${fieldPromenadeBorder} ${[...fieldPromenadePoints].reverse().map(point=>`L${point.x} ${point.y}`).join(' ')}Z`
+  : '';
 // Coastal paving takes precedence over the campus ground at this junction.
 export function ValleyCoastOverlay(){return <g pointerEvents="none" stroke="none">
   <defs><clipPath id="valley-coastal-overlay"><rect x="2480" y="850" width="760" height="700"/></clipPath></defs>
@@ -70,6 +81,8 @@ export function NeighborhoodStudyGround(){return <>
     <g data-layer="beach-promenade" aria-label="Calçadão com mosaico de ondas inspirado em Copacabana">
       <path d={promenadePath} fill="none" stroke="#B8B2A4" strokeWidth="54"/>
       <path d={promenadePath} fill="none" stroke="url(#copacabana-mosaic)" strokeWidth="46"></path>
+      <path d={fieldPromenadeJoin} fill="url(#copacabana-mosaic)" stroke="none"/>
+      <path d={fieldPromenadeBorder} fill="none" stroke="#B8B2A4" strokeWidth="4" strokeLinejoin="round"/>
     </g>
     <path d={foamPath} fill="none" stroke="#D7F2F7" strokeWidth="12" opacity=".85"></path>
   </g>

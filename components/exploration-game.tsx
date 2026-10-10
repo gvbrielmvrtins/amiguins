@@ -21,6 +21,7 @@ const targets:Target[]=[...mapCharacters, ...modularDestinations.map<Target>(d=>
 const destinationPortraits:Record<string,string>={"pingos-nos-ins":"pingos-nos-ins-redacao-v04.png","east-cafe":"cafe-apoio-render-v01.png","colabin":"colabin-laboratorio-v02.png","vagao-feminino":"metro-vagao-feminino-v04.png","livrinhoteca":"livrinhoteca-isometrico-v01.png","cineminha":"cineminha-isometrico-v01.png","mercado-vagas":"mercado-vagas-isometrico-v01.png","prefeintura":"prefeitura-render-v02.png","taverna-joguins":"taverna-medieval-games-v04.png","pracinha":"praca-central-circular-v01.png","espacin-coloridin":"coloridin-arco-iris-frontal-v02.png","linkedin":"linkedin-predio-v02.png","jardim-secreto":"rosa-arvore-isometrica-v01.png","estudio-criativins":"estudio-render-v02.png","silicin-valley":"silicin-campus-v02.png","departamento-xerifins":"xerifins-departamento-v01.png","inglish-pub":"inglish-pub-render-v02.png","oficina-vendinhas":"feira-roupas-v01.png","torre-mistica":"torre-feiticaria-v02.png","plaza-hispanica":"plaza-arcada-bandeiras-v02.png","academia-marombins":"academia-render-v02.png","binstro":"binstro-render-v02.png","paises-africanos":"aeroporto-internacional-v02.png"};
 // Crop the existing illustration to the head without exposing the map pose or props.
 const facePortraits:Record<string,{width:number;height:number;crop:[number,number,number]}>= {
+  'rebeca-araujo':{width:1024,height:1536,crop:[250,15,590]},
   'adriane-costa':{width:1024,height:1536,crop:[235,60,500]},
   'maria-fernanda-figueiroa':{width:1024,height:1536,crop:[340,45,390]},
   'luara-nardelli':{width:1024,height:1536,crop:[290,70,540]},
@@ -110,6 +111,18 @@ export default function ExplorationGame({optimized=false}:{optimized?:boolean}) 
     setViewportNode(node);
   },[]);
   const drag = useRef<{ x: number; y: number; left: number; top: number } | null>(null);
+  const initialCameraPlaced = useRef(false);
+  useLayoutEffect(()=>{
+    const v=viewportNode;
+    if(!v||!layoutReady||initialCameraPlaced.current)return;
+    const file=destinationPortraits.pracinha;
+    const image=Array.from(v.querySelectorAll<SVGImageElement>(`image[href="/images/modular/${file}"], [data-place-file="${file}"]`)).find(node=>node.getBoundingClientRect().width>0);
+    if(!image)return;
+    const rect=image.getBoundingClientRect(),frame=v.getBoundingClientRect();
+    const next=boundedScroll(v.scrollLeft+rect.left-frame.left+rect.width/2-v.clientWidth/2,v.scrollTop+rect.top-frame.top+rect.height/2-v.clientHeight/2,v.clientWidth,v.clientHeight,v.scrollWidth,v.scrollHeight);
+    v.scrollLeft=next.left;v.scrollTop=next.top;
+    initialCameraPlaced.current=true;
+  },[viewportNode,layoutReady]);
   const didDrag = useRef(false);
   const touchGesture = useRef<{distance:number;zoom:number;mapX:number;mapY:number} | null>(null);
   const zoomAnchor = useRef<{mapX:number;mapY:number;x:number;y:number} | null>(null);
@@ -280,10 +293,6 @@ export default function ExplorationGame({optimized=false}:{optimized?:boolean}) 
     <dialog ref={reset} className="game-dialog"><h2>Mais uma volta?</h2><p>As descobertas desta rodada serão apagadas e as pessoas poderão ser encontradas novamente.</p><div className="dialog-actions"><button onClick={() => reset.current?.close()}>Continuar jogando</button><button className="dialog-primary" onClick={() => { setFound([]); setSelected(null); setMessage(''); setZoom(1); reset.current?.close(); }}>Recomeçar</button></div></dialog>
   </main></MapEditorContext.Provider>;
 }
-
-
-
-
 
 
 

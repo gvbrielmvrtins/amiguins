@@ -1,0 +1,5 @@
+# Rebeca — cabelo curto
+
+Edição localizada via imagegen integrado de v02. Foto `1766102133902.png` usada exclusivamente como referência de comprimento e formato do cabelo: ondulado, até a nuca, sem mechas longas sobre o peito. Preservados corpo inteiro, pose, risada e acessórios. Arquivo: `public/images/characters/rebeca-araujo-v03.png`, utilizado no mapa e no retrato do menu pelo cadastro existente.
+
+Prompt: Use case: precise-object-edit. Image1 edit target full-body cartoon Rebeca. Image2 reference ONLY for haircut length and shape: short wavy dark hair ending at nape/chin, above shoulders, not long cascading chest locks. Change ONLY hair on image1 to this short softly wavy haircut under orange beanie/headphones. Remove all long locks from hoodie shoulder/chest, restore black hoodie fabric naturally there. Preserve EXACTLY face laughing eyes shut headback, glasses, beanie, headphones, body pose, clothes, hands, jeans, shoes, black-outline cartoon style, scale fullbody framing and transparent background. Do not use reference2 expression or clothing. Keep original laughing face unchanged. Short waves visible at cheeks and nape only, no hair below shoulders.

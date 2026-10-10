@@ -1,6 +1,7 @@
 import type { Target } from './game-data';
 
 export const mapCharacters: (Target & { file: string; elevation?: number; isSheriff?: boolean })[] = [
+  { id: 'rebeca-araujo', name: 'Rebeca Araujo', article: 'a', category: 'people', x: 2790, y: 350, width: 30, height: 45, file: '/images/characters/rebeca-araujo-v03.png', clue: 'Rebeca está rindo de olhos fechados, com gorro laranja, fone, óculos e moletom preto.' },
   { id: 'adriane-costa', name: 'Adriane Costa', article: 'a', category: 'people', isSheriff: true, x: 975, y: 975, width: 40, height: 60, file: '/images/characters/adriane-costa-v01.png', clue: 'Adriane é professora de espanhol e xerifinha na plaza hispânica, segurando um livro de espanhol e falando ao megafone.' },
   { id: 'maria-fernanda-figueiroa', name: 'Maffer Figueiroa', article: 'a', category: 'people', x: 1010, y: 1356, width: 30, height: 45, file: '/images/characters/maria-fernanda-figueiroa-v01.png', clue: 'María está na rua perto da plaza hispânica, comendo um espetinho de cuy, com cabelo roxo curto e óculos redondos.' },
   { id: 'luara-nardelli', name: 'Luara Nardelli', article: 'a', category: 'people', isSheriff: true, x: 394, y: 143, width: 30, height: 45, file: '/images/characters/luara-nardelli-v02.png', clue: 'Luara está sobre os livros em frente à livrINhoteca, de blusa roxa, abraçando dois livros e disparando seu revólver antigo para cima.' },

@@ -1,0 +1,7 @@
+# Campinho com arquibancada
+
+Sprite único móvel via imagegen integrado. Referências explícitas: cinema e árvore originais. Arquivo: `public/images/modular/campinho-arquibancada-v01.png`. ID: `football-field-bleachers`. Implantação no terreno costeiro abaixo da embaixada; projeção retificada para eixos a ±30 graus, paralelos aos asfaltos. Campo, traves, alambrado, arquibancada e vegetação em uma imagem.
+
+## Prompt executado
+
+Use case: stylized-concept. One complete small neighborhood football soccer field with compact bleachers, single transparent-background map sprite. Style references cinema and tree: bold dark outlines, richly colored retro cartoon controlled shading and natural green textures. Rectangular vivid grass pitch with accurate white soccer field lines center circle penalty boxes and TWO goals on opposite short ends with white nets. Low perimeter mesh fence and entrance gate. A compact three-row concrete bleacher along far back sideline with blue and coral seating. No people no text no big stadium lights. Elevated isometric projection EXACT ground edges ±30 degrees, vertical upright structures. Rectangular footprint clean straight boundaries, long axis slopes DOWN RIGHT +30 degrees, short axis DOWN LEFT -30degrees. Top rear corner where two straight roads meet must be a precise 90degree ground corner; field extends into foreground from that corner. All wall/grass footprint aligned perfectly to isometric axes, never irregular. Entire asset no surrounding roads, outside footprint transparent. Bleachers at far rear edge do not cover pitch.

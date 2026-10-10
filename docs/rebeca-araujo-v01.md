@@ -1,0 +1,7 @@
+# Rebeca Araujo
+
+Imagegen integrado; foto Receba.jpeg como referência explícita de identidade, pose e expressão. Nathan v01 e Gabriel v02 como estilo. Mantido enquadramento de busto da referência e risada de olhos fechados, gorro, fone, óculos e moletom. Arquivo: `public/images/characters/rebeca-araujo-v01.png`; personagem no menu e mapa.
+
+## Prompt executado
+
+Use case: identity-preserve. Create cartoon portrait sprite of Rebeca Araujo faithfully matching image1 photo, same EXACT bust crop and body expression. Photo is identity AND pose reference. Orange rib-knit beanie covering hair, large black over-ear headphones outside beanie, large dark rectangular glasses with softly rounded corners, black hoodie. Head thrown BACK slightly toward viewer LEFT, chin raised, eyes squeezed CLOSED in joyful laughter, broad mouth open showing upper teeth, cheeks lifted. Shoulders and upper chest exactly photo stance, no invented hand poses, do not change to frontal smile or open eyes. Preserve recognizable nose face cheek and mouth shapes. Images2 Nathan and3 Gabriel are explicit style references: clearly worked black outlines, enlarged expressive cartoon facial shapes, controlled cel shadows vibrant map illustration, not semi-realistic or anime. Photo expression takes precedence over generic look-at-viewer rule. Single bust sprite including shoulders hoodie, exact reference composition, transparent background, no scenery no glow. No text.

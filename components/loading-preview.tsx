@@ -39,6 +39,7 @@ export function LoadingScreen({ progress }: { progress: number }) {
           >
             {percent}%
           </div>
+          <img className={styles.logo} src="/images/logo-loading.png" alt="AmiguINs" width={600} height={120} />
       </div>
     </main>
   );
