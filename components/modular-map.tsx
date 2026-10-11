@@ -106,6 +106,7 @@ export default function ModularMap({ selected, onSelect }: { selected: string | 
     <ArchaeologicalRuins/>
     <CinemaPosterEasels/>
     <ExtraBeachgoers/>
+    <MovableMapElement id="retired-mascot-grandpa-crochet"><image href="/images/modular/mascote-vovo-croche-v01.png" x="1240" y="815" width="30" height="45" pointerEvents="none"/></MovableMapElement>
     <MovableMapElement id="marlon-virus-nonplayable"><image href="/images/modular/marlon-virus-v01.png" x="1500" y="1050" width="22" height="22" pointerEvents="none"/></MovableMapElement>
     <MovableMapElement id="hen-rebeca-accessories"><image href="/images/modular/galinha-rebeca-v01.png" x="1490" y="1090" width="25" height="30" pointerEvents="none"/></MovableMapElement>
     <MovableMapElement id="rebeca-dimensional-vortex"><image href="/images/modular/vortex-rebeca-v01.png" x="1380" y="1020" width="100" height="100" pointerEvents="none"/></MovableMapElement>

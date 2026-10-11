@@ -58,7 +58,7 @@ export default function ExplorationGame({optimized=false}:{optimized?:boolean}) 
   const [layoutReady,setLayoutReady]=useState(false);
   const layoutHistory=useRef<LayoutOffsets[]>([]);
   useEffect(()=>{
-    if(!localEditor)return;
+    if(!localEditor){setLayoutReady(true);return;}
     try{const parsed=JSON.parse(localStorage.getItem('amiguins-map-layout-v1')??'{}');
       const valid:LayoutOffsets={...savedLayoutOffsets};for(const [id,p] of Object.entries(parsed)){const point=p as LayoutElement;if(point&&Number.isFinite(point.x)&&Number.isFinite(point.y))valid[id]={x:point.x,y:point.y,scale:Number.isFinite(point.scale)?Math.max(.1,Math.min(4,point.scale!)):1,rotation:Number.isFinite(point.rotation)?point.rotation!%360:0,layer:Number.isFinite(point.layer)?Math.max(-100,Math.min(100,Math.round(point.layer!))):0,hidden:point.hidden===true,...(typeof point.sourceId==='string'?{sourceId:point.sourceId}:{})};}setLayoutOffsets(valid);
     }catch{}setLayoutReady(true);
@@ -117,13 +117,20 @@ export default function ExplorationGame({optimized=false}:{optimized?:boolean}) 
   useLayoutEffect(()=>{
     const v=viewportNode;
     if(!v||!layoutReady||initialCameraPlaced.current)return;
-    const file=destinationPortraits.pracinha;
-    const image=Array.from(v.querySelectorAll<SVGImageElement>(`image[href="/images/modular/${file}"], [data-place-file="${file}"]`)).find(node=>node.getBoundingClientRect().width>0);
-    if(!image)return;
-    const rect=image.getBoundingClientRect(),frame=v.getBoundingClientRect();
-    const next=boundedScroll(v.scrollLeft+rect.left-frame.left+rect.width/2-v.clientWidth/2,v.scrollTop+rect.top-frame.top+rect.height/2-v.clientHeight/2,v.clientWidth,v.clientHeight,v.scrollWidth,v.scrollHeight);
-    v.scrollLeft=next.left;v.scrollTop=next.top;
-    initialCameraPlaced.current=true;
+    const placeCamera=()=>{
+      if(initialCameraPlaced.current)return;
+      const file=destinationPortraits.pracinha;
+      const image=Array.from(v.querySelectorAll<SVGImageElement>(`image[href="/images/modular/${file}"], [data-place-file="${file}"]`)).find(node=>node.getBoundingClientRect().width>0);
+      if(!image)return;
+      const rect=image.getBoundingClientRect(),frame=v.getBoundingClientRect();
+      const next=boundedScroll(v.scrollLeft+rect.left-frame.left+rect.width/2-v.clientWidth/2,v.scrollTop+rect.top-frame.top+rect.height/2-v.clientHeight/2,v.clientWidth,v.clientHeight,v.scrollWidth,v.scrollHeight);
+      v.scrollLeft=next.left;v.scrollTop=next.top;
+      initialCameraPlaced.current=true;
+    };
+    const observer=new MutationObserver(placeCamera);
+    observer.observe(v,{childList:true,subtree:true});
+    placeCamera();
+    return()=>observer.disconnect();
   },[viewportNode,layoutReady]);
   const didDrag = useRef(false);
   const touchGesture = useRef<{distance:number;zoom:number;mapX:number;mapY:number} | null>(null);

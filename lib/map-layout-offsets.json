@@ -549,11 +549,11 @@
     "hidden": false
   },
   "paises-africanos/internationalAirport/100/140": {
-    "x": 188.47,
-    "y": 1165.17,
+    "x": 185.42,
+    "y": 1162.67,
     "scale": 1.2,
     "rotation": 0,
-    "layer": 0,
+    "layer": -3,
     "hidden": false
   },
   "paula-whale/beachWhale/0/0": {
@@ -5099,11 +5099,11 @@
     "sourceId": "railway-crossing-gate"
   },
   "lula-nonplayable": {
-    "x": 1.73,
-    "y": -7.12,
-    "scale": 1.15,
+    "x": 292.04,
+    "y": -16.17,
+    "scale": 1.3,
     "rotation": 0,
-    "layer": 0,
+    "layer": 1,
     "hidden": false
   },
   "departamento-xerifins-lamp::copy:c0eb078e-bcb2-45b0-8849-0670efe9ee50": {
@@ -5149,11 +5149,11 @@
     "sourceId": "traffic-light-rising"
   },
   "rebeca-araujo": {
-    "x": -888.49,
-    "y": -410.46,
-    "scale": 1.2,
+    "x": -770.99,
+    "y": 324.05,
+    "scale": 1.6,
     "rotation": 0,
-    "layer": 0,
+    "layer": -4,
     "hidden": false
   },
   "gabriel-female-moustache-nonplayable": {
@@ -5216,5 +5216,15 @@
     "x": 29.79,
     "y": -106.54,
     "scale": 1.4
+  },
+  "odete-roitman-helicopter-nonplayable": {
+    "x": -0.61,
+    "y": 4.02,
+    "scale": 0.45
+  },
+  "retired-mascot-grandpa-crochet": {
+    "x": 150.88,
+    "y": -108.81,
+    "scale": 0.8
   }
 }

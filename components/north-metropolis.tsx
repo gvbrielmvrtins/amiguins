@@ -1,5 +1,6 @@
 import {uprightProjection} from '@/lib/map-projection';
 import {fillerRenderedAssets} from '@/lib/filler-rendered-assets';
+import {MovableMapElement} from './map-layout-editor';
 
 // The urban fabric extends past the upper and left artboard edges.
 const blocks=Array.from({length:6},(_,row)=>Array.from({length:14},(_,col)=>{
@@ -40,9 +41,10 @@ export default function NorthMetropolis(){return <g data-layer="north-metropolis
   </g>
     {blocks.map(b=><g key={b.id} transform={`translate(${b.sx} ${b.sy})`} data-metropolis-building={b.id}>
       <path d="M-47 0L0-27 47 0 0 27Z" fill="#E4DDC8"/>
-      {b.variant===1?<image href="/images/modular/metropole-residencial-v01.png" x={-565*b.height/1370} y={-1400*b.height/1370} width={1105*b.height/1370} height={1424*b.height/1370}/>:<image href="/images/modular/metropole-escritorios-v01.png" x={-730*b.height/1060} y={-1080*b.height/1060} width={1415*b.height/1060} height={1111*b.height/1060}/>}
+      {b.variant===1?<image href="/images/modular/metropole-residencial-v01.png" x={-565*b.height/1370} y={-1400*b.height/1370} width={1105*b.height/1370} height={1424*b.height/1370}/>:<image href={b.id==='metropolis-0-5'?'/images/modular/metropole-escritorios-heliponto-v01.png':'/images/modular/metropole-escritorios-v01.png'} x={-730*b.height/1060} y={-1080*b.height/1060} width={1415*b.height/1060} height={1111*b.height/1060}/>}
       <image href="/images/modular/poste-detalhado-v01.png" x="40" y="-31" width="20" height="30"/>
       <image href="/images/modular/floreira-detalhada-v01.png" x="-45" y="5" width="27" height="18"/>
+      {b.id==='metropolis-0-5'&&<MovableMapElement id="odete-roitman-helicopter-nonplayable"><image href="/images/modular/odete-roitman-helicoptero-v01.png" x="-52" y="-218" width="100" height="66.67" pointerEvents="none"/></MovableMapElement>}
 
 
     </g>)}
