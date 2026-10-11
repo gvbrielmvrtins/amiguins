@@ -106,6 +106,9 @@ export default function ModularMap({ selected, onSelect }: { selected: string | 
     <ArchaeologicalRuins/>
     <CinemaPosterEasels/>
     <ExtraBeachgoers/>
+    <MovableMapElement id="silent-observer-newspaper"><image href="/images/modular/observador-jornal-v01.png" x="1140" y="1180" width="30" height="45" pointerEvents="none"/></MovableMapElement>
+    <MovableMapElement id="silent-observer-mug"><image href="/images/modular/observador-caneca-v01.png" x="1180" y="1180" width="30" height="45" pointerEvents="none"/></MovableMapElement>
+    <MovableMapElement id="silent-observer-tree"><image href="/images/modular/observador-arvore-v01.png" x="1220" y="1165" width="40" height="60" pointerEvents="none"/></MovableMapElement>
     <MovableMapElement id="pingulin-microphone-original"><image href="/images/modular/pingulin-microfone-original.png" x="2025" y="972" width="32" height="34.37" pointerEvents="none"/></MovableMapElement>
     <MovableMapElement id="pingulin-headphones-original"><image href="/images/modular/pingulin-fone-original.png" x="2090" y="976" width="30" height="36.55" pointerEvents="none"/></MovableMapElement>
     <MovableMapElement id="retired-mascot-grandpa-crochet"><image href="/images/modular/mascote-vovo-croche-v01.png" x="1240" y="815" width="30" height="45" pointerEvents="none"/></MovableMapElement>
@@ -190,6 +193,8 @@ export default function ModularMap({ selected, onSelect }: { selected: string | 
       };
       return <MovableMapElement key={destination.id} id={destination.id} locked={destination.id==='colabin'||forestTreeIds.has(destination.id)}>{render()}</MovableMapElement>;
     })}
+    <MovableMapElement id="snake-plant-pot"><image href="/images/modular/vaso-espada-sao-jorge-v01.png" x="1690" y="719" width="50" height="37.48" pointerEvents="none"/></MovableMapElement>
+    <MovableMapElement id="totem-eu-amo-amiguins"><image href="/images/modular/totem-eu-amo-amiguins-v02.png" x="1190" y="1299" width="100" height="45" pointerEvents="none"/></MovableMapElement>
     <MovableMapElement id="hens-foraging-group"><image href="/images/modular/galinhas-ciscando-v01.png" x="870" y="1045" width="60" height="40" pointerEvents="none"/></MovableMapElement>
     <MovableMapElement id="children-action-figures"><image href="/images/modular/criancas-bonequinhos-v01.png" x="850" y="975" width="75" height="55" pointerEvents="none"/></MovableMapElement>
     <MovableMapElement id="plaza-mariachis"><image href="/images/modular/plaza-mariachis-v01.png" x="710" y="840" width="75" height="55.15" pointerEvents="none"/></MovableMapElement>
