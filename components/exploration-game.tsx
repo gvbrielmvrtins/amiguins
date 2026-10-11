@@ -85,6 +85,18 @@ export default function ExplorationGame({optimized=false}:{optimized?:boolean}) 
     a.href=url;a.download='amiguins-posicoes.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
   }
   const [found, setFound] = useState<string[]>([]);
+  const [progressLoaded,setProgressLoaded]=useState(false);
+  useEffect(()=>{
+    try{
+      const saved=JSON.parse(localStorage.getItem('amiguins-found-v1')??'[]');
+      if(Array.isArray(saved))setFound([...new Set(saved.filter((id):id is string=>typeof id==='string'&&mapCharacters.some(person=>person.id===id)))]);
+    }catch{}
+    setProgressLoaded(true);
+  },[]);
+  useEffect(()=>{
+    if(!progressLoaded)return;
+    try{localStorage.setItem('amiguins-found-v1',JSON.stringify(found));}catch{}
+  },[found,progressLoaded]);
   const [selected, setSelected] = useState<string | null>(null);
   const [collapsed, setCollapsed] = useState<string[]>([]);
   const [zoom, setZoom] = useState(1);
@@ -303,7 +315,6 @@ export default function ExplorationGame({optimized=false}:{optimized?:boolean}) 
     <dialog ref={reset} className="game-dialog"><h2>Mais uma volta?</h2><p>As descobertas desta rodada serão apagadas e as pessoas poderão ser encontradas novamente.</p><div className="dialog-actions"><button onClick={() => reset.current?.close()}>Continuar jogando</button><button className="dialog-primary" onClick={() => { setFound([]); setSelected(null); setMessage(''); setZoom(1); reset.current?.close(); }}>Recomeçar</button></div></dialog>
   </main></MapEditorContext.Provider>;
 }
-
 
 
 
