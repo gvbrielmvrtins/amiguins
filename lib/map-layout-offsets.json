@@ -3010,6 +3010,54 @@
     "layer": 0,
     "hidden": true
   },
+  "pamela-souza": {
+    "x": 36.96,
+    "y": -61.42,
+    "scale": 1.3,
+    "rotation": 0,
+    "layer": 1,
+    "hidden": false
+  },
+  "rock-in-rio-sign": {
+    "x": -5.47,
+    "y": -21.99,
+    "scale": 0.85,
+    "rotation": 0,
+    "layer": 1,
+    "hidden": false
+  },
+  "isabela-guedes": {
+    "x": 358.58,
+    "y": 89.7,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 2,
+    "hidden": false
+  },
+  "raquel-rocha": {
+    "x": 0,
+    "y": 17.01,
+    "scale": 1.45,
+    "rotation": 0,
+    "layer": 1,
+    "hidden": false
+  },
+  "tati-ribeiro": {
+    "x": -13.49,
+    "y": -130.25,
+    "scale": 1.2,
+    "rotation": 0,
+    "layer": 2,
+    "hidden": false
+  },
+  "flavia-lima": {
+    "x": 35.41,
+    "y": -61.65,
+    "scale": 1.2,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
+  },
   "central-circular-square": {
     "x": 453.02,
     "y": -38.56,
@@ -3820,9 +3868,9 @@
     "hidden": false
   },
   "beach-shell-13/beachShell/0/0": {
-    "x": -65.63,
-    "y": -69.12,
-    "scale": 0.8,
+    "x": -66.03,
+    "y": -63.99,
+    "scale": 0.55,
     "rotation": 0,
     "layer": 0,
     "hidden": false
@@ -4184,7 +4232,7 @@
     "y": -403.03,
     "scale": 1,
     "rotation": 0,
-    "layer": 0,
+    "layer": 2,
     "hidden": false
   },
   "oficina-vendinhas-flowers": {
@@ -5386,9 +5434,9 @@
     "hidden": false
   },
   "jackson-alves-mota": {
-    "x": 1442.28,
-    "y": -344.63,
-    "scale": 1.15,
+    "x": 1443.95,
+    "y": -343.14,
+    "scale": 1.05,
     "rotation": 0,
     "layer": 1,
     "hidden": false
@@ -5606,21 +5654,33 @@
   "savanna-coastal-grass-2/savannaGrass/0/0": {
     "x": -0.14,
     "y": 0,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
     "hidden": true
   },
   "savanna-grass-48/savannaGrass/0/0": {
     "x": 0,
     "y": 0,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
     "hidden": true
   },
   "savanna-grass-33/savannaGrass/0/0": {
     "x": 0,
     "y": 0,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
     "hidden": true
   },
   "savanna-coastal-grass-1/savannaGrass/0/0": {
     "x": 0,
     "y": 0,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
     "hidden": true
   }
 }

@@ -200,6 +200,7 @@ export default function ModularMap({ selected, onSelect }: { selected: string | 
     })}
     <MovableMapElement id="snake-plant-pot"><image href="/images/modular/vaso-espada-sao-jorge-v01.png" x="1690" y="719" width="50" height="37.48" pointerEvents="none"/></MovableMapElement>
     <MovableMapElement id="totem-eu-amo-amiguins"><image href="/images/modular/totem-eu-amo-amiguins-v02.png" x="1190" y="1299" width="100" height="45" pointerEvents="none"/></MovableMapElement>
+    <MovableMapElement id="rock-in-rio-sign"><image href="/images/modular/rock-in-rio-sign-v01.png" x="1180" y="1315" width="150" height="75" pointerEvents="none" aria-label="Letreiro Rock in Rio"/></MovableMapElement>
     <MovableMapElement id="hens-foraging-group"><image href="/images/modular/galinhas-ciscando-v01.png" x="870" y="1045" width="60" height="40" pointerEvents="none"/></MovableMapElement>
     <MovableMapElement id="children-action-figures"><image href="/images/modular/criancas-bonequinhos-v01.png" x="850" y="975" width="75" height="55" pointerEvents="none"/></MovableMapElement>
     <MovableMapElement id="plaza-mariachis"><image href="/images/modular/plaza-mariachis-v01.png" x="710" y="840" width="75" height="55.15" pointerEvents="none"/></MovableMapElement>

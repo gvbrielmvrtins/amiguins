@@ -22,6 +22,11 @@ const targets:Target[]=[...mapCharacters, ...modularDestinations.map<Target>(d=>
 const destinationPortraits:Record<string,string>={"pingos-nos-ins":"pingos-nos-ins-redacao-v04.png","east-cafe":"cafe-apoio-render-v01.png","colabin":"colabin-laboratorio-v02.png","vagao-feminino":"metro-vagao-feminino-v04.png","livrinhoteca":"livrinhoteca-isometrico-v01.png","cineminha":"cineminha-isometrico-v01.png","mercado-vagas":"mercado-vagas-isometrico-v01.png","prefeintura":"prefeitura-render-v02.png","taverna-joguins":"taverna-medieval-games-v04.png","pracinha":"praca-central-circular-v01.png","espacin-coloridin":"coloridin-arco-iris-frontal-v02.png","linkedin":"linkedin-predio-v02.png","jardim-secreto":"rosa-arvore-isometrica-v01.png","estudio-criativins":"estudio-render-v02.png","silicin-valley":"silicin-campus-v02.png","departamento-xerifins":"xerifins-departamento-v01.png","inglish-pub":"inglish-pub-render-v02.png","oficina-vendinhas":"feira-roupas-v01.png","torre-mistica":"torre-feiticaria-v02.png","plaza-hispanica":"plaza-arcada-bandeiras-v02.png","academia-marombins":"academia-render-v02.png","binstro":"binstro-render-v02.png","paises-africanos":"aeroporto-internacional-v02.png"};
 // Crop the existing illustration to the head without exposing the map pose or props.
 const facePortraits:Record<string,{width:number;height:number;crop:[number,number,number]}>= {
+  'tati-ribeiro':{width:1024,height:1536,crop:[205,15,570]},
+  'raquel-rocha':{width:1024,height:1536,crop:[355,10,450]},
+  'isabela-guedes':{width:1415,height:1111,crop:[850,65,335]},
+  'flavia-lima':{width:1024,height:1536,crop:[235,15,490]},
+  'pamela-souza':{width:1024,height:1536,crop:[115,20,565]},
   'andressa-araujo':{width:1536,height:1024,crop:[185,0,415]},
   'jackson-alves-mota':{width:1536,height:1024,crop:[995,0,335]},
   'ze-elias-dolfo':{width:1024,height:1536,crop:[210,50,405]},
