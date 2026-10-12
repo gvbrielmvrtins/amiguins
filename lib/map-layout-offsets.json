@@ -253,15 +253,15 @@
     "y": -13.23,
     "scale": 1.15,
     "rotation": 0,
-    "layer": 0,
+    "layer": 3,
     "hidden": false
   },
   "patrick-canuto": {
     "x": 10.31,
-    "y": -0.38,
+    "y": -0.57,
     "scale": 1.25,
     "rotation": 0,
-    "layer": 0,
+    "layer": 3,
     "hidden": false
   },
   "loisi-vieira": {
@@ -1080,7 +1080,7 @@
     "y": -3.35,
     "scale": 0.85,
     "rotation": 0,
-    "layer": -1,
+    "layer": 0,
     "hidden": false
   },
   "silicin-valley/valleyRobot/-18/147": {
@@ -1237,27 +1237,27 @@
   },
   "forest-coast-grass-22/savannaGrass/0/0": {
     "x": 38.92,
-    "y": -99.72,
+    "y": -99.91,
     "scale": 1,
     "rotation": 0,
     "layer": 0,
-    "hidden": false
+    "hidden": true
   },
   "forest-coast-grass-21/savannaGrass/0/0": {
-    "x": 22.42,
-    "y": -100.39,
+    "x": 21.14,
+    "y": -100.18,
     "scale": 1,
     "rotation": 0,
     "layer": 0,
-    "hidden": false
+    "hidden": true
   },
   "forest-coast-grass-19/savannaGrass/0/0": {
-    "x": 50.69,
+    "x": 50.5,
     "y": -33.97,
     "scale": 1,
     "rotation": 0,
     "layer": 0,
-    "hidden": false
+    "hidden": true
   },
   "forest-coast-grass-16/savannaGrass/0/0": {
     "x": 33.05,
@@ -1265,7 +1265,7 @@
     "scale": 1,
     "rotation": 0,
     "layer": 0,
-    "hidden": false
+    "hidden": true
   },
   "forest-coast-grass-14/savannaGrass/0/0": {
     "x": 8.04,
@@ -1273,15 +1273,15 @@
     "scale": 1,
     "rotation": 0,
     "layer": 0,
-    "hidden": false
+    "hidden": true
   },
   "forest-coast-grass-15/savannaGrass/0/0": {
-    "x": 11.72,
+    "x": 11.61,
     "y": 4.03,
     "scale": 1,
     "rotation": 0,
     "layer": 0,
-    "hidden": false
+    "hidden": true
   },
   "forest-coast-grass-15/savannaGrass/0/0::copy:385edd1f-dcb1-4447-8c1d-6f9ed5b48b31": {
     "x": 30.95,
@@ -1289,24 +1289,24 @@
     "scale": 1,
     "rotation": 0,
     "layer": 0,
-    "hidden": false,
+    "hidden": true,
     "sourceId": "forest-coast-grass-15/savannaGrass/0/0"
   },
   "forest-coast-grass-17/savannaGrass/0/0": {
     "x": 8.23,
-    "y": -27.73,
+    "y": -27.82,
     "scale": 1,
     "rotation": 0,
     "layer": 0,
-    "hidden": false
+    "hidden": true
   },
   "forest-coast-grass-18/savannaGrass/0/0": {
-    "x": 48.27,
+    "x": 48.05,
     "y": -44.04,
     "scale": 1,
     "rotation": 0,
     "layer": 0,
-    "hidden": false
+    "hidden": true
   },
   "forest-coast-grass-20/savannaGrass/0/0": {
     "x": 74.52,
@@ -1314,7 +1314,7 @@
     "scale": 1.65,
     "rotation": 0,
     "layer": 0,
-    "hidden": false
+    "hidden": true
   },
   "coastal-forest-10-3": {
     "x": 37.91,
@@ -1399,11 +1399,11 @@
   },
   "forest-coast-grass-1/savannaGrass/0/0": {
     "x": 0,
-    "y": -0.15,
+    "y": -0.33,
     "scale": 1,
     "rotation": 0,
     "layer": 0,
-    "hidden": false
+    "hidden": true
   },
   "forest-coast-grass-1/savannaGrass/0/0::copy:55465360-4379-4968-a02c-b113aff31d38": {
     "x": 15.44,
@@ -1411,7 +1411,7 @@
     "scale": 1,
     "rotation": 0,
     "layer": 0,
-    "hidden": false,
+    "hidden": true,
     "sourceId": "forest-coast-grass-1/savannaGrass/0/0"
   },
   "beach-feature-13/beachPalm/0/0": {
@@ -1428,7 +1428,7 @@
     "scale": 1,
     "rotation": 0,
     "layer": 0,
-    "hidden": false
+    "hidden": true
   },
   "beach-feature-13": {
     "x": -6.23,
@@ -1444,7 +1444,7 @@
     "scale": 1,
     "rotation": 0,
     "layer": 0,
-    "hidden": false
+    "hidden": true
   },
   "forest-coast-grass-3/savannaGrass/0/0": {
     "x": 12.07,
@@ -1452,7 +1452,7 @@
     "scale": 1,
     "rotation": 0,
     "layer": 0,
-    "hidden": false
+    "hidden": true
   },
   "forest-coast-grass-6/savannaGrass/0/0": {
     "x": -24.74,
@@ -1460,7 +1460,7 @@
     "scale": 1,
     "rotation": 0,
     "layer": 0,
-    "hidden": false
+    "hidden": true
   },
   "forest-coast-grass-8/savannaGrass/0/0": {
     "x": -0.84,
@@ -1468,7 +1468,7 @@
     "scale": 1,
     "rotation": 0,
     "layer": 0,
-    "hidden": false
+    "hidden": true
   },
   "forest-coast-grass-9/savannaGrass/0/0": {
     "x": 8.7,
@@ -1476,15 +1476,15 @@
     "scale": 1,
     "rotation": 0,
     "layer": 0,
-    "hidden": false
+    "hidden": true
   },
   "forest-coast-grass-10/savannaGrass/0/0": {
     "x": -4.2,
-    "y": -46.66,
+    "y": -46.75,
     "scale": 1,
     "rotation": 0,
     "layer": 0,
-    "hidden": false
+    "hidden": true
   },
   "forest-coast-grass-11/savannaGrass/0/0": {
     "x": -21.01,
@@ -1492,7 +1492,7 @@
     "scale": 1,
     "rotation": 0,
     "layer": 0,
-    "hidden": false
+    "hidden": true
   },
   "forest-coast-grass-13/savannaGrass/0/0": {
     "x": -75.87,
@@ -1500,7 +1500,7 @@
     "scale": 1,
     "rotation": 0,
     "layer": 0,
-    "hidden": false
+    "hidden": true
   },
   "torre-mistica/torre/0/25": {
     "x": 91.07,
@@ -1575,11 +1575,11 @@
     "hidden": false
   },
   "torre-mistica/tarot/138/-12": {
-    "x": -100.3,
-    "y": -424.1,
-    "scale": 0.9,
+    "x": -85.99,
+    "y": -429.96,
+    "scale": 0.7,
     "rotation": 0,
-    "layer": -1,
+    "layer": 1,
     "hidden": false
   },
   "civic-tower-tree": {
@@ -1794,8 +1794,8 @@
     "hidden": true
   },
   "jardim-secreto/maze": {
-    "x": 0,
-    "y": 0,
+    "x": 0.2,
+    "y": -0.2,
     "scale": 1,
     "rotation": 0,
     "layer": 0,
@@ -1967,7 +1967,7 @@
     "scale": 3.05,
     "rotation": 0,
     "layer": -1,
-    "hidden": false,
+    "hidden": true,
     "sourceId": "ground-grass-organic"
   },
   "secret-garden-ring-2": {
@@ -2421,12 +2421,12 @@
     "hidden": false
   },
   "ground-grass-organic::copy:d8bd4841-879d-4e56-8eb5-b33071e62893": {
-    "x": 182.49,
-    "y": -457.78,
+    "x": 182.18,
+    "y": -518.36,
     "scale": 3.25,
     "rotation": 5,
     "layer": -3,
-    "hidden": false,
+    "hidden": true,
     "sourceId": "ground-grass-organic"
   },
   "filler-north-flowers::copy:94a782cd-dff3-471e-bf34-baf80e76b149": {
@@ -2444,7 +2444,7 @@
     "scale": 1,
     "rotation": 0,
     "layer": 0,
-    "hidden": false
+    "hidden": true
   },
   "valley-forest-grass-15/savannaGrass/0/0::copy:153a5a3b-ec30-4cb1-96ac-fc9b0291dd79": {
     "x": 25,
@@ -2485,7 +2485,7 @@
     "y": -315.14,
     "scale": 3.55,
     "rotation": 0,
-    "layer": -1,
+    "layer": 0,
     "hidden": false,
     "sourceId": "valley-forest-grass-3/savannaGrass/0/0"
   },
@@ -2494,7 +2494,7 @@
     "y": -328.84,
     "scale": 3.55,
     "rotation": 0,
-    "layer": -1,
+    "layer": 4,
     "hidden": false,
     "sourceId": "valley-forest-grass-3/savannaGrass/0/0"
   },
@@ -2767,7 +2767,7 @@
     "y": -88.7,
     "scale": 1.05,
     "rotation": 0,
-    "layer": -1,
+    "layer": 1,
     "hidden": false
   },
   "forest-jacu-1": {
@@ -2775,7 +2775,7 @@
     "y": -853.79,
     "scale": 1,
     "rotation": 0,
-    "layer": 0,
+    "layer": 4,
     "hidden": false
   },
   "forest-jacu-2": {
@@ -2783,7 +2783,7 @@
     "y": -763.26,
     "scale": 1,
     "rotation": 0,
-    "layer": 0,
+    "layer": 4,
     "hidden": false
   },
   "east-cafe-table": {
@@ -2799,7 +2799,7 @@
     "y": -820.4,
     "scale": 0.75,
     "rotation": 0,
-    "layer": 0,
+    "layer": 4,
     "hidden": false
   },
   "forest-jacu-4": {
@@ -2807,7 +2807,7 @@
     "y": -894.02,
     "scale": 0.9,
     "rotation": 0,
-    "layer": 0,
+    "layer": 4,
     "hidden": false
   },
   "forest-jacu-5": {
@@ -2815,7 +2815,7 @@
     "y": -920.95,
     "scale": 1,
     "rotation": 0,
-    "layer": 0,
+    "layer": 4,
     "hidden": false
   },
   "diego-dog": {
@@ -3956,8 +3956,8 @@
     "hidden": false
   },
   "car-suv": {
-    "x": 1178.07,
-    "y": 43.32,
+    "x": 1177.6,
+    "y": 44.27,
     "scale": 1,
     "rotation": 0,
     "layer": 0,
@@ -4213,11 +4213,11 @@
   },
   "ground-grass-organic::copy:7554a651-6393-43f4-8e5b-5c5dec52e5c8": {
     "x": 536.99,
-    "y": 475.82,
+    "y": 476.12,
     "scale": 1.05,
     "rotation": -190,
     "layer": 0,
-    "hidden": false,
+    "hidden": true,
     "sourceId": "ground-grass-organic"
   },
   "ground-grass-organic::copy:fb55b904-b90d-4634-8566-762c11f079d0": {
@@ -4226,16 +4226,16 @@
     "scale": 1.05,
     "rotation": -190,
     "layer": 0,
-    "hidden": false,
+    "hidden": true,
     "sourceId": "ground-grass-organic"
   },
   "ground-grass-organic::copy:d9dd8fb4-47e2-4572-a362-dd4fa6276634": {
     "x": 873.88,
-    "y": 730.93,
+    "y": 731.23,
     "scale": 1.45,
     "rotation": -190,
     "layer": 0,
-    "hidden": false,
+    "hidden": true,
     "sourceId": "ground-grass-organic"
   },
   "coastal-forest-10-7": {
@@ -4885,7 +4885,7 @@
     "y": -0.79,
     "scale": 0.4,
     "rotation": 0,
-    "layer": 0,
+    "layer": 4,
     "hidden": false
   },
   "beach-feature-11/beachBall/0/0": {
@@ -4920,16 +4920,16 @@
     "scale": 1,
     "rotation": 0,
     "layer": -2,
-    "hidden": false,
+    "hidden": true,
     "sourceId": "cottage-stone-path"
   },
   "cottage-stone-path::copy:aeed0d5d-5ef5-4dd9-b921-b3e94e8b36b7": {
-    "x": 962.31,
+    "x": 962.43,
     "y": -432.65,
     "scale": 1,
     "rotation": 0,
     "layer": -2,
-    "hidden": false,
+    "hidden": true,
     "sourceId": "cottage-stone-path"
   },
   "cottage-stone-path::copy:0ac47f4d-f60d-4e7f-9800-123226b44913": {
@@ -4937,8 +4937,8 @@
     "y": -337.87,
     "scale": 1,
     "rotation": 0,
-    "layer": -2,
-    "hidden": false,
+    "layer": 1,
+    "hidden": true,
     "sourceId": "cottage-stone-path"
   },
   "cottage-stone-path::copy:eaf59d6d-0939-4338-94a8-a17d7e42d610": {
@@ -5219,7 +5219,7 @@
     "y": -106.54,
     "scale": 1.4,
     "rotation": 0,
-    "layer": 0,
+    "layer": 4,
     "hidden": false
   },
   "odete-roitman-helicopter-nonplayable": {
@@ -5271,11 +5271,11 @@
     "hidden": false
   },
   "silent-observer-tree": {
-    "x": 1092.29,
-    "y": -316.57,
+    "x": 1084.11,
+    "y": -327.84,
     "scale": 1.15,
     "rotation": 0,
-    "layer": 1,
+    "layer": 3,
     "hidden": false
   },
   "silent-observer-mug": {
@@ -5316,7 +5316,7 @@
     "y": -81.32,
     "scale": 0.9,
     "rotation": 0,
-    "layer": 1,
+    "layer": 4,
     "hidden": false,
     "sourceId": "snake-plant-pot"
   },
@@ -5325,7 +5325,7 @@
     "y": -129.56,
     "scale": 0.8,
     "rotation": 0,
-    "layer": 0,
+    "layer": 4,
     "hidden": false,
     "sourceId": "snake-plant-pot"
   },
@@ -5380,6 +5380,227 @@
   "ze-elias-dolfo": {
     "x": 13.68,
     "y": -5.38,
-    "scale": 1.25
+    "scale": 1.25,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
+  },
+  "jackson-alves-mota": {
+    "x": 1442.28,
+    "y": -344.63,
+    "scale": 1.15,
+    "rotation": 0,
+    "layer": 1,
+    "hidden": false
+  },
+  "andressa-araujo": {
+    "x": 1442.58,
+    "y": -344.56,
+    "scale": 1.15,
+    "rotation": 0,
+    "layer": -1,
+    "hidden": false
+  },
+  "jorge-family-nonplayable": {
+    "x": 1442.37,
+    "y": -344.69,
+    "scale": 1.15,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
+  },
+  "ground-grass-organic::copy:71c93959-9df2-43c4-bb52-445ff9935c7e": {
+    "x": 898.88,
+    "y": 756.23,
+    "scale": 1.45,
+    "rotation": -190,
+    "layer": 0,
+    "hidden": true,
+    "sourceId": "ground-grass-organic"
+  },
+  "forest-composite": {
+    "x": 0,
+    "y": -0.4,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 1,
+    "hidden": false
+  },
+  "jardim-secreto": {
+    "x": 0,
+    "y": 0,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 2,
+    "hidden": false
+  },
+  "forest-coast-grass-2/savannaGrass/0/0": {
+    "x": -0.44,
+    "y": -23.6,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": true
+  },
+  "valley-forest-grass-11/savannaGrass/0/0": {
+    "x": 0,
+    "y": 0,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": true
+  },
+  "valley-forest-grass-10/savannaGrass/0/0": {
+    "x": -0.27,
+    "y": 0.27,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": true
+  },
+  "valley-forest-grass-8/savannaGrass/0/0": {
+    "x": 0,
+    "y": 0,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": true
+  },
+  "valley-forest-grass-7/savannaGrass/0/0": {
+    "x": 0,
+    "y": -0.13,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": true
+  },
+  "valley-forest-grass-6/savannaGrass/0/0": {
+    "x": 0,
+    "y": 0,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": true
+  },
+  "valley-forest-grass-5/savannaGrass/0/0": {
+    "x": 0,
+    "y": 0,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": true
+  },
+  "valley-forest-grass-4/savannaGrass/0/0": {
+    "x": 0,
+    "y": 0,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": true
+  },
+  "valley-forest-grass-0/savannaGrass/0/0": {
+    "x": 0,
+    "y": 0,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": true
+  },
+  "valley-forest-grass-1/savannaGrass/0/0": {
+    "x": 0,
+    "y": 0,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": true
+  },
+  "valley-forest-grass-9/savannaGrass/0/0": {
+    "x": 0,
+    "y": 0,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": true
+  },
+  "valley-forest-grass-12/savannaGrass/0/0": {
+    "x": 0,
+    "y": 0,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": true
+  },
+  "valley-forest-grass-13/savannaGrass/0/0": {
+    "x": 0,
+    "y": 0,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": true
+  },
+  "forest-coast-grass-7/savannaGrass/0/0": {
+    "x": 0,
+    "y": 0,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": true
+  },
+  "forest-coast-grass-23/savannaGrass/0/0": {
+    "x": 0,
+    "y": 0,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": true
+  },
+  "forest-coast-grass-24/savannaGrass/0/0": {
+    "x": 0,
+    "y": 0,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": true
+  },
+  "forest-coast-grass-25/savannaGrass/0/0": {
+    "x": 0,
+    "y": 0,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": true
+  },
+  "forest-coast-grass-26/savannaGrass/0/0": {
+    "x": 0,
+    "y": 0.16,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": true
+  },
+  "forest-coast-grass-27/savannaGrass/0/0": {
+    "x": 0.21,
+    "y": 0,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": true
+  },
+  "valley-forest-grass-3/savannaGrass/0/0::copy:7ccc79e2-b6e4-4e83-b383-b31036a6676b": {
+    "x": 474,
+    "y": -320.79,
+    "scale": 1.95,
+    "rotation": 0,
+    "layer": 4,
+    "hidden": false,
+    "sourceId": "valley-forest-grass-3/savannaGrass/0/0"
+  },
+  "forest-composite-front": {
+    "x": 0,
+    "y": -0.4,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 3,
+    "hidden": false
   }
 }

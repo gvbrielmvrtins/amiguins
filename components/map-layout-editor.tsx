@@ -6,10 +6,13 @@ export type LayoutElement={x:number;y:number;scale?:number;rotation?:number;laye
 export type LayoutOffsets=Record<string,LayoutElement>;
 type EditorState={enabled:boolean;offsets:LayoutOffsets;selected:string|null;select:(id:string)=>void;move:(id:string,x:number,y:number,begin?:boolean)=>void};
 export const MapElementScope=createContext('map');
+const MapElementLock=createContext(false);
 export const MapEditorContext=createContext<EditorState>({enabled:false,offsets:{},selected:null,select:()=>{},move:()=>{}});
 type SelectionBounds={x:number;y:number;width:number;height:number};
 export function MovableMapElement({id,children,locked=false,selectionBounds}:{id:string;children:ReactNode;locked?:boolean;selectionBounds?:SelectionBounds}){
   const editor=useContext(MapEditorContext);
+  const inheritedLock=useContext(MapElementLock);
+  locked=locked||inheritedLock;
   return <><MovableInstance id={id} locked={locked} selectionBounds={selectionBounds}>{children}</MovableInstance>{Object.entries(editor.offsets).filter(([,p])=>p.sourceId===id).map(([copyId])=><MovableInstance key={copyId} id={copyId} duplicate locked={locked} selectionBounds={selectionBounds}>{children}</MovableInstance>)}</>;
 }
 export function MapLayoutLayers({front}:{front:boolean}){
@@ -50,7 +53,7 @@ function MovableInstance({id,children,duplicate=false,locked=false,selectionBoun
       onKeyDown={e=>{const delta={ArrowLeft:[-1,0],ArrowRight:[1,0],ArrowUp:[0,-1],ArrowDown:[0,1]}[e.key];if(!delta)return;e.preventDefault();e.stopPropagation();editor.select(id);editor.move(id,offset.x+delta[0]*(e.shiftKey?10:1),offset.y+delta[1]*(e.shiftKey?10:1),true);}}>
       <rect x={bounds.x-2} y={bounds.y-2} width={bounds.width+4} height={bounds.height+4} fill="transparent" stroke="#3774FA" strokeWidth="1.5" vectorEffect="non-scaling-stroke" pointerEvents="all"/>
     </g>}
-    <MapElementScope.Provider value={id}><g ref={art} pointerEvents={editor.enabled?"none":undefined}>{children}</g></MapElementScope.Provider>
+    <MapElementScope.Provider value={id}><MapElementLock.Provider value={locked}><g ref={art} pointerEvents={editor.enabled?"none":undefined}>{children}</g></MapElementLock.Provider></MapElementScope.Provider>
   </g>;
   return <><g ref={anchor} data-layout-element={id}>{portal?null:content}</g>{portal&&createPortal(<g transform={portal.matrix}>{content}</g>,portal.target)}</>;
 }

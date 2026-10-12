@@ -10,7 +10,8 @@ import {MovableMapElement,MapLayoutLayers} from './map-layout-editor';
 import NorthMetropolis, {MetropolisTransitionGround} from './north-metropolis';
 import NorthMountain from './north-mountain';
 import NorthDesert from './north-desert';
-import {northForestTrees,forestCoastPlants} from '@/lib/north-forest';
+import {forestCoastPlants} from '@/lib/north-forest';
+import forestComposite from '@/lib/forest-composite.json';
 import MetroTrain, {MetroGround,MetroUnderpass} from './metro-line';
 import MapStreets from './map-streets';
 import PrideParade from './pride-parade';
@@ -46,7 +47,6 @@ import { pilotLandscape } from '@/lib/pilot-landscape';
 import PilotLandscapeProp from '@/components/pilot-landscape-prop';
 
 const mainland = 'M-5000-5000H8000V8000H-5000Z';
-const forestTreeIds=new Set(northForestTrees.map(tree=>tree.id));
 export default function ModularMap({ selected, onSelect }: { selected: string | null; onSelect: (id: string, keyboard?: boolean) => void }) {
   return <svg className="modular-map" viewBox="380 -70 2320 1800" aria-label="mapa da amiguINlândia" aria-describedby="modular-map-description">
 
@@ -90,6 +90,10 @@ export default function ModularMap({ selected, onSelect }: { selected: string | 
       </g>
     </g>
     </g>
+    <MovableMapElement id="forest-composite" locked>
+      <image data-forest-composite="back" href={forestComposite.back.file} x={forestComposite.x} y={forestComposite.y} width={forestComposite.width} height={forestComposite.height} pointerEvents="none" aria-label="Árvores de trás da floresta"/>
+    </MovableMapElement>
+    <MovableMapElement id="forest-composite-front" locked><image data-forest-composite="front" href={forestComposite.front.file} x={forestComposite.x} y={forestComposite.y} width={forestComposite.width} height={forestComposite.height} pointerEvents="none" aria-label="Árvores da frente da floresta"/></MovableMapElement>
     <MovableMapElement id="north-metropolis" locked><NorthMetropolis/></MovableMapElement>
     <MetroUnderpass/>
     <MovableMapElement id="north-mountain" locked><NorthMountain/></MovableMapElement>
@@ -133,7 +137,7 @@ export default function ModularMap({ selected, onSelect }: { selected: string | 
     <g transform="translate(1095.588457269 1459)" pointerEvents="none" aria-label="Buraco que Paula está cavando"><ellipse cx="-7" cy="0" rx="11" ry="5" fill="#AB7F48" stroke="#CDA260" strokeWidth="2"/><path d="M-15 0Q-7-5 2 0" fill="none" stroke="#735733" strokeWidth="2"/><path d="M-22 3Q-18-5-13 1L-10 5Z" fill="#D8B87B" stroke="#BE965B" strokeWidth="1"/></g>
     {savannaProps.filter(item=>item.kind==='savannaOasis').map(item=><SavannaProp key={item.id} item={item}/>)}
     <WestGreenProps/>
-    {[...[...savannaProps.filter(item=>item.kind!=='savannaOasis'),...forestCoastPlants].map(item=>({...item,type: 'savanna' as const})), ...forestClearingItems.map(item=>({...item,type:'forest-clearing' as const})), ...[...beachProps,...paulaBeachProps].map(item=>({...item,type: 'beach' as const})), ...mapCharacters.map(item=>({...item,type: 'character' as const})), ...[...gardenStudyProps.filter(item=>!item.id.startsWith('secret-')&&!item.id.startsWith('north-')),...northForestTrees].map(item=>({type: 'garden' as const,...item})), ...modularDestinations.map(destination => ({ type: 'destination' as const, ...destination })), ...eastFillers.map(item=>({type: 'east-filler' as const,...item})), ...fillerBuildings.map(item => ({ type: 'filler' as const, ...item })), ...[...communityLandscape, ...commerceLandscape, ...pilotLandscape, ...fillerLandscape.filter(item=>item.id!=='filler-park-flowers'), ...civicLandscape, ...eastLandscape].map(item => ({ type: 'landscape' as const, ...item }))].sort((a,b) => (a.id==='ze-elias-dolfo'?5000:a.id==='luara-nardelli'?1201:a.id==='naiane-de-mello'?617:a.id==='henrique-hardman'?616:a.id==='patrick-canuto'?3085:a.id==='loisi-vieira'?3086:a.id==='vagao-feminino'?615:a.id==='taverna-joguins'?a.x+a.y-200:a.x+a.y)-(b.id==='ze-elias-dolfo'?5000:b.id==='luara-nardelli'?1201:b.id==='naiane-de-mello'?617:b.id==='henrique-hardman'?616:b.id==='patrick-canuto'?3085:b.id==='loisi-vieira'?3086:b.id==='vagao-feminino'?615:b.id==='taverna-joguins'?b.x+b.y-200:b.x+b.y)).map(destination => {
+    {[...[...savannaProps.filter(item=>item.kind!=='savannaOasis'),...forestCoastPlants].map(item=>({...item,type: 'savanna' as const})), ...forestClearingItems.map(item=>({...item,type:'forest-clearing' as const})), ...[...beachProps,...paulaBeachProps].map(item=>({...item,type: 'beach' as const})), ...mapCharacters.map(item=>({...item,type: 'character' as const})), ...[...gardenStudyProps.filter(item=>!item.id.startsWith('secret-')&&!item.id.startsWith('north-'))].map(item=>({type: 'garden' as const,...item})), ...modularDestinations.map(destination => ({ type: 'destination' as const, ...destination })), ...eastFillers.map(item=>({type: 'east-filler' as const,...item})), ...fillerBuildings.map(item => ({ type: 'filler' as const, ...item })), ...[...communityLandscape, ...commerceLandscape, ...pilotLandscape, ...fillerLandscape.filter(item=>item.id!=='filler-park-flowers'), ...civicLandscape, ...eastLandscape].map(item => ({ type: 'landscape' as const, ...item }))].sort((a,b) => (a.id==='ze-elias-dolfo'?5000:a.id==='luara-nardelli'?1201:a.id==='naiane-de-mello'?617:a.id==='henrique-hardman'?616:a.id==='patrick-canuto'?3085:a.id==='loisi-vieira'?3086:a.id==='vagao-feminino'?615:a.id==='taverna-joguins'?a.x+a.y-200:a.x+a.y)-(b.id==='ze-elias-dolfo'?5000:b.id==='luara-nardelli'?1201:b.id==='naiane-de-mello'?617:b.id==='henrique-hardman'?616:b.id==='patrick-canuto'?3085:b.id==='loisi-vieira'?3086:b.id==='vagao-feminino'?615:b.id==='taverna-joguins'?b.x+b.y-200:b.x+b.y)).map(destination => {
       const render=()=>{
       if (destination.type === 'forest-clearing') return <ForestClearingProp item={destination}/>;
       if (destination.type === 'savanna') return <SavannaProp key={destination.id} item={destination}/>;
@@ -192,7 +196,7 @@ export default function ModularMap({ selected, onSelect }: { selected: string | 
         </g>
       </g>;
       };
-      return <MovableMapElement key={destination.id} id={destination.id} locked={destination.id==='colabin'||forestTreeIds.has(destination.id)}>{render()}</MovableMapElement>;
+      return <MovableMapElement key={destination.id} id={destination.id} locked={destination.id==='colabin'||destination.id==='jardim-secreto'}>{render()}</MovableMapElement>;
     })}
     <MovableMapElement id="snake-plant-pot"><image href="/images/modular/vaso-espada-sao-jorge-v01.png" x="1690" y="719" width="50" height="37.48" pointerEvents="none"/></MovableMapElement>
     <MovableMapElement id="totem-eu-amo-amiguins"><image href="/images/modular/totem-eu-amo-amiguins-v02.png" x="1190" y="1299" width="100" height="45" pointerEvents="none"/></MovableMapElement>

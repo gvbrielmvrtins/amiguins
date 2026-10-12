@@ -2,7 +2,7 @@
 
 import { useState, useRef,useEffect, useLayoutEffect, useCallback, type TouchEvent, type PointerEvent } from 'react';
 import {boundedScroll} from '@/lib/map-camera';
-import { ArrowUpRight, Check, ChevronDown, HelpCircle, Maximize, Minus, MousePointer2, PawPrint, Plus, RotateCcw, Sparkles, Store, Users, X } from 'lucide-react';
+import { ArrowUpRight, Check, ChevronDown, HelpCircle, MousePointer2, PawPrint, RotateCcw, Sparkles, Store, Users, X } from 'lucide-react';
 import dynamic from 'next/dynamic';
 import OptimizedMap from './optimized-map';
 import type tileManifest from '@/lib/map-tiles-manifest.json';
@@ -65,7 +65,7 @@ export default function ExplorationGame({optimized=false,hd=false,hdManifest}:{o
   const [editing,setEditing]=useState(false);
   const [layoutOffsets,setLayoutOffsets]=useState<LayoutOffsets>(savedLayoutOffsets);
   const [editingSelection,setEditingSelection]=useState<string|null>(null);
-  useEffect(()=>{if(editingSelection==='north-metropolis'||editingSelection==='north-mountain')setEditingSelection(null);},[editingSelection]);
+  useEffect(()=>{if(editingSelection==='north-metropolis'||editingSelection==='north-mountain'||editingSelection==='forest-composite'||editingSelection==='forest-composite-front'||editingSelection==='jardim-secreto'||editingSelection?.startsWith('jardim-secreto/'))setEditingSelection(null);},[editingSelection]);
   const [layoutReady,setLayoutReady]=useState(false);
   const layoutHistory=useRef<LayoutOffsets[]>([]);
   useEffect(()=>{
@@ -74,6 +74,30 @@ export default function ExplorationGame({optimized=false,hd=false,hdManifest}:{o
       const valid:LayoutOffsets={...savedLayoutOffsets};for(const [id,p] of Object.entries(parsed)){const point=p as LayoutElement;if(point&&Number.isFinite(point.x)&&Number.isFinite(point.y))valid[id]={x:point.x,y:point.y,scale:Number.isFinite(point.scale)?Math.max(.1,Math.min(4,point.scale!)):1,rotation:Number.isFinite(point.rotation)?point.rotation!%360:0,layer:Number.isFinite(point.layer)?Math.max(-100,Math.min(100,Math.round(point.layer!))):0,hidden:point.hidden===true,...(typeof point.sourceId==='string'?{sourceId:point.sourceId}:{})};}setLayoutOffsets(valid);
     }catch{}setLayoutReady(true);
   },[localEditor]);
+  useEffect(()=>{
+    if(!layoutReady)return;
+    const gardenLayer=Math.max(1,(layoutOffsets['forest-composite']?.layer??0)+1);
+    const updates:LayoutOffsets={};
+    const front=layoutOffsets['forest-composite-front']??{x:0,y:0};
+    const forest=layoutOffsets['forest-composite']??{x:0,y:0};
+    if((front.layer??0)!==gardenLayer+1||(['x','y','scale','rotation','hidden'] as const).some(key=>front[key]!==forest[key]))updates['forest-composite-front']={...forest,layer:gardenLayer+1};
+    const garden=layoutOffsets['jardim-secreto']??{x:0,y:0};
+    if((garden.layer??0)<gardenLayer)updates['jardim-secreto']={...garden,layer:gardenLayer};
+    for(const [id,offset] of Object.entries(layoutOffsets)){
+      if(id.startsWith('jardim-secreto/')&&(offset.layer??0)!==0&&(offset.layer??0)<gardenLayer)updates[id]={...offset,layer:gardenLayer};
+    }
+    for(let i=1;i<=5;i++){
+      const id=`forest-jacu-${i}`,offset=layoutOffsets[id]??{x:0,y:0};
+      if((offset.layer??0)<gardenLayer+2)updates[id]={...offset,layer:gardenLayer+2};
+    }
+    for(const id of ['snake-plant-pot::copy:99b611b0-5e9e-4f48-8984-8168be4fc47f','snake-plant-pot::copy:5a33e3b9-56c6-4a35-b2f5-d036ea8acca9']){
+      const offset=layoutOffsets[id];
+      if(offset&&(offset.layer??0)<gardenLayer+2)updates[id]={...offset,layer:gardenLayer+2};
+    }
+    const melissa=layoutOffsets['melissa-augustin']??{x:0,y:0};
+    if((melissa.layer??0)<gardenLayer+2)updates['melissa-augustin']={...melissa,layer:gardenLayer+2};
+    if(Object.keys(updates).length)setLayoutOffsets(prev=>({...prev,...updates}));
+  },[layoutOffsets,layoutReady]);
   useEffect(()=>{if(localEditor&&layoutReady){try{localStorage.setItem('amiguins-map-layout-v1',JSON.stringify(layoutOffsets));}catch{}}},[layoutOffsets,layoutReady,localEditor]);
   function moveElement(id:string,x:number,y:number,begin=false){
     if(begin){layoutHistory.current.push(layoutOffsets);if(layoutHistory.current.length>100)layoutHistory.current.shift();}
@@ -314,7 +338,6 @@ export default function ExplorationGame({optimized=false,hd=false,hdManifest}:{o
             <div className="map-world modular-world" style={{width:`${mapScale*100}%`,minWidth:`${740*mapScale}px`}}>{optimized?<OptimizedMap hd={hd} previewManifest={hdManifest} onSelect={(id,keyboard)=>{if(keyboard||!didDrag.current){const target=targets.find(t=>t.id===id);if(target?.category === 'people')discover(target);else if(target){locateDestination(id);showMessage(`Você está em ${target.name}.`);}}}}/>:<ModularMap selected={selected} onSelect={(id,keyboard)=>{if(keyboard||!didDrag.current){const target=targets.find(t=>t.id===id);if(target?.category === 'people')discover(target);else if(target){locateDestination(id);showMessage(`Você está em ${target.name}.`);}}}}/>}</div>
           </div>
 
-          <div className="map-controls"><button aria-label="Aumentar zoom" disabled={zoom >= 5} onClick={() => changeZoom(Math.min(5, zoom + .25))}><Plus size={19} /></button><span>{Math.round(zoom * 100)}%</span><button aria-label="Diminuir zoom" disabled={zoom <= .25} onClick={() => changeZoom(Math.max(.25, zoom - .25))}><Minus size={19} /></button><div /><button aria-label="Ajustar mapa à tela" onClick={() => { setZoom(1); viewport.current?.scrollTo({ top: 0, left: 0 }); }}><Maximize size={17} /></button></div>
           {<div className="map-actions"><button className="help-button" aria-label="Como jogar" onClick={() => help.current?.showModal()}><HelpCircle size={17} /></button><button className="help-button" aria-label="Recomeçar" onClick={() => reset.current?.showModal()}><RotateCcw size={17} /></button></div>}
 
           {message && <div className={`game-message ${complete ? 'complete' : ''}`} role="status"><Sparkles size={19} /><span>{complete ? `Você encontrou todas as ${mapCharacters.length} pessoas da vila! Que tal explorar de novo?` : message}</span><button aria-label="Fechar mensagem" onClick={() => setMessage('')}><X size={15} /></button></div>}
@@ -326,4 +349,3 @@ export default function ExplorationGame({optimized=false,hd=false,hdManifest}:{o
     <dialog ref={reset} className="game-dialog"><h2>Mais uma volta?</h2><p>As descobertas desta rodada serão apagadas e as pessoas poderão ser encontradas novamente.</p><div className="dialog-actions"><button onClick={() => reset.current?.close()}>Continuar jogando</button><button className="dialog-primary" onClick={() => { setFound([]); setSelected(null); setMessage(''); setZoom(1); reset.current?.close(); }}>Recomeçar</button></div></dialog>
   </main></MapEditorContext.Provider>;
 }
-
