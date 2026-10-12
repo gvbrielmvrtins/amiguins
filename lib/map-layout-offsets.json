@@ -2903,7 +2903,7 @@
     "y": -155.88,
     "scale": 1,
     "rotation": 0,
-    "layer": 0,
+    "layer": -1,
     "hidden": false
   },
   "linkedin-building-reimport-v02": {
@@ -5067,7 +5067,7 @@
   "job-seekers-queue": {
     "x": -10.84,
     "y": -3.46,
-    "scale": 0.85,
+    "scale": 0.75,
     "rotation": 0,
     "layer": 1,
     "hidden": false
@@ -5207,9 +5207,9 @@
     "hidden": false
   },
   "ingrid-lima": {
-    "x": 620.41,
-    "y": 90.83,
-    "scale": 1.25,
+    "x": 611.65,
+    "y": 83.32,
+    "scale": 1.15,
     "rotation": 0,
     "layer": 1,
     "hidden": false
@@ -5257,62 +5257,129 @@
   "eric-barros": {
     "x": -520.53,
     "y": -500.97,
-    "scale": 1.65
+    "scale": 1.65,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "silent-observer-newspaper": {
     "x": 151.66,
-    "y": -328.53
+    "y": -328.53,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "silent-observer-tree": {
     "x": 1092.29,
     "y": -316.57,
+    "scale": 1.15,
+    "rotation": 0,
     "layer": 1,
-    "scale": 1.15
+    "hidden": false
   },
   "silent-observer-mug": {
-    "x": 958.77,
-    "y": -219.42,
-    "layer": 1,
-    "scale": 1.15
+    "x": 1006.29,
+    "y": -274.39,
+    "scale": 1.05,
+    "rotation": 0,
+    "layer": -2,
+    "hidden": false
   },
   "tiago-vieira": {
     "x": -69.24,
     "y": -65.6,
     "scale": 1.15,
-    "layer": 1
+    "rotation": 0,
+    "layer": 1,
+    "hidden": false
   },
   "snake-plant-pot": {
     "x": -27.92,
     "y": -24.48,
-    "layer": 0
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "snake-plant-pot::copy:0fd6b89c-186d-4cdb-9085-1d316fc67f56": {
     "x": 57.68,
     "y": 28.32,
+    "scale": 1,
+    "rotation": 0,
     "layer": 0,
-    "sourceId": "snake-plant-pot",
-    "hidden": false
+    "hidden": false,
+    "sourceId": "snake-plant-pot"
   },
   "snake-plant-pot::copy:99b611b0-5e9e-4f48-8984-8168be4fc47f": {
     "x": 653.31,
     "y": -81.32,
+    "scale": 0.9,
+    "rotation": 0,
     "layer": 1,
-    "sourceId": "snake-plant-pot",
     "hidden": false,
-    "scale": 0.9
+    "sourceId": "snake-plant-pot"
   },
   "snake-plant-pot::copy:5a33e3b9-56c6-4a35-b2f5-d036ea8acca9": {
     "x": 666.85,
     "y": -129.56,
+    "scale": 0.8,
+    "rotation": 0,
     "layer": 0,
-    "sourceId": "snake-plant-pot",
     "hidden": false,
-    "scale": 0.8
+    "sourceId": "snake-plant-pot"
   },
   "totem-eu-amo-amiguins": {
     "x": -4.64,
     "y": 21.49,
+    "scale": 1.8,
     "rotation": 0,
-    "scale": 1.8
+    "layer": 0,
+    "hidden": false
+  },
+  "eduardo-mesquita": {
+    "x": 0,
+    "y": 0,
+    "scale": 1.05,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
+  },
+  "gabriela-ribeiro": {
+    "x": 39.44,
+    "y": -692.47,
+    "scale": 1.1,
+    "rotation": 0,
+    "layer": 1,
+    "hidden": false
+  },
+  "bruna-lucas": {
+    "x": 39.51,
+    "y": -692.27,
+    "scale": 1.1,
+    "rotation": 0,
+    "layer": 1,
+    "hidden": false
+  },
+  "jakeline-sakamoto": {
+    "x": 62.04,
+    "y": -340.27,
+    "scale": 1.2,
+    "rotation": 0,
+    "layer": 1,
+    "hidden": false
+  },
+  "clara-marques": {
+    "x": 481.21,
+    "y": -359.68,
+    "scale": 1.15,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
+  },
+  "ze-elias-dolfo": {
+    "x": 13.68,
+    "y": -5.38,
+    "scale": 1.25
   }
 }
