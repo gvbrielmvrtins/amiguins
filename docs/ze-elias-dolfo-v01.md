@@ -1,0 +1,13 @@
+# Zé Elias Dolfo
+
+Editor-chefe encontrável na porta do pINgos nos INs. Gorro cinza, bigode, camisa laranja estampada, shorts claros e pena volumosa. Mãos na cintura. Menu em ordem alfabética. Prévia HD não regenerada.
+
+Arquivo: `public/images/characters/ze-elias-dolfo-v01.png`, 1024 × 1536, transparente. Referências de identidade: as duas fotos fornecidas em `/Users/dolfo/Downloads/Requires attention/`. Referências de estilo: Nathan v01 e Gabriel v02.
+
+## Prompt inicial
+
+Create single full body 2D cartoon game sprite of adult man Zé Elias Dolfo, editor-in-chief. First TWO photos are his own facial identity and clothing: warm fair skin, broad smiling face, dark thick mustache, dark eyebrows, tiny subtle stubble but no full beard, gray rolled fisherman knit beanie covering hair. Orange long-sleeve collared knit shirt with striking black and cream looping geometric striped patterns exactly inspired by photo; cream shorts, visible simplified leg tattoos and casual white sneakers. References 3 Nathan and 4 Gabriel are STRICT art style: oversized head, compact body, big oval expressive cartoon eyes with simple black pupils and white highlights, broad rounded simple cartoon nose, thick black outlines, flat colors and controlled cel shadows. NO realistic face texture, realistic lips or photorealistic shading. Preserve Zé's own face and mustache; do not copy other characters' identity. Facing viewer, cheerful confident editor stance with BOTH hands resting on hips and elbows projecting outward. While his right hand stays at his hip it grips the slender stem of ONE comically enormous writer's quill: extravagant wide fluffy feather extending diagonally up beside him, voluminous curling feathery silhouette, bright turquoise and royal blue with purple accents, gold nib. Feather must be unmistakably exaggerated, almost as tall as upper body, not covering face. No microphone. Exactly two hands, two legs, complete sprite head to feet and entire quill visible, transparent background, no scene, no labels.
+
+## Ajuste da pose
+
+Edit ONLY the right arm holding the quill in this cartoon sprite. Both hands must rest firmly ON HIS HIPS in a hands-on-hips pose. The hand currently holding feather higher beside chest must move down to the right waist/hip at the same height as opposite hand. Bend elbow outward, rest gripping knuckles against hip; hold the quill stem in that hand while it rests on waist, feather rises beside shoulder. Keep enormous colorful feather fully visible. Preserve EXACT face, beanie, mustache, hairstyle, eyes, clothing pattern, shorts, tattoos, shoes, left arm, overall proportions, canvas and transparency. Do not change facial style or add anything. Transparent background.

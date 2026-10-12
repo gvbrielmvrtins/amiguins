@@ -13,8 +13,9 @@ export default function LoadingSquare3D() {
     let renderer: THREE.WebGLRenderer;
     try { renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true }); }
     catch { setUnavailable(true); return; }
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-    renderer.shadowMap.enabled = true;
+    const touchDevice = window.matchMedia('(pointer: coarse)').matches;
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, touchDevice ? 1 : 2));
+    renderer.shadowMap.enabled = !touchDevice;
     renderer.shadowMap.type = THREE.PCFShadowMap;
     renderer.setClearColor(0x000000, 0);
     element.appendChild(renderer.domElement);
@@ -23,7 +24,7 @@ export default function LoadingSquare3D() {
     camera.position.set(0, 9, 12); camera.lookAt(0, .55, 0);
     scene.add(new THREE.HemisphereLight('#fff8ee', '#8b9a96', 1.25));
     const sun = new THREE.DirectionalLight('#fff5e8', 1.65);
-    sun.position.set(-3, 9, 5); sun.castShadow = true;
+    sun.position.set(-3, 9, 5); sun.castShadow = !touchDevice;
     sun.shadow.mapSize.set(1024, 1024);
     Object.assign(sun.shadow.camera, { left: -5, right: 5, top: 5, bottom: -5 });
     sun.shadow.normalBias = .04; scene.add(sun);

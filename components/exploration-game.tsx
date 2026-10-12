@@ -5,6 +5,7 @@ import {boundedScroll} from '@/lib/map-camera';
 import { ArrowUpRight, Check, ChevronDown, HelpCircle, Maximize, Minus, MousePointer2, PawPrint, Plus, RotateCcw, Sparkles, Store, Users, X } from 'lucide-react';
 import dynamic from 'next/dynamic';
 import OptimizedMap from './optimized-map';
+import type tileManifest from '@/lib/map-tiles-manifest.json';
 const ModularMap=dynamic(()=>import('@/components/modular-map'));
 import {MapEditorContext,type LayoutOffsets,type LayoutElement} from './map-layout-editor';
 import savedLayoutOffsets from '@/lib/map-layout-offsets.json';
@@ -21,10 +22,18 @@ const targets:Target[]=[...mapCharacters, ...modularDestinations.map<Target>(d=>
 const destinationPortraits:Record<string,string>={"pingos-nos-ins":"pingos-nos-ins-redacao-v04.png","east-cafe":"cafe-apoio-render-v01.png","colabin":"colabin-laboratorio-v02.png","vagao-feminino":"metro-vagao-feminino-v04.png","livrinhoteca":"livrinhoteca-isometrico-v01.png","cineminha":"cineminha-isometrico-v01.png","mercado-vagas":"mercado-vagas-isometrico-v01.png","prefeintura":"prefeitura-render-v02.png","taverna-joguins":"taverna-medieval-games-v04.png","pracinha":"praca-central-circular-v01.png","espacin-coloridin":"coloridin-arco-iris-frontal-v02.png","linkedin":"linkedin-predio-v02.png","jardim-secreto":"rosa-arvore-isometrica-v01.png","estudio-criativins":"estudio-render-v02.png","silicin-valley":"silicin-campus-v02.png","departamento-xerifins":"xerifins-departamento-v01.png","inglish-pub":"inglish-pub-render-v02.png","oficina-vendinhas":"feira-roupas-v01.png","torre-mistica":"torre-feiticaria-v02.png","plaza-hispanica":"plaza-arcada-bandeiras-v02.png","academia-marombins":"academia-render-v02.png","binstro":"binstro-render-v02.png","paises-africanos":"aeroporto-internacional-v02.png"};
 // Crop the existing illustration to the head without exposing the map pose or props.
 const facePortraits:Record<string,{width:number;height:number;crop:[number,number,number]}>= {
+  'andressa-araujo':{width:1536,height:1024,crop:[185,0,415]},
+  'jackson-alves-mota':{width:1536,height:1024,crop:[995,0,335]},
+  'ze-elias-dolfo':{width:1024,height:1536,crop:[210,50,405]},
+  'clara-marques':{width:1024,height:1536,crop:[240,10,550]},
+  'bruna-lucas':{width:1024,height:1536,crop:[65,80,450]},
+  'gabriela-ribeiro':{width:1024,height:1536,crop:[525,80,450]},
+  'eduardo-mesquita':{width:1024,height:1536,crop:[275,10,470]},
+  'jakeline-sakamoto':{width:1024,height:1536,crop:[255,30,505]},
   'tiago-vieira':{width:1145,height:1374,crop:[375,30,370]},
   'eric-barros':{width:1024,height:1536,crop:[300,0,430]},
   'melissa-augustin':{width:1024,height:1536,crop:[170,15,470]},
-  'ingrid-lima':{width:1024,height:1536,crop:[45,65,520]},
+  'ingrid-lima':{width:1166,height:1349,crop:[120,140,540]},
   'rebeca-araujo':{width:1024,height:1536,crop:[250,15,590]},
   'adriane-costa':{width:1024,height:1536,crop:[235,60,500]},
   'maria-fernanda-figueiroa':{width:1024,height:1536,crop:[340,45,390]},
@@ -49,7 +58,7 @@ function Portrait({target,optimized=false}:{target:Target;optimized?:boolean}){
   return <img className="portrait" aria-hidden="true" alt="" src={`/images/modular/${destinationPortraits[target.id]}`} style={{objectFit:'contain'}}/>;
 }
 
-export default function ExplorationGame({optimized=false}:{optimized?:boolean}) {
+export default function ExplorationGame({optimized=false,hd=false,hdManifest}:{optimized?:boolean;hd?:boolean;hdManifest?:typeof tileManifest}) {
 
 
   const localEditor=process.env.NODE_ENV==='development'&&!optimized;
@@ -100,7 +109,7 @@ export default function ExplorationGame({optimized=false}:{optimized?:boolean}) 
     try{localStorage.setItem('amiguins-found-v1',JSON.stringify(found));}catch{}
   },[found,progressLoaded]);
   const [selected, setSelected] = useState<string | null>(null);
-  const [collapsed, setCollapsed] = useState<string[]>([]);
+  const [collapsed, setCollapsed] = useState<string[]>(['people', 'places']);
   const [zoom, setZoom] = useState(1);
   // New 100% equals 200% of the previous 1.75× preview baseline.
   const mapScale = zoom * 3.5;
@@ -266,7 +275,7 @@ export default function ExplorationGame({optimized=false}:{optimized?:boolean}) 
     constrainCamera();
   }
   return <MapEditorContext.Provider value={{enabled:localEditor&&editing,offsets:localEditor?layoutOffsets:savedLayoutOffsets,selected:editingSelection,select:setEditingSelection,move:moveElement}}><main className="game-shell">
-    {process.env.NODE_ENV==='development'&&<div className="map-preview-links"><a href={optimized?'/':'/?map=optimized'}>{optimized?'Voltar ao editor local':'Testar mapa otimizado'}</a>{optimized&&<span>Prévia otimizada · posições salvas</span>}</div>}
+    {process.env.NODE_ENV==='development'&&<div className="map-preview-links"><a href={optimized?'/':'/map-hd-preview'}>{optimized?'Voltar ao editor local':'Testar mapa HD'}</a>{optimized&&<span>Prévia otimizada · posições salvas</span>}</div>}
     {localEditor&&<div className="map-editor-toolbar">
       <button onClick={()=>setEditing(v=>!v)} aria-pressed={editing}>{editing?'Concluir edição':'Editar posições'}</button>
       {editing&&<><button disabled={!layoutHistory.current.length} onClick={()=>{const previous=layoutHistory.current.pop();if(previous)setLayoutOffsets(previous);}}>Desfazer</button>
@@ -302,7 +311,7 @@ export default function ExplorationGame({optimized=false}:{optimized?:boolean}) 
         <div className="map-topbar" aria-hidden="true"/>
         <div className="map-frame">
           <div className="map-viewport" ref={attachViewport} onTouchStart={e=>{if(e.touches.length===1)didDrag.current=false;beginTouch(e);}} onTouchMove={moveTouch} onTouchEnd={endTouch} onTouchCancel={()=>{touchGesture.current=null;drag.current=null;}} onScroll={constrainCamera} onPointerDown={startDrag} onPointerMove={moveDrag} onPointerUp={() => { drag.current = null; }} onPointerLeave={() => { drag.current = null; }}>
-            <div className="map-world modular-world" style={{width:`${mapScale*100}%`,minWidth:`${740*mapScale}px`}}>{optimized?<OptimizedMap onSelect={(id,keyboard)=>{if(keyboard||!didDrag.current){const target=targets.find(t=>t.id===id);if(target?.category === 'people')discover(target);else if(target){locateDestination(id);showMessage(`Você está em ${target.name}.`);}}}}/>:<ModularMap selected={selected} onSelect={(id,keyboard)=>{if(keyboard||!didDrag.current){const target=targets.find(t=>t.id===id);if(target?.category === 'people')discover(target);else if(target){locateDestination(id);showMessage(`Você está em ${target.name}.`);}}}}/>}</div>
+            <div className="map-world modular-world" style={{width:`${mapScale*100}%`,minWidth:`${740*mapScale}px`}}>{optimized?<OptimizedMap hd={hd} previewManifest={hdManifest} onSelect={(id,keyboard)=>{if(keyboard||!didDrag.current){const target=targets.find(t=>t.id===id);if(target?.category === 'people')discover(target);else if(target){locateDestination(id);showMessage(`Você está em ${target.name}.`);}}}}/>:<ModularMap selected={selected} onSelect={(id,keyboard)=>{if(keyboard||!didDrag.current){const target=targets.find(t=>t.id===id);if(target?.category === 'people')discover(target);else if(target){locateDestination(id);showMessage(`Você está em ${target.name}.`);}}}}/>}</div>
           </div>
 
           <div className="map-controls"><button aria-label="Aumentar zoom" disabled={zoom >= 5} onClick={() => changeZoom(Math.min(5, zoom + .25))}><Plus size={19} /></button><span>{Math.round(zoom * 100)}%</span><button aria-label="Diminuir zoom" disabled={zoom <= .25} onClick={() => changeZoom(Math.max(.25, zoom - .25))}><Minus size={19} /></button><div /><button aria-label="Ajustar mapa à tela" onClick={() => { setZoom(1); viewport.current?.scrollTo({ top: 0, left: 0 }); }}><Maximize size={17} /></button></div>
@@ -317,10 +326,4 @@ export default function ExplorationGame({optimized=false}:{optimized?:boolean}) 
     <dialog ref={reset} className="game-dialog"><h2>Mais uma volta?</h2><p>As descobertas desta rodada serão apagadas e as pessoas poderão ser encontradas novamente.</p><div className="dialog-actions"><button onClick={() => reset.current?.close()}>Continuar jogando</button><button className="dialog-primary" onClick={() => { setFound([]); setSelected(null); setMessage(''); setZoom(1); reset.current?.close(); }}>Recomeçar</button></div></dialog>
   </main></MapEditorContext.Provider>;
 }
-
-
-
-
-
-
 

@@ -1,0 +1,9 @@
+# Bruna Lucas e Gabriela Ribeiro
+
+Ilustração conjunta, com duas metades clicáveis independentes no mapa normal. As entradas e o progresso são separados, em ordem alfabética. Gabriela tem estrela de cinco pontas no peito e destaque de xerifinha no menu. Posicionadas na área livre perto da praia. Prévia HD não regenerada.
+
+Arquivo: `public/images/characters/bruna-gabriela-v01.png`. Fotos: `/Users/dolfo/Downloads/gabriela.png` (Gabriela) e `/Users/dolfo/Downloads/1787140369017.png` (Bruna). Referências de estilo: Nathan v01 e Gabriel v02.
+
+## Prompt
+
+Generate one transparent full-body sprite illustration of TWO adult women as a loving couple holding hands, side by side facing the viewer. FIRST reference photo gabriela.png is Gabriela Ribeiro: long voluminous wavy burgundy dark brown hair, large translucent brown round glasses, smiling face, olive sleeveless high-neck top. Place Gabriela on the RIGHT, gold sheriff badge naturally pinned to her upper chest, exactly FIVE points with small round tips like Gabriel style reference. SECOND photo is Bruna Lucas: shoulder-length straight dark-root blonde ombre hair, no glasses, black short-sleeve T-shirt, small round pendant necklace, subtle upper-arm tattoo. Place Bruna LEFT. Both wear casual jeans and sneakers, adult feminine proportions, smiling affectionately, gently leaning toward one another while eyes face viewer. Their inner hands join at exact horizontal center; keep each person's head, body and feet fully on her own half so we can use two adjacent independently clickable halves. No overlapping faces or bodies. STRICT style references 3 Nathan and 4 Gabriel: bold clean black outlines, oversized expressive cartoon heads, compact bodies, crisp controlled cel shading, polished same 2D game illustration. Photos only for each woman's own identity, do not reuse male faces. Entire bodies head to feet same baseline, generous transparent margin, no scenery, no text, no labels.

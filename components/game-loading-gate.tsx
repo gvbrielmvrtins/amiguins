@@ -11,7 +11,10 @@ export default function GameLoadingGate({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     const element = host.current!;
-    const assets = new Map<string, { settled: boolean; image: HTMLImageElement }>();
+    const assets = new Map<string, { settled: boolean; image?: HTMLImageElement }>();
+    const pending: string[] = [];
+    const resourceTimers = new Set<number>();
+    let active = 0;
     let stopped = false;
     let timer = 0;
     let frame = 0;
@@ -24,20 +27,40 @@ export default function GameLoadingGate({ children }: { children: ReactNode }) {
       window.clearTimeout(timer);
       timer = window.setTimeout(scan, 100);
     };
+    // Loading progress must not force every full-resolution sprite into decoded memory.
+    // Bound probes and release them as soon as the browser finishes the resource.
+    const pump = () => {
+      while (!stopped && active < 4 && pending.length) {
+        const url = pending.shift()!;
+        const asset = assets.get(url)!;
+        const image = new Image();
+        asset.image = image;
+        active++;
+        const deadline = window.setTimeout(settle, 30000);
+        resourceTimers.add(deadline);
+        function settle() {
+          if (stopped || asset.settled) return;
+          window.clearTimeout(deadline);
+          resourceTimers.delete(deadline);
+          asset.settled = true;
+          image.onload = null;
+          image.onerror = null;
+          asset.image = undefined;
+          active--;
+          schedule();
+          pump();
+        }
+        image.onload = settle;
+        image.onerror = settle;
+        image.decoding = 'async';
+        image.src = url;
+      }
+    };
     const track = (url: string) => {
       if (assets.has(url)) return;
-      const image = new Image();
-      const asset = { settled: false, image };
-      assets.set(url, asset);
-      // Failed resources are terminal too: a missing image must not lock the game.
-      const settle = () => {
-        if (stopped || asset.settled) return;
-        asset.settled = true;
-        schedule();
-      };
-      image.onerror = settle;
-      image.onload = () => { image.decode().then(settle, settle); };
-      image.src = url;
+      assets.set(url, { settled: false });
+      pending.push(url);
+      pump();
     };
     function scan() {
       if (stopped) return;
@@ -63,7 +86,8 @@ export default function GameLoadingGate({ children }: { children: ReactNode }) {
             setReady(true);
             observer.disconnect();
             stopped = true;
-            assets.forEach(({ image }) => { image.onload = null; image.onerror = null; });
+            resourceTimers.forEach(id => window.clearTimeout(id));
+            assets.forEach(({ image }) => { if (image) { image.onload = null; image.onerror = null; } });
             assets.clear();
           });
         });
@@ -78,7 +102,8 @@ export default function GameLoadingGate({ children }: { children: ReactNode }) {
       observer.disconnect();
       window.clearTimeout(timer);
       cancelAnimationFrame(frame);
-      assets.forEach(({ image }) => { image.onload = null; image.onerror = null; });
+      resourceTimers.forEach(id => window.clearTimeout(id));
+      assets.forEach(({ image }) => { if (image) { image.onload = null; image.onerror = null; } });
     };
   }, []);
 
