@@ -14,7 +14,7 @@ const carriageProjection=uprightProjection(-.49,.42).transform;
 export default function MetroTrain(){
   const scope=useContext(MapElementScope);
   return <g id="destination-vagao-feminino" role="group" aria-label="Metrô com um vagão feminino" pointerEvents="none">
-    {[{x:260,file:'metro-vagao-feminino-v04.png'},{x:560,file:'metro-carro-frontal-v01.png'}].map(car=>{
+    {[{x:260,file:'metro-vagao-feminino-v04.webp'},{x:560,file:'metro-carro-frontal-v01.webp'}].map(car=>{
       const at=projectGround(car.x,55);
       return <MovableMapElement key={car.file} id={`${scope}/carriage/${car.x}`}><g transform={`translate(${at.x} ${at.y})`}>
         <g transform={carriageProjection}><image href={`/images/modular/${car.file}`} x="-106.4" y="-99.4" width="215.04" height="143.36"/></g>
@@ -41,7 +41,7 @@ export default function MetroTrain(){
     </MovableMapElement>
     <MovableMapElement id={`${scope}/agent`}><g data-metro-agent="decorative" transform={`translate(${projectGround(260,55).x+34} ${projectGround(260,55).y-43})`}>
       <ellipse cx="0" cy="-1" rx="7" ry="2" fill="#574F40" opacity=".18"/>
-      <image href="/images/modular/agente-galinha-v02.png" x="-14" y="-26" width="28" height="27"/>
+      <image href="/images/modular/agente-galinha-v02.webp" x="-14" y="-26" width="28" height="27"/>
     </g>
     </MovableMapElement>
   </g>;

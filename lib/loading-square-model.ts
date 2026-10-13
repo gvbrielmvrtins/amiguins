@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 import { mergeGeometries } from 'three/addons/utils/BufferGeometryUtils.js';
 
-/** A fully volumetric interpretation of praca-central-circular-v01.png. */
+/** A fully volumetric interpretation of praca-central-circular-v01.webp. */
 export function createLoadingSquare() {
   const root = new THREE.Group();
   const bands = new THREE.DataTexture(new Uint8Array([88, 150, 205, 255]), 4, 1, THREE.RedFormat);

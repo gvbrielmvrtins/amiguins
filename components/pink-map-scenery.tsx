@@ -32,7 +32,7 @@ export function PinkSceneryProp({ item }: { item: PinkSceneryItem }) {
       <path d="M0-65V-94Q0-103 10-103H23" fill="none" strokeWidth="5"/>
       <path d="M10-99Q23-116 36-99Z" fill={p.coral}/>
       <ellipse cx="23" cy="-99" rx="13" ry="4" fill={p.yellow}/>
-    </g> : <image href={`${pilotAssetPath}${tree ? 'rosa-arvore-isometrica-v01.png' : 'rosa-jardineira-banco-isometrica-v01.png'}`} x={-item.width*.5} y={-height*.91} width={item.width} height={height} preserveAspectRatio="xMidYMid meet"/>}
+    </g> : <image href={`${pilotAssetPath}${tree ? 'rosa-arvore-isometrica-v01.webp' : 'rosa-jardineira-banco-isometrica-v01.webp'}`} x={-item.width*.5} y={-height*.91} width={item.width} height={height} preserveAspectRatio="xMidYMid meet"/>}
   </g>;
 }
 

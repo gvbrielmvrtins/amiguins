@@ -8,7 +8,7 @@ export default function CinemaPosterEasels() {
       {id:'cinema-poster-la-la-land',file:'cartaz-la-la-land.jpg',title:'La La Land',x:855,y:525},
     ].map(poster=><MovableMapElement key={poster.id} id={poster.id}>
       <g transform={`translate(${poster.x} ${poster.y}) scale(0.036)`} aria-label={`Em cartaz: ${poster.title}`}>
-        <image href="/images/modular/cineminha-cartaz-isometrico-v01.png" width="1100" height="1430"/>
+        <image href="/images/modular/cineminha-cartaz-isometrico-v01.webp" width="1100" height="1430"/>
         <image href={`/images/modular/${poster.file}`} width="418" height="534" preserveAspectRatio="none" transform="matrix(1 -0.4952 0.1423 1 421 556)" pointerEvents="none"/>
       </g>
     </MovableMapElement>)}

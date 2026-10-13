@@ -17,4 +17,4 @@ export const targets: Target[] = [
   { id: 'mingau', name: 'Mingau', article: 'o', category: 'animals', x: 81.3, y: 82.5, width: 4, height: 5, clue: 'Mingau está na margem direita do rio.' },
 ];
 export const categories = [{ id: 'people', label: 'Pessoas', subtitle: 'A turma toda está por aí', color: 'blue' }, { id: 'places', label: 'Espaços', subtitle: 'Lugares cheios de histórias', color: 'coral' }, { id: 'animals', label: 'Animais', subtitle: 'Nossos amigos de quatro patas', color: 'pink' }] as const;
-export const worldImage = '/images/amiguins-town.png';
+export const worldImage = '/images/amiguins-town.webp';

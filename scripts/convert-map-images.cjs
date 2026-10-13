@@ -1,0 +1,9 @@
+const fs=require('fs'),path=require('path');
+// Use the same optional Sharp runtime as the existing map rendering scripts.
+const sharp=require(process.env.SHARP_PATH || '/Users/dolfo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/sharp');
+const root=path.resolve(__dirname,'..');
+function walk(d){return fs.readdirSync(d,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(path.join(d,e.name)):[path.join(d,e.name)]);}
+const sources=[...walk(root+'/components'),...walk(root+'/lib')].filter(f=>/\.(tsx?|json)$/.test(f)&&!f.includes('manifest')&&!f.includes('forest-composite.json'));
+const originals=walk(root+'/public/images').filter(f=>f.endsWith('.png'));
+(async()=>{let before=0,after=0;const replacements=[];for(const file of originals){const name=path.basename(file);if(!sources.some(f=>fs.readFileSync(f,'utf8').includes(name)))continue;const buf=await sharp(file).webp({lossless:true,effort:4}).toBuffer();const size=fs.statSync(file).size;if(buf.length>=size)continue;const out=file.replace(/\.png$/,'.webp');fs.writeFileSync(out,buf);before+=size;after+=buf.length;replacements.push({old:file.slice((root+'/public/').length),new:out.slice((root+'/public/').length)});for(const src of sources){const text=fs.readFileSync(src,'utf8');if(text.includes(name))fs.writeFileSync(src,text.split(name).join(path.basename(out)));}}
+const manifestPath=root+'/scripts/deployment-archived-images.json';const archived=JSON.parse(fs.readFileSync(manifestPath));for(const r of replacements)if(!archived.includes(r.old))archived.push(r.old);fs.writeFileSync(manifestPath,JSON.stringify(archived,null,2)+'\n');fs.writeFileSync(root+'/docs/webp-conversion-report.json',JSON.stringify({mode:'lossless',before,after,count:replacements.length,files:replacements},null,2)+'\n');console.log({count:replacements.length,beforeMB:before/1e6,afterMB:after/1e6});})();

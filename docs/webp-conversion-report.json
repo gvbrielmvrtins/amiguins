@@ -1,0 +1,972 @@
+{
+  "mode": "lossless",
+  "before": 331564009,
+  "after": 189620520,
+  "count": 241,
+  "files": [
+    {
+      "old": "images/amiguins-town.png",
+      "new": "images/amiguins-town.webp"
+    },
+    {
+      "old": "images/characters/adriane-costa-v02.png",
+      "new": "images/characters/adriane-costa-v02.webp"
+    },
+    {
+      "old": "images/characters/andressa-jackson-jorge-v01.png",
+      "new": "images/characters/andressa-jackson-jorge-v01.webp"
+    },
+    {
+      "old": "images/characters/bruna-gabriela-v02.png",
+      "new": "images/characters/bruna-gabriela-v02.webp"
+    },
+    {
+      "old": "images/characters/camila-ochoa-v02.png",
+      "new": "images/characters/camila-ochoa-v02.webp"
+    },
+    {
+      "old": "images/characters/clara-marques-v01.png",
+      "new": "images/characters/clara-marques-v01.webp"
+    },
+    {
+      "old": "images/characters/davi-cabeca-v02.png",
+      "new": "images/characters/davi-cabeca-v02.webp"
+    },
+    {
+      "old": "images/characters/diego-ungari-v04.png",
+      "new": "images/characters/diego-ungari-v04.webp"
+    },
+    {
+      "old": "images/characters/eduardo-mesquita-v02.png",
+      "new": "images/characters/eduardo-mesquita-v02.webp"
+    },
+    {
+      "old": "images/characters/elton-pavesi-v02.png",
+      "new": "images/characters/elton-pavesi-v02.webp"
+    },
+    {
+      "old": "images/characters/eric-barros-v01.png",
+      "new": "images/characters/eric-barros-v01.webp"
+    },
+    {
+      "old": "images/characters/flavia-lima-v01.png",
+      "new": "images/characters/flavia-lima-v01.webp"
+    },
+    {
+      "old": "images/characters/gabriel-martins-v02.png",
+      "new": "images/characters/gabriel-martins-v02.webp"
+    },
+    {
+      "old": "images/characters/gustavo-pontes-v01.png",
+      "new": "images/characters/gustavo-pontes-v01.webp"
+    },
+    {
+      "old": "images/characters/henrique-hardman-v02.png",
+      "new": "images/characters/henrique-hardman-v02.webp"
+    },
+    {
+      "old": "images/characters/ingrid-lima-v02.png",
+      "new": "images/characters/ingrid-lima-v02.webp"
+    },
+    {
+      "old": "images/characters/isabela-guedes-v01.png",
+      "new": "images/characters/isabela-guedes-v01.webp"
+    },
+    {
+      "old": "images/characters/jakeline-sakamoto-v02.png",
+      "new": "images/characters/jakeline-sakamoto-v02.webp"
+    },
+    {
+      "old": "images/characters/kauana-moreira-v01.png",
+      "new": "images/characters/kauana-moreira-v01.webp"
+    },
+    {
+      "old": "images/characters/leticia-figueiredo-v01.png",
+      "new": "images/characters/leticia-figueiredo-v01.webp"
+    },
+    {
+      "old": "images/characters/loisi-vieira-v02.png",
+      "new": "images/characters/loisi-vieira-v02.webp"
+    },
+    {
+      "old": "images/characters/luana-cheque-v04.png",
+      "new": "images/characters/luana-cheque-v04.webp"
+    },
+    {
+      "old": "images/characters/luara-nardelli-v02.png",
+      "new": "images/characters/luara-nardelli-v02.webp"
+    },
+    {
+      "old": "images/characters/maria-fernanda-figueiroa-v01.png",
+      "new": "images/characters/maria-fernanda-figueiroa-v01.webp"
+    },
+    {
+      "old": "images/characters/melissa-augustin-v04.png",
+      "new": "images/characters/melissa-augustin-v04.webp"
+    },
+    {
+      "old": "images/characters/naiane-de-mello-v02.png",
+      "new": "images/characters/naiane-de-mello-v02.webp"
+    },
+    {
+      "old": "images/characters/nathan-machado-v01.png",
+      "new": "images/characters/nathan-machado-v01.webp"
+    },
+    {
+      "old": "images/characters/pamela-souza-v01.png",
+      "new": "images/characters/pamela-souza-v01.webp"
+    },
+    {
+      "old": "images/characters/patrick-canuto-v01.png",
+      "new": "images/characters/patrick-canuto-v01.webp"
+    },
+    {
+      "old": "images/characters/paula-lotti-v02.png",
+      "new": "images/characters/paula-lotti-v02.webp"
+    },
+    {
+      "old": "images/characters/raquel-rocha-v01.png",
+      "new": "images/characters/raquel-rocha-v01.webp"
+    },
+    {
+      "old": "images/characters/rebeca-araujo-v03.png",
+      "new": "images/characters/rebeca-araujo-v03.webp"
+    },
+    {
+      "old": "images/characters/simone-lapa-grupo-v01.png",
+      "new": "images/characters/simone-lapa-grupo-v01.webp"
+    },
+    {
+      "old": "images/characters/tati-ribeiro-v01.png",
+      "new": "images/characters/tati-ribeiro-v01.webp"
+    },
+    {
+      "old": "images/characters/tatiane-baniski-v02.png",
+      "new": "images/characters/tatiane-baniski-v02.webp"
+    },
+    {
+      "old": "images/characters/tiago-vieira-v04.png",
+      "new": "images/characters/tiago-vieira-v04.webp"
+    },
+    {
+      "old": "images/characters/valeria-coelho-v01.png",
+      "new": "images/characters/valeria-coelho-v01.webp"
+    },
+    {
+      "old": "images/characters/vinicius-macedo-v01.png",
+      "new": "images/characters/vinicius-macedo-v01.webp"
+    },
+    {
+      "old": "images/characters/ze-elias-dolfo-v02.png",
+      "new": "images/characters/ze-elias-dolfo-v02.webp"
+    },
+    {
+      "old": "images/logo-loading.png",
+      "new": "images/logo-loading.webp"
+    },
+    {
+      "old": "images/modular/academia-barra-v01.png",
+      "new": "images/modular/academia-barra-v01.webp"
+    },
+    {
+      "old": "images/modular/academia-pesos-v01.png",
+      "new": "images/modular/academia-pesos-v01.webp"
+    },
+    {
+      "old": "images/modular/academia-render-v02.png",
+      "new": "images/modular/academia-render-v02.webp"
+    },
+    {
+      "old": "images/modular/aeroporto-internacional-v02.png",
+      "new": "images/modular/aeroporto-internacional-v02.webp"
+    },
+    {
+      "old": "images/modular/africa-banca-v01.png",
+      "new": "images/modular/africa-banca-v01.webp"
+    },
+    {
+      "old": "images/modular/africa-comercio-v01.png",
+      "new": "images/modular/africa-comercio-v01.webp"
+    },
+    {
+      "old": "images/modular/africa-pavilhao-v01.png",
+      "new": "images/modular/africa-pavilhao-v01.webp"
+    },
+    {
+      "old": "images/modular/africa-ponte-v01.png",
+      "new": "images/modular/africa-ponte-v01.webp"
+    },
+    {
+      "old": "images/modular/africa-residencia-v01.png",
+      "new": "images/modular/africa-residencia-v01.webp"
+    },
+    {
+      "old": "images/modular/agente-galinha-v02.png",
+      "new": "images/modular/agente-galinha-v02.webp"
+    },
+    {
+      "old": "images/modular/balizador-detalhado-v01.png",
+      "new": "images/modular/balizador-detalhado-v01.webp"
+    },
+    {
+      "old": "images/modular/banhista-bola-v01.png",
+      "new": "images/modular/banhista-bola-v01.webp"
+    },
+    {
+      "old": "images/modular/banhista-surfista-v01.png",
+      "new": "images/modular/banhista-surfista-v01.webp"
+    },
+    {
+      "old": "images/modular/banhista-toalha-v01.png",
+      "new": "images/modular/banhista-toalha-v01.webp"
+    },
+    {
+      "old": "images/modular/barreira-transito-v01.png",
+      "new": "images/modular/barreira-transito-v01.webp"
+    },
+    {
+      "old": "images/modular/binstro-render-v02.png",
+      "new": "images/modular/binstro-render-v02.webp"
+    },
+    {
+      "old": "images/modular/bolsonaro-jaula-npc-v04.png",
+      "new": "images/modular/bolsonaro-jaula-npc-v04.webp"
+    },
+    {
+      "old": "images/modular/cafe-apoio-render-v01.png",
+      "new": "images/modular/cafe-apoio-render-v01.webp"
+    },
+    {
+      "old": "images/modular/cafeteria-mesa-tenda-v01.png",
+      "new": "images/modular/cafeteria-mesa-tenda-v01.webp"
+    },
+    {
+      "old": "images/modular/caminho-pedrinhas-v01.png",
+      "new": "images/modular/caminho-pedrinhas-v01.webp"
+    },
+    {
+      "old": "images/modular/campinho-arquibancada-v02.png",
+      "new": "images/modular/campinho-arquibancada-v02.webp"
+    },
+    {
+      "old": "images/modular/cancela-ferroviaria-v01.png",
+      "new": "images/modular/cancela-ferroviaria-v01.webp"
+    },
+    {
+      "old": "images/modular/carteira-trabalho-avulsa-v01.png",
+      "new": "images/modular/carteira-trabalho-avulsa-v01.webp"
+    },
+    {
+      "old": "images/modular/casinha-sitio-v01.png",
+      "new": "images/modular/casinha-sitio-v01.webp"
+    },
+    {
+      "old": "images/modular/cemiterio-v01.png",
+      "new": "images/modular/cemiterio-v01.webp"
+    },
+    {
+      "old": "images/modular/ciclista-pedalando-v02.png",
+      "new": "images/modular/ciclista-pedalando-v02.webp"
+    },
+    {
+      "old": "images/modular/cineminha-cartaz-isometrico-v01.png",
+      "new": "images/modular/cineminha-cartaz-isometrico-v01.webp"
+    },
+    {
+      "old": "images/modular/cineminha-isometrico-v01.png",
+      "new": "images/modular/cineminha-isometrico-v01.webp"
+    },
+    {
+      "old": "images/modular/colabin-laboratorio-v02.png",
+      "new": "images/modular/colabin-laboratorio-v02.webp"
+    },
+    {
+      "old": "images/modular/coloridin-arco-iris-frontal-v02.png",
+      "new": "images/modular/coloridin-arco-iris-frontal-v02.webp"
+    },
+    {
+      "old": "images/modular/coloridin-bandeira-v01.png",
+      "new": "images/modular/coloridin-bandeira-v01.webp"
+    },
+    {
+      "old": "images/modular/coloridin-folioes-1-v01.png",
+      "new": "images/modular/coloridin-folioes-1-v01.webp"
+    },
+    {
+      "old": "images/modular/coloridin-folioes-2-v01.png",
+      "new": "images/modular/coloridin-folioes-2-v01.webp"
+    },
+    {
+      "old": "images/modular/coloridin-pano-piquenique-v01.png",
+      "new": "images/modular/coloridin-pano-piquenique-v01.webp"
+    },
+    {
+      "old": "images/modular/criancas-bonequinhos-v01.png",
+      "new": "images/modular/criancas-bonequinhos-v01.webp"
+    },
+    {
+      "old": "images/modular/deserto-camelo-v01.png",
+      "new": "images/modular/deserto-camelo-v01.webp"
+    },
+    {
+      "old": "images/modular/deserto-dunas-v01.png",
+      "new": "images/modular/deserto-dunas-v01.webp"
+    },
+    {
+      "old": "images/modular/diego-cachorro-2-v01.png",
+      "new": "images/modular/diego-cachorro-2-v01.webp"
+    },
+    {
+      "old": "images/modular/diego-cachorro-v01.png",
+      "new": "images/modular/diego-cachorro-v01.webp"
+    },
+    {
+      "old": "images/modular/entregador-pizza-v01.png",
+      "new": "images/modular/entregador-pizza-v01.webp"
+    },
+    {
+      "old": "images/modular/estudio-bancada-v02.png",
+      "new": "images/modular/estudio-bancada-v02.webp"
+    },
+    {
+      "old": "images/modular/estudio-cavalete-v02.png",
+      "new": "images/modular/estudio-cavalete-v02.webp"
+    },
+    {
+      "old": "images/modular/estudio-escultura-v02.png",
+      "new": "images/modular/estudio-escultura-v02.webp"
+    },
+    {
+      "old": "images/modular/estudio-render-v02.png",
+      "new": "images/modular/estudio-render-v02.webp"
+    },
+    {
+      "old": "images/modular/faixa-nao-ultrapasse-oposta-v01.png",
+      "new": "images/modular/faixa-nao-ultrapasse-oposta-v01.webp"
+    },
+    {
+      "old": "images/modular/faixa-nao-ultrapasse-v01.png",
+      "new": "images/modular/faixa-nao-ultrapasse-v01.webp"
+    },
+    {
+      "old": "images/modular/fatia-pizza-telhado-v01.png",
+      "new": "images/modular/fatia-pizza-telhado-v01.webp"
+    },
+    {
+      "old": "images/modular/feira-ceramica-v01.png",
+      "new": "images/modular/feira-ceramica-v01.webp"
+    },
+    {
+      "old": "images/modular/feira-eletronicos-v01.png",
+      "new": "images/modular/feira-eletronicos-v01.webp"
+    },
+    {
+      "old": "images/modular/feira-hortifruti-v01.png",
+      "new": "images/modular/feira-hortifruti-v01.webp"
+    },
+    {
+      "old": "images/modular/feira-livros-v01.png",
+      "new": "images/modular/feira-livros-v01.webp"
+    },
+    {
+      "old": "images/modular/feira-roupas-v01.png",
+      "new": "images/modular/feira-roupas-v01.webp"
+    },
+    {
+      "old": "images/modular/fila-empregos-v01.png",
+      "new": "images/modular/fila-empregos-v01.webp"
+    },
+    {
+      "old": "images/modular/floreira-detalhada-v01.png",
+      "new": "images/modular/floreira-detalhada-v01.webp"
+    },
+    {
+      "old": "images/modular/gabriel-versao-feminina-bigode-v01.png",
+      "new": "images/modular/gabriel-versao-feminina-bigode-v01.webp"
+    },
+    {
+      "old": "images/modular/galinha-rebeca-v01.png",
+      "new": "images/modular/galinha-rebeca-v01.webp"
+    },
+    {
+      "old": "images/modular/galinhas-ciscando-v01.png",
+      "new": "images/modular/galinhas-ciscando-v01.webp"
+    },
+    {
+      "old": "images/modular/glub-peixe-feminino-v01.png",
+      "new": "images/modular/glub-peixe-feminino-v01.webp"
+    },
+    {
+      "old": "images/modular/glub-peixe-masculino-v01.png",
+      "new": "images/modular/glub-peixe-masculino-v01.webp"
+    },
+    {
+      "old": "images/modular/igreja-evangelica-v01.png",
+      "new": "images/modular/igreja-evangelica-v01.webp"
+    },
+    {
+      "old": "images/modular/inglish-pub-render-v02.png",
+      "new": "images/modular/inglish-pub-render-v02.webp"
+    },
+    {
+      "old": "images/modular/jacu-v01.png",
+      "new": "images/modular/jacu-v01.webp"
+    },
+    {
+      "old": "images/modular/jardim-abrigo-insetos-v01.png",
+      "new": "images/modular/jardim-abrigo-insetos-v01.webp"
+    },
+    {
+      "old": "images/modular/jardim-animais-vasos-v01.png",
+      "new": "images/modular/jardim-animais-vasos-v01.webp"
+    },
+    {
+      "old": "images/modular/jardim-arco-trepadeiras-v01.png",
+      "new": "images/modular/jardim-arco-trepadeiras-v01.webp"
+    },
+    {
+      "old": "images/modular/jardim-bancada-vasos-v01.png",
+      "new": "images/modular/jardim-bancada-vasos-v01.webp"
+    },
+    {
+      "old": "images/modular/jardim-canteiro-v01.png",
+      "new": "images/modular/jardim-canteiro-v01.webp"
+    },
+    {
+      "old": "images/modular/jardim-estufa-v01.png",
+      "new": "images/modular/jardim-estufa-v01.webp"
+    },
+    {
+      "old": "images/modular/jardim-ilha-flores-v01.png",
+      "new": "images/modular/jardim-ilha-flores-v01.webp"
+    },
+    {
+      "old": "images/modular/jardim-labirinto-unificado-v01.png",
+      "new": "images/modular/jardim-labirinto-unificado-v01.webp"
+    },
+    {
+      "old": "images/modular/jardim-lago-compacto-v01.png",
+      "new": "images/modular/jardim-lago-compacto-v01.webp"
+    },
+    {
+      "old": "images/modular/jardim-relogio-sol-v01.png",
+      "new": "images/modular/jardim-relogio-sol-v01.webp"
+    },
+    {
+      "old": "images/modular/jardim-reservatorio-v01.png",
+      "new": "images/modular/jardim-reservatorio-v01.webp"
+    },
+    {
+      "old": "images/modular/leite-derramado-estragado-v01.png",
+      "new": "images/modular/leite-derramado-estragado-v01.webp"
+    },
+    {
+      "old": "images/modular/letreiro-igreja-pastor-vittar-v01.png",
+      "new": "images/modular/letreiro-igreja-pastor-vittar-v01.webp"
+    },
+    {
+      "old": "images/modular/linkedin-arquibancada-v01.png",
+      "new": "images/modular/linkedin-arquibancada-v01.webp"
+    },
+    {
+      "old": "images/modular/linkedin-credenciamento-v01.png",
+      "new": "images/modular/linkedin-credenciamento-v01.webp"
+    },
+    {
+      "old": "images/modular/linkedin-predio-v02.png",
+      "new": "images/modular/linkedin-predio-v02.webp"
+    },
+    {
+      "old": "images/modular/linkedin-totem-v01.png",
+      "new": "images/modular/linkedin-totem-v01.webp"
+    },
+    {
+      "old": "images/modular/livrinhoteca-banco-isometrico-v01.png",
+      "new": "images/modular/livrinhoteca-banco-isometrico-v01.webp"
+    },
+    {
+      "old": "images/modular/livrinhoteca-isometrico-v01.png",
+      "new": "images/modular/livrinhoteca-isometrico-v01.webp"
+    },
+    {
+      "old": "images/modular/livrinhoteca-livros-isometrico-v01.png",
+      "new": "images/modular/livrinhoteca-livros-isometrico-v01.webp"
+    },
+    {
+      "old": "images/modular/loja-amarela-isometrica-v01.png",
+      "new": "images/modular/loja-amarela-isometrica-v01.webp"
+    },
+    {
+      "old": "images/modular/loja-amarela-norte-v01.png",
+      "new": "images/modular/loja-amarela-norte-v01.webp"
+    },
+    {
+      "old": "images/modular/loja-coral-isometrica-v01.png",
+      "new": "images/modular/loja-coral-isometrica-v01.webp"
+    },
+    {
+      "old": "images/modular/lula-npc-v02.png",
+      "new": "images/modular/lula-npc-v02.webp"
+    },
+    {
+      "old": "images/modular/marlon-virus-v01.png",
+      "new": "images/modular/marlon-virus-v01.webp"
+    },
+    {
+      "old": "images/modular/mascote-vovo-croche-v01.png",
+      "new": "images/modular/mascote-vovo-croche-v01.webp"
+    },
+    {
+      "old": "images/modular/mercado-vagas-isometrico-v01.png",
+      "new": "images/modular/mercado-vagas-isometrico-v01.webp"
+    },
+    {
+      "old": "images/modular/metro-carro-frontal-v01.png",
+      "new": "images/modular/metro-carro-frontal-v01.webp"
+    },
+    {
+      "old": "images/modular/metro-vagao-feminino-v04.png",
+      "new": "images/modular/metro-vagao-feminino-v04.webp"
+    },
+    {
+      "old": "images/modular/metropole-escritorios-heliponto-v01.png",
+      "new": "images/modular/metropole-escritorios-heliponto-v01.webp"
+    },
+    {
+      "old": "images/modular/metropole-escritorios-v01.png",
+      "new": "images/modular/metropole-escritorios-v01.webp"
+    },
+    {
+      "old": "images/modular/metropole-residencial-v01.png",
+      "new": "images/modular/metropole-residencial-v01.webp"
+    },
+    {
+      "old": "images/modular/milharal-pamonhas-v01.png",
+      "new": "images/modular/milharal-pamonhas-v01.webp"
+    },
+    {
+      "old": "images/modular/montanha-chao-organico-v01.png",
+      "new": "images/modular/montanha-chao-organico-v01.webp"
+    },
+    {
+      "old": "images/modular/montanha-letreiro-integrado-v02.png",
+      "new": "images/modular/montanha-letreiro-integrado-v02.webp"
+    },
+    {
+      "old": "images/modular/mural-detalhado-v01.png",
+      "new": "images/modular/mural-detalhado-v01.webp"
+    },
+    {
+      "old": "images/modular/mural-workshop-capcut-v01.png",
+      "new": "images/modular/mural-workshop-capcut-v01.webp"
+    },
+    {
+      "old": "images/modular/obra-estrutura-vigas-v01.png",
+      "new": "images/modular/obra-estrutura-vigas-v01.webp"
+    },
+    {
+      "old": "images/modular/obra-materiais-v01.png",
+      "new": "images/modular/obra-materiais-v01.webp"
+    },
+    {
+      "old": "images/modular/obra-trabalhador-carrinho-v01.png",
+      "new": "images/modular/obra-trabalhador-carrinho-v01.webp"
+    },
+    {
+      "old": "images/modular/obra-trabalhador-pa-v01.png",
+      "new": "images/modular/obra-trabalhador-pa-v01.webp"
+    },
+    {
+      "old": "images/modular/obra-trator-v01.png",
+      "new": "images/modular/obra-trator-v01.webp"
+    },
+    {
+      "old": "images/modular/observador-arvore-v01.png",
+      "new": "images/modular/observador-arvore-v01.webp"
+    },
+    {
+      "old": "images/modular/observador-caneca-v01.png",
+      "new": "images/modular/observador-caneca-v01.webp"
+    },
+    {
+      "old": "images/modular/observador-jornal-v01.png",
+      "new": "images/modular/observador-jornal-v01.webp"
+    },
+    {
+      "old": "images/modular/odete-roitman-helicoptero-v01.png",
+      "new": "images/modular/odete-roitman-helicoptero-v01.webp"
+    },
+    {
+      "old": "images/modular/parque-banco-v01.png",
+      "new": "images/modular/parque-banco-v01.webp"
+    },
+    {
+      "old": "images/modular/parque-betula-v01.png",
+      "new": "images/modular/parque-betula-v01.webp"
+    },
+    {
+      "old": "images/modular/parque-carvalho-v01.png",
+      "new": "images/modular/parque-carvalho-v01.webp"
+    },
+    {
+      "old": "images/modular/parque-cerca-v01.png",
+      "new": "images/modular/parque-cerca-v01.webp"
+    },
+    {
+      "old": "images/modular/parque-grama-v01.png",
+      "new": "images/modular/parque-grama-v01.webp"
+    },
+    {
+      "old": "images/modular/parque-lago-v01.png",
+      "new": "images/modular/parque-lago-v01.webp"
+    },
+    {
+      "old": "images/modular/parque-pinheiro-v01.png",
+      "new": "images/modular/parque-pinheiro-v01.webp"
+    },
+    {
+      "old": "images/modular/parque-piquenique-v01.png",
+      "new": "images/modular/parque-piquenique-v01.webp"
+    },
+    {
+      "old": "images/modular/pastor-cilios-v01.png",
+      "new": "images/modular/pastor-cilios-v01.webp"
+    },
+    {
+      "old": "images/modular/pingos-nos-ins-redacao-v04.png",
+      "new": "images/modular/pingos-nos-ins-redacao-v04.webp"
+    },
+    {
+      "old": "images/modular/pingulin-fone-original.png",
+      "new": "images/modular/pingulin-fone-original.webp"
+    },
+    {
+      "old": "images/modular/pingulin-microfone-original.png",
+      "new": "images/modular/pingulin-microfone-original.webp"
+    },
+    {
+      "old": "images/modular/pipoca-detalhada-v01.png",
+      "new": "images/modular/pipoca-detalhada-v01.webp"
+    },
+    {
+      "old": "images/modular/placa-homens-trabalhando-v01.png",
+      "new": "images/modular/placa-homens-trabalhando-v01.webp"
+    },
+    {
+      "old": "images/modular/plaza-arcada-bandeiras-v02.png",
+      "new": "images/modular/plaza-arcada-bandeiras-v02.webp"
+    },
+    {
+      "old": "images/modular/plaza-arepas-v01.png",
+      "new": "images/modular/plaza-arepas-v01.webp"
+    },
+    {
+      "old": "images/modular/plaza-carrinho-peruano-cuy-v02.png",
+      "new": "images/modular/plaza-carrinho-peruano-cuy-v02.webp"
+    },
+    {
+      "old": "images/modular/plaza-mariachis-v01.png",
+      "new": "images/modular/plaza-mariachis-v01.webp"
+    },
+    {
+      "old": "images/modular/plaza-obelisco-argentino-v01.png",
+      "new": "images/modular/plaza-obelisco-argentino-v01.webp"
+    },
+    {
+      "old": "images/modular/plaza-palco-rbd-v01.png",
+      "new": "images/modular/plaza-palco-rbd-v01.webp"
+    },
+    {
+      "old": "images/modular/plaza-tango-v01.png",
+      "new": "images/modular/plaza-tango-v01.webp"
+    },
+    {
+      "old": "images/modular/plaza-tecidos-v01.png",
+      "new": "images/modular/plaza-tecidos-v01.webp"
+    },
+    {
+      "old": "images/modular/poste-detalhado-v01.png",
+      "new": "images/modular/poste-detalhado-v01.webp"
+    },
+    {
+      "old": "images/modular/praca-central-circular-v01.png",
+      "new": "images/modular/praca-central-circular-v01.webp"
+    },
+    {
+      "old": "images/modular/pracinha-fonte-v01.png",
+      "new": "images/modular/pracinha-fonte-v01.webp"
+    },
+    {
+      "old": "images/modular/pracinha-jogos-v01.png",
+      "new": "images/modular/pracinha-jogos-v01.webp"
+    },
+    {
+      "old": "images/modular/pracinha-palco-v01.png",
+      "new": "images/modular/pracinha-palco-v01.webp"
+    },
+    {
+      "old": "images/modular/pracinha-pergolado-v01.png",
+      "new": "images/modular/pracinha-pergolado-v01.webp"
+    },
+    {
+      "old": "images/modular/pracinha-quiosque-v01.png",
+      "new": "images/modular/pracinha-quiosque-v01.webp"
+    },
+    {
+      "old": "images/modular/praia-baleia-encalhada-v01.png",
+      "new": "images/modular/praia-baleia-encalhada-v01.webp"
+    },
+    {
+      "old": "images/modular/praia-banhista-1-v01.png",
+      "new": "images/modular/praia-banhista-1-v01.webp"
+    },
+    {
+      "old": "images/modular/praia-banhista-2-v01.png",
+      "new": "images/modular/praia-banhista-2-v01.webp"
+    },
+    {
+      "old": "images/modular/praia-bola-v01.png",
+      "new": "images/modular/praia-bola-v01.webp"
+    },
+    {
+      "old": "images/modular/praia-castelo-areia-v01.png",
+      "new": "images/modular/praia-castelo-areia-v01.webp"
+    },
+    {
+      "old": "images/modular/praia-concha-v01.png",
+      "new": "images/modular/praia-concha-v01.webp"
+    },
+    {
+      "old": "images/modular/praia-coqueiro-v01.png",
+      "new": "images/modular/praia-coqueiro-v01.webp"
+    },
+    {
+      "old": "images/modular/praia-espreguicadeira-v01.png",
+      "new": "images/modular/praia-espreguicadeira-v01.webp"
+    },
+    {
+      "old": "images/modular/praia-guarda-sol-v01.png",
+      "new": "images/modular/praia-guarda-sol-v01.webp"
+    },
+    {
+      "old": "images/modular/prefeitura-render-v02.png",
+      "new": "images/modular/prefeitura-render-v02.webp"
+    },
+    {
+      "old": "images/modular/pub-caixa-som-v01.png",
+      "new": "images/modular/pub-caixa-som-v01.webp"
+    },
+    {
+      "old": "images/modular/pub-microfone-v01.png",
+      "new": "images/modular/pub-microfone-v01.webp"
+    },
+    {
+      "old": "images/modular/relogio-detalhado-v01.png",
+      "new": "images/modular/relogio-detalhado-v01.webp"
+    },
+    {
+      "old": "images/modular/residencia-coral-norte-v01.png",
+      "new": "images/modular/residencia-coral-norte-v01.webp"
+    },
+    {
+      "old": "images/modular/rio-agua-textura-v02.png",
+      "new": "images/modular/rio-agua-textura-v02.webp"
+    },
+    {
+      "old": "images/modular/rock-in-rio-sign-v01.png",
+      "new": "images/modular/rock-in-rio-sign-v01.webp"
+    },
+    {
+      "old": "images/modular/rosa-arvore-isometrica-v01.png",
+      "new": "images/modular/rosa-arvore-isometrica-v01.webp"
+    },
+    {
+      "old": "images/modular/rosa-jardineira-banco-isometrica-v01.png",
+      "new": "images/modular/rosa-jardineira-banco-isometrica-v01.webp"
+    },
+    {
+      "old": "images/modular/ruinas-arco-quebrado-v01.png",
+      "new": "images/modular/ruinas-arco-quebrado-v01.webp"
+    },
+    {
+      "old": "images/modular/ruinas-estatua-primeira-marca-v01.png",
+      "new": "images/modular/ruinas-estatua-primeira-marca-v01.webp"
+    },
+    {
+      "old": "images/modular/ruinas-parede-pixacao-v01.png",
+      "new": "images/modular/ruinas-parede-pixacao-v01.webp"
+    },
+    {
+      "old": "images/modular/ruinas-pedras-v01.png",
+      "new": "images/modular/ruinas-pedras-v01.webp"
+    },
+    {
+      "old": "images/modular/safari-visitante-1-v01.png",
+      "new": "images/modular/safari-visitante-1-v01.webp"
+    },
+    {
+      "old": "images/modular/safari-visitante-2-v01.png",
+      "new": "images/modular/safari-visitante-2-v01.webp"
+    },
+    {
+      "old": "images/modular/safari-visitante-3-v01.png",
+      "new": "images/modular/safari-visitante-3-v01.webp"
+    },
+    {
+      "old": "images/modular/safari-visitante-4-v01.png",
+      "new": "images/modular/safari-visitante-4-v01.webp"
+    },
+    {
+      "old": "images/modular/savana-acacia-v01.png",
+      "new": "images/modular/savana-acacia-v01.webp"
+    },
+    {
+      "old": "images/modular/savana-carro-safari-v01.png",
+      "new": "images/modular/savana-carro-safari-v01.webp"
+    },
+    {
+      "old": "images/modular/savana-elefante-v01.png",
+      "new": "images/modular/savana-elefante-v01.webp"
+    },
+    {
+      "old": "images/modular/savana-girafa-v01.png",
+      "new": "images/modular/savana-girafa-v01.webp"
+    },
+    {
+      "old": "images/modular/savana-impala-v01.png",
+      "new": "images/modular/savana-impala-v01.webp"
+    },
+    {
+      "old": "images/modular/savana-leao-v01.png",
+      "new": "images/modular/savana-leao-v01.webp"
+    },
+    {
+      "old": "images/modular/savana-leoa-v01.png",
+      "new": "images/modular/savana-leoa-v01.webp"
+    },
+    {
+      "old": "images/modular/savana-oasis-v01.png",
+      "new": "images/modular/savana-oasis-v01.webp"
+    },
+    {
+      "old": "images/modular/savana-ovelha-anjo-v01.png",
+      "new": "images/modular/savana-ovelha-anjo-v01.webp"
+    },
+    {
+      "old": "images/modular/savana-rinoceronte-v01.png",
+      "new": "images/modular/savana-rinoceronte-v01.webp"
+    },
+    {
+      "old": "images/modular/savana-vegetacao-baixa-v01.png",
+      "new": "images/modular/savana-vegetacao-baixa-v01.webp"
+    },
+    {
+      "old": "images/modular/savana-zebra-v01.png",
+      "new": "images/modular/savana-zebra-v01.webp"
+    },
+    {
+      "old": "images/modular/semaforo-v01.png",
+      "new": "images/modular/semaforo-v01.webp"
+    },
+    {
+      "old": "images/modular/silicin-bicicletario-v02.png",
+      "new": "images/modular/silicin-bicicletario-v02.webp"
+    },
+    {
+      "old": "images/modular/silicin-campus-circular-v01.png",
+      "new": "images/modular/silicin-campus-circular-v01.webp"
+    },
+    {
+      "old": "images/modular/silicin-campus-v02.png",
+      "new": "images/modular/silicin-campus-v02.webp"
+    },
+    {
+      "old": "images/modular/silicin-prototipos-v01.png",
+      "new": "images/modular/silicin-prototipos-v01.webp"
+    },
+    {
+      "old": "images/modular/silicin-robo-v01.png",
+      "new": "images/modular/silicin-robo-v01.webp"
+    },
+    {
+      "old": "images/modular/sobrado-comercio-rosa-norte-v01.png",
+      "new": "images/modular/sobrado-comercio-rosa-norte-v01.webp"
+    },
+    {
+      "old": "images/modular/sobrado-rosa-isometrico-v01.png",
+      "new": "images/modular/sobrado-rosa-isometrico-v01.webp"
+    },
+    {
+      "old": "images/modular/tapume-obras-v01.png",
+      "new": "images/modular/tapume-obras-v01.webp"
+    },
+    {
+      "old": "images/modular/taverna-medieval-games-v04.png",
+      "new": "images/modular/taverna-medieval-games-v04.webp"
+    },
+    {
+      "old": "images/modular/taverna-mesa-redonda-v01.png",
+      "new": "images/modular/taverna-mesa-redonda-v01.webp"
+    },
+    {
+      "old": "images/modular/taverna-pato-v01.png",
+      "new": "images/modular/taverna-pato-v01.webp"
+    },
+    {
+      "old": "images/modular/torre-feiticaria-v02.png",
+      "new": "images/modular/torre-feiticaria-v02.webp"
+    },
+    {
+      "old": "images/modular/torre-taro-render-v02.png",
+      "new": "images/modular/torre-taro-render-v02.webp"
+    },
+    {
+      "old": "images/modular/totem-eu-amo-amiguins-v02.png",
+      "new": "images/modular/totem-eu-amo-amiguins-v02.webp"
+    },
+    {
+      "old": "images/modular/trio-adolescentes-v01.png",
+      "new": "images/modular/trio-adolescentes-v01.webp"
+    },
+    {
+      "old": "images/modular/vagao-feminino-isometrico-v01.png",
+      "new": "images/modular/vagao-feminino-isometrico-v01.webp"
+    },
+    {
+      "old": "images/modular/vaso-espada-sao-jorge-v01.png",
+      "new": "images/modular/vaso-espada-sao-jorge-v01.webp"
+    },
+    {
+      "old": "images/modular/vortex-rebeca-v01.png",
+      "new": "images/modular/vortex-rebeca-v01.webp"
+    },
+    {
+      "old": "images/modular/xerifins-departamento-v01.png",
+      "new": "images/modular/xerifins-departamento-v01.webp"
+    },
+    {
+      "old": "images/modular/xerifins-guarita-v01.png",
+      "new": "images/modular/xerifins-guarita-v01.webp"
+    },
+    {
+      "old": "images/modular/xerifins-viatura-v01.png",
+      "new": "images/modular/xerifins-viatura-v01.webp"
+    },
+    {
+      "old": "images/modular/carro-hatch-v01.png",
+      "new": "images/modular/carro-hatch-v01.webp"
+    },
+    {
+      "old": "images/modular/carro-sedan-v01.png",
+      "new": "images/modular/carro-sedan-v01.webp"
+    },
+    {
+      "old": "images/modular/carro-suv-v01.png",
+      "new": "images/modular/carro-suv-v01.webp"
+    },
+    {
+      "old": "images/modular/carro-picape-v01.png",
+      "new": "images/modular/carro-picape-v01.webp"
+    }
+  ]
+}

@@ -13,7 +13,7 @@ export default function NorthDesert(){return <g data-layer="north-desert" pointe
     <rect x="480" y="-650" width="1100" height="900" fill="url(#desert-urban-blend)" opacity=".64"/>
     {Array.from({length:14},(_,i)=><path key={`ripple-${i}`} d={`M${850+i*43} ${30+i%3*19}q90-28 185-10t180-15`} fill="none" stroke={i%2?'#FFF0C4':'#D1AA75'} strokeWidth={i%3===0?2:1} opacity=".24"/>)}
     <g clipPath="url(#desert-boundary)">
-      {[{x:1050,y:-200,w:400},{x:1350,y:-240,w:460},{x:1670,y:-250,w:470},{x:1190,y:-65,w:350},{x:1480,y:-70,w:400},{x:1760,y:-115,w:420}].map((d,i)=><image key={i} href="/images/modular/deserto-dunas-v01.png?v=1" x={d.x} y={d.y} width={d.w} height={d.w*.58} transform={i%2?`translate(${2*d.x+d.w} 0) scale(-1 1)`:undefined}/>)}
+      {[{x:1050,y:-200,w:400},{x:1350,y:-240,w:460},{x:1670,y:-250,w:470},{x:1190,y:-65,w:350},{x:1480,y:-70,w:400},{x:1760,y:-115,w:420}].map((d,i)=><image key={i} href="/images/modular/deserto-dunas-v01.webp?v=1" x={d.x} y={d.y} width={d.w} height={d.w*.58} transform={i%2?`translate(${2*d.x+d.w} 0) scale(-1 1)`:undefined}/>)}
     </g>
   </g>
 </g>;}
