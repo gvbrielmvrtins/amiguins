@@ -542,10 +542,10 @@
   },
   "valley-forest-grass-3/savannaGrass/0/0": {
     "x": -621.95,
-    "y": -1153.38,
+    "y": -1153.54,
     "scale": 2.7,
     "rotation": 0,
-    "layer": -2,
+    "layer": 0,
     "hidden": false
   },
   "paises-africanos/internationalAirport/100/140": {
@@ -1507,7 +1507,7 @@
     "y": -420.71,
     "scale": 1,
     "rotation": 0,
-    "layer": -1,
+    "layer": 0,
     "hidden": false
   },
   "torre-mistica": {
@@ -4663,8 +4663,8 @@
     "hidden": false
   },
   "construction-materials": {
-    "x": 6.42,
-    "y": 0.22,
+    "x": 14.2,
+    "y": 1.22,
     "scale": 1.05,
     "rotation": 0,
     "layer": 0,
@@ -4766,7 +4766,7 @@
     "y": -106.71,
     "scale": 2.6,
     "rotation": 0,
-    "layer": 1,
+    "layer": 2,
     "hidden": false
   },
   "ruins-rubble-east": {
@@ -4810,11 +4810,11 @@
     "hidden": false
   },
   "ruins-caution-front-east-1": {
-    "x": 0.48,
-    "y": 2.62,
+    "x": 0.59,
+    "y": 2.51,
     "scale": 1,
     "rotation": 0,
-    "layer": 1,
+    "layer": 2,
     "hidden": false
   },
   "ruins-caution-front-west-1": {
@@ -4830,7 +4830,7 @@
     "y": -0.16,
     "scale": 1,
     "rotation": 0,
-    "layer": 1,
+    "layer": 2,
     "hidden": false
   },
   "traffic-barrier-falling::copy:f4b55f77-38b1-475d-8f35-086f3e72f8fc": {
@@ -5048,11 +5048,11 @@
     "hidden": false
   },
   "construction-beam-structure": {
-    "x": -18,
-    "y": 67.3,
+    "x": -14.9,
+    "y": 58.32,
     "scale": 1.4,
     "rotation": 0,
-    "layer": 0,
+    "layer": 1,
     "hidden": false
   },
   "pingos-nos-ins": {
@@ -5700,7 +5700,7 @@
     "hidden": false
   },
   "tatiane-baniski": {
-    "x": -20.2,
+    "x": -20.37,
     "y": -96.56,
     "scale": 1.45,
     "rotation": 0,
@@ -5758,6 +5758,69 @@
   "savanna-coastal-grass-7/savannaGrass/0/0": {
     "x": 0,
     "y": 0,
-    "layer": -3
+    "scale": 1,
+    "rotation": 0,
+    "layer": -3,
+    "hidden": false
+  },
+  "pamonhal-bloco-1-layer-0": {
+    "x": 0,
+    "y": 0,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
+  },
+  "pamonhal-bloco-2-layer-0": {
+    "x": 0,
+    "y": 0,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
+  },
+  "pamonhal-bloco-2-layer--1": {
+    "x": 0,
+    "y": 0,
+    "scale": 1,
+    "rotation": 0,
+    "layer": -1,
+    "hidden": false
+  },
+  "pamonhal-bloco-3-layer-0": {
+    "x": 0,
+    "y": 0,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
+  },
+  "pamonhal-bloco-3-layer-1": {
+    "x": 0,
+    "y": 0,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 2,
+    "hidden": false
+  },
+  "ruins-caution-back-west-0": {
+    "x": 0,
+    "y": 0,
+    "layer": 1
+  },
+  "ruins-caution-back-west-1": {
+    "x": 0,
+    "y": -0.11,
+    "layer": 1
+  },
+  "construction-hoarding-back-west-1": {
+    "x": 0,
+    "y": 0,
+    "layer": 1
+  },
+  "construction-hoarding-back-west-0": {
+    "x": 0,
+    "y": 0,
+    "layer": 1
   }
 }

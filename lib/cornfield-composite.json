@@ -1,0 +1,82 @@
+[
+  {
+    "id": "pamonhal-bloco-1",
+    "file": "/images/modular/pamonhal-bloco-1-v02.webp",
+    "layers": [
+      0
+    ],
+    "x": 335,
+    "y": 672,
+    "width": 160,
+    "height": 255,
+    "sourceIds": [
+      "pamonha-cornfield-0",
+      "pamonha-cornfield-1",
+      "pamonha-cornfield-2",
+      "pamonha-cornfield-13",
+      "pamonha-cornfield-14",
+      "pamonha-cornfield-15",
+      "pamonha-cornfield-16"
+    ],
+    "tileWidth": 640,
+    "tileHeight": 1020,
+    "atlasWidth": 640
+  },
+  {
+    "id": "pamonhal-bloco-2",
+    "file": "/images/modular/pamonhal-bloco-2-v02.webp",
+    "layers": [
+      0,
+      -1
+    ],
+    "x": 318,
+    "y": 984,
+    "width": 201,
+    "height": 280,
+    "sourceIds": [
+      "pamonha-cornfield-3",
+      "pamonha-cornfield-4",
+      "pamonha-cornfield-5",
+      "pamonha-cornfield-6",
+      "pamonha-cornfield-17",
+      "pamonha-cornfield-18",
+      "pamonha-cornfield-19",
+      "pamonha-cornfield-20",
+      "pamonha-cornfield-21"
+    ],
+    "tileWidth": 804,
+    "tileHeight": 1120,
+    "atlasWidth": 1608
+  },
+  {
+    "id": "pamonhal-bloco-3",
+    "file": "/images/modular/pamonhal-bloco-3-v02.webp",
+    "layers": [
+      0,
+      1
+    ],
+    "x": 343,
+    "y": 1329,
+    "width": 181,
+    "height": 413,
+    "sourceIds": [
+      "pamonha-cornfield-9",
+      "pamonha-cornfield-10",
+      "pamonha-cornfield-11",
+      "pamonha-cornfield-12",
+      "pamonha-cornfield-24",
+      "pamonha-cornfield-25",
+      "pamonha-cornfield-26",
+      "pamonha-cornfield-26::copy:65b9c313-1b1e-47b7-aaa7-8813344c336e",
+      "pamonha-cornfield-26::copy:8bd162b5-199e-48b2-a64e-617e7793ba62",
+      "pamonha-cornfield-27",
+      "pamonha-cornfield-28",
+      "pamonha-cornfield-28::copy:5bfe0807-e1d3-4daa-93ae-d1a6e28c145a",
+      "pamonha-cornfield-28::copy:9a31f781-18df-45f0-bc07-846c406f8f4e",
+      "pamonha-cornfield-28::copy:31f51551-a5bd-476a-b607-a4a5f48a2369"
+    ],
+    "tileWidth": 724,
+    "tileHeight": 1652,
+    "atlasWidth": 1448
+  }
+]

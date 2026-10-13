@@ -12,6 +12,7 @@ import NorthMountain, {NorthMountainGround} from './north-mountain';
 import NorthDesert from './north-desert';
 import {forestCoastPlants} from '@/lib/north-forest';
 import forestComposite from '@/lib/forest-composite.json';
+import cornfieldComposite from '@/lib/cornfield-composite.json';
 import MetroTrain, {MetroGround,MetroUnderpass} from './metro-line';
 import MapStreets from './map-streets';
 import PrideParade from './pride-parade';
@@ -228,12 +229,7 @@ export default function ModularMap({ selected, onSelect }: { selected: string | 
     <MovableMapElement id="desert-camel"><image href="/images/modular/deserto-camelo-v01.webp" x="1550" y="35" width="78" height="65" pointerEvents="none"/></MovableMapElement>
     <MovableMapElement id="desert-editable-dune"><image href="/images/modular/deserto-dunas-v01.webp" x="1510" y="-60" width="340" height="195" pointerEvents="none"/></MovableMapElement>
     <MapCars/>
-    {Array.from({length:29},(_,i)=>{
-      const row=i<13?0:1,index=i<13?i:i-13;
-      const jitter=[-8,5,-2,9,-5,3,-7][index%7];
-      const width=[86,94,81,91,88][index%5];
-      return <MovableMapElement key={`pamonha-cornfield-${i}`} id={`pamonha-cornfield-${i}`}><image href="/images/modular/milharal-pamonhas-v01.webp" x={row===0?352+jitter:390+jitter} y={(row===0?708:680)+index*(row===0?69:59)} width={width} height={+(width*1185/1186).toFixed(2)} pointerEvents="none"/></MovableMapElement>;
-    })}
+    {cornfieldComposite.flatMap(block=>block.layers.map(layer=><MovableMapElement key={`${block.id}-${layer}`} id={`${block.id}-layer-${layer}`} locked={block.id!=='pamonhal-bloco-3'}><svg x={block.x} y={block.y} width={block.width} height={block.height} viewBox={`${block.layers.indexOf(layer)*block.tileWidth} 0 ${block.tileWidth} ${block.tileHeight}`} overflow="hidden" pointerEvents="none"><image href={block.file} width={block.atlasWidth} height={block.tileHeight}/></svg></MovableMapElement>))}
     <MapLayoutLayers front/>
     </g>
   </svg>;
