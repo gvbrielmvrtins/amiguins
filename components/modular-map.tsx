@@ -143,6 +143,7 @@ export default function ModularMap({ selected, onSelect }: { selected: string | 
       if (destination.type === 'savanna') return <SavannaProp key={destination.id} item={destination}/>;
       if (destination.type === 'beach') return <BeachProp key={destination.id} item={destination}/>;
       if (destination.type === 'character') {
+        if (destination.id === 'camila-ochoa') return null;
         const at = projectGround(destination.x, destination.y);
         return <g key={destination.id} id={`character-${destination.id}`} data-character={destination.id} transform={`translate(${at.x} ${at.y-(destination.elevation??0)}) scale(${buildingScale})`} className="modular-destination map-character" role="button" tabIndex={0} aria-label={`Encontrar ${destination.name}`} onClick={() => onSelect(destination.id)} onKeyDown={event => { if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); onSelect(destination.id, true); } }}>
 
@@ -199,7 +200,17 @@ export default function ModularMap({ selected, onSelect }: { selected: string | 
       return <MovableMapElement key={destination.id} id={destination.id} locked={destination.id==='colabin'||destination.id==='jardim-secreto'}>{render()}</MovableMapElement>;
     })}
     <MovableMapElement id="snake-plant-pot"><image href="/images/modular/vaso-espada-sao-jorge-v01.png" x="1690" y="719" width="50" height="37.48" pointerEvents="none"/></MovableMapElement>
-    <MovableMapElement id="totem-eu-amo-amiguins"><image href="/images/modular/totem-eu-amo-amiguins-v02.png" x="1190" y="1299" width="100" height="45" pointerEvents="none"/></MovableMapElement>
+    <MovableMapElement id="camila-ochoa">
+      <g transform="translate(-468.34 94.65) translate(1240 1321.5) scale(3) translate(-1240 -1321.5)">
+      <g id="character-camila-ochoa" data-character="camila-ochoa" role="button" tabIndex={0} aria-label="Encontrar Camila Ochoa" className="modular-destination map-character" transform="rotate(-8 1250 1316)" onClick={()=>onSelect('camila-ochoa')} onKeyDown={event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();onSelect('camila-ochoa',true);}}}>
+        <rect x="1243" y="1302.5" width="14" height="12.69" fill="transparent"/>
+        <image href="/images/characters/camila-ochoa-v02.png" x="1243" y="1302.5" width="14" height="12.69" pointerEvents="none"/>
+      </g>
+      </g>
+    </MovableMapElement>
+    <MovableMapElement id="totem-eu-amo-amiguins" selectionBounds={{x:1190,y:1299,width:100,height:45}}>
+      <image href="/images/modular/totem-eu-amo-amiguins-v02.png" x="1190" y="1299" width="100" height="45" pointerEvents="none"/>
+    </MovableMapElement>
     <MovableMapElement id="rock-in-rio-sign"><image href="/images/modular/rock-in-rio-sign-v01.png" x="1180" y="1315" width="150" height="75" pointerEvents="none" aria-label="Letreiro Rock in Rio"/></MovableMapElement>
     <MovableMapElement id="hens-foraging-group"><image href="/images/modular/galinhas-ciscando-v01.png" x="870" y="1045" width="60" height="40" pointerEvents="none"/></MovableMapElement>
     <MovableMapElement id="children-action-figures"><image href="/images/modular/criancas-bonequinhos-v01.png" x="850" y="975" width="75" height="55" pointerEvents="none"/></MovableMapElement>

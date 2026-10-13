@@ -15,7 +15,7 @@ function TavernDucks(){const scope=useContext(MapElementScope);return <g pointer
 </g>;}
 function Building({kind}:{kind:string}){return <g stroke={p.ink} strokeWidth="2" strokeLinejoin="round">
   {kind==='taverna-joguins' && <>
-    <CivicRenderedProp kind="tavern" y={-55}/>
+    <CivicRenderedProp kind="tavern" y={-55} locked/>
     <MovableMapElement id="tavern-roof-pizza-slice"><image href="/images/modular/fatia-pizza-telhado-v01.png" x="-50" y="-150" width="48" height="34" pointerEvents="none"/></MovableMapElement>
     <TavernFurniture/>
     <TavernDucks/>
@@ -66,7 +66,6 @@ export function EastGround(){return <g data-layer="east-district-study-ground" s
 
 export function EastFiller({item}:{item:{id:string;x:number;y:number}}){const at=projectGround(item.x,item.y);return <g transform={`translate(${at.x} ${at.y})`} pointerEvents="none" aria-label={item.id==='east-cafe'?'Café de apoio renderizado':item.id.startsWith('valley-')?'Campus e robôs do silicIN valley':'Jardim de convivência'}><Building kind={item.id}/></g>;}
 export default function EastDestination({destination:d,selected,onSelect}:{destination:ModularDestination;selected:string|null;onSelect:(id:string,keyboard?:boolean)=>void}){const at=projectGround(d.x-100,d.y-100);return <g id={`destination-${d.id}`} className={`modular-destination ${selected===d.id?'is-selected':''}`} transform={`translate(${at.x} ${at.y})`} role="group" aria-label={d.name}><Building kind={d.id}/></g>;}
-
 
 
 
