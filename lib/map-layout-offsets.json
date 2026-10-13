@@ -4923,7 +4923,7 @@
   "tavern-pizza-delivery-man": {
     "x": -158.53,
     "y": -9.57,
-    "scale": 0.75,
+    "scale": 0.65,
     "rotation": 0,
     "layer": 1,
     "hidden": false
@@ -5337,7 +5337,7 @@
   "tiago-vieira": {
     "x": -69.24,
     "y": -65.72,
-    "scale": 1.05,
+    "scale": 1,
     "rotation": 0,
     "layer": 1,
     "hidden": false
@@ -5734,6 +5734,30 @@
   "camila-ochoa": {
     "x": 39.41,
     "y": 2.87,
-    "scale": 0.7
+    "scale": 0.7,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
+  },
+  "simone-lapa": {
+    "x": 24.34,
+    "y": 0.19,
+    "scale": 1.15,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
+  },
+  "north-mountain-ground": {
+    "x": 28.43,
+    "y": 11.8,
+    "scale": 1,
+    "rotation": 0,
+    "layer": -3,
+    "hidden": false
+  },
+  "savanna-coastal-grass-7/savannaGrass/0/0": {
+    "x": 0,
+    "y": 0,
+    "layer": -3
   }
 }

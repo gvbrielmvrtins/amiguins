@@ -22,6 +22,7 @@ const targets:Target[]=[...mapCharacters, ...modularDestinations.map<Target>(d=>
 const destinationPortraits:Record<string,string>={"pingos-nos-ins":"pingos-nos-ins-redacao-v04.png","east-cafe":"cafe-apoio-render-v01.png","colabin":"colabin-laboratorio-v02.png","vagao-feminino":"metro-vagao-feminino-v04.png","livrinhoteca":"livrinhoteca-isometrico-v01.png","cineminha":"cineminha-isometrico-v01.png","mercado-vagas":"mercado-vagas-isometrico-v01.png","prefeintura":"prefeitura-render-v02.png","taverna-joguins":"taverna-medieval-games-v04.png","pracinha":"praca-central-circular-v01.png","espacin-coloridin":"coloridin-arco-iris-frontal-v02.png","linkedin":"linkedin-predio-v02.png","jardim-secreto":"rosa-arvore-isometrica-v01.png","estudio-criativins":"estudio-render-v02.png","silicin-valley":"silicin-campus-v02.png","departamento-xerifins":"xerifins-departamento-v01.png","inglish-pub":"inglish-pub-render-v02.png","oficina-vendinhas":"feira-roupas-v01.png","torre-mistica":"torre-feiticaria-v02.png","plaza-hispanica":"plaza-arcada-bandeiras-v02.png","academia-marombins":"academia-render-v02.png","binstro":"binstro-render-v02.png","paises-africanos":"aeroporto-internacional-v02.png"};
 // Crop the existing illustration to the head without exposing the map pose or props.
 const facePortraits:Record<string,{width:number;height:number;crop:[number,number,number]}>= {
+  'simone-lapa':{width:1448,height:1086,crop:[475,15,500]},
   'gustavo-pontes':{width:1199,height:1312,crop:[350,0,560]},
   'camila-ochoa':{width:1317,height:1194,crop:[300,15,680]},
   'vinicius-macedo':{width:1024,height:1536,crop:[160,0,440]},
@@ -51,7 +52,7 @@ const facePortraits:Record<string,{width:number;height:number;crop:[number,numbe
   'maria-fernanda-figueiroa':{width:1024,height:1536,crop:[340,45,390]},
   'luara-nardelli':{width:1024,height:1536,crop:[290,70,540]},
   'naiane-de-mello':{width:1024,height:1536,crop:[270,0,530]},
-  'diego-ungari':{width:1388,height:1133,crop:[445,0,350]},
+  'diego-ungari':{width:1388,height:1133,crop:[420,0,400]},
   'elton-pavesi':{width:1024,height:1536,crop:[210,0,560]},
   'davi-cabeca':{width:1254,height:1254,crop:[110,10,1140]},
   'loisi-vieira':{width:1310,height:1200,crop:[275,20,410]},
@@ -153,6 +154,8 @@ export default function ExplorationGame({optimized=false,hd=false,hdManifest}:{o
   useLayoutEffect(()=>{wheelZoom.current=zoom;},[zoom]);
   const [message, setMessage] = useState('');
   const [messageVersion,setMessageVersion]=useState(0);
+  type Milestone = {text:string;tone:'quarter'|'half'|'complete'};
+  const [milestone,setMilestone]=useState<Milestone|null>(null);
   function showMessage(text:string){
     setMessage(text);
     setMessageVersion(version=>version+1);
@@ -162,6 +165,11 @@ export default function ExplorationGame({optimized=false,hd=false,hdManifest}:{o
     const timer=window.setTimeout(()=>setMessage(''),5000);
     return()=>window.clearTimeout(timer);
   },[message,messageVersion]);
+  useEffect(()=>{
+    if(!milestone)return;
+    const timer=window.setTimeout(()=>setMilestone(null),5000);
+    return()=>window.clearTimeout(timer);
+  },[milestone]);
   const [filter, setFilter] = useState<'all' | 'remaining'>('all');
   const help = useRef<HTMLDialogElement>(null);
   const reset = useRef<HTMLDialogElement>(null);
@@ -240,7 +248,6 @@ export default function ExplorationGame({optimized=false,hd=false,hdManifest}:{o
     if(e.touches.length)beginTouch(e);
   }
   const current = targets.find(t => t.id === selected);
-  const complete = mapCharacters.length > 0 && found.length === mapCharacters.length;
   function constrainCamera(){
     const v=viewport.current;if(!v)return;
     const next=boundedScroll(v.scrollLeft,v.scrollTop,v.clientWidth,v.clientHeight,v.scrollWidth,v.scrollHeight);
@@ -266,6 +273,20 @@ export default function ExplorationGame({optimized=false,hd=false,hdManifest}:{o
     v.addEventListener('wheel',wheel,{passive:false,capture:true});
     return()=>v.removeEventListener('wheel',wheel,true);
   },[viewportNode]);
+  function locateFoundCharacter(id:string){
+    if(!found.includes(id))return false;
+    const v=viewport.current;
+    const person=mapCharacters.find(character=>character.id===id);
+    const node=v?.querySelector<SVGGraphicsElement>(`#character-${id}, [data-character="${id}"]`)??Array.from(v?.querySelectorAll<SVGGraphicsElement>('.optimized-character')??[]).find(element=>element.getAttribute('aria-label')===`Encontrar ${person?.name}`);
+    if(!v||!node)return false;
+    const rect=node.getBoundingClientRect();
+    if(!rect.width||!rect.height)return false;
+    setSelected(id);
+    const frame=v.getBoundingClientRect();
+    const next=boundedScroll(v.scrollLeft+rect.left-frame.left+rect.width/2-v.clientWidth/2,v.scrollTop+rect.top-frame.top+rect.height/2-v.clientHeight/2,v.clientWidth,v.clientHeight,v.scrollWidth,v.scrollHeight);
+    v.scrollTo({left:next.left,top:next.top,behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});
+    return true;
+  }
   function locateDestination(id:string){
     setSelected(id);const v=viewport.current,d=targets.find(item=>item.id===id);if(!v||!d)return false;
     // Follow rendered artwork rather than the original lot coordinates. The
@@ -296,14 +317,13 @@ export default function ExplorationGame({optimized=false,hd=false,hdManifest}:{o
     const count = found.length + 1;
     const quarter = Math.ceil(mapCharacters.length * .25);
     const half = Math.ceil(mapCharacters.length * .5);
+    showMessage(`Você encontrou ${target.name}!`);
     if (count === mapCharacters.length) {
-      showMessage('YAY! Você encontrou todos os amiguINs! E os easter eggs, achou todos? 👀');
+      setMilestone({text:'YAY! Você encontrou todos os amiguINs! E os easter eggs, achou todos? 👀',tone:'complete'});
     } else if (count === half) {
-      showMessage(`UAU! Você já achou ${count} amiguINs pelas ruas da amiguINlândia! Já se encontrou também?`);
+      setMilestone({text:`UAU! Você já achou ${count} amiguINs pelas ruas da amiguINlândia! Já se encontrou também?`,tone:'half'});
     } else if (count === quarter) {
-      showMessage(`Você já encontrou ${count} amiguINs! Tá curtindo passear pela amiguINlândia?`);
-    } else {
-      showMessage(`Você encontrou ${target.name}!`);
+      setMilestone({text:`Você já encontrou ${count} amiguINs! Tá curtindo passear pela amiguINlândia?`,tone:'quarter'});
     }
     if (selected === target.id) setSelected(null);
   }
@@ -349,7 +369,7 @@ export default function ExplorationGame({optimized=false,hd=false,hdManifest}:{o
           if (category.id === 'places') items.sort((a, b) => (placeListPriority[a.id] ?? 3) - (placeListPriority[b.id] ?? 3));
           const count = items.filter(t => found.includes(t.id)).length;
           const Icon = Store;
-          return <section className="category" key={category.id}><button className="category-heading" aria-expanded={!collapsed.includes(category.id)} onClick={() => setCollapsed(prev => prev.includes(category.id) ? prev.filter(c => c !== category.id) : [...prev, category.id])}><strong>{category.label}</strong>{category.id === 'people' && <span className="category-count">{count}<span>/{items.length}</span></span>}<ChevronDown size={15} className={collapsed.includes(category.id) ? 'closed' : ''} /></button>{!collapsed.includes(category.id) && <div className={`target-grid ${category.id === 'places' ? 'places-grid' : ''}`}>{items.filter(t => category.id === 'places' || filter !== 'remaining' || !found.includes(t.id)).map(target => <button key={target.id} className={`target-card ${selected === target.id ? 'selected' : ''} ${found.includes(target.id) ? 'found' : ''}`} aria-label={target.category === 'places' ? `Ir para ${target.name}` : `Procurar ${target.name}${sheriffIds.has(target.id)?', xerifIN':''}${found.includes(target.id) ? ', encontrado' : ''}`} aria-pressed={selected === target.id} onClick={() => { if(target.category === 'places'){if(locateDestination(target.id))showMessage(`Você está em ${target.name}.`);return;} setSelected(target.id); showMessage(found.includes(target.id) ? `${target.name} já foi encontrado!` : `Procurando ${target.name}. Encontre no mapa!`); }}><span className="portrait-wrap"><Portrait target={target} optimized={optimized}/>{sheriffIds.has(target.id)&&<span className="sheriff-badge" role="img" aria-label="xerifIN"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l3 6 6.6 1-4.8 4.7 1.1 6.6L12 18.2l-5.9 3.1 1.1-6.6L2.4 10 9 9Z" fill="#FAD846" stroke="#604722" strokeWidth="1.4"/>{[[12,3],[21.6,10],[17.9,21.3],[6.1,21.3],[2.4,10]].map(([x,y],i)=><circle key={i} cx={x} cy={y} r="1.5" fill="#FFE888" stroke="#604722" strokeWidth=".8"/>)}</svg></span>}{found.includes(target.id) && <span className="found-check"><Check size={12} /></span>}</span><span>{target.name}</span></button>)}</div>}</section>;
+          return <section className="category" key={category.id}><button className="category-heading" aria-expanded={!collapsed.includes(category.id)} onClick={() => setCollapsed(prev => prev.includes(category.id) ? prev.filter(c => c !== category.id) : [...prev, category.id])}><strong>{category.label}</strong>{category.id === 'people' && <span className="category-count">{count}<span>/{items.length}</span></span>}<ChevronDown size={15} className={collapsed.includes(category.id) ? 'closed' : ''} /></button>{!collapsed.includes(category.id) && <div className={`target-grid ${category.id === 'places' ? 'places-grid' : ''}`}>{items.filter(t => category.id === 'places' || filter !== 'remaining' || !found.includes(t.id)).map(target => <button key={target.id} className={`target-card ${selected === target.id ? 'selected' : ''} ${found.includes(target.id) ? 'found' : ''}`} aria-label={target.category === 'places' ? `Ir para ${target.name}` : `Procurar ${target.name}${sheriffIds.has(target.id)?', xerifIN':''}${found.includes(target.id) ? ', encontrado' : ''}`} aria-pressed={selected === target.id} onClick={() => { if(target.category === 'places'){if(locateDestination(target.id))showMessage(`Você está em ${target.name}.`);return;} if(found.includes(target.id)){if(locateFoundCharacter(target.id))showMessage(`Aqui está ${target.name}!`);return;} setSelected(target.id); showMessage(`Procurando ${target.name}. Encontre no mapa!`); }}><span className="portrait-wrap"><Portrait target={target} optimized={optimized}/>{sheriffIds.has(target.id)&&<span className="sheriff-badge" role="img" aria-label="xerifIN"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l3 6 6.6 1-4.8 4.7 1.1 6.6L12 18.2l-5.9 3.1 1.1-6.6L2.4 10 9 9Z" fill="#FAD846" stroke="#604722" strokeWidth="1.4"/>{[[12,3],[21.6,10],[17.9,21.3],[6.1,21.3],[2.4,10]].map(([x,y],i)=><circle key={i} cx={x} cy={y} r="1.5" fill="#FFE888" stroke="#604722" strokeWidth=".8"/>)}</svg></span>}{found.includes(target.id) && <span className="found-check"><Check size={12} /></span>}</span><span>{target.name}</span></button>)}</div>}</section>;
         })}</div>
 
 
@@ -363,12 +383,13 @@ export default function ExplorationGame({optimized=false,hd=false,hdManifest}:{o
 
           {<div className="map-actions"><button className="help-button" aria-label="Como jogar" onClick={() => help.current?.showModal()}><HelpCircle size={17} /></button><button className="help-button" aria-label="Recomeçar" onClick={() => reset.current?.showModal()}><RotateCcw size={17} /></button></div>}
 
-          {message && <div className={`game-message ${complete ? 'complete' : ''}`} role="status"><Sparkles size={19} /><span>{complete ? 'YAY! Você encontrou todos os amiguINs! E os easter eggs, achou todos? 👀' : message}</span><button aria-label="Fechar mensagem" onClick={() => setMessage('')}><X size={15} /></button></div>}
+          {message && <div className="game-message" role="status"><Sparkles size={19} /><span>{message}</span><button aria-label="Fechar mensagem" onClick={() => setMessage('')}><X size={15} /></button></div>}
+          {milestone && <div className={`game-message game-milestone ${milestone.tone}`} role="status"><Sparkles size={24} /><span>{milestone.text}</span><button aria-label="Fechar mensagem de progresso" onClick={()=>setMilestone(null)}><X size={15}/></button></div>}
         </div>
         <div className="map-footer"><span>{mapCharacters.length} pessoas para encontrar · clique nos EspacINs para navegar · use o zoom e arraste para explorar</span></div>
       </section>
     </div>
     <dialog ref={help} className="game-dialog"><button className="dialog-close" aria-label="Fechar instruções" onClick={() => help.current?.close()}><X /></button><h2>Explore a amiguINlândia</h2><ol><li>Escolha um amiguIN para procurar.</li><li>Ao encontrar, clique no amiguIN no mapa para registrar a descoberta.</li><li>Clique em um espacIN da lista para ir até ele no mapa.</li><li>Use o mouse (no computador) ou gesto de pinça nos dedos (no celular) para ampliar ou reduzir; arraste o mapa para explorar.</li><li>Eles não são registráveis, mas o mapa está cheio de easter eggs... encontrou todos? 👀</li></ol><button className="dialog-primary" onClick={() => help.current?.close()}>Vamos explorar <ArrowUpRight size={17} /></button></dialog>
-    <dialog ref={reset} className="game-dialog"><h2>Mais uma volta?</h2><p>As descobertas desta rodada serão apagadas e as pessoas poderão ser encontradas novamente.</p><div className="dialog-actions"><button onClick={() => reset.current?.close()}>Continuar jogando</button><button className="dialog-primary" onClick={() => { setFound([]); setSelected(null); setMessage(''); setZoom(1); reset.current?.close(); }}>Recomeçar</button></div></dialog>
+    <dialog ref={reset} className="game-dialog"><h2>Mais uma volta?</h2><p>As descobertas desta rodada serão apagadas e as pessoas poderão ser encontradas novamente.</p><div className="dialog-actions"><button onClick={() => reset.current?.close()}>Continuar jogando</button><button className="dialog-primary" onClick={() => { setMilestone(null); setFound([]); setSelected(null); setMessage(''); setZoom(1); reset.current?.close(); }}>Recomeçar</button></div></dialog>
   </main></MapEditorContext.Provider>;
 }

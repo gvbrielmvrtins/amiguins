@@ -1,0 +1,15 @@
+# Simone Lapa
+
+Personagem encontrável no terreno texturizado atrás da montanha, em grupo único com palhaço, tubarão fora d’água e ET. Só Simone tem entrada no menu; retrato recorta seu rosto. Grupo editável pelo ID simone-lapa. Prévia HD preservada.
+
+Arte: `public/images/characters/simone-lapa-grupo-v01.png`.
+Retrato: `public/images/menu-portraits/simone-lapa.webp`.
+Geração imagegen integrado. Foto pessoal para identidade; Lula v02 como estilo principal, Nathan v01 e Gabriel v02 adicionais. A primeira variante foi descartada por copiar Lula como integrante.
+
+## Prompt inicial
+
+Use case stylized-concept. Transparent single group sprite for isometric cartoon village. Four friendly figures arranged compactly with SIMONE LAPA prominently in CENTER, full bodies visible: adult woman from Image1 identity reference, warm medium brown skin, round friendly face, very voluminous shoulder length tight black curls with a few gray strands, brown eyes, gentle toothy smile, no glasses. Purple ribbed long-sleeve top and silver necklace with small P pendant matching photo, dark trousers and comfortable shoes. Surround her with a friendly clown (red nose colorful costume curly wig) on left, a cute gray shark OUT OF WATER resting/standing on belly at front right with fins and smiling face, and small green extraterrestrial with big eyes behind/right. No violence, not frightening. Simone larger/prominent and readable, companions don't obscure face/body. Image2 NEW LULA is PRIMARY IDEAL STYLE; Images3 Nathan and4 Gabriel mandatory additional STYLE references. EXACT bold thick clean black contours, large SIMPLE oval expressive eyes, simplified rounded nose and smile, enlarged heads compact cartoon bodies, controlled two-tone flat cel shading. Preserve Simone own likeness, not reference faces. Eyes face viewer, elevated slight three-quarter perspective for map. No sheriff badge. All feet/fin/tentacles fully in canvas. Genuine transparent alpha, absolutely no glow halo floor scenery text or watermark. Landscape canvas. One coherent group with human scale companions and shark smaller than human, no setting.
+
+## Correção final
+
+Correct target group illustration. REPLACE the entire man on LEFT (white-bearded president with hat/sash) with a FRIENDLY CLOWN: no beard, no hat resembling Panama, no sash, white clown face makeup, round RED nose, bright orange curly wig, colorful red-yellow-blue loose costume, oversized colorful shoes, smiling. Keep central woman Simone, ET and shark arrangement. Also SIMPLIFY Simone face and hair into bold flat cartoon style: clean thick black outlines, simple rounded nose, large simple oval eyes dark pupils one white highlight directly toward viewer, simple white smile, flat two-tone shading with NO realistic skin texture/gradients and NO fine curly strands; hair broad chunky small cartoon curl clusters, some gray accents. Preserve Simone identity, warm medium brown skin, purple ribbed sweater P necklace, dark trousers. Primary request is woman surrounded by clown, shark and ET, NO politicians or extra humans. Keep full bodies and clean transparent alpha, no glow scenery text.

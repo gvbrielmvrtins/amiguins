@@ -8,7 +8,7 @@ import MapCars from './map-cars';
 import EditableGroundPatches from './editable-ground-patches';
 import {MovableMapElement,MapLayoutLayers} from './map-layout-editor';
 import NorthMetropolis, {MetropolisTransitionGround} from './north-metropolis';
-import NorthMountain from './north-mountain';
+import NorthMountain, {NorthMountainGround} from './north-mountain';
 import NorthDesert from './north-desert';
 import {forestCoastPlants} from '@/lib/north-forest';
 import forestComposite from '@/lib/forest-composite.json';
@@ -96,10 +96,11 @@ export default function ModularMap({ selected, onSelect }: { selected: string | 
     <MovableMapElement id="forest-composite-front" locked><image data-forest-composite="front" href={forestComposite.front.file} x={forestComposite.x} y={forestComposite.y} width={forestComposite.width} height={forestComposite.height} pointerEvents="none" aria-label="Árvores da frente da floresta"/></MovableMapElement>
     <MovableMapElement id="north-metropolis" locked><NorthMetropolis/></MovableMapElement>
     <MetroUnderpass/>
+    <MapLayoutLayers front={false}/>
+    <MovableMapElement id="north-mountain-ground" locked><NorthMountainGround/></MovableMapElement>
     <MovableMapElement id="north-mountain" locked><NorthMountain/></MovableMapElement>
     <g data-layer="destinations-depth-sorted">
     <MovableMapElement id="pamonha-cornfield-ground"><path d="M300 686Q404 682 447 704Q495 731 470 790Q456 846 483 895Q506 946 475 1005Q461 1048 481 1104Q503 1170 468 1220Q446 1270 474 1325Q497 1380 468 1433Q448 1480 480 1532Q510 1598 459 1648Q422 1674 300 1668Z" fill="url(#pamonha-earth-texture)" mask="url(#pamonha-earth-fade)" pointerEvents="none"/></MovableMapElement>
-    <MapLayoutLayers front={false}/>
     <g pointerEvents="none" fill="url(#pamonha-earth-texture)">
       {[{x:558,y:1558,width:389},{x:1063,y:2118,width:384}].map(lot=><polygon key={lot.y} points={[[lot.x,lot.y],[lot.x+lot.width,lot.y],[lot.x+lot.width,lot.y+444],[lot.x,lot.y+444]].map(([x,y])=>{const p=projectGround(x,y);return `${p.x},${p.y}`;}).join(' ')}/>)}
     </g>
@@ -121,9 +122,9 @@ export default function ModularMap({ selected, onSelect }: { selected: string | 
     <MovableMapElement id="hen-rebeca-accessories"><image href="/images/modular/galinha-rebeca-v01.png" x="1490" y="1090" width="25" height="30" pointerEvents="none"/></MovableMapElement>
     <MovableMapElement id="rebeca-dimensional-vortex"><image href="/images/modular/vortex-rebeca-v01.png" x="1380" y="1020" width="100" height="100" pointerEvents="none"/></MovableMapElement>
     <MovableMapElement id="gabriel-female-moustache-nonplayable"><image href="/images/modular/gabriel-versao-feminina-bigode-v01.png" x="460" y="570" width="30" height="45" pointerEvents="none"/></MovableMapElement>
-    <MovableMapElement id="bolsonaro-cage-nonplayable"><image href="/images/modular/bolsonaro-jaula-npc-v01.png" x="1610" y="755" width="44" height="66" pointerEvents="none"/></MovableMapElement>
+    <MovableMapElement id="bolsonaro-cage-nonplayable"><image href="/images/modular/bolsonaro-jaula-npc-v04.png" x="1610" y="755" width="44" height="66" pointerEvents="none"/></MovableMapElement>
     <MovableMapElement id="football-field-bleachers"><g transform="translate(944 1098)" pointerEvents="none"><g transform={uprightProjection(-.554, .587).transform}><image href="/images/modular/campinho-arquibancada-v02.png" width="380" height="253.33"/></g></g></MovableMapElement>
-    <MovableMapElement id="lula-nonplayable"><image href="/images/modular/lula-npc-v01.png" x="1550" y="755" width="28" height="42" pointerEvents="none"/></MovableMapElement>
+    <MovableMapElement id="lula-nonplayable"><image href="/images/modular/lula-npc-v02.png" x="1550" y="755" width="28" height="42" pointerEvents="none"/></MovableMapElement>
     <MovableMapElement id="job-seekers-queue"><image href="/images/modular/fila-empregos-v01.png" x="1265" y="515" width="120" height="80" pointerEvents="none"/></MovableMapElement>
     <MovableMapElement id="work-booklet-loose"><image href="/images/modular/carteira-trabalho-avulsa-v01.png" x="1370" y="610" width="30" height="30" pointerEvents="none"/></MovableMapElement>
     <MovableMapElement id="cemetery-single-image"><image href="/images/modular/cemiterio-v01.png" x="885" y="1070" width="175" height="140" pointerEvents="none"/></MovableMapElement>

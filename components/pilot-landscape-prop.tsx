@@ -20,13 +20,19 @@ export default function PilotLandscapeProp({ item }: { item: LandscapeProp }) {
   const treeWidth = item.size ?? 105;
   const illustration = item.kind === 'clock' || item.kind === 'lamp' || item.kind === 'popcorn' || item.kind === 'planter' || item.kind === 'table' || item.kind === 'notice' || item.kind === 'bollard' ? illustratedProps[item.kind] : null;
   if (illustration) return <g data-landscape={item.id} transform={`translate(${at.x} ${at.y})`} pointerEvents="none" aria-hidden="true">
-    <image href={`${pilotAssetPath}${illustration.file}`} x={-illustration.anchorX*illustration.scale} y={-illustration.anchorY*illustration.scale} width={illustration.width*illustration.scale} height={illustration.height*illustration.scale} preserveAspectRatio="xMidYMid meet"/>
+    <image href={`${pilotAssetPath}${item.id==='civic-city-notice'?'mural-workshop-capcut-v01.png':illustration.file}`} x={-illustration.anchorX*illustration.scale} y={-illustration.anchorY*illustration.scale} width={illustration.width*illustration.scale} height={illustration.height*illustration.scale} preserveAspectRatio="xMidYMid meet"/>
+    {item.id==='civic-city-notice'&&<g transform="scale(.052) translate(-700 -965)">
+      <g transform="matrix(1 .342 0 1 430 330)">
+        <text x="265" y="44" textAnchor="middle" fill="#1C1C1C" fontFamily="var(--font-gasoek), sans-serif" fontSize="35">
+          {['JÁ SE INSCREVEU','PRO WORKSHOP','DE CAPCUT DIA 15?'].map((line,i)=><tspan key={line} x="265" dy={i===0?0:62}>{line}</tspan>)}
+        </text>
+      </g>
+    </g>}
   </g>;
   return <g data-landscape={item.id} transform={`translate(${at.x} ${at.y})`} pointerEvents="none" aria-hidden="true" stroke={p.ink} strokeWidth="1.8" strokeLinejoin="round" strokeLinecap="round">
     <ellipse cx="7" cy="3" rx={item.kind==='tree'?22:19} ry="8" fill={p.ink} opacity=".12" stroke="none"/>
     {item.kind==='tree' && <image href={`${pilotAssetPath}rosa-arvore-isometrica-v01.png`} x={-treeWidth*.525} y={-treeWidth*.7} width={treeWidth} height={treeWidth*.75} preserveAspectRatio="xMidYMid meet"/>}
   </g>;
 }
-
 
 

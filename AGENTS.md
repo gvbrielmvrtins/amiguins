@@ -21,6 +21,8 @@ Diretriz do usuário em 03/10/2026: seguir [a estratégia de composição](docs/
 
 ## Estilo dos personagens
 
+Diretriz do usuário em 13/10/2026: usar também o novo Lula (`public/images/modular/lula-npc-v02.png`) como referência ideal de estilo nas próximas gerações e revisões, junto de Nathan e Gabriel. Priorizar suas formas cartoon simples, contornos pretos fortes, olhos expressivos e sombreamento controlado; preservar a identidade própria de cada pessoa.
+
 Diretriz do usuário em 10/10/2026: novos personagens devem olhar diretamente para o usuário, com olhos voltados para a frente, evitando o olhar habitual para o alto à direita. Exceções apenas quando a ação ou orientação solicitada exigir outro olhar (por exemplo, fila voltada ao atendimento).
 
 Diretriz do usuário em 09/10/2026: Nathan e Gabriel são as referências principais de estilo para personagens (`public/images/characters/nathan-machado-v01.png` e `gabriel-martins-v02.png`). Usá-los explicitamente nas gerações: contornos pretos definidos, proporções cartoon, olhos expressivos e sombreamento controlado. Usar a foto de cada pessoa como referência de identidade facial; não reutilizar o rosto de outro personagem. Preservar identidades ilustradas preexistentes quando solicitado pelo usuário.

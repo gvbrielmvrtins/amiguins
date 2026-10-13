@@ -356,3 +356,10 @@ h1,h2,h3,h4,h5,h6,button,label,.eyebrow,.progress-label,.category-count,.map-top
 
 .sheriff-badge { position:absolute; left:-3px; bottom:-3px; width:19px; height:19px; display:grid; place-items:center; background:#fffef9; border-radius:50%; border:1px solid #c8b77b; z-index:1; }
 .sheriff-badge svg { width:16px; height:16px; overflow:visible; }
+
+.game-message.quarter { background:var(--pink); }
+.game-message.half { background:var(--coral); }
+
+.game-milestone { top:50%; transform:translate(-50%,-50%); width: min(460px,calc(100% - 35px)); padding:28px 30px; text-align:center; flex-direction:column; z-index:5; pointer-events:none; }
+.game-milestone > span { width:100%; text-align:center; }
+.game-milestone button { position:absolute; top:8px; right:8px; margin:0; pointer-events:auto; }
