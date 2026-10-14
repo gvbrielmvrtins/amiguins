@@ -15,7 +15,10 @@ Headers do Pages em `out/_headers`: HTML principal revalidado a cada acesso; arq
 - Diretório de publicação: `out`.
 - Node: `24.21.0`; pnpm: `12.3.4`, conforme o projeto.
 - Produção: `main`.
-- Domínio: `mapa.amiguins.com`, após verificar a prévia `pages.dev`.
+- Projeto Git: `amiguins`; prévia: https://amiguins.pages.dev.
+- Domínio ativo: https://mapa.amiguins.com; CNAME `mapa` → `amiguins.pages.dev`.
+- Migração concluída em 14/10/2026: HTTPS 200, mapa sem erros de console, 876 imagens SVG usando exclusivamente `assets.amiguins.com`.
+- Variáveis de build no painel: `NODE_VERSION=24.21.0`, `PNPM_VERSION=12.3.4`.
 
 O domínio permanece igual para preservar o progresso salvo no navegador (`amiguins-found-v1`). O editor local usa `amiguins-map-layout-v1` e continua disponível com `npm run dev`.
 
