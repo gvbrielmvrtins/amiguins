@@ -29,3 +29,6 @@ next-env.d.ts
 
 # Local-only high-definition map experiment
 /public/images/map-hd-preview/
+# Static export and its temporary export destination
+/out/
+/.next-pages/

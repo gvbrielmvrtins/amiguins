@@ -51,7 +51,7 @@ export default function RootLayout({
     <html lang="pt-BR" className={`light ${displayFont.variable} ${headingFont.variable} ${bodyFont.variable}`}>
       <body className="antialiased">
         {children}
-        {process.env.NODE_ENV === 'production' && <Analytics />}
+        {process.env.VERCEL === '1' && <Analytics />}
       </body>
     </html>
   )

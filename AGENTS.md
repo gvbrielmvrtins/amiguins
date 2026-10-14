@@ -19,6 +19,12 @@ Diretriz do usuário em 03/10/2026: seguir [a estratégia de composição](docs/
 - A sequência de trabalho não exige aprovação intermediária adicional; respeitar o escopo e as instruções do pedido atual.
 - Basear sempre as novas composições nas referências visuais do cenário já construído: escala, paleta, isometria e relação entre edificações e áreas livres. As demarcações de terrenos são guias flexíveis; preenchimentos podem incluir residências, comércios e parques sem criar destinos específicos da vila.
 
+## Publicação do mapa
+
+- As ilustrações de produção são carregadas diretamente de `https://assets.amiguins.com` (Cloudflare R2), por `lib/asset-url.ts`. Novas imagens e revisões precisam ser enviadas ao bucket `amiguins-images` antes de publicar código que as referencia. Preferir nomes com versão; invalidar cache se sobrescrever um arquivo existente.
+- A versão para Cloudflare Pages é gerada com `npm run build:pages`: site estático em `out/`, sem funções de servidor. A pasta `out/images` é removida apenas do pacote gerado; os originais em `public/images` ficam preservados. Nunca enviar fotos de referência ou credenciais na publicação.
+- `npm run dev` mantém o editor e as prévias locais. Preservar o domínio `mapa.amiguins.com` e as chaves existentes do localStorage para manter o progresso dos jogadores.
+
 ## Estilo dos personagens
 
 Diretriz do usuário em 13/10/2026: usar também o novo Lula (`public/images/modular/lula-npc-v02.png`) como referência ideal de estilo nas próximas gerações e revisões, junto de Nathan e Gabriel. Priorizar suas formas cartoon simples, contornos pretos fortes, olhos expressivos e sombreamento controlado; preservar a identidade própria de cada pessoa.
