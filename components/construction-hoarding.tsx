@@ -1,3 +1,4 @@
+import {assetUrl} from '@/lib/asset-url';
 import {MovableMapElement} from './map-layout-editor';
 
 const edges=[
@@ -14,7 +15,7 @@ export default function ConstructionHoarding({front}:{front:boolean}){
       const x=edge.x+i*width,y=edge.y+(edge.falling?1:-1)*i*dy;
       return <MovableMapElement key={`${edge.id}-${i}`} id={`construction-hoarding-${edge.id}-${i}`}>
         <g transform={`translate(${edge.falling?x+width:x} ${edge.falling?y+dy:y}) scale(${edge.falling?-scale:scale} ${scale})`} pointerEvents="none">
-          <g transform="matrix(1 -.241 0 1 0 0)"><image href="/images/modular/tapume-obras-v01.webp" x="-148" y="-987" width="1536" height="1024"/></g>
+          <g transform="matrix(1 -.241 0 1 0 0)"><image href={assetUrl("/images/modular/tapume-obras-v01.webp")} x="-148" y="-987" width="1536" height="1024"/></g>
         </g>
       </MovableMapElement>;
     }))}

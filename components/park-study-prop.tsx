@@ -1,3 +1,4 @@
+import {assetUrl} from '@/lib/asset-url';
 import { projectGround } from '@/lib/map-projection';
 import { parkStudyProps } from '@/lib/map-filler';
 import { parkRenderedAssets } from '@/lib/park-rendered-assets';
@@ -10,7 +11,7 @@ function Board({ x,y,w,d,z }: { x:number;y:number;w:number;d:number;z:number }) 
 export default function ParkStudyProp({ item }: { item:Prop }) {
   const at=projectGround(item.x,item.y);
   const art=parkRenderedAssets[item.kind];
-  if (art) return <g data-park-study={item.id} transform={`translate(${at.x} ${at.y})`} pointerEvents="none" aria-hidden="true"><image href={`/images/modular/${art.file}`} x={-art.anchorX*art.scale} y={-art.anchorY*art.scale} width={art.width*art.scale} height={art.height*art.scale}/></g>;
+  if (art) return <g data-park-study={item.id} transform={`translate(${at.x} ${at.y})`} pointerEvents="none" aria-hidden="true"><image href={assetUrl(`/images/modular/${art.file}`)} x={-art.anchorX*art.scale} y={-art.anchorY*art.scale} width={art.width*art.scale} height={art.height*art.scale}/></g>;
   const tree=item.kind==='oak'||item.kind==='birch'||item.kind==='pine';
   return <g data-park-study={item.id} transform={`translate(${at.x} ${at.y})`} pointerEvents="none" aria-hidden="true" stroke="#384B37" strokeWidth="2" strokeLinejoin="round" strokeLinecap="round">
     <ellipse cx="8" cy="3" rx={tree?23:27} ry="8" fill="#405A36" opacity=".15" stroke="none"/>

@@ -1,3 +1,4 @@
+import {assetUrl} from '@/lib/asset-url';
 import {projectGround} from '@/lib/map-projection';
 import {MovableMapElement} from './map-layout-editor';
 
@@ -13,7 +14,7 @@ export default function MapCars(){
     {cars.map(car=>{
       const at=projectGround(car.x,1500);
       return <MovableMapElement key={car.id} id={car.id}>
-        <image href={`/images/modular/carro-${car.file}-v01.webp`}
+        <image href={assetUrl(`/images/modular/carro-${car.file}-v01.webp`)}
           x={at.x-car.width/2} y={at.y-car.height*.72}
           width={car.width} height={car.height} pointerEvents="none"/>
       </MovableMapElement>;

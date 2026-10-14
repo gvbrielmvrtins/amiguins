@@ -1,5 +1,6 @@
 'use client';
 
+import {assetUrl} from '@/lib/asset-url';
 import { useEffect, useState } from 'react';
 import styles from './loading-preview.module.css';
 import LoadingSquare3D from './loading-square-3d';
@@ -39,7 +40,7 @@ export function LoadingScreen({ progress }: { progress: number }) {
           >
             {percent}%
           </div>
-          <img className={styles.logo} src="/images/logo-loading.webp" alt="AmiguINs" width={600} height={120} />
+          <img className={styles.logo} src={assetUrl("/images/logo-loading.webp")} alt="AmiguINs" width={600} height={120} />
       </div>
     </main>
   );

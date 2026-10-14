@@ -1,3 +1,4 @@
+import {assetUrl} from '@/lib/asset-url';
 import {MovableMapElement,MapElementScope} from './map-layout-editor';
 import {useContext} from 'react';
 import {streetLanes} from './map-streets';
@@ -11,15 +12,15 @@ function TavernFurniture(){return <g data-tavern-furniture="rendered">
   <CivicRenderedProp kind="tavernRoundTable" x={85} y={120}/>
 </g>;}
 function TavernDucks(){const scope=useContext(MapElementScope);return <g pointerEvents="none" data-tavern-ducks="decorative">
-  {[[-130,50],[-60,175],[100,160],[80,60]].map(([x,y],i)=><MovableMapElement key={`tavern-duck-${i}`} id={`${scope}/duck/${i}`}><g transform={`translate(${(x-y)*.5196152423} ${(x+y)*.3}) scale(${i%2?-1:1} 1)`}><image href="/images/modular/taverna-pato-v01.webp" x="-13" y="-23" width="26" height="24"/></g></MovableMapElement>)}
+  {[[-130,50],[-60,175],[100,160],[80,60]].map(([x,y],i)=><MovableMapElement key={`tavern-duck-${i}`} id={`${scope}/duck/${i}`}><g transform={`translate(${(x-y)*.5196152423} ${(x+y)*.3}) scale(${i%2?-1:1} 1)`}><image href={assetUrl("/images/modular/taverna-pato-v01.webp")} x="-13" y="-23" width="26" height="24"/></g></MovableMapElement>)}
 </g>;}
 function Building({kind}:{kind:string}){return <g stroke={p.ink} strokeWidth="2" strokeLinejoin="round">
   {kind==='taverna-joguins' && <>
     <CivicRenderedProp kind="tavern" y={-55} locked/>
-    <MovableMapElement id="tavern-roof-pizza-slice"><image href="/images/modular/fatia-pizza-telhado-v01.webp" x="-50" y="-150" width="48" height="34" pointerEvents="none"/></MovableMapElement>
+    <MovableMapElement id="tavern-roof-pizza-slice"><image href={assetUrl("/images/modular/fatia-pizza-telhado-v01.webp")} x="-50" y="-150" width="48" height="34" pointerEvents="none"/></MovableMapElement>
     <TavernFurniture/>
     <TavernDucks/>
-    <MovableMapElement id="tavern-pizza-delivery-man"><image href="/images/modular/entregador-pizza-v01.webp" x="-55" y="-40" width="40" height="69" pointerEvents="none"/></MovableMapElement>
+    <MovableMapElement id="tavern-pizza-delivery-man"><image href={assetUrl("/images/modular/entregador-pizza-v01.webp")} x="-55" y="-40" width="40" height="69" pointerEvents="none"/></MovableMapElement>
   </>}
   {kind==='linkedin' && <>
     <CivicRenderedProp kind="linkedinBuilding" y={-55}/>
@@ -34,7 +35,7 @@ function Building({kind}:{kind:string}){return <g stroke={p.ink} strokeWidth="2"
     <CivicRenderedProp kind="valleyCycles" x={105} y={40}/>
   </>}
   {kind.startsWith('valley-robot-') && <g pointerEvents="none" transform={kind.endsWith('-b')?'scale(-1 1)':undefined}>
-    <image href={`/images/modular/silicin-${kind.includes('walle')?'walle':kind.includes('humanoid')?'humanoide':'aspirador'}-v01.png?v=1`} x={kind.includes('vacuum')?-9:-13} y={kind.includes('vacuum')?-10:-31} width={kind.includes('vacuum')?18:26} height={kind.includes('vacuum')?11:32}/>
+    <image href={assetUrl(`/images/modular/silicin-${kind.includes('walle')?'walle':kind.includes('humanoid')?'humanoide':'aspirador'}-v01.png?v=1`)} x={kind.includes('vacuum')?-9:-13} y={kind.includes('vacuum')?-10:-31} width={kind.includes('vacuum')?18:26} height={kind.includes('vacuum')?11:32}/>
   </g>}
   {kind==='valley-ring' && <CivicRenderedProp kind="valleyRing"/>}
   {kind==='east-cafe' && <CivicRenderedProp kind="eastCafe" x={-40} y={-35}/>}
@@ -45,7 +46,7 @@ export function EastGround(){return <g data-layer="east-district-study-ground" s
       <rect width="4400" height="3600" fill="white" stroke="none"/>
       <path d={streetLanes.join(' ')} fill="none" stroke="black" strokeWidth="116" strokeLinecap="round" strokeLinejoin="round"/>
     </mask>
-    <pattern id="tavern-grass-continuous" patternUnits="userSpaceOnUse" x="-270" y="-140" width="630" height="380"><rect width="630" height="380" fill="#9CBA78"/><image href="/images/modular/parque-grama-v01.webp" width="630" height="380" preserveAspectRatio="none" opacity=".78"/></pattern>
+    <pattern id="tavern-grass-continuous" patternUnits="userSpaceOnUse" x="-270" y="-140" width="630" height="380"><rect width="630" height="380" fill="#9CBA78"/><image href={assetUrl("/images/modular/parque-grama-v01.webp")} width="630" height="380" preserveAspectRatio="none" opacity=".78"/></pattern>
     <pattern id="valley-concrete-paving" width="96" height="64" patternUnits="userSpaceOnUse">
       <rect width="96" height="64" fill="#AAA99F" stroke="none"/>
       <rect x=".9" y=".9" width="46.2" height="30.2" rx=".6" fill="#D0CFC6" stroke="none"/>

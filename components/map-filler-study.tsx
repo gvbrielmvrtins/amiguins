@@ -1,3 +1,4 @@
+import {assetUrl} from '@/lib/asset-url';
 import { projectGround, uprightProjection } from '@/lib/map-projection';
 import { fillerBuildings } from '@/lib/map-filler';
 import { fillerRenderedAssets } from '@/lib/filler-rendered-assets';
@@ -23,7 +24,7 @@ export default function FillerBuilding({ item: b }: { item: Building }) {
     return <g data-filler-building={b.id} pointerEvents="none" aria-hidden="true">
       <g transform={`translate(${corner.x} ${corner.y})`}>
         <g transform={uprightProjection(art.risingSlope,art.fallingSlope).transform}>
-          <image href={`/images/modular/${art.file}`} x={-art.anchorX*art.scale} y={-art.anchorY*art.scale} width={art.width*art.scale} height={art.height*art.scale}/>
+          <image href={assetUrl(`/images/modular/${art.file}`)} x={-art.anchorX*art.scale} y={-art.anchorY*art.scale} width={art.width*art.scale} height={art.height*art.scale}/>
         </g>
       </g>
     </g>;

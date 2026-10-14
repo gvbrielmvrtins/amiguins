@@ -1,3 +1,4 @@
+import {assetUrl} from '@/lib/asset-url';
 import {projectGround} from '@/lib/map-projection';
 
 export const forestClearingItems=[
@@ -16,10 +17,10 @@ export default function ForestClearingProp({item}:{item:typeof forestClearingIte
   return <g transform={`translate(${at.x} ${at.y})`} pointerEvents="none">
     <g transform={item.mirror?'scale(-1 1)':undefined}>
       {'dog' in item && item.dog
-        ? <image href={item.id==='diego-dog-2'?'/images/modular/diego-cachorro-2-v01.webp':'/images/modular/diego-cachorro-v01.webp'} x={item.id==='diego-dog-2'?-15:-12} y="-25" width={item.id==='diego-dog-2'?30:24} height="26"/>
+        ? <image href={assetUrl(item.id==='diego-dog-2'?'/images/modular/diego-cachorro-2-v01.webp':'/images/modular/diego-cachorro-v01.webp')} x={item.id==='diego-dog-2'?-15:-12} y="-25" width={item.id==='diego-dog-2'?30:24} height="26"/>
         : item.house
-        ? <image href="/images/modular/casinha-sitio-v01.webp" x="-45" y="-65" width="90" height="70"/>
-        : <image href="/images/modular/jacu-v01.webp" x="-10" y="-17" width="20" height="18"/>}
+        ? <image href={assetUrl("/images/modular/casinha-sitio-v01.webp")} x="-45" y="-65" width="90" height="70"/>
+        : <image href={assetUrl("/images/modular/jacu-v01.webp")} x="-10" y="-17" width="20" height="18"/>}
     </g>
   </g>;
 }

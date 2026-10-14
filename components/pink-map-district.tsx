@@ -1,3 +1,4 @@
+import {assetUrl} from '@/lib/asset-url';
 import {MovableMapElement} from './map-layout-editor';
 import { projectGround, buildingScale } from '@/lib/map-projection';
 import { modularDestinations, mapPalette as p } from '@/lib/modular-map';
@@ -19,7 +20,7 @@ export default function PinkMapDistrict({ selected, onSelect, only }: { only?: s
 
           <g data-projection="upright-isometric" transform={pilotProjections[site.id].transform}>
 
-            <image href={`${pilotAssetPath}${asset.file}`} x={x} y={y} width={width} height={height} preserveAspectRatio="xMidYMid meet"/>
+            <image href={assetUrl(`${pilotAssetPath}${asset.file}`)} x={x} y={y} width={width} height={height} preserveAspectRatio="xMidYMid meet"/>
           </g>
         </g>;
         return site.id==='livrinhoteca'
@@ -32,7 +33,7 @@ export default function PinkMapDistrict({ selected, onSelect, only }: { only?: s
         const position = projectGround(ornament.x, ornament.y);
         const width = ornament.width * buildingScale;
         const height = ornament.height * buildingScale;
-        const image=<image key={ornament.id} href={`${pilotAssetPath}${ornament.file}`} x={position.x-width/2} y={position.y-height} width={width} height={height} preserveAspectRatio="xMidYMid meet"/>;
+        const image=<image key={ornament.id} href={assetUrl(`${pilotAssetPath}${ornament.file}`)} x={position.x-width/2} y={position.y-height} width={width} height={height} preserveAspectRatio="xMidYMid meet"/>;
         return ornament.destination==='livrinhoteca'
           ? <MovableMapElement key={ornament.id} id={ornament.id}>{image}</MovableMapElement>
           : image;

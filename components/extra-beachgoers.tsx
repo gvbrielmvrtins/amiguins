@@ -1,3 +1,4 @@
+import {assetUrl} from '@/lib/asset-url';
 import {cityShorePoints} from '@/lib/beach-layout';
 import {projectGround} from '@/lib/map-projection';
 import {MovableMapElement} from './map-layout-editor';
@@ -13,7 +14,7 @@ export default function ExtraBeachgoers(){
   return <g data-layer="extra-beachgoers">{models.map(model=>{
     const at=projectGround(shore[model.index].x,shore[model.index].y);
     return <MovableMapElement key={model.id} id={model.id}>
-      <image href={`/images/modular/${model.file}`} x={at.x-model.width/2} y={at.y-30} width={model.width} height="30" pointerEvents="none"/>
+      <image href={assetUrl(`/images/modular/${model.file}`)} x={at.x-model.width/2} y={at.y-30} width={model.width} height="30" pointerEvents="none"/>
     </MovableMapElement>;
   })}</g>;
 }

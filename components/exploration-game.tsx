@@ -1,5 +1,6 @@
 'use client';
 
+import {assetUrl} from '@/lib/asset-url';
 import { useState, useRef,useEffect, useLayoutEffect, useCallback, type TouchEvent, type PointerEvent } from 'react';
 import {boundedScroll} from '@/lib/map-camera';
 import { ArrowUpRight, Check, ChevronDown, HelpCircle, MousePointer2, PawPrint, RotateCcw, Sparkles, Store, Users, X } from 'lucide-react';
@@ -65,10 +66,10 @@ const facePortraits:Record<string,{width:number;height:number;crop:[number,numbe
 };
 function Portrait({target,optimized=false}:{target:Target;optimized?:boolean}){
   const mirrored=target.id==='naiane-de-mello'||target.id==='luara-nardelli';
-  if(optimized)return <img className="portrait" aria-hidden="true" alt="" src={`/images/menu-portraits/${target.id}.webp`} style={{objectFit:'contain',transform:mirrored?'scaleX(-1)':undefined}}/>;
+  if(optimized)return <img className="portrait" aria-hidden="true" alt="" src={assetUrl(`/images/menu-portraits/${target.id}.webp`)} style={{objectFit:'contain',transform:mirrored?'scaleX(-1)':undefined}}/>;
   const person=mapCharacters.find(p=>p.id===target.id),face=facePortraits[target.id];
-  if(person&&face){const [x,y,size]=face.crop;return <svg className="portrait face-portrait" style={{transform:mirrored?'scaleX(-1)':undefined}} aria-hidden="true" viewBox={`${x} ${y} ${size} ${size}`}><image href={person.file} width={face.width} height={face.height}/></svg>;}
-  return <img className="portrait" aria-hidden="true" alt="" src={`/images/modular/${destinationPortraits[target.id]}`} style={{objectFit:'contain'}}/>;
+  if(person&&face){const [x,y,size]=face.crop;return <svg className="portrait face-portrait" style={{transform:mirrored?'scaleX(-1)':undefined}} aria-hidden="true" viewBox={`${x} ${y} ${size} ${size}`}><image href={assetUrl(person.file)} width={face.width} height={face.height}/></svg>;}
+  return <img className="portrait" aria-hidden="true" alt="" src={assetUrl(`/images/modular/${destinationPortraits[target.id]}`)} style={{objectFit:'contain'}}/>;
 }
 
 export default function ExplorationGame({optimized=false,hd=false,hdManifest}:{optimized?:boolean;hd?:boolean;hdManifest?:typeof tileManifest}) {
@@ -187,7 +188,7 @@ export default function ExplorationGame({optimized=false,hd=false,hdManifest}:{o
     const placeCamera=()=>{
       if(initialCameraPlaced.current)return;
       const file=destinationPortraits.pracinha;
-      const image=Array.from(v.querySelectorAll<SVGImageElement>(`image[href="/images/modular/${file}"], [data-place-file="${file}"]`)).find(node=>node.getBoundingClientRect().width>0);
+      const image=Array.from(v.querySelectorAll<SVGImageElement>(`image[href="${assetUrl(`/images/modular/${file}`)}"], [data-place-file="${file}"]`)).find(node=>node.getBoundingClientRect().width>0);
       if(!image)return;
       const rect=image.getBoundingClientRect(),frame=v.getBoundingClientRect();
       const next=boundedScroll(v.scrollLeft+rect.left-frame.left+rect.width/2-v.clientWidth/2,v.scrollTop+rect.top-frame.top+rect.height/2-v.clientHeight/2,v.clientWidth,v.clientHeight,v.scrollWidth,v.scrollHeight);
@@ -292,7 +293,7 @@ export default function ExplorationGame({optimized=false,hd=false,hdManifest}:{o
     // Follow rendered artwork rather than the original lot coordinates. The
     // browser bounds include editor translations, rotation, scale and portals.
     const file=id==='jardim-secreto'?'jardim-labirinto-unificado-v01.webp':destinationPortraits[id];
-    const images=Array.from(v.querySelectorAll<SVGImageElement>(`image[href="/images/modular/${file}"], [data-place-file="${file}"]`));
+    const images=Array.from(v.querySelectorAll<SVGImageElement>(`image[href="${assetUrl(`/images/modular/${file}`)}"], [data-place-file="${file}"]`));
     const image=images.find(node=>{
       const rect=node.getBoundingClientRect();
       return rect.width>0&&rect.height>0;

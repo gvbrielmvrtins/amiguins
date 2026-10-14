@@ -1,3 +1,4 @@
+import {assetUrl} from '@/lib/asset-url';
 import { modularDestinations, mapPalette as p, type ModularDestination } from '@/lib/modular-map';
 import { projectGround } from '@/lib/map-projection';
 import { civicIds, civicLotSize } from '@/lib/civic-study';
@@ -35,7 +36,7 @@ function GatheringArea() {return <g data-study="square-gathering">
 function TarotArea() {return <g data-study="tarot-reading" aria-label="Espaço de leitura de tarô renderizado"><CivicRenderedProp kind="tarot" x={138} y={-12}/></g>;}
 
 export function CivicGround() {return <g data-layer="civic-study-ground" strokeWidth="3">
-  <defs><pattern id="civic-grass" width="325" height="320" patternUnits="userSpaceOnUse" stroke="none"><rect width="325" height="320" fill="#9CBA78" stroke="none"/><image href="/images/modular/parque-grama-v01.webp" width="325" height="320" preserveAspectRatio="none" opacity=".78"/></pattern></defs>
+  <defs><pattern id="civic-grass" width="325" height="320" patternUnits="userSpaceOnUse" stroke="none"><rect width="325" height="320" fill="#9CBA78" stroke="none"/><image href={assetUrl("/images/modular/parque-grama-v01.webp")} width="325" height="320" preserveAspectRatio="none" opacity=".78"/></pattern></defs>
   {modularDestinations.filter(d=>civicIds.has(d.id)).map(d=>{const height=d.id==='pracinha'?550:civicLotSize;return <g key={d.id} transform={`translate(${d.x-100} ${d.y-100})`}>
   </g>;})}
 </g>;}

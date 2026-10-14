@@ -1,3 +1,4 @@
+import {assetUrl} from '@/lib/asset-url';
 import ForestClearingProp,{forestClearingItems} from './forest-clearing';
 import ConstructionSite from './construction-site';
 import EditableTrafficProps from './editable-traffic-props';
@@ -92,9 +93,9 @@ export default function ModularMap({ selected, onSelect }: { selected: string | 
     </g>
     </g>
     <MovableMapElement id="forest-composite" locked>
-      <image data-forest-composite="back" href={forestComposite.back.file} x={forestComposite.x} y={forestComposite.y} width={forestComposite.width} height={forestComposite.height} pointerEvents="none" aria-label="Árvores de trás da floresta"/>
+      <image data-forest-composite="back" href={assetUrl(forestComposite.back.file)} x={forestComposite.x} y={forestComposite.y} width={forestComposite.width} height={forestComposite.height} pointerEvents="none" aria-label="Árvores de trás da floresta"/>
     </MovableMapElement>
-    <MovableMapElement id="forest-composite-front" locked><image data-forest-composite="front" href={forestComposite.front.file} x={forestComposite.x} y={forestComposite.y} width={forestComposite.width} height={forestComposite.height} pointerEvents="none" aria-label="Árvores da frente da floresta"/></MovableMapElement>
+    <MovableMapElement id="forest-composite-front" locked><image data-forest-composite="front" href={assetUrl(forestComposite.front.file)} x={forestComposite.x} y={forestComposite.y} width={forestComposite.width} height={forestComposite.height} pointerEvents="none" aria-label="Árvores da frente da floresta"/></MovableMapElement>
     <MovableMapElement id="north-metropolis" locked><NorthMetropolis/></MovableMapElement>
     <MetroUnderpass/>
     <MapLayoutLayers front={false}/>
@@ -112,29 +113,29 @@ export default function ModularMap({ selected, onSelect }: { selected: string | 
     <ArchaeologicalRuins/>
     <CinemaPosterEasels/>
     <ExtraBeachgoers/>
-    <MovableMapElement id="silent-observer-newspaper"><image href="/images/modular/observador-jornal-v01.webp" x="1140" y="1180" width="30" height="45" pointerEvents="none"/></MovableMapElement>
-    <MovableMapElement id="silent-observer-mug"><image href="/images/modular/observador-caneca-v01.webp" x="1180" y="1180" width="30" height="45" pointerEvents="none"/></MovableMapElement>
-    <MovableMapElement id="silent-observer-tree"><image href="/images/modular/observador-arvore-v01.webp" x="1220" y="1165" width="40" height="60" pointerEvents="none"/></MovableMapElement>
-    <MovableMapElement id="pingulin-microphone-original"><image href="/images/modular/pingulin-microfone-original.webp" x="2025" y="972" width="32" height="34.37" pointerEvents="none"/></MovableMapElement>
-    <MovableMapElement id="pingulin-headphones-original"><image href="/images/modular/pingulin-fone-original.webp" x="2090" y="976" width="30" height="36.55" pointerEvents="none"/></MovableMapElement>
-    <MovableMapElement id="retired-mascot-grandpa-crochet"><image href="/images/modular/mascote-vovo-croche-v01.webp" x="1240" y="815" width="30" height="45" pointerEvents="none"/></MovableMapElement>
-    <MovableMapElement id="jorge-family-nonplayable"><g transform="translate(691.508051 1405) scale(0.75)" aria-label="Jorge, filho de Andressa e Jackson" pointerEvents="none"><svg x={-14.501953125/2} y={-44} width={14.501953125} height={45} viewBox="640 0 330 1024" overflow="hidden"><image href="/images/characters/andressa-jackson-jorge-v01.webp" width="1536" height="1024"/></svg></g></MovableMapElement>
-    <MovableMapElement id="marlon-virus-nonplayable"><image href="/images/modular/marlon-virus-v01.webp" x="1500" y="1050" width="22" height="22" pointerEvents="none"/></MovableMapElement>
-    <MovableMapElement id="hen-rebeca-accessories"><image href="/images/modular/galinha-rebeca-v01.webp" x="1490" y="1090" width="25" height="30" pointerEvents="none"/></MovableMapElement>
-    <MovableMapElement id="rebeca-dimensional-vortex"><image href="/images/modular/vortex-rebeca-v01.webp" x="1380" y="1020" width="100" height="100" pointerEvents="none"/></MovableMapElement>
-    <MovableMapElement id="gabriel-female-moustache-nonplayable"><image href="/images/modular/gabriel-versao-feminina-bigode-v01.webp" x="460" y="570" width="30" height="45" pointerEvents="none"/></MovableMapElement>
-    <MovableMapElement id="bolsonaro-cage-nonplayable"><image href="/images/modular/bolsonaro-jaula-npc-v04.webp" x="1610" y="755" width="44" height="66" pointerEvents="none"/></MovableMapElement>
-    <MovableMapElement id="football-field-bleachers"><g transform="translate(944 1098)" pointerEvents="none"><g transform={uprightProjection(-.554, .587).transform}><image href="/images/modular/campinho-arquibancada-v02.webp" width="380" height="253.33"/></g></g></MovableMapElement>
-    <MovableMapElement id="lula-nonplayable"><image href="/images/modular/lula-npc-v02.webp" x="1550" y="755" width="28" height="42" pointerEvents="none"/></MovableMapElement>
-    <MovableMapElement id="job-seekers-queue"><image href="/images/modular/fila-empregos-v01.webp" x="1265" y="515" width="120" height="80" pointerEvents="none"/></MovableMapElement>
-    <MovableMapElement id="work-booklet-loose"><image href="/images/modular/carteira-trabalho-avulsa-v01.webp" x="1370" y="610" width="30" height="30" pointerEvents="none"/></MovableMapElement>
-    <MovableMapElement id="cemetery-single-image"><image href="/images/modular/cemiterio-v01.webp" x="885" y="1070" width="175" height="140" pointerEvents="none"/></MovableMapElement>
-    <MovableMapElement id="small-evangelical-church"><image href="/images/modular/igreja-evangelica-v01.webp" x="1060" y="1085" width="130" height="101" pointerEvents="none"/></MovableMapElement>
-    <MovableMapElement id="pastor-false-eyelashes"><image href="/images/modular/pastor-cilios-v01.webp" x="1245" y="1140" width="30" height="45" pointerEvents="none"/></MovableMapElement>
-    <MovableMapElement id="teenage-girls-group"><image href="/images/modular/trio-adolescentes-v01.webp" x="1180" y="1140" width="44" height="66" pointerEvents="none"/></MovableMapElement>
-    <MovableMapElement id="cyclist-pedaling"><image href="/images/modular/ciclista-pedalando-v02.webp" x="1450" y="1190" width="27" height="40" pointerEvents="none"/></MovableMapElement>
-    <MovableMapElement id="spoiled-spilled-milk"><image href="/images/modular/leite-derramado-estragado-v01.webp" x="745" y="1345" width="40" height="31" pointerEvents="none"/></MovableMapElement>
-    <MovableMapElement id="cottage-stone-path"><image href="/images/modular/caminho-pedrinhas-v01.webp" x="1117" y="1185" width="90" height="60" pointerEvents="none"/></MovableMapElement>
+    <MovableMapElement id="silent-observer-newspaper"><image href={assetUrl("/images/modular/observador-jornal-v01.webp")} x="1140" y="1180" width="30" height="45" pointerEvents="none"/></MovableMapElement>
+    <MovableMapElement id="silent-observer-mug"><image href={assetUrl("/images/modular/observador-caneca-v01.webp")} x="1180" y="1180" width="30" height="45" pointerEvents="none"/></MovableMapElement>
+    <MovableMapElement id="silent-observer-tree"><image href={assetUrl("/images/modular/observador-arvore-v01.webp")} x="1220" y="1165" width="40" height="60" pointerEvents="none"/></MovableMapElement>
+    <MovableMapElement id="pingulin-microphone-original"><image href={assetUrl("/images/modular/pingulin-microfone-original.webp")} x="2025" y="972" width="32" height="34.37" pointerEvents="none"/></MovableMapElement>
+    <MovableMapElement id="pingulin-headphones-original"><image href={assetUrl("/images/modular/pingulin-fone-original.webp")} x="2090" y="976" width="30" height="36.55" pointerEvents="none"/></MovableMapElement>
+    <MovableMapElement id="retired-mascot-grandpa-crochet"><image href={assetUrl("/images/modular/mascote-vovo-croche-v01.webp")} x="1240" y="815" width="30" height="45" pointerEvents="none"/></MovableMapElement>
+    <MovableMapElement id="jorge-family-nonplayable"><g transform="translate(691.508051 1405) scale(0.75)" aria-label="Jorge, filho de Andressa e Jackson" pointerEvents="none"><svg x={-14.501953125/2} y={-44} width={14.501953125} height={45} viewBox="640 0 330 1024" overflow="hidden"><image href={assetUrl("/images/characters/andressa-jackson-jorge-v01.webp")} width="1536" height="1024"/></svg></g></MovableMapElement>
+    <MovableMapElement id="marlon-virus-nonplayable"><image href={assetUrl("/images/modular/marlon-virus-v01.webp")} x="1500" y="1050" width="22" height="22" pointerEvents="none"/></MovableMapElement>
+    <MovableMapElement id="hen-rebeca-accessories"><image href={assetUrl("/images/modular/galinha-rebeca-v01.webp")} x="1490" y="1090" width="25" height="30" pointerEvents="none"/></MovableMapElement>
+    <MovableMapElement id="rebeca-dimensional-vortex"><image href={assetUrl("/images/modular/vortex-rebeca-v01.webp")} x="1380" y="1020" width="100" height="100" pointerEvents="none"/></MovableMapElement>
+    <MovableMapElement id="gabriel-female-moustache-nonplayable"><image href={assetUrl("/images/modular/gabriel-versao-feminina-bigode-v01.webp")} x="460" y="570" width="30" height="45" pointerEvents="none"/></MovableMapElement>
+    <MovableMapElement id="bolsonaro-cage-nonplayable"><image href={assetUrl("/images/modular/bolsonaro-jaula-npc-v04.webp")} x="1610" y="755" width="44" height="66" pointerEvents="none"/></MovableMapElement>
+    <MovableMapElement id="football-field-bleachers"><g transform="translate(944 1098)" pointerEvents="none"><g transform={uprightProjection(-.554, .587).transform}><image href={assetUrl("/images/modular/campinho-arquibancada-v02.webp")} width="380" height="253.33"/></g></g></MovableMapElement>
+    <MovableMapElement id="lula-nonplayable"><image href={assetUrl("/images/modular/lula-npc-v02.webp")} x="1550" y="755" width="28" height="42" pointerEvents="none"/></MovableMapElement>
+    <MovableMapElement id="job-seekers-queue"><image href={assetUrl("/images/modular/fila-empregos-v01.webp")} x="1265" y="515" width="120" height="80" pointerEvents="none"/></MovableMapElement>
+    <MovableMapElement id="work-booklet-loose"><image href={assetUrl("/images/modular/carteira-trabalho-avulsa-v01.webp")} x="1370" y="610" width="30" height="30" pointerEvents="none"/></MovableMapElement>
+    <MovableMapElement id="cemetery-single-image"><image href={assetUrl("/images/modular/cemiterio-v01.webp")} x="885" y="1070" width="175" height="140" pointerEvents="none"/></MovableMapElement>
+    <MovableMapElement id="small-evangelical-church"><image href={assetUrl("/images/modular/igreja-evangelica-v01.webp")} x="1060" y="1085" width="130" height="101" pointerEvents="none"/></MovableMapElement>
+    <MovableMapElement id="pastor-false-eyelashes"><image href={assetUrl("/images/modular/pastor-cilios-v01.webp")} x="1245" y="1140" width="30" height="45" pointerEvents="none"/></MovableMapElement>
+    <MovableMapElement id="teenage-girls-group"><image href={assetUrl("/images/modular/trio-adolescentes-v01.webp")} x="1180" y="1140" width="44" height="66" pointerEvents="none"/></MovableMapElement>
+    <MovableMapElement id="cyclist-pedaling"><image href={assetUrl("/images/modular/ciclista-pedalando-v02.webp")} x="1450" y="1190" width="27" height="40" pointerEvents="none"/></MovableMapElement>
+    <MovableMapElement id="spoiled-spilled-milk"><image href={assetUrl("/images/modular/leite-derramado-estragado-v01.webp")} x="745" y="1345" width="40" height="31" pointerEvents="none"/></MovableMapElement>
+    <MovableMapElement id="cottage-stone-path"><image href={assetUrl("/images/modular/caminho-pedrinhas-v01.webp")} x="1117" y="1185" width="90" height="60" pointerEvents="none"/></MovableMapElement>
     <SeaCharacters/>
     <g transform="translate(1095.588457269 1459)" pointerEvents="none" aria-label="Buraco que Paula está cavando"><ellipse cx="-7" cy="0" rx="11" ry="5" fill="#AB7F48" stroke="#CDA260" strokeWidth="2"/><path d="M-15 0Q-7-5 2 0" fill="none" stroke="#735733" strokeWidth="2"/><path d="M-22 3Q-18-5-13 1L-10 5Z" fill="#D8B87B" stroke="#BE965B" strokeWidth="1"/></g>
     {savannaProps.filter(item=>item.kind==='savannaOasis').map(item=><SavannaProp key={item.id} item={item}/>)}
@@ -150,7 +151,7 @@ export default function ModularMap({ selected, onSelect }: { selected: string | 
         return <g key={destination.id} id={`character-${destination.id}`} data-character={destination.id} transform={`translate(${at.x} ${at.y-(destination.elevation??0)}) scale(${buildingScale})`} className="modular-destination map-character" role="button" tabIndex={0} aria-label={`Encontrar ${destination.name}`} onClick={() => onSelect(destination.id)} onKeyDown={event => { if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); onSelect(destination.id, true); } }}>
 
           <rect x={-destination.width/2} y={1-destination.height} width={destination.width} height={destination.height+1} rx={5} fill="transparent"/>
-          {destination.spriteFrame ? <svg x={-destination.width/2} y={1-destination.height} width={destination.width} height={destination.height} viewBox={`${destination.spriteFrame.x} ${destination.spriteFrame.y} ${destination.spriteFrame.width} ${destination.spriteFrame.height}`} overflow="hidden" pointerEvents="none"><image href={destination.file} width={destination.spriteFrame.sourceWidth} height={destination.spriteFrame.sourceHeight}/></svg> : <image href={destination.file} x={-destination.width/2} y={1-destination.height} width={destination.width} height={destination.height} pointerEvents="none"/>}
+          {destination.spriteFrame ? <svg x={-destination.width/2} y={1-destination.height} width={destination.width} height={destination.height} viewBox={`${destination.spriteFrame.x} ${destination.spriteFrame.y} ${destination.spriteFrame.width} ${destination.spriteFrame.height}`} overflow="hidden" pointerEvents="none"><image href={assetUrl(destination.file)} width={destination.spriteFrame.sourceWidth} height={destination.spriteFrame.sourceHeight}/></svg> : <image href={assetUrl(destination.file)} x={-destination.width/2} y={1-destination.height} width={destination.width} height={destination.height} pointerEvents="none"/>}
         </g>;
       }
       if (destination.type === 'garden') return <GardenStudyProp key={destination.id} item={destination}/>;
@@ -160,7 +161,7 @@ export default function ModularMap({ selected, onSelect }: { selected: string | 
       if(destination.id==='pingos-nos-ins'){
         const at=projectGround(destination.x,destination.y);
         return <g id="destination-pingos-nos-ins" aria-label="pINgos nos INs — redação de jornal, comunicação e marketing" pointerEvents="none">
-          <image href="/images/modular/pingos-nos-ins-redacao-v04.webp" x={at.x-100} y={at.y-158} width="200" height="160.58"/>
+          <image href={assetUrl("/images/modular/pingos-nos-ins-redacao-v04.webp")} x={at.x-100} y={at.y-158} width="200" height="160.58"/>
         </g>;
       }
       if(destination.id==='colabin'){
@@ -169,7 +170,7 @@ export default function ModularMap({ selected, onSelect }: { selected: string | 
           <g transform={`translate(${at.x} ${at.y-12}) matrix(.5196152423 .3 -.5196152423 .3 0 0)`}>
             <path d="M-145-112Q-155-143-117-148L74-143Q133-150 153-105L146 80Q159 120 109 140L-83 151Q-132 146-149 107L-159-18Z" fill="url(#editable-patch-sidewalk)" stroke="none"/>
           </g>
-          <image href="/images/modular/colabin-laboratorio-v02.webp" x={at.x-100} y={at.y-165} width={200} height={170}/>
+          <image href={assetUrl("/images/modular/colabin-laboratorio-v02.webp")} x={at.x-100} y={at.y-165} width={200} height={170}/>
         </g>;
       }
       if(destination.id==='espacin-coloridin')return <PrideParade key={destination.id}/>;
@@ -201,35 +202,35 @@ export default function ModularMap({ selected, onSelect }: { selected: string | 
       };
       return <MovableMapElement key={destination.id} id={destination.id} locked={destination.id==='colabin'||destination.id==='jardim-secreto'}>{render()}</MovableMapElement>;
     })}
-    <MovableMapElement id="snake-plant-pot"><image href="/images/modular/vaso-espada-sao-jorge-v01.webp" x="1690" y="719" width="50" height="37.48" pointerEvents="none"/></MovableMapElement>
+    <MovableMapElement id="snake-plant-pot"><image href={assetUrl("/images/modular/vaso-espada-sao-jorge-v01.webp")} x="1690" y="719" width="50" height="37.48" pointerEvents="none"/></MovableMapElement>
     <MovableMapElement id="camila-ochoa">
       <g transform="translate(-468.34 94.65) translate(1240 1321.5) scale(3) translate(-1240 -1321.5)">
       <g id="character-camila-ochoa" data-character="camila-ochoa" role="button" tabIndex={0} aria-label="Encontrar Camila Ochoa" className="modular-destination map-character" transform="rotate(-8 1250 1316)" onClick={()=>onSelect('camila-ochoa')} onKeyDown={event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();onSelect('camila-ochoa',true);}}}>
         <rect x="1243" y="1302.5" width="14" height="12.69" fill="transparent"/>
-        <image href="/images/characters/camila-ochoa-v02.webp" x="1243" y="1302.5" width="14" height="12.69" pointerEvents="none"/>
+        <image href={assetUrl("/images/characters/camila-ochoa-v02.webp")} x="1243" y="1302.5" width="14" height="12.69" pointerEvents="none"/>
       </g>
       </g>
     </MovableMapElement>
     <MovableMapElement id="totem-eu-amo-amiguins" selectionBounds={{x:1190,y:1299,width:100,height:45}}>
-      <image href="/images/modular/totem-eu-amo-amiguins-v02.webp" x="1190" y="1299" width="100" height="45" pointerEvents="none"/>
+      <image href={assetUrl("/images/modular/totem-eu-amo-amiguins-v02.webp")} x="1190" y="1299" width="100" height="45" pointerEvents="none"/>
     </MovableMapElement>
-    <MovableMapElement id="rock-in-rio-sign"><image href="/images/modular/rock-in-rio-sign-v01.webp" x="1180" y="1315" width="150" height="75" pointerEvents="none" aria-label="Letreiro Rock in Rio"/></MovableMapElement>
-    <MovableMapElement id="hens-foraging-group"><image href="/images/modular/galinhas-ciscando-v01.webp" x="870" y="1045" width="60" height="40" pointerEvents="none"/></MovableMapElement>
-    <MovableMapElement id="children-action-figures"><image href="/images/modular/criancas-bonequinhos-v01.webp" x="850" y="975" width="75" height="55" pointerEvents="none"/></MovableMapElement>
-    <MovableMapElement id="plaza-mariachis"><image href="/images/modular/plaza-mariachis-v01.webp" x="710" y="840" width="75" height="55.15" pointerEvents="none"/></MovableMapElement>
-    <MovableMapElement id="plaza-tango"><image href="/images/modular/plaza-tango-v01.webp" x="800" y="875" width="48" height="67.64" pointerEvents="none"/></MovableMapElement>
-    <MovableMapElement id="plaza-tecidos"><image href="/images/modular/plaza-tecidos-v01.webp" x="960" y="760" width="90" height="87.43" pointerEvents="none"/></MovableMapElement>
-    <MovableMapElement id="plaza-arepas"><image href="/images/modular/plaza-arepas-v01.webp" x="690" y="925" width="75" height="89.92" pointerEvents="none"/></MovableMapElement>
-    <MovableMapElement id="plaza-peruvian-food-cart"><image href="/images/modular/plaza-carrinho-peruano-cuy-v02.webp" x="880" y="780" width="80" height="100" pointerEvents="none"/></MovableMapElement>
-    <MovableMapElement id="plaza-argentine-obelisk"><image href="/images/modular/plaza-obelisco-argentino-v01.webp" x="790" y="700" width="57" height="180" pointerEvents="none"/></MovableMapElement>
-    <MovableMapElement id="plaza-rbd-stage"><image href="/images/modular/plaza-palco-rbd-v01.webp" x="1000" y="730" width="200" height="157" pointerEvents="none"/></MovableMapElement>
-    <MovableMapElement id="editable-residential-building"><image href="/images/modular/metropole-residencial-v01.webp" x="780" y="860" width="95" height="120" pointerEvents="none"/></MovableMapElement>
-    <MovableMapElement id="central-circular-square" locked><image href="/images/modular/praca-central-circular-v01.webp" x="760" y="720" width="300" height="224.8" pointerEvents="none"/></MovableMapElement>
-    <MovableMapElement id="linkedin-building-reimport-v02"><image href="/images/modular/linkedin-predio-v02.webp" x="1100" y="750" width="175" height="137.4" pointerEvents="none"/></MovableMapElement>
-    <MovableMapElement id="desert-camel"><image href="/images/modular/deserto-camelo-v01.webp" x="1550" y="35" width="78" height="65" pointerEvents="none"/></MovableMapElement>
-    <MovableMapElement id="desert-editable-dune"><image href="/images/modular/deserto-dunas-v01.webp" x="1510" y="-60" width="340" height="195" pointerEvents="none"/></MovableMapElement>
+    <MovableMapElement id="rock-in-rio-sign"><image href={assetUrl("/images/modular/rock-in-rio-sign-v01.webp")} x="1180" y="1315" width="150" height="75" pointerEvents="none" aria-label="Letreiro Rock in Rio"/></MovableMapElement>
+    <MovableMapElement id="hens-foraging-group"><image href={assetUrl("/images/modular/galinhas-ciscando-v01.webp")} x="870" y="1045" width="60" height="40" pointerEvents="none"/></MovableMapElement>
+    <MovableMapElement id="children-action-figures"><image href={assetUrl("/images/modular/criancas-bonequinhos-v01.webp")} x="850" y="975" width="75" height="55" pointerEvents="none"/></MovableMapElement>
+    <MovableMapElement id="plaza-mariachis"><image href={assetUrl("/images/modular/plaza-mariachis-v01.webp")} x="710" y="840" width="75" height="55.15" pointerEvents="none"/></MovableMapElement>
+    <MovableMapElement id="plaza-tango"><image href={assetUrl("/images/modular/plaza-tango-v01.webp")} x="800" y="875" width="48" height="67.64" pointerEvents="none"/></MovableMapElement>
+    <MovableMapElement id="plaza-tecidos"><image href={assetUrl("/images/modular/plaza-tecidos-v01.webp")} x="960" y="760" width="90" height="87.43" pointerEvents="none"/></MovableMapElement>
+    <MovableMapElement id="plaza-arepas"><image href={assetUrl("/images/modular/plaza-arepas-v01.webp")} x="690" y="925" width="75" height="89.92" pointerEvents="none"/></MovableMapElement>
+    <MovableMapElement id="plaza-peruvian-food-cart"><image href={assetUrl("/images/modular/plaza-carrinho-peruano-cuy-v02.webp")} x="880" y="780" width="80" height="100" pointerEvents="none"/></MovableMapElement>
+    <MovableMapElement id="plaza-argentine-obelisk"><image href={assetUrl("/images/modular/plaza-obelisco-argentino-v01.webp")} x="790" y="700" width="57" height="180" pointerEvents="none"/></MovableMapElement>
+    <MovableMapElement id="plaza-rbd-stage"><image href={assetUrl("/images/modular/plaza-palco-rbd-v01.webp")} x="1000" y="730" width="200" height="157" pointerEvents="none"/></MovableMapElement>
+    <MovableMapElement id="editable-residential-building"><image href={assetUrl("/images/modular/metropole-residencial-v01.webp")} x="780" y="860" width="95" height="120" pointerEvents="none"/></MovableMapElement>
+    <MovableMapElement id="central-circular-square" locked><image href={assetUrl("/images/modular/praca-central-circular-v01.webp")} x="760" y="720" width="300" height="224.8" pointerEvents="none"/></MovableMapElement>
+    <MovableMapElement id="linkedin-building-reimport-v02"><image href={assetUrl("/images/modular/linkedin-predio-v02.webp")} x="1100" y="750" width="175" height="137.4" pointerEvents="none"/></MovableMapElement>
+    <MovableMapElement id="desert-camel"><image href={assetUrl("/images/modular/deserto-camelo-v01.webp")} x="1550" y="35" width="78" height="65" pointerEvents="none"/></MovableMapElement>
+    <MovableMapElement id="desert-editable-dune"><image href={assetUrl("/images/modular/deserto-dunas-v01.webp")} x="1510" y="-60" width="340" height="195" pointerEvents="none"/></MovableMapElement>
     <MapCars/>
-    {cornfieldComposite.flatMap(block=>block.layers.map(layer=><MovableMapElement key={`${block.id}-${layer}`} id={`${block.id}-layer-${layer}`} locked={block.id!=='pamonhal-bloco-3'}><svg x={block.x} y={block.y} width={block.width} height={block.height} viewBox={`${block.layers.indexOf(layer)*block.tileWidth} 0 ${block.tileWidth} ${block.tileHeight}`} overflow="hidden" pointerEvents="none"><image href={block.file} width={block.atlasWidth} height={block.tileHeight}/></svg></MovableMapElement>))}
+    {cornfieldComposite.flatMap(block=>block.layers.map(layer=><MovableMapElement key={`${block.id}-${layer}`} id={`${block.id}-layer-${layer}`} locked={block.id!=='pamonhal-bloco-3'}><svg x={block.x} y={block.y} width={block.width} height={block.height} viewBox={`${block.layers.indexOf(layer)*block.tileWidth} 0 ${block.tileWidth} ${block.tileHeight}`} overflow="hidden" pointerEvents="none"><image href={assetUrl(block.file)} width={block.atlasWidth} height={block.tileHeight}/></svg></MovableMapElement>))}
     <MapLayoutLayers front/>
     </g>
   </svg>;

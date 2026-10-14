@@ -1,3 +1,4 @@
+import {assetUrl} from '@/lib/asset-url';
 import { projectGround, uprightProjection } from '@/lib/map-projection';
 
 // Continuous front fence; access stays on the clear east side.
@@ -33,6 +34,6 @@ export default function ParkFence({item}:{item:typeof parkFencePanels[number]}) 
   const clipId=`${item.id}-clip`;
   return <g data-park-fence={item.id} pointerEvents="none" aria-hidden="true" transform={`translate(${start.x} ${start.y}) scale(${mirror*scale} ${scale})`}><g transform={projection.transform}>
     <defs><clipPath id={clipId}><rect x="-100" y="-650" width={875*item.fraction+200} height="1150"/></clipPath></defs>
-    <image href="/images/modular/parque-cerca-v01.webp" x="-285" y="-640" width="1415" height="1111" clipPath={`url(#${clipId})`}/>
+    <image href={assetUrl("/images/modular/parque-cerca-v01.webp")} x="-285" y="-640" width="1415" height="1111" clipPath={`url(#${clipId})`}/>
   </g></g>;
 }

@@ -1,3 +1,4 @@
+import {assetUrl} from '@/lib/asset-url';
 import {groundTransform} from '@/lib/map-projection';
 import {MovableMapElement} from './map-layout-editor';
 
@@ -21,7 +22,7 @@ export default function EditableGroundPatches(){
         <path d="M5 8h1m14 11h1M9 24h1m14-19h1" stroke="#BFBBAF" strokeWidth=".7" opacity=".65"/>
       </pattern>
       <pattern id="editable-patch-grass" patternUnits="userSpaceOnUse" x="-120" y="-120" width="240" height="240">
-        <image href="/images/modular/parque-grama-v01.webp" width="240" height="240" preserveAspectRatio="none" stroke="none"/>
+        <image href={assetUrl("/images/modular/parque-grama-v01.webp")} width="240" height="240" preserveAspectRatio="none" stroke="none"/>
       </pattern>
     </defs>
     {patches.map(patch=><MovableMapElement key={patch.id} id={patch.id}>

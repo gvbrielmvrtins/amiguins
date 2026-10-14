@@ -1,3 +1,4 @@
+import {assetUrl} from '@/lib/asset-url';
 import {MovableMapElement,MapElementScope} from './map-layout-editor';
 import {useContext} from 'react';
 import {projectGround,uprightProjection} from '@/lib/map-projection';
@@ -9,7 +10,7 @@ import {secretGarden} from '@/lib/garden-study';
 const point=(x:number,y:number,z=0)=>`${(x-y)*.5196152423},${(x+y)*.3-z}`;
 function GardenArt({kind,x,y,size=1}:{kind:string;x:number;y:number;size?:number}){
   const art=gardenRenderedAssets[kind]??parkRenderedAssets[kind];
-  return <g transform={`translate(${point(x,y)}) scale(${art.scale*size})`}><image href={`/images/modular/${art.file}`} x={-art.anchorX} y={-art.anchorY} width={art.width} height={art.height}/></g>;
+  return <g transform={`translate(${point(x,y)}) scale(${art.scale*size})`}><image href={assetUrl(`/images/modular/${art.file}`)} x={-art.anchorX} y={-art.anchorY} width={art.width} height={art.height}/></g>;
 }
 // Atlas cells keep the new illustrated pieces independent and reusable.
 const residents=[
@@ -32,7 +33,7 @@ function GardenSprite({index,px,py,pot=false}:{index:number;px:number;py:number;
   return <g data-garden-resident={pot?'potted-plant':'animal'} transform={`translate(${at.x} ${at.y}) scale(${(pot?32:28)/cell})`}>
     <MovableMapElement id={`${scope}/${pot?'pot':'animal'}/${index}/${px}/${py}`} selectionBounds={{x:-cell/2,y:-cell,width:cell,height:cell}}>
     <defs><clipPath id={clip}><rect x={-cell/2} y={-cell} width={cell} height={cell}/></clipPath></defs>
-    <g clipPath={`url(#${clip})`}><image href="/images/modular/jardim-animais-vasos-v01.webp" x={-cell/2-col*cell} y={-cell-row*cell} width="1448" height="1086"/></g>
+    <g clipPath={`url(#${clip})`}><image href={assetUrl("/images/modular/jardim-animais-vasos-v01.webp")} x={-cell/2-col*cell} y={-cell-row*cell} width="1448" height="1086"/></g>
     </MovableMapElement>
   </g>;
 }
@@ -47,7 +48,7 @@ export default function SecretGardenMaze(){
     {depth:195,key:'arrival-birch',art:<GardenArt kind="birch" x={190} y={5} size={.58}/>},
     {depth:280,key:'sundial',art:<GardenArt kind="sundial" x={180} y={100} size={.8}/>},
     {depth:380,key:'arrival-pine',art:<GardenArt kind="pine" x={195} y={185} size={.5}/> }];
-  return <g data-secret-garden="rendered-maze" transform={`translate(${at.x} ${at.y}) scale(.8)`} pointerEvents="none"><MovableMapElement id={`${scope}/maze`}><g data-maze-hedge="unified" transform={`${uprightProjection(-.61,.65).transform} scale(.347)`}><image href="/images/modular/jardim-labirinto-unificado-v01.webp" x="-775" y="-550" width="1536" height="1024"/></g></MovableMapElement>{[...residents.map(([index,px,py])=><GardenSprite key={`animal-${index}-${px}-${py}`} index={index} px={px} py={py}/>),...pots.map(([index,px,py])=><GardenSprite key={`pot-${index}-${px}-${py}`} index={index} px={px} py={py} pot/>) ]}{items.sort((a,b)=>a.depth-b.depth).map(item=><MovableMapElement key={item.key} id={`${scope}/${item.key}`}>{item.art}</MovableMapElement>)}</g>;
+  return <g data-secret-garden="rendered-maze" transform={`translate(${at.x} ${at.y}) scale(.8)`} pointerEvents="none"><MovableMapElement id={`${scope}/maze`}><g data-maze-hedge="unified" transform={`${uprightProjection(-.61,.65).transform} scale(.347)`}><image href={assetUrl("/images/modular/jardim-labirinto-unificado-v01.webp")} x="-775" y="-550" width="1536" height="1024"/></g></MovableMapElement>{[...residents.map(([index,px,py])=><GardenSprite key={`animal-${index}-${px}-${py}`} index={index} px={px} py={py}/>),...pots.map(([index,px,py])=><GardenSprite key={`pot-${index}-${px}-${py}`} index={index} px={px} py={py} pot/>) ]}{items.sort((a,b)=>a.depth-b.depth).map(item=><MovableMapElement key={item.key} id={`${scope}/${item.key}`}>{item.art}</MovableMapElement>)}</g>;
 }
 
 

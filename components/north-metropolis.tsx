@@ -1,3 +1,4 @@
+import {assetUrl} from '@/lib/asset-url';
 import {uprightProjection} from '@/lib/map-projection';
 import {fillerRenderedAssets} from '@/lib/filler-rendered-assets';
 import {MovableMapElement} from './map-layout-editor';
@@ -31,7 +32,7 @@ export function MetropolisTransitionGround(){return <g stroke="none" strokeWidth
 <TransitionProps/>
 </g>;}
 function TransitionProps(){return <g pointerEvents="none">{transitionProps.map((a,i)=><g key={`city-transition-${i}`} transform={`translate(${a.x} ${a.y})`}>
-  {a.kind<2?<image href="/images/modular/rosa-arvore-isometrica-v01.webp" x="-40" y="-60" width="80" height="60"/>:a.kind===2?<image href="/images/modular/parque-banco-v01.webp" x="-22" y="-31" width="44" height="35"/>:<image href="/images/modular/floreira-detalhada-v01.webp" x="-21" y="-22" width="42" height="28"/>}
+  {a.kind<2?<image href={assetUrl("/images/modular/rosa-arvore-isometrica-v01.webp")} x="-40" y="-60" width="80" height="60"/>:a.kind===2?<image href={assetUrl("/images/modular/parque-banco-v01.webp")} x="-22" y="-31" width="44" height="35"/>:<image href={assetUrl("/images/modular/floreira-detalhada-v01.webp")} x="-21" y="-22" width="42" height="28"/>}
 </g>)}</g>;}
 export default function NorthMetropolis(){return <g data-layer="north-metropolis" pointerEvents="none" aria-label="Metrópole que continua além da borda superior do mapa">
   <defs><linearGradient id="city-desert-fringe" x1="760" y1="0" x2="1390" y2="0" gradientUnits="userSpaceOnUse"><stop stopColor="#DAD8C7"/><stop offset=".55" stopColor="#DED7BD"/><stop offset="1" stopColor="#E8CFA0"/></linearGradient><clipPath id="metropolis-boundary"><path d={cityBoundary}/></clipPath><filter id="city-edge-soft"><feGaussianBlur stdDeviation="10"/></filter><mask id="city-ground-mask"><path d={cityBoundary} fill="white" filter="url(#city-edge-soft)"/></mask></defs>
@@ -41,16 +42,16 @@ export default function NorthMetropolis(){return <g data-layer="north-metropolis
   </g>
     {blocks.map(b=><g key={b.id} transform={`translate(${b.sx} ${b.sy})`} data-metropolis-building={b.id}>
       <path d="M-47 0L0-27 47 0 0 27Z" fill="#E4DDC8"/>
-      {b.variant===1?<image href="/images/modular/metropole-residencial-v01.webp" x={-565*b.height/1370} y={-1400*b.height/1370} width={1105*b.height/1370} height={1424*b.height/1370}/>:<image href={b.id==='metropolis-0-5'?'/images/modular/metropole-escritorios-heliponto-v01.webp':'/images/modular/metropole-escritorios-v01.webp'} x={-730*b.height/1060} y={-1080*b.height/1060} width={1415*b.height/1060} height={1111*b.height/1060}/>}
-      <image href="/images/modular/poste-detalhado-v01.webp" x="40" y="-31" width="20" height="30"/>
-      <image href="/images/modular/floreira-detalhada-v01.webp" x="-45" y="5" width="27" height="18"/>
-      {b.id==='metropolis-0-5'&&<MovableMapElement id="odete-roitman-helicopter-nonplayable"><image href="/images/modular/odete-roitman-helicoptero-v01.webp" x="-52" y="-218" width="100" height="66.67" pointerEvents="none"/></MovableMapElement>}
+      {b.variant===1?<image href={assetUrl("/images/modular/metropole-residencial-v01.webp")} x={-565*b.height/1370} y={-1400*b.height/1370} width={1105*b.height/1370} height={1424*b.height/1370}/>:<image href={assetUrl(b.id==='metropolis-0-5'?'/images/modular/metropole-escritorios-heliponto-v01.webp':'/images/modular/metropole-escritorios-v01.webp')} x={-730*b.height/1060} y={-1080*b.height/1060} width={1415*b.height/1060} height={1111*b.height/1060}/>}
+      <image href={assetUrl("/images/modular/poste-detalhado-v01.webp")} x="40" y="-31" width="20" height="30"/>
+      <image href={assetUrl("/images/modular/floreira-detalhada-v01.webp")} x="-45" y="5" width="27" height="18"/>
+      {b.id==='metropolis-0-5'&&<MovableMapElement id="odete-roitman-helicopter-nonplayable"><image href={assetUrl("/images/modular/odete-roitman-helicoptero-v01.webp")} x="-52" y="-218" width="100" height="66.67" pointerEvents="none"/></MovableMapElement>}
 
 
     </g>)}
   {blocks.filter(b=>b.sy===335 && b.sx<440).map((b,i)=>{
     const art=fillerRenderedAssets[i%2?'north-residence-coral':'north-corner-store'];
-    return <g key={`shop-${b.id}`} transform={`translate(${b.sx+45} ${b.sy+38}) ${uprightProjection(art.risingSlope,art.fallingSlope).transform} scale(${art.scale*.48})`}><image href={`/images/modular/${art.file}`} x={-art.anchorX} y={-art.anchorY} width={art.width} height={art.height}/></g>;
+    return <g key={`shop-${b.id}`} transform={`translate(${b.sx+45} ${b.sy+38}) ${uprightProjection(art.risingSlope,art.fallingSlope).transform} scale(${art.scale*.48})`}><image href={assetUrl(`/images/modular/${art.file}`)} x={-art.anchorX} y={-art.anchorY} width={art.width} height={art.height}/></g>;
   })}
 <TransitionProps/>
 </g>;}

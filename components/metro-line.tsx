@@ -1,3 +1,4 @@
+import {assetUrl} from '@/lib/asset-url';
 import {MovableMapElement,MapElementScope} from './map-layout-editor';
 import {useContext} from 'react';
 import {projectGround, uprightProjection} from '@/lib/map-projection';
@@ -17,7 +18,7 @@ export default function MetroTrain(){
     {[{x:260,file:'metro-vagao-feminino-v04.webp'},{x:560,file:'metro-carro-frontal-v01.webp'}].map(car=>{
       const at=projectGround(car.x,55);
       return <MovableMapElement key={car.file} id={`${scope}/carriage/${car.x}`}><g transform={`translate(${at.x} ${at.y})`}>
-        <g transform={carriageProjection}><image href={`/images/modular/${car.file}`} x="-106.4" y="-99.4" width="215.04" height="143.36"/></g>
+        <g transform={carriageProjection}><image href={assetUrl(`/images/modular/${car.file}`)} x="-106.4" y="-99.4" width="215.04" height="143.36"/></g>
       </g></MovableMapElement>;
     })}
     {/* Share the carriage correction so the inset lid follows its roof axes. */}
@@ -41,7 +42,7 @@ export default function MetroTrain(){
     </MovableMapElement>
     <MovableMapElement id={`${scope}/agent`}><g data-metro-agent="decorative" transform={`translate(${projectGround(260,55).x+34} ${projectGround(260,55).y-43})`}>
       <ellipse cx="0" cy="-1" rx="7" ry="2" fill="#574F40" opacity=".18"/>
-      <image href="/images/modular/agente-galinha-v02.webp" x="-14" y="-26" width="28" height="27"/>
+      <image href={assetUrl("/images/modular/agente-galinha-v02.webp")} x="-14" y="-26" width="28" height="27"/>
     </g>
     </MovableMapElement>
   </g>;

@@ -1,3 +1,4 @@
+import {assetUrl} from '@/lib/asset-url';
 import {northForestGround,coastalForestGround,forestCoastEdge} from '@/lib/north-forest';
 import {streetLanes} from './map-streets';
 import {MazeGround} from './secret-garden-maze';
@@ -42,9 +43,9 @@ export function GardenGround(){return <g data-layer="gardens-rendered" stroke="#
 export function GardenStudyProp({item}:{item:GardenProp}){
   const at=projectGround(item.x,item.y);
   const rendered=gardenRenderedAssets[item.kind];
-  if(rendered){const projection=rendered.risingSlope!==undefined?uprightProjection(rendered.risingSlope,rendered.fallingSlope!).transform:undefined;return <g data-garden-prop={item.id} transform={`translate(${at.x} ${at.y}) scale(${item.scale??1})`} pointerEvents="none"><g transform={projection}><g transform={`scale(${rendered.mirror?-rendered.scale:rendered.scale} ${rendered.scale})`}><image href={`/images/modular/${rendered.file}`} x={-rendered.anchorX} y={-rendered.anchorY} width={rendered.width} height={rendered.height}/></g></g></g>;}
+  if(rendered){const projection=rendered.risingSlope!==undefined?uprightProjection(rendered.risingSlope,rendered.fallingSlope!).transform:undefined;return <g data-garden-prop={item.id} transform={`translate(${at.x} ${at.y}) scale(${item.scale??1})`} pointerEvents="none"><g transform={projection}><g transform={`scale(${rendered.mirror?-rendered.scale:rendered.scale} ${rendered.scale})`}><image href={assetUrl(`/images/modular/${rendered.file}`)} x={-rendered.anchorX} y={-rendered.anchorY} width={rendered.width} height={rendered.height}/></g></g></g>;}
   const art=parkRenderedAssets[item.kind];
-  if(art)return <g data-garden-prop={item.id} transform={`translate(${at.x} ${at.y}) scale(${item.scale??1})`} pointerEvents="none"><image href={`/images/modular/${art.file}`} x={-art.anchorX*art.scale} y={-art.anchorY*art.scale} width={art.width*art.scale} height={art.height*art.scale}/></g>;
+  if(art)return <g data-garden-prop={item.id} transform={`translate(${at.x} ${at.y}) scale(${item.scale??1})`} pointerEvents="none"><image href={assetUrl(`/images/modular/${art.file}`)} x={-art.anchorX*art.scale} y={-art.anchorY*art.scale} width={art.width*art.scale} height={art.height*art.scale}/></g>;
   return null;
 }
 export default function SecretGarden({destination:d,selected,onSelect}:{destination:ModularDestination;selected:string|null;onSelect:(id:string,keyboard?:boolean)=>void}){
