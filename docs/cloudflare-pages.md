@@ -19,6 +19,14 @@ Headers do Pages em `out/_headers`: HTML principal revalidado a cada acesso; arq
 
 O domínio permanece igual para preservar o progresso salvo no navegador (`amiguins-found-v1`). O editor local usa `amiguins-map-layout-v1` e continua disponível com `npm run dev`.
 
+## Repositórios sincronizados
+
+A instalação Git da Cloudflare usa o fork `zeheliasm-gif/amiguins`. Nesta máquina, `origin` mantém o endereço de leitura `gvbrielmvrtins/amiguins` e dois endereços de push: o original e o fork. `git push origin main` envia para ambos, sem force push. Confira as duas respostas de sucesso; se um envio falhar, repita o push após corrigir o acesso.
+
+Essa configuração é local ao checkout. Em outra máquina, configure os dois destinos com `git remote set-url --add --push origin <URL>` para cada repositório. O fork foi atualizado por avanço direto, sem descartar commits.
+
+Prévia manual de recuperação: https://amiguins-preview.pages.dev. Ela não recebe pushes automaticamente; a integração Git é configurada em um projeto separado.
+
 ## Novas imagens
 
 Enviar a ilustração ao R2 e confirmar HTTP 200 antes do push. Usar `assetUrl()` nos componentes. Não criar proxy de imagens pela hospedagem. A cobrança e o alerta de gastos do R2 são independentes do Pages; o alerta está configurado para US$ 1 e não bloqueia o consumo.
