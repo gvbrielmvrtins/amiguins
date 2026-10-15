@@ -1,4 +1,76 @@
 {
+  "filipe-salles": {
+    "x": 227.88,
+    "y": -255.11,
+    "scale": 1.05,
+    "rotation": 0,
+    "layer": 3,
+    "hidden": false
+  },
+  "iara-rampassi": {
+    "x": 833.25,
+    "y": 235.2,
+    "scale": 1.05,
+    "rotation": 0,
+    "layer": 2,
+    "hidden": false
+  },
+  "natalia-rocha": {
+    "x": 5.77,
+    "y": -10.78,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 2,
+    "hidden": false
+  },
+  "natalia-vannuchi": {
+    "x": -200.64,
+    "y": -118.55,
+    "scale": 1.6,
+    "rotation": 0,
+    "layer": -2,
+    "hidden": false
+  },
+  "gabriela-stephano": {
+    "x": 72.71,
+    "y": 15.92,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 1,
+    "hidden": false
+  },
+  "caio-ciappina": {
+    "x": -222.57,
+    "y": 41.29,
+    "scale": 1.45,
+    "rotation": 0,
+    "layer": 1,
+    "hidden": false
+  },
+  "ronaldinho-gaucho-nonplayable": {
+    "x": -56.74,
+    "y": -33.91,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 2,
+    "hidden": false
+  },
+  "erika-hilton-nonplayable": {
+    "x": 5.24,
+    "y": -17.71,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 2,
+    "hidden": false
+  },
+  "vini-jr-nonplayable": {
+    "x": -73.43,
+    "y": -5.2,
+    "scale": 1.05,
+    "rotation": 0,
+    "layer": 2,
+    "hidden": false
+  },
   "espacin-coloridin/prideCrowd2/0/0": {
     "x": 4.87,
     "y": 13.22,
@@ -1164,8 +1236,8 @@
     "hidden": false
   },
   "beach-feature-17/beachPalm/0/0": {
-    "x": -16.29,
-    "y": 0.94,
+    "x": -15.54,
+    "y": 51.26,
     "scale": 1,
     "rotation": 0,
     "layer": 0,
@@ -1180,19 +1252,19 @@
     "hidden": false
   },
   "beach-rest-18/beachChair/0/0": {
-    "x": 9.16,
-    "y": -19.77,
+    "x": 13.65,
+    "y": 2.96,
     "scale": 1,
     "rotation": 0,
     "layer": 0,
     "hidden": false
   },
   "beach-umbrella-18/beachUmbrella/0/0": {
-    "x": -57.29,
-    "y": -52.64,
+    "x": -42.04,
+    "y": -42.73,
     "scale": 1,
     "rotation": 0,
-    "layer": 0,
+    "layer": -1,
     "hidden": false
   },
   "beach-rest-16/coloridinBlanket/0/0": {
@@ -1204,9 +1276,9 @@
     "hidden": false
   },
   "beach-shell-17/beachShell/0/0": {
-    "x": -18.92,
-    "y": -60.95,
-    "scale": 1,
+    "x": 62.3,
+    "y": 30.68,
+    "scale": 0.65,
     "rotation": 0,
     "layer": 0,
     "hidden": false
@@ -3011,9 +3083,9 @@
     "hidden": true
   },
   "pamela-souza": {
-    "x": 36.96,
-    "y": -61.42,
-    "scale": 1.25,
+    "x": 38.09,
+    "y": -62.66,
+    "scale": 1.15,
     "rotation": 0,
     "layer": 1,
     "hidden": false
@@ -4029,10 +4101,10 @@
   },
   "academia-marombins/commerceWeights/35/110": {
     "x": 671.92,
-    "y": -63.02,
+    "y": -63.1,
     "scale": 1,
     "rotation": 0,
-    "layer": 0,
+    "layer": 1,
     "hidden": false
   },
   "nathan-machado": {
@@ -4160,7 +4232,7 @@
     "y": 59.76,
     "scale": 4,
     "rotation": 0,
-    "layer": -2,
+    "layer": -4,
     "hidden": false
   },
   "inglish-pub-planter": {
@@ -5164,11 +5236,11 @@
     "sourceId": "departamento-xerifins-lamp"
   },
   "football-field-bleachers": {
-    "x": -44.2,
+    "x": -44.36,
     "y": 23.03,
     "scale": 1,
     "rotation": 0,
-    "layer": -1,
+    "layer": -3,
     "hidden": false
   },
   "bolsonaro-cage-nonplayable": {
@@ -5214,7 +5286,7 @@
   },
   "rebeca-dimensional-vortex": {
     "x": -525.24,
-    "y": 256.65,
+    "y": 256.48,
     "scale": 1.55,
     "rotation": 0,
     "layer": -2,
@@ -5379,7 +5451,7 @@
   },
   "totem-eu-amo-amiguins": {
     "x": -468.34,
-    "y": 94.65,
+    "y": 94.52,
     "scale": 3,
     "rotation": 0,
     "layer": -1,
@@ -5718,7 +5790,7 @@
   "vinicius-macedo": {
     "x": -341.29,
     "y": -185.02,
-    "scale": 1.3,
+    "scale": 1.2,
     "rotation": 0,
     "layer": 2,
     "hidden": false
@@ -5736,13 +5808,13 @@
     "y": 2.87,
     "scale": 0.7,
     "rotation": 0,
-    "layer": 0,
+    "layer": 4,
     "hidden": false
   },
   "simone-lapa": {
-    "x": 24.34,
-    "y": 0.19,
-    "scale": 1.15,
+    "x": 23.77,
+    "y": -3.4,
+    "scale": 1.05,
     "rotation": 0,
     "layer": 0,
     "hidden": false
@@ -5806,21 +5878,57 @@
   "ruins-caution-back-west-0": {
     "x": 0,
     "y": 0,
-    "layer": 1
+    "scale": 1,
+    "rotation": 0,
+    "layer": 1,
+    "hidden": false
   },
   "ruins-caution-back-west-1": {
     "x": 0,
     "y": -0.11,
-    "layer": 1
+    "scale": 1,
+    "rotation": 0,
+    "layer": 1,
+    "hidden": false
   },
   "construction-hoarding-back-west-1": {
     "x": 0,
     "y": 0,
-    "layer": 1
+    "scale": 1,
+    "rotation": 0,
+    "layer": 1,
+    "hidden": false
   },
   "construction-hoarding-back-west-0": {
     "x": 0,
     "y": 0,
-    "layer": 1
+    "scale": 1,
+    "rotation": 0,
+    "layer": 1,
+    "hidden": false
+  },
+  "victoria-hang": {
+    "x": 121.78,
+    "y": -304.57,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
+  },
+  "andre-luiz-fernandes": {
+    "x": -41.8,
+    "y": -153.52,
+    "scale": 1.35,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
+  },
+  "matheus-monteiro": {
+    "x": -24.9,
+    "y": -24.86,
+    "scale": 1.5,
+    "rotation": 0,
+    "layer": -1,
+    "hidden": false
   }
 }
