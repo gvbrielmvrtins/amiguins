@@ -23,6 +23,16 @@ const targets:Target[]=[...mapCharacters, ...modularDestinations.map<Target>(d=>
 const destinationPortraits:Record<string,string>={"pingos-nos-ins":"pingos-nos-ins-redacao-v04.webp","east-cafe":"cafe-apoio-render-v01.webp","colabin":"colabin-laboratorio-v02.webp","vagao-feminino":"metro-vagao-feminino-v04.webp","livrinhoteca":"livrinhoteca-isometrico-v01.webp","cineminha":"cineminha-isometrico-v01.webp","mercado-vagas":"mercado-vagas-isometrico-v01.webp","prefeintura":"prefeitura-render-v02.webp","taverna-joguins":"taverna-medieval-games-v04.webp","pracinha":"praca-central-circular-v01.webp","espacin-coloridin":"coloridin-arco-iris-frontal-v02.webp","linkedin":"linkedin-predio-v02.webp","jardim-secreto":"rosa-arvore-isometrica-v01.webp","estudio-criativins":"estudio-render-v02.webp","silicin-valley":"silicin-campus-v02.webp","departamento-xerifins":"xerifins-departamento-v01.webp","inglish-pub":"inglish-pub-render-v02.webp","oficina-vendinhas":"feira-roupas-v01.webp","torre-mistica":"torre-feiticaria-v02.webp","plaza-hispanica":"plaza-arcada-bandeiras-v02.webp","academia-marombins":"academia-render-v02.webp","binstro":"binstro-render-v02.webp","paises-africanos":"aeroporto-internacional-v02.webp"};
 // Crop the existing illustration to the head without exposing the map pose or props.
 const facePortraits:Record<string,{width:number;height:number;crop:[number,number,number]}>= {
+  'nico-ranullo':{width:1145,height:1374,crop:[300,50,410]},
+  'marcelle-ribeiro':{width:1024,height:1536,crop:[200,5,560]},
+  'gabriela-tiburcio':{width:1374,height:1145,crop:[430,0,420]},
+  'nathalia-silva':{width:1024,height:1536,crop:[220,5,470]},
+  'ana-trovisco':{width:1024,height:1536,crop:[150,15,500]},
+  'claudia-feijo':{width:1024,height:1536,crop:[210,10,590]},
+  'janaina-marin':{width:1024,height:1536,crop:[200,5,650]},
+  'assis-rossolo':{width:1024,height:1536,crop:[340,20,410]},
+  'luisa-candeias':{width:1024,height:1536,crop:[200,5,470]},
+  'larissa-rosa':{width:1024,height:1536,crop:[250,0,530]},
   'filipe-salles':{width:1024,height:1536,crop:[240,0,470]},
   'iara-rampassi':{width:1024,height:1536,crop:[270,25,475]},
   'natalia-rocha':{width:1024,height:1536,crop:[250,5,530]},

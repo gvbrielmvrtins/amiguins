@@ -2,7 +2,9 @@
 
 Arte: `public/images/modular/mural-workshop-capcut-v01.png`, editada com imagegen integrado a partir do mural existente. Texto em Gasoek aplicado em SVG no plano do papel, preservando margens, tachinhas e dobra. Apenas o mural da prefeitura usa esta variante.
 
-Texto: JÁ SE INSCREVEU PRO WORKSHOP DE CAPCUT DIA 15?
+Texto atual: Tá sabendo que agora estamos no insta? @amiguins_
+
+Atualizado em quatro linhas, mantendo a fonte Gasoek no plano do papel.
 
 ## Prompt da edição
 
