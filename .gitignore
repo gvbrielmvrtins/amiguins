@@ -23,6 +23,8 @@ yarn-error.log*
 # Local credentials and private keys
 .aws/
 .wrangler/
+.security-review/
+backups/
 *.pem
 *.key
 *.p12
