@@ -7,6 +7,9 @@
     "dev": "next dev",
     "build": "node scripts/prepare-deployment-assets.mjs && next build",
     "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test scripts/*.test.mjs",
+    "verify:export": "node scripts/verify-export.mjs",
     "build:pages": "node scripts/build-cloudflare-pages.mjs",
     "assets:audit": "node scripts/prepare-deployment-assets.mjs --audit"
   },
