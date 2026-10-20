@@ -20,6 +20,14 @@ yarn-error.log*
 # env files
 .env*
 
+# Local credentials and private keys
+.aws/
+.wrangler/
+*.pem
+*.key
+*.p12
+*.pfx
+
 # vercel
 .vercel
 

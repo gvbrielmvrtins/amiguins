@@ -3,3 +3,6 @@ pmOnFail: ignore
 minimumReleaseAgeExclude:
   - '@next/*'
   - next
+
+overrides:
+  browserslist@<=4.28.6: ^4.28.7

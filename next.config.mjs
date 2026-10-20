@@ -2,9 +2,6 @@
 const staticExport = process.env.STATIC_EXPORT === '1';
 const nextConfig = {
   ...(staticExport ? {output: 'export', distDir: '.next-pages'} : {}),
-  typescript: {
-    ignoreBuildErrors: true,
-  },
   images: {
     unoptimized: true,
   },
