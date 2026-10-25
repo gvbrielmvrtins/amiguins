@@ -3,7 +3,8 @@
 import {assetUrl} from '@/lib/asset-url';
 import { useState, useRef,useEffect, useLayoutEffect, useCallback, type TouchEvent, type PointerEvent } from 'react';
 import {boundedScroll} from '@/lib/map-camera';
-import { ArrowUpRight, Check, ChevronDown, HelpCircle, MousePointer2, PawPrint, RotateCcw, Sparkles, Store, Users, X } from 'lucide-react';
+import { ArrowUpRight, Check, ChevronDown, HelpCircle, MousePointer2, PawPrint, RotateCcw, ShieldCheck, Sparkles, Store, Users, X } from 'lucide-react';
+import PrivacyPolicyDialog from './privacy-policy-dialog';
 import dynamic from 'next/dynamic';
 import OptimizedMap from './optimized-map';
 import type tileManifest from '@/lib/map-tiles-manifest.json';
@@ -23,6 +24,13 @@ const targets:Target[]=[...mapCharacters, ...modularDestinations.map<Target>(d=>
 const destinationPortraits:Record<string,string>={"pingos-nos-ins":"pingos-nos-ins-redacao-v04.webp","east-cafe":"cafe-apoio-render-v01.webp","colabin":"colabin-laboratorio-v02.webp","vagao-feminino":"metro-vagao-feminino-v04.webp","livrinhoteca":"livrinhoteca-isometrico-v01.webp","cineminha":"cineminha-isometrico-v01.webp","mercado-vagas":"mercado-vagas-isometrico-v01.webp","prefeintura":"prefeitura-render-v02.webp","taverna-joguins":"taverna-medieval-games-v04.webp","pracinha":"praca-central-circular-v01.webp","espacin-coloridin":"coloridin-arco-iris-frontal-v02.webp","linkedin":"linkedin-predio-v02.webp","jardim-secreto":"rosa-arvore-isometrica-v01.webp","estudio-criativins":"estudio-render-v02.webp","silicin-valley":"silicin-campus-v02.webp","departamento-xerifins":"xerifins-departamento-v01.webp","inglish-pub":"inglish-pub-render-v02.webp","oficina-vendinhas":"feira-roupas-v01.webp","torre-mistica":"torre-feiticaria-v02.webp","plaza-hispanica":"plaza-arcada-bandeiras-v02.webp","academia-marombins":"academia-render-v02.webp","binstro":"binstro-render-v02.webp","paises-africanos":"aeroporto-internacional-v02.webp"};
 // Crop the existing illustration to the head without exposing the map pose or props.
 const facePortraits:Record<string,{width:number;height:number;crop:[number,number,number]}>= {
+  'maju-martins':{width:1024,height:1536,crop:[230,20,410]},
+  'bode':{width:1024,height:1536,crop:[215,0,565]},
+  'tais-alvarez':{width:1024,height:1536,crop:[150,90,410]},
+  'leticia-machado':{width:1024,height:1536,crop:[240,30,430]},
+  'thomas-gaya':{width:1024,height:1536,crop:[210,20,420]},
+  'andressa-soriano':{width:1254,height:1254,crop:[365,80,540]},
+  'aryane-lozin':{width:1024,height:1536,crop:[260,30,440]},
   'nico-ranullo':{width:1145,height:1374,crop:[300,50,410]},
   'marcelle-ribeiro':{width:1024,height:1536,crop:[200,5,560]},
   'gabriela-tiburcio':{width:1374,height:1145,crop:[430,0,420]},
@@ -193,6 +201,7 @@ export default function ExplorationGame({optimized=false,hd=false,hdManifest}:{o
   const [filter, setFilter] = useState<'all' | 'remaining'>('all');
   const help = useRef<HTMLDialogElement>(null);
   const reset = useRef<HTMLDialogElement>(null);
+  const privacy = useRef<HTMLDialogElement>(null);
   const viewport = useRef<HTMLDivElement>(null);
   const [viewportNode,setViewportNode]=useState<HTMLDivElement|null>(null);
   const attachViewport=useCallback((node:HTMLDivElement|null)=>{
@@ -401,7 +410,7 @@ export default function ExplorationGame({optimized=false,hd=false,hdManifest}:{o
             <div className="map-world modular-world" style={{width:`${mapScale*100}%`,minWidth:`${740*mapScale}px`}}>{optimized?<OptimizedMap hd={hd} previewManifest={hdManifest} onSelect={(id,keyboard)=>{if(keyboard||!didDrag.current){const target=targets.find(t=>t.id===id);if(target?.category === 'people')discover(target);else if(target){locateDestination(id);showMessage(`Você está em ${target.name}.`);}}}}/>:<ModularMap selected={selected} onSelect={(id,keyboard)=>{if(keyboard||!didDrag.current){const target=targets.find(t=>t.id===id);if(target?.category === 'people')discover(target);else if(target){locateDestination(id);showMessage(`Você está em ${target.name}.`);}}}}/>}</div>
           </div>
 
-          {<div className="map-actions"><button className="help-button" aria-label="Como jogar" onClick={() => help.current?.showModal()}><HelpCircle size={17} /></button><button className="help-button" aria-label="Recomeçar" onClick={() => reset.current?.showModal()}><RotateCcw size={17} /></button></div>}
+          {<div className="map-actions"><button className="help-button" aria-label="Como jogar" onClick={() => help.current?.showModal()}><HelpCircle size={17} /></button><button className="help-button" aria-label="Recomeçar" onClick={() => reset.current?.showModal()}><RotateCcw size={17} /></button><button className="help-button privacy-button" aria-label="Política de privacidade" title="Política de privacidade" aria-haspopup="dialog" onClick={() => { if(privacy.current){privacy.current.showModal();privacy.current.querySelector<HTMLElement>('#privacy-policy-title')?.focus({preventScroll:true});privacy.current.scrollTop=0;} }}><ShieldCheck size={17} aria-hidden="true" /></button></div>}
 
           {message && <div className="game-message" role="status"><Sparkles size={19} /><span>{message}</span><button aria-label="Fechar mensagem" onClick={() => setMessage('')}><X size={15} /></button></div>}
           {milestone && <div className={`game-message game-milestone ${milestone.tone}`} role="status"><Sparkles size={24} /><span>{milestone.text}</span><button aria-label="Fechar mensagem de progresso" onClick={()=>setMilestone(null)}><X size={15}/></button></div>}
@@ -411,5 +420,6 @@ export default function ExplorationGame({optimized=false,hd=false,hdManifest}:{o
     </div>
     <dialog ref={help} className="game-dialog"><button className="dialog-close" aria-label="Fechar instruções" onClick={() => help.current?.close()}><X /></button><h2>Explore a amiguINlândia</h2><ol><li>Escolha um amiguIN para procurar.</li><li>Ao encontrar, clique no amiguIN no mapa para registrar a descoberta.</li><li>Clique em um espacIN da lista para ir até ele no mapa.</li><li>Use o mouse (no computador) ou gesto de pinça nos dedos (no celular) para ampliar ou reduzir; arraste o mapa para explorar.</li><li>Eles não são registráveis, mas o mapa está cheio de easter eggs... encontrou todos? 👀</li></ol><button className="dialog-primary" onClick={() => help.current?.close()}>Vamos explorar <ArrowUpRight size={17} /></button></dialog>
     <dialog ref={reset} className="game-dialog"><h2>Mais uma volta?</h2><p>As descobertas desta rodada serão apagadas e as pessoas poderão ser encontradas novamente.</p><div className="dialog-actions"><button onClick={() => reset.current?.close()}>Continuar jogando</button><button className="dialog-primary" onClick={() => { setMilestone(null); setFound([]); setSelected(null); setMessage(''); setZoom(1); reset.current?.close(); }}>Recomeçar</button></div></dialog>
+    <PrivacyPolicyDialog dialogRef={privacy} />
   </main></MapEditorContext.Provider>;
 }
