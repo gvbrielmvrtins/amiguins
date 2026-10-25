@@ -3,7 +3,9 @@
     "x": -255.41,
     "y": 223.07,
     "scale": 0.75,
-    "layer": 3
+    "rotation": 0,
+    "layer": 3,
+    "hidden": false
   },
   "marcelle-ribeiro": {
     "x": 96.32,
@@ -104,7 +106,7 @@
   "natalia-vannuchi": {
     "x": -200.64,
     "y": -118.55,
-    "scale": 1.6,
+    "scale": 1.35,
     "rotation": 0,
     "layer": -2,
     "hidden": false
@@ -417,7 +419,7 @@
   "loisi-vieira": {
     "x": -2.66,
     "y": -23.6,
-    "scale": 1.25,
+    "scale": 1.2,
     "rotation": 0,
     "layer": 3,
     "hidden": false
@@ -6015,6 +6017,70 @@
     "scale": 1,
     "rotation": 0,
     "layer": 4,
+    "hidden": false
+  },
+  "aryane-lozin": {
+    "x": 0.39,
+    "y": 2.26,
+    "scale": 1.05,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
+  },
+  "andressa-soriano": {
+    "x": 50.99,
+    "y": -13.97,
+    "scale": 0.8,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
+  },
+  "thomas-gaya": {
+    "x": 113.92,
+    "y": -17.36,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
+  },
+  "leticia-machado": {
+    "x": 48.09,
+    "y": -110.47,
+    "scale": 0.75,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
+  },
+  "tais-alvarez": {
+    "x": -37.16,
+    "y": 52.27,
+    "scale": 0.95,
+    "rotation": 0,
+    "layer": 1,
+    "hidden": false
+  },
+  "bode": {
+    "x": 111.62,
+    "y": 82.77,
+    "scale": 1.1,
+    "rotation": 0,
+    "layer": -1,
+    "hidden": false
+  },
+  "lola-julio": {
+    "x": -62.02,
+    "y": -12.24,
+    "scale": 0.9,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
+  },
+  "maju-martins": {
+    "x": 223.1,
+    "y": 30.88,
+    "scale": 1.05,
+    "rotation": 0,
+    "layer": 2,
     "hidden": false
   }
 }

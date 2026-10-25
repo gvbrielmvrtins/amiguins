@@ -1,6 +1,6 @@
 <!-- BEGIN:nextjs-agent-rules -->
 
-# This is NOT the Next.js you know
+## This is NOT the Next.js you know
 
 This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
 
@@ -32,3 +32,7 @@ Diretriz do usuário em 13/10/2026: usar também o novo Lula (`public/images/mod
 Diretriz do usuário em 10/10/2026: novos personagens devem olhar diretamente para o usuário, com olhos voltados para a frente, evitando o olhar habitual para o alto à direita. Exceções apenas quando a ação ou orientação solicitada exigir outro olhar (por exemplo, fila voltada ao atendimento).
 
 Diretriz do usuário em 09/10/2026: Nathan e Gabriel são as referências principais de estilo para personagens (`public/images/characters/nathan-machado-v01.png` e `gabriel-martins-v02.png`). Usá-los explicitamente nas gerações: contornos pretos definidos, proporções cartoon, olhos expressivos e sombreamento controlado. Usar a foto de cada pessoa como referência de identidade facial; não reutilizar o rosto de outro personagem. Preservar identidades ilustradas preexistentes quando solicitado pelo usuário.
+
+Diretriz do usuário em 25/10/2026: Lula (`public/images/modular/lula-npc-v02.png`) é o modelo definitivo de estilo para personagens, não apenas inspiração. Nas revisões e novas gerações, priorizar suas proporções cartoon, olhos ovais simples, contornos pretos fortes e sombras em blocos; evitar modelagem facial realista, fios de cabelo detalhados e texturas excessivas. Preservar a identidade de cada pessoa.
+
+Diretriz do usuário em 25/10/2026: gerar diretamente no estilo definitivo do Lula desde a PRIMEIRA geração. Incluir a ilustração do Lula como referência visual explícita e especificar suas formas simples, olhos ovais, contornos fortes e sombras em blocos antes de gerar. Não usar como fluxo padrão gerar uma versão detalhada para depois simplificá-la: isso desperdiça tempo e franquia. Revisões de estilo devem ser exceções, não uma etapa planejada.

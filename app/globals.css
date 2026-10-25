@@ -338,6 +338,34 @@ h1,h2,h3,h4,h5,h6,button,label,.eyebrow,.progress-label,.category-count,.map-top
 .pink-study-controls p { margin: 5px 0 0; }
 /* Compact map actions retain accessible names and comfortable touch targets. */
 .map-actions .help-button { width:44px; height:44px; padding:0; justify-content:center; }
+.map-actions .privacy-button { background:var(--coral); }
+.map-actions .privacy-button:hover { background:var(--coral); filter:brightness(1.06); }
+.map-actions .help-button:focus-visible { outline:3px solid var(--blue); outline-offset:4px; }
+.privacy-dialog { max-width:720px; max-height:85dvh; padding:0; overflow-y:auto; overscroll-behavior:contain; scrollbar-width:thin; }
+.privacy-dialog-header { position:sticky; top:0; z-index:1; padding:28px 58px 22px 30px; background:var(--paper); border-bottom:1.5px solid var(--ink); }
+.privacy-dialog h2 { margin:0; font-size:27px; }
+.privacy-dialog h2 span { display:block; margin-top:10px; font-family:var(--type-heading); font-size:13px; line-height:1.5; font-weight:700; }
+.privacy-dialog h2:focus { outline:none; }
+.privacy-dialog .dialog-close { width:32px; height:32px; display:grid; place-items:center; border-radius:5px; }
+.privacy-dialog .dialog-close:hover { background:var(--yellow); }
+.privacy-dialog .dialog-close:focus-visible,.privacy-dialog a:focus-visible,.privacy-dialog .dialog-primary:focus-visible { outline:3px solid var(--blue); outline-offset:3px; }
+.privacy-dialog-content { padding:22px 30px 30px; }
+.privacy-dialog-content p { margin:0 0 16px; }
+.privacy-dialog .privacy-updated { font-size:14px; }
+.privacy-dialog section { margin-top:28px; }
+.privacy-dialog h3 { margin:0 0 12px; font-size:17px; line-height:1.5; font-weight:700; }
+.privacy-dialog ul { list-style:disc; padding-left:23px; margin:0 0 16px; }
+.privacy-dialog li { margin-bottom:9px; }
+.privacy-dialog a { text-decoration:underline; text-underline-offset:3px; color:var(--blue); overflow-wrap:anywhere; }
+.privacy-dialog .privacy-closing { margin-top:28px; padding-top:22px; border-top:1px solid var(--ink); }
+@media(max-width:700px) {
+  .privacy-dialog { width:calc(100% - 28px); max-height:88dvh; }
+  .privacy-dialog-header { padding:22px 48px 18px 20px; }
+  .privacy-dialog h2 { font-size:21px; }
+  .privacy-dialog h2 span { font-size:11px; }
+  .privacy-dialog-content { padding:20px; }
+  .privacy-dialog h3 { font-size:15px; }
+}
 .map-character:focus-visible rect { stroke:var(--blue); stroke-width:2; }
 
 .map-editor-toolbar { display:flex; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:12px; padding:10px; background:#e3ebff; border:2px solid #1c1c1c; border-radius:12px; }
