@@ -1,6 +1,8 @@
 import type { Target } from './game-data';
 
 export const mapCharacters: (Target & { file: string; elevation?: number; isSheriff?: boolean; spriteFrame?: { x: number; y: number; width: number; height: number; sourceWidth: number; sourceHeight: number } })[] = [
+  { id: 'laine-cardoso', name: 'Lâine Cardoso', article: 'a', category: 'people', x: 1850, y: 960, width: 50, height: 75, file: '/images/characters/laine-cardoso-v01.webp', clue: 'Lâine está perto do estúdio criativIN, montando flores coloridas de artesanato numa pequena bancada de madeira.' },
+  { id: 'ana-fragoso', name: 'Ana Fragoso', article: 'a', category: 'people', x: 2325, y: 400, width: 40, height: 60, file: '/images/characters/ana-fragoso-v01.webp', clue: 'Ana está perto do pINgos nos INs, com megafone abaixado e passos em câmera lenta, representando seu Slow Marketing.' },
   { id: 'maju-martins', name: 'Maju Martins', article: 'a', category: 'people', x: 1980, y: -450, width: 40, height: 60, file: '/images/characters/maju-martins-v01.webp', clue: 'Maju está no jardIN secreto, abraçando sua cachorrinha de pelagem escura com asinhas brancas e auréola dourada.' },
   { id: 'bode', name: 'Bode', article: 'o', category: 'people', x: 1369, y: 801, width: 36, height: 54, file: '/images/characters/bode-v01.webp', clue: 'Bode está na pracinha: uma criatura meio humana e meio bode, com cachos pretos, bigode, piercing, chifres e cascos.' },
   { id: 'tais-alvarez', name: 'Taís Alvarez', article: 'a', category: 'people', x: 1305, y: 1445, elevation: 90, width: 42, height: 63, file: '/images/characters/tais-alvarez-v02.webp', clue: 'Taís está em cima do INglish pub, com livro de inglês e quebra-cabeça na bolsa transversal e binóculos, observando um passarinho voando.' },
