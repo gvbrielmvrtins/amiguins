@@ -1,3 +1,5 @@
+import {cafeArtwork} from './cafe-appearance';
+
 export type CivicArt={file:string;width:number;height:number;anchorX:number;anchorY:number;scale:number;mirror?:boolean;risingSlope?:number;fallingSlope?:number};
 export const civicRenderedAssets:Record<string,CivicArt>={
   savannaVisitor1:{file:'safari-visitante-1-v01.webp',width:1024,height:1536,anchorX:530,anchorY:1480,scale:.024},
@@ -60,7 +62,7 @@ export const civicRenderedAssets:Record<string,CivicArt>={
   tavernPicnic:{file:'parque-piquenique-v01.webp',width:1448,height:1086,anchorX:710,anchorY:940,scale:.044,risingSlope:-.577,fallingSlope:.577},
   tavernRoundTable:{file:'taverna-mesa-redonda-v01.webp',width:1415,height:1111,anchorX:710,anchorY:900,scale:.043},
   tavernBench:{file:'parque-banco-v01.webp',width:1415,height:1111,anchorX:720,anchorY:940,scale:.042},
-  eastCafe:{file:'cafe-apoio-render-v01.webp',width:1536,height:1024,anchorX:800,anchorY:840,scale:.09,risingSlope:-.58,fallingSlope:.34},
+  eastCafe:{file:cafeArtwork,width:1536,height:1024,anchorX:800,anchorY:840,scale:.09,risingSlope:-.58,fallingSlope:.34},
   valleyPrototype:{file:'silicin-prototipos-v01.webp',width:1415,height:1111,anchorX:725,anchorY:925,scale:.07,mirror:true,risingSlope:-.32,fallingSlope:.56},
   valleyRobot:{file:'silicin-robo-v01.webp',width:1508,height:1043,anchorX:710,anchorY:810,scale:.075,risingSlope:-.577,fallingSlope:.577},
   valleyCycles:{file:'silicin-bicicletario-v02.webp',width:1844,height:853,anchorX:930,anchorY:590,scale:.065,risingSlope:-.58,fallingSlope:.26},

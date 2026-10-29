@@ -9,10 +9,10 @@ export const MapElementScope=createContext('map');
 const MapElementLock=createContext(false);
 export const MapEditorContext=createContext<EditorState>({enabled:false,offsets:{},selected:null,select:()=>{},move:()=>{}});
 type SelectionBounds={x:number;y:number;width:number;height:number};
-export function MovableMapElement({id,children,locked=false,selectionBounds}:{id:string;children:ReactNode;locked?:boolean;selectionBounds?:SelectionBounds}){
+export function MovableMapElement({id,children,locked=false,selectionBounds,independentlyEditable=false}:{id:string;children:ReactNode;locked?:boolean;selectionBounds?:SelectionBounds;independentlyEditable?:boolean}){
   const editor=useContext(MapEditorContext);
   const inheritedLock=useContext(MapElementLock);
-  locked=locked||inheritedLock;
+  locked=locked||(inheritedLock&&!independentlyEditable);
   return <><MovableInstance id={id} locked={locked} selectionBounds={selectionBounds}>{children}</MovableInstance>{Object.entries(editor.offsets).filter(([,p])=>p.sourceId===id).map(([copyId])=><MovableInstance key={copyId} id={copyId} duplicate locked={locked} selectionBounds={selectionBounds}>{children}</MovableInstance>)}</>;
 }
 export function MapLayoutLayers({front}:{front:boolean}){

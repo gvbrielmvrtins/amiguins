@@ -24,8 +24,8 @@ export default function PilotLandscapeProp({ item }: { item: LandscapeProp }) {
     <image href={assetUrl(`${pilotAssetPath}${item.id==='civic-city-notice'?'mural-workshop-capcut-v01.webp':illustration.file}`)} x={-illustration.anchorX*illustration.scale} y={-illustration.anchorY*illustration.scale} width={illustration.width*illustration.scale} height={illustration.height*illustration.scale} preserveAspectRatio="xMidYMid meet"/>
     {item.id==='civic-city-notice'&&<g transform="scale(.052) translate(-700 -965)">
       <g transform="matrix(1 .342 0 1 430 330)">
-        <text x="265" y="44" textAnchor="middle" fill="#1C1C1C" fontFamily="var(--font-gasoek), sans-serif" fontSize="35">
-          {['Tá sabendo que','agora estamos','no insta?','@amiguins_'].map((line,i)=><tspan key={line} x="265" dy={i===0?0:45}>{line}</tspan>)}
+        <text x="265" y="44" textAnchor="middle" fill="#1C1C1C" fontFamily="var(--font-gasoek), sans-serif" fontSize="43">
+          {['cafézIN de','hallowIN 🎃','30/11 às 19h'].map((line,i)=><tspan key={line} x="265" dy={i===0?0:49}>{line}</tspan>)}
         </text>
       </g>
     </g>}
