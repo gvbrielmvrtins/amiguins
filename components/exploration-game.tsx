@@ -1,6 +1,7 @@
 'use client';
 
 import {assetUrl} from '@/lib/asset-url';
+import {cafeArtwork} from '@/lib/cafe-appearance';
 import { useState, useRef,useEffect, useLayoutEffect, useCallback, type TouchEvent, type PointerEvent } from 'react';
 import {boundedScroll} from '@/lib/map-camera';
 import { ArrowUpRight, Check, ChevronDown, HelpCircle, MousePointer2, PawPrint, RotateCcw, ShieldCheck, Sparkles, Store, Users, X } from 'lucide-react';
@@ -21,9 +22,13 @@ const categories=[{id:'people',label:'AMIGUINS'},{id:'places',label:'Espacins'}]
 const cafeLocation=eastFillers.find(item=>item.id==='east-cafe')!;
 const targets:Target[]=[...mapCharacters, ...modularDestinations.map<Target>(d=>({id:d.id,name:d.name,article:'o',category:'places',x:d.x,y:d.y,width:0,height:0,clue:'Procure '+d.name+' no mapa.'})),{id:'east-cafe',name:'cafézIN',article:'o',category:'places',x:cafeLocation.x,y:cafeLocation.y,width:0,height:0,clue:'Procure o cafézIN no mapa.'}];
 
-const destinationPortraits:Record<string,string>={"pingos-nos-ins":"pingos-nos-ins-redacao-v04.webp","east-cafe":"cafe-apoio-render-v01.webp","colabin":"colabin-laboratorio-v02.webp","vagao-feminino":"metro-vagao-feminino-v04.webp","livrinhoteca":"livrinhoteca-isometrico-v01.webp","cineminha":"cineminha-isometrico-v01.webp","mercado-vagas":"mercado-vagas-isometrico-v01.webp","prefeintura":"prefeitura-render-v02.webp","taverna-joguins":"taverna-medieval-games-v04.webp","pracinha":"praca-central-circular-v01.webp","espacin-coloridin":"coloridin-arco-iris-frontal-v02.webp","linkedin":"linkedin-predio-v02.webp","jardim-secreto":"rosa-arvore-isometrica-v01.webp","estudio-criativins":"estudio-render-v02.webp","silicin-valley":"silicin-campus-v02.webp","departamento-xerifins":"xerifins-departamento-v01.webp","inglish-pub":"inglish-pub-render-v02.webp","oficina-vendinhas":"feira-roupas-v01.webp","torre-mistica":"torre-feiticaria-v02.webp","plaza-hispanica":"plaza-arcada-bandeiras-v02.webp","academia-marombins":"academia-render-v02.webp","binstro":"binstro-render-v02.webp","paises-africanos":"aeroporto-internacional-v02.webp"};
+const destinationPortraits:Record<string,string>={"pingos-nos-ins":"pingos-nos-ins-redacao-v04.webp","east-cafe":cafeArtwork,"colabin":"colabin-laboratorio-v02.webp","vagao-feminino":"metro-vagao-feminino-v04.webp","livrinhoteca":"livrinhoteca-isometrico-v01.webp","cineminha":"cineminha-isometrico-v01.webp","mercado-vagas":"mercado-vagas-isometrico-v01.webp","prefeintura":"prefeitura-render-v02.webp","taverna-joguins":"taverna-medieval-games-v04.webp","pracinha":"praca-central-circular-v01.webp","espacin-coloridin":"coloridin-arco-iris-frontal-v02.webp","linkedin":"linkedin-predio-v02.webp","jardim-secreto":"rosa-arvore-isometrica-v01.webp","estudio-criativins":"estudio-render-v02.webp","silicin-valley":"silicin-campus-v02.webp","departamento-xerifins":"xerifins-departamento-v01.webp","inglish-pub":"inglish-pub-render-v02.webp","oficina-vendinhas":"feira-roupas-v01.webp","torre-mistica":"torre-feiticaria-v02.webp","plaza-hispanica":"plaza-arcada-bandeiras-v02.webp","academia-marombins":"academia-render-v02.webp","binstro":"binstro-render-v02.webp","paises-africanos":"aeroporto-internacional-v02.webp"};
 // Crop the existing illustration to the head without exposing the map pose or props.
 const facePortraits:Record<string,{width:number;height:number;crop:[number,number,number]}>= {
+  'joyce-vieira':{width:1024,height:1536,crop:[340,15,440]},
+  'vitoria-aragao':{width:1024,height:1536,crop:[295,25,410]},
+  'carolina-cruz':{width:1024,height:1536,crop:[245,35,480]},
+  'dani-souza':{width:1024,height:1536,crop:[235,30,440]},
   'laine-cardoso':{width:1024,height:1536,crop:[285,20,410]},
   'ana-fragoso':{width:1024,height:1536,crop:[250,20,500]},
   'maju-martins':{width:1024,height:1536,crop:[230,20,410]},

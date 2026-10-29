@@ -5186,7 +5186,7 @@
   "beachgoer-surfer": {
     "x": -294.28,
     "y": -126.71,
-    "scale": 1.2,
+    "scale": 1.25,
     "rotation": 0,
     "layer": 0,
     "hidden": false
@@ -5423,9 +5423,9 @@
     "hidden": false
   },
   "odete-roitman-helicopter-nonplayable": {
-    "x": -0.61,
-    "y": 4.02,
-    "scale": 0.45,
+    "x": -4.14,
+    "y": 4.94,
+    "scale": 0.55,
     "rotation": 0,
     "layer": 0,
     "hidden": false
@@ -5471,19 +5471,19 @@
     "hidden": false
   },
   "silent-observer-tree": {
-    "x": 1084.11,
-    "y": -327.84,
-    "scale": 1.15,
+    "x": 1095.12,
+    "y": -316.39,
+    "scale": 0.95,
     "rotation": 0,
     "layer": 3,
     "hidden": false
   },
   "silent-observer-mug": {
-    "x": 1006.29,
-    "y": -274.39,
-    "scale": 1.05,
+    "x": 434.13,
+    "y": 7.45,
+    "scale": 0.95,
     "rotation": 0,
-    "layer": -2,
+    "layer": 1,
     "hidden": false
   },
   "tiago-vieira": {
@@ -6085,12 +6085,79 @@
   },
   "ana-fragoso": {
     "x": -62.92,
-    "y": 2.42
+    "y": 2.42,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "laine-cardoso": {
     "x": 64.44,
     "y": -62.2,
+    "scale": 0.85,
+    "rotation": 0,
     "layer": 1,
-    "scale": 0.85
+    "hidden": false
+  },
+  "dani-souza": {
+    "x": 13.62,
+    "y": 97.94,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 2,
+    "hidden": false
+  },
+  "mariah-carey-frozen-nonplayable": {
+    "x": -86.63,
+    "y": -120.04,
+    "scale": 1.05,
+    "rotation": 0,
+    "layer": 2,
+    "hidden": false
+  },
+  "carolina-cruz": {
+    "x": 30.45,
+    "y": -75.93,
+    "scale": 1.05,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
+  },
+  "vitoria-aragao": {
+    "x": -158.79,
+    "y": -60.22,
+    "scale": 1.1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
+  },
+  "joyce-vieira": {
+    "x": -64.35,
+    "y": -45.02,
+    "layer": 2
+  },
+  "flavio-carminha-nonplayable": {
+    "x": -0.24,
+    "y": 3.75,
+    "scale": 0.95,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
+  },
+  "toxic-landfill": {
+    "x": -61.8,
+    "y": 30.72,
+    "scale": 0.95,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
+  },
+  "toxic-landfill-sign": {
+    "x": -91.09,
+    "y": 6.11,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   }
 }

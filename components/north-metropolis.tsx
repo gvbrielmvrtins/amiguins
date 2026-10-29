@@ -45,7 +45,8 @@ export default function NorthMetropolis(){return <g data-layer="north-metropolis
       {b.variant===1?<image href={assetUrl("/images/modular/metropole-residencial-v01.webp")} x={-565*b.height/1370} y={-1400*b.height/1370} width={1105*b.height/1370} height={1424*b.height/1370}/>:<image href={assetUrl(b.id==='metropolis-0-5'?'/images/modular/metropole-escritorios-heliponto-v01.webp':'/images/modular/metropole-escritorios-v01.webp')} x={-730*b.height/1060} y={-1080*b.height/1060} width={1415*b.height/1060} height={1111*b.height/1060}/>}
       <image href={assetUrl("/images/modular/poste-detalhado-v01.webp")} x="40" y="-31" width="20" height="30"/>
       <image href={assetUrl("/images/modular/floreira-detalhada-v01.webp")} x="-45" y="5" width="27" height="18"/>
-      {b.id==='metropolis-0-5'&&<MovableMapElement id="odete-roitman-helicopter-nonplayable"><image href={assetUrl("/images/modular/odete-roitman-helicoptero-v01.webp")} x="-52" y="-218" width="100" height="66.67" pointerEvents="none"/></MovableMapElement>}
+      {b.id==='metropolis-0-5'&&<MovableMapElement id="odete-roitman-helicopter-nonplayable" independentlyEditable><image href={assetUrl("/images/modular/odete-roitman-helicoptero-v01.webp")} x="-52" y="-218" width="100" height="66.67" pointerEvents="none"/></MovableMapElement>}
+      {b.id==='metropolis-0-5'&&<MovableMapElement id="flavio-carminha-nonplayable" independentlyEditable><image href={assetUrl("/images/modular/flavio-carminha-npc-v01.webp")} x="10" y="-192" width="16" height="24" pointerEvents="none" role="img" aria-label="Caricatura de Flávio Bolsonaro fantasiado de Carminha gritando INFERNO!"/></MovableMapElement>}
 
 
     </g>)}
