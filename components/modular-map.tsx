@@ -1,3 +1,5 @@
+import Titanic from './titanic';
+import AirportWelcomeGarden from './airport-welcome-garden';
 import {assetUrl} from '@/lib/asset-url';
 import ForestClearingProp,{forestClearingItems} from './forest-clearing';
 import ConstructionSite from './construction-site';
@@ -108,6 +110,7 @@ export default function ModularMap({ selected, onSelect }: { selected: string | 
     </g>
     <MovableMapElement id="pamonha-earth-organic"><path d="M483 1480C472 1454 493 1428 523 1424C547 1409 579 1417 595 1430C624 1434 639 1454 628 1473C640 1494 615 1515 589 1514C565 1532 534 1524 516 1515C489 1517 475 1500 483 1480Z" fill="url(#pamonha-earth-texture)" pointerEvents="none"/></MovableMapElement>
     <EditableGroundPatches/>
+    <AirportWelcomeGarden/>
     <ConstructionSite/>
     <EditableTrafficProps/>
     <ArchaeologicalRuins/>
@@ -127,6 +130,7 @@ export default function ModularMap({ selected, onSelect }: { selected: string | 
     <MovableMapElement id="bolsonaro-cage-nonplayable"><image href={assetUrl("/images/modular/bolsonaro-jaula-npc-v04.webp")} x="1610" y="755" width="44" height="66" pointerEvents="none"/></MovableMapElement>
     <MovableMapElement id="football-field-bleachers"><g transform="translate(944 1098)" pointerEvents="none"><g transform={uprightProjection(-.554, .587).transform}><image href={assetUrl("/images/modular/campinho-arquibancada-v02.webp")} width="380" height="253.33"/></g></g></MovableMapElement>
     <MovableMapElement id="lola-julio"><image aria-label="Lola, cachorrinha mini com chapéu rosa, e Julio, cachorro preto de grande porte, perto da Flavia" href={assetUrl("/images/modular/lola-julio-v01.webp")} x="1290" y="1307.67" width="44" height="29.33" pointerEvents="none"/></MovableMapElement>
+    <MovableMapElement id="nai-galinha-nonplayable"><image aria-label="Nai fantasiada de galinha em frente ao cafézIN" href={assetUrl("/images/modular/nai-galinha-npc-v02.webp")} x="1925" y="825" width="30" height="45" pointerEvents="none"/></MovableMapElement>
     <MovableMapElement id="lula-nonplayable"><image href={assetUrl("/images/modular/lula-npc-v02.webp")} x="1550" y="755" width="28" height="42" pointerEvents="none"/></MovableMapElement>
     <MovableMapElement id="estatua-inusitada-nonplayable"><image aria-label="Estátua inusitada com plaquinha amarela" href={assetUrl("/images/modular/estatua-inusitada-v01.webp")} x="1115" y="690" width="36" height="38.38" pointerEvents="none"/></MovableMapElement>
     <MovableMapElement id="vini-jr-nonplayable"><image aria-label="Vini Jr ao lado de Vinícius Macedo" href={assetUrl("/images/modular/vini-jr-npc-v01.webp")} x="1003" y="632" width="30" height="45" pointerEvents="none"/></MovableMapElement>
@@ -148,6 +152,7 @@ export default function ModularMap({ selected, onSelect }: { selected: string | 
     <MovableMapElement id="spoiled-spilled-milk"><image href={assetUrl("/images/modular/leite-derramado-estragado-v01.webp")} x="745" y="1345" width="40" height="31" pointerEvents="none"/></MovableMapElement>
     <MovableMapElement id="cottage-stone-path"><image href={assetUrl("/images/modular/caminho-pedrinhas-v01.webp")} x="1117" y="1185" width="90" height="60" pointerEvents="none"/></MovableMapElement>
     <SeaCharacters/>
+    <Titanic/>
     <g transform="translate(1095.588457269 1459)" pointerEvents="none" aria-label="Buraco que Paula está cavando"><ellipse cx="-7" cy="0" rx="11" ry="5" fill="#AB7F48" stroke="#CDA260" strokeWidth="2"/><path d="M-15 0Q-7-5 2 0" fill="none" stroke="#735733" strokeWidth="2"/><path d="M-22 3Q-18-5-13 1L-10 5Z" fill="#D8B87B" stroke="#BE965B" strokeWidth="1"/></g>
     {savannaProps.filter(item=>item.kind==='savannaOasis').map(item=><SavannaProp key={item.id} item={item}/>)}
     <WestGreenProps/>
