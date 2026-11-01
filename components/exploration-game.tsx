@@ -25,6 +25,10 @@ const targets:Target[]=[...mapCharacters, ...modularDestinations.map<Target>(d=>
 const destinationPortraits:Record<string,string>={"pingos-nos-ins":"pingos-nos-ins-redacao-v04.webp","east-cafe":cafeArtwork,"colabin":"colabin-laboratorio-v02.webp","vagao-feminino":"metro-vagao-feminino-v04.webp","livrinhoteca":"livrinhoteca-isometrico-v01.webp","cineminha":"cineminha-isometrico-v01.webp","mercado-vagas":"mercado-vagas-isometrico-v01.webp","prefeintura":"prefeitura-render-v02.webp","taverna-joguins":"taverna-medieval-games-v04.webp","pracinha":"praca-central-circular-v01.webp","espacin-coloridin":"coloridin-arco-iris-frontal-v02.webp","linkedin":"linkedin-predio-v02.webp","jardim-secreto":"rosa-arvore-isometrica-v01.webp","estudio-criativins":"estudio-render-v02.webp","silicin-valley":"silicin-campus-v02.webp","departamento-xerifins":"xerifins-departamento-v01.webp","inglish-pub":"inglish-pub-render-v02.webp","oficina-vendinhas":"feira-roupas-v01.webp","torre-mistica":"torre-feiticaria-v02.webp","plaza-hispanica":"plaza-arcada-bandeiras-v02.webp","academia-marombins":"academia-render-v02.webp","binstro":"binstro-render-v02.webp","paises-africanos":"aeroporto-internacional-v02.webp"};
 // Crop the existing illustration to the head without exposing the map pose or props.
 const facePortraits:Record<string,{width:number;height:number;crop:[number,number,number]}>= {
+  'soraia-santos':{width:768,height:1024,crop:[185,5,390]},
+  'isabela-allan':{width:768,height:1024,crop:[205,5,390]},
+  'william-barter':{width:1024,height:1536,crop:[240,20,480]},
+  'samantha-veiga':{width:1536,height:1024,crop:[650,10,280]},
   'gabriela-bandeira':{width:1024,height:1536,crop:[100,180,430]},
   'sofia-bedeschi':{width:1024,height:1536,crop:[270,30,470]},
   'duda-razzera':{width:1024,height:1536,crop:[275,10,480]},

@@ -1735,11 +1735,11 @@
     "hidden": false
   },
   "civic-tower-tree": {
-    "x": 216.1,
-    "y": 48.59,
+    "x": 216.2,
+    "y": 48.49,
     "scale": 1.2,
     "rotation": 0,
-    "layer": 1,
+    "layer": 0,
     "hidden": false
   },
   "ground-grass-organic": {
@@ -3131,11 +3131,11 @@
     "hidden": false
   },
   "civic-square-lamp": {
-    "x": 276.18,
+    "x": 276.24,
     "y": 251.44,
     "scale": 1,
     "rotation": 0,
-    "layer": 0,
+    "layer": -2,
     "hidden": false
   },
   "civic-square-table": {
@@ -3187,8 +3187,8 @@
     "hidden": false
   },
   "raquel-rocha": {
-    "x": 7.02,
-    "y": 11.44,
+    "x": 16.64,
+    "y": 13.12,
     "scale": 1.3,
     "rotation": 0,
     "layer": 1,
@@ -3352,7 +3352,7 @@
     "y": 6.94,
     "scale": 1.4,
     "rotation": 0,
-    "layer": 0,
+    "layer": -5,
     "hidden": false
   },
   "beach-feature-1/beachPalm/0/0": {
@@ -4284,11 +4284,11 @@
     "hidden": false
   },
   "inglish-pub/tavernRoundTable/-105/115": {
-    "x": 1464.89,
-    "y": 55.65,
+    "x": 1464.88,
+    "y": 55.58,
     "scale": 1,
     "rotation": 0,
-    "layer": 0,
+    "layer": 1,
     "hidden": false
   },
   "inglish-pub/tavernRoundTable/20/135": {
@@ -5300,8 +5300,8 @@
   },
   "lula-nonplayable": {
     "x": 292.04,
-    "y": -16.17,
-    "scale": 1.1,
+    "y": -16.24,
+    "scale": 0.95,
     "rotation": 0,
     "layer": 1,
     "hidden": false
@@ -5479,8 +5479,8 @@
     "hidden": false
   },
   "silent-observer-mug": {
-    "x": 434.13,
-    "y": 7.45,
+    "x": 551.2,
+    "y": -91.77,
     "scale": 0.95,
     "rotation": 0,
     "layer": 1,
@@ -5878,7 +5878,7 @@
   "gustavo-pontes": {
     "x": 0,
     "y": 0,
-    "scale": 1.4,
+    "scale": 1.2,
     "rotation": 0,
     "layer": 2,
     "hidden": false
@@ -6166,7 +6166,10 @@
   "otavio-maciel": {
     "x": -59.98,
     "y": -13.26,
-    "scale": 1.5
+    "scale": 1.5,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "gatos-naiane": {
     "x": 11.16,
@@ -6179,16 +6182,113 @@
   "duda-razzera": {
     "x": -323.67,
     "y": -140.18,
-    "scale": 0.75
+    "scale": 0.75,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "sofia-bedeschi": {
     "x": 8.2,
-    "y": -112.12
+    "y": -112.12,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   },
   "gabriela-bandeira": {
     "x": -75.25,
     "y": -197.93,
+    "scale": 0.9,
+    "rotation": 0,
     "layer": 1,
-    "scale": 0.9
+    "hidden": false
+  },
+  "william-barter": {
+    "x": 129.43,
+    "y": -3.97,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 2,
+    "hidden": false
+  },
+  "samantha-veiga": {
+    "x": 211.53,
+    "y": -44.42,
+    "scale": 1.05,
+    "rotation": 0,
+    "layer": 1,
+    "hidden": false
+  },
+  "nai-galinha-nonplayable": {
+    "x": -60.64,
+    "y": -56.97,
+    "scale": 0.9,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
+  },
+  "airport-welcome-bench": {
+    "x": 35.93,
+    "y": 11.81,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
+  },
+  "airport-welcome-planter": {
+    "x": -43.28,
+    "y": -6.53,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
+  },
+  "airport-welcome-tree": {
+    "x": 0,
+    "y": 0,
+    "scale": 1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": true
+  },
+  "airport-welcome-sign": {
+    "x": 26.08,
+    "y": 13.27,
+    "scale": 1.3,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
+  },
+  "airport-welcome-globe": {
+    "x": -413.94,
+    "y": -77.93,
+    "scale": 1.8,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
+  },
+  "soraia-santos": {
+    "x": -432.61,
+    "y": -205.29,
+    "scale": 0.9,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
+  },
+  "isabela-allan": {
+    "x": -407.18,
+    "y": -205.16,
+    "scale": 0.95,
+    "rotation": 0,
+    "layer": -1,
+    "hidden": false
+  },
+  "titanic": {
+    "x": 111.02,
+    "y": 65.32,
+    "scale": 1.9,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   }
 }

@@ -1,0 +1,7 @@
+# Samantha Veiga com os filhos
+
+01/11/2026. Ilustração única da Samantha com os dois filhos fantasiados, no silicIN valley. Somente Samantha é personagem encontrável e aparece no menu; as crianças não recebem nomes nem entradas próprias. Notebook fechado como referência ao trabalho com TI.
+
+Imagegen integrado, referências explícitas: foto da Samantha para identidade, foto dos filhos para identidades/fantasias e Lula como modelo definitivo de estilo. Prompt: "Unified transparent full-body family sprite, mother center with two children, older child left in broad black witch hat and black robe with white skeletal/tree motifs, younger right in burgundy patchwork monster costume with purple/orange shoulders, green sleeves, striped lower shirt and skeleton gloves/pants. Harmless face paint matching reference. Samantha shoulder-length side-part brown hair, dark drop earrings, black V-neck blouse, jeans, sneakers, closed laptop under arm. Protective natural family pose, faces toward viewer, different children's heights. STRICT Lula style: simple white oval eyes/dark oval pupils, rounded cartoon forms, bold black outlines, flat colors and hard block shadows, no realistic face or hair. Full feet/hats, landscape1536x1024, transparent, no scenery/text/badge, exactly three people."
+
+Arquivo `public/images/characters/samantha-veiga-filhos-v01.webp`, proporção 3:2 preservada. Retrato do menu recorta somente Samantha. Fotos originais não copiadas ao projeto. Enviar WebP ao R2 antes da publicação.

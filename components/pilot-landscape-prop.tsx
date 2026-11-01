@@ -25,7 +25,7 @@ export default function PilotLandscapeProp({ item }: { item: LandscapeProp }) {
     {item.id==='civic-city-notice'&&<g transform="scale(.052) translate(-700 -965)">
       <g transform="matrix(1 .342 0 1 430 330)">
         <text x="265" y="44" textAnchor="middle" fill="#1C1C1C" fontFamily="var(--font-gasoek), sans-serif" fontSize="43">
-          {['cafézIN de','hallowIN 🎃','30/11 às 19h'].map((line,i)=><tspan key={line} x="265" dy={i===0?0:49}>{line}</tspan>)}
+          {['Já seguiu','a gente no','insta?','@amiguins_'].map((line,i)=><tspan key={line} x="265" dy={i===0?0:49}>{line}</tspan>)}
         </text>
       </g>
     </g>}
