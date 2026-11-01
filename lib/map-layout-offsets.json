@@ -6134,7 +6134,10 @@
   "joyce-vieira": {
     "x": -64.35,
     "y": -45.02,
-    "layer": 2
+    "scale": 1,
+    "rotation": 0,
+    "layer": 2,
+    "hidden": false
   },
   "flavio-carminha-nonplayable": {
     "x": -0.24,
@@ -6159,5 +6162,33 @@
     "rotation": 0,
     "layer": 0,
     "hidden": false
+  },
+  "otavio-maciel": {
+    "x": -59.98,
+    "y": -13.26,
+    "scale": 1.5
+  },
+  "gatos-naiane": {
+    "x": 11.16,
+    "y": -5.75,
+    "scale": 0.8,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
+  },
+  "duda-razzera": {
+    "x": -323.67,
+    "y": -140.18,
+    "scale": 0.75
+  },
+  "sofia-bedeschi": {
+    "x": 8.2,
+    "y": -112.12
+  },
+  "gabriela-bandeira": {
+    "x": -75.25,
+    "y": -197.93,
+    "layer": 1,
+    "scale": 0.9
   }
 }

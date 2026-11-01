@@ -19,6 +19,9 @@ export default function MetroTrain(){
       const at=projectGround(car.x,55);
       return <MovableMapElement key={car.file} id={`${scope}/carriage/${car.x}`}><g transform={`translate(${at.x} ${at.y})`}>
         <g transform={carriageProjection}><image href={assetUrl(`/images/modular/${car.file}`)} x="-106.4" y="-99.4" width="215.04" height="143.36"/></g>
+        {car.x===260&&<MovableMapElement id="gatos-naiane">
+          <image aria-label="Os dois gatos tigrados e brancos da Naiane, um sentado e outro deitado, no teto do vagão" href={assetUrl('/images/modular/gatos-naiane-v01.webp')} x="-57" y="-93.34" width="28" height={28*1024/1536} preserveAspectRatio="xMidYMid meet"/>
+        </MovableMapElement>}
       </g></MovableMapElement>;
     })}
     {/* Share the carriage correction so the inset lid follows its roof axes. */}

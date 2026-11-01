@@ -1,5 +1,5 @@
 /** Switch to 'original' after the seasonal decoration ends. Both assets are preserved. */
-export const cafeAppearance: 'original' | 'halloween' = 'halloween';
+export const cafeAppearance: 'original' | 'halloween' = 'original';
 const cafeVariants = {
   original: 'cafe-apoio-render-v01.webp',
   halloween: 'cafe-apoio-halloween-v01.webp',
