@@ -293,7 +293,7 @@
     "y": -6.32,
     "scale": 1,
     "rotation": 0,
-    "layer": 0,
+    "layer": 1,
     "hidden": false
   },
   "filler-west-tree": {
@@ -305,11 +305,11 @@
     "hidden": false
   },
   "west-workshop": {
-    "x": 24.14,
+    "x": 23.99,
     "y": 18.92,
     "scale": 1,
     "rotation": 0,
-    "layer": 0,
+    "layer": 1,
     "hidden": false
   },
   "filler-west-table": {
@@ -349,7 +349,7 @@
     "y": -64.2,
     "scale": 1,
     "rotation": 0,
-    "layer": 0,
+    "layer": 1,
     "hidden": false
   },
   "filler-west-flowers": {
@@ -6180,9 +6180,9 @@
     "hidden": false
   },
   "duda-razzera": {
-    "x": -323.67,
-    "y": -140.18,
-    "scale": 0.75,
+    "x": -323.05,
+    "y": -137.31,
+    "scale": 0.9,
     "rotation": 0,
     "layer": 0,
     "hidden": false
@@ -6270,7 +6270,7 @@
   "soraia-santos": {
     "x": -432.61,
     "y": -205.29,
-    "scale": 0.9,
+    "scale": 0.85,
     "rotation": 0,
     "layer": 0,
     "hidden": false
@@ -6278,7 +6278,7 @@
   "isabela-allan": {
     "x": -407.18,
     "y": -205.16,
-    "scale": 0.95,
+    "scale": 0.9,
     "rotation": 0,
     "layer": -1,
     "hidden": false
@@ -6290,5 +6290,23 @@
     "rotation": 0,
     "layer": 0,
     "hidden": false
+  },
+  "north-corner-store::copy:17edb9bc-4b29-415f-8978-881b98b352bd": {
+    "x": -415.3,
+    "y": -214.43,
+    "scale": 0.7,
+    "rotation": 0,
+    "layer": -4,
+    "hidden": false,
+    "sourceId": "north-corner-store"
+  },
+  "north-residence-coral::copy:cfc8eb67-7dcb-4768-8a02-bb76b8a5dbf2": {
+    "x": -453.69,
+    "y": -151.19,
+    "scale": 0.7,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false,
+    "sourceId": "north-residence-coral"
   }
 }
