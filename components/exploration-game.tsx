@@ -2,14 +2,15 @@
 
 import {assetUrl} from '@/lib/asset-url';
 import {cafeArtwork} from '@/lib/cafe-appearance';
-import { useState, useRef,useEffect, useLayoutEffect, useCallback, type TouchEvent, type PointerEvent } from 'react';
+import { useState, useRef,useEffect, useLayoutEffect, useCallback, useMemo, memo, type TouchEvent, type PointerEvent } from 'react';
 import {boundedScroll} from '@/lib/map-camera';
 import { ArrowUpRight, Check, ChevronDown, HelpCircle, MousePointer2, PawPrint, RotateCcw, ShieldCheck, Sparkles, Store, Users, X } from 'lucide-react';
 import PrivacyPolicyDialog from './privacy-policy-dialog';
 import dynamic from 'next/dynamic';
 import OptimizedMap from './optimized-map';
 import type tileManifest from '@/lib/map-tiles-manifest.json';
-const ModularMap=dynamic(()=>import('@/components/modular-map'));
+// Memoised: the 7,000-node SVG must not reconcile on every zoom/message/progress update.
+const ModularMap=memo(dynamic(()=>import('@/components/modular-map')));
 import {MapEditorContext,type LayoutOffsets,type LayoutElement} from './map-layout-editor';
 import savedLayoutOffsets from '@/lib/map-layout-offsets.json';
 import { modularDestinations } from '@/lib/modular-map';
@@ -155,10 +156,12 @@ export default function ExplorationGame({optimized=false,hd=false,hdManifest}:{o
     if(Object.keys(updates).length)setLayoutOffsets(prev=>({...prev,...updates}));
   },[layoutOffsets,layoutReady]);
   useEffect(()=>{if(localEditor&&layoutReady){try{localStorage.setItem('amiguins-map-layout-v1',JSON.stringify(layoutOffsets));}catch{}}},[layoutOffsets,layoutReady,localEditor]);
+  const moveRef=useRef<(id:string,x:number,y:number,begin?:boolean)=>void>(()=>{});
   function moveElement(id:string,x:number,y:number,begin=false){
     if(begin){layoutHistory.current.push(layoutOffsets);if(layoutHistory.current.length>100)layoutHistory.current.shift();}
     setLayoutOffsets(prev=>({...prev,[id]:{...prev[id],x:Math.round(x*100)/100,y:Math.round(y*100)/100}}));
   }
+  moveRef.current=moveElement;
   function editElement(patch:Partial<LayoutElement>){
     if(!editingSelection)return;
     layoutHistory.current.push(layoutOffsets);
@@ -194,7 +197,12 @@ export default function ExplorationGame({optimized=false,hd=false,hdManifest}:{o
   // New 100% equals 200% of the previous 1.75× preview baseline.
   const mapScale = zoom * 3.5;
   const wheelZoom=useRef(zoom);
-  useLayoutEffect(()=>{wheelZoom.current=zoom;},[zoom]);
+  const committedZoom=useRef(zoom);
+  // While a pinch/wheel gesture is running the map is only scaled with a CSS
+  // transform (compositor-only). The expensive SVG relayout runs once, on commit.
+  const preview=useRef<{z0:number;s0:number;mapX:number;mapY:number;next:number;x:number;y:number}|null>(null);
+  const wheelTimer=useRef<number|undefined>(undefined);
+  useLayoutEffect(()=>{wheelZoom.current=zoom;committedZoom.current=zoom;},[zoom]);
   const [message, setMessage] = useState('');
   const [messageVersion,setMessageVersion]=useState(0);
   type Milestone = {text:string;tone:'quarter'|'half'|'complete'};
@@ -248,10 +256,38 @@ export default function ExplorationGame({optimized=false,hd=false,hdManifest}:{o
   const zoomAnchor = useRef<{mapX:number;mapY:number;x:number;y:number} | null>(null);
   function renderedMapScale(v:HTMLDivElement){
     const world=v.querySelector<HTMLElement>('.map-world');
-    return (world?.getBoundingClientRect().width??v.clientWidth)/2320;
+    // offsetWidth ignores the temporary preview transform.
+    return (world?.offsetWidth??v.clientWidth)/2320;
+  }
+  function previewZoom(next:number,x:number,y:number,anchor?:{mapX:number;mapY:number}){
+    const v=viewport.current,world=v?.querySelector<HTMLElement>('.map-world');
+    if(!v||!world)return;
+    let p=preview.current;
+    if(!p){
+      const s0=renderedMapScale(v);
+      p=preview.current={z0:committedZoom.current,s0,mapX:anchor?.mapX??(v.scrollLeft+x)/s0,mapY:anchor?.mapY??(v.scrollTop+y)/s0,next,x,y};
+    }
+    p.next=next;p.x=x;p.y=y;
+    const ox=p.mapX*p.s0,oy=p.mapY*p.s0;
+    world.style.transformOrigin=`${ox}px ${oy}px`;
+    world.style.transform=`translate(${x-ox+v.scrollLeft}px,${y-oy+v.scrollTop}px) scale(${next/p.z0})`;
+  }
+  function commitZoom(){
+    window.clearTimeout(wheelTimer.current);
+    const p=preview.current;if(!p)return;
+    preview.current=null;
+    if(Math.abs(p.next-committedZoom.current)<.0005){
+      const world=viewport.current?.querySelector<HTMLElement>('.map-world');
+      if(world){world.style.transform='';world.style.transformOrigin='';}
+      return;
+    }
+    zoomAnchor.current={mapX:p.mapX,mapY:p.mapY,x:p.x,y:p.y};
+    setZoom(p.next);
   }
   useLayoutEffect(()=>{
     const v=viewport.current,anchor=zoomAnchor.current;
+    const world=v?.querySelector<HTMLElement>('.map-world');
+    if(world){world.style.transform='';world.style.transformOrigin='';}
     if(!v||!anchor)return;
     const scale=renderedMapScale(v);
     v.scrollLeft=anchor.mapX*scale-anchor.x;
@@ -263,7 +299,7 @@ export default function ExplorationGame({optimized=false,hd=false,hdManifest}:{o
     if(e.touches.length>=2){
       const [a,b]=Array.from(e.touches),rect=v.getBoundingClientRect(),scale=renderedMapScale(v);
       const x=(a.clientX+b.clientX)/2-rect.left,y=(a.clientY+b.clientY)/2-rect.top;
-      touchGesture.current={distance:Math.max(1,Math.hypot(a.clientX-b.clientX,a.clientY-b.clientY)),zoom,mapX:(v.scrollLeft+x)/scale,mapY:(v.scrollTop+y)/scale};
+      touchGesture.current={distance:Math.max(1,Math.hypot(a.clientX-b.clientX,a.clientY-b.clientY)),zoom:committedZoom.current,mapX:(v.scrollLeft+x)/scale,mapY:(v.scrollTop+y)/scale};
       drag.current=null;didDrag.current=true;
     }else if(e.touches.length===1){
       const t=e.touches[0];
@@ -273,21 +309,18 @@ export default function ExplorationGame({optimized=false,hd=false,hdManifest}:{o
   function moveTouch(e:TouchEvent<HTMLDivElement>){
     const v=viewport.current;if(!v)return;
     if(e.touches.length>=2&&touchGesture.current){
-      e.preventDefault();
       const [a,b]=Array.from(e.touches),g=touchGesture.current,rect=v.getBoundingClientRect();
       const x=(a.clientX+b.clientX)/2-rect.left,y=(a.clientY+b.clientY)/2-rect.top;
       const next=Math.max(.25,Math.min(5,g.zoom*Math.hypot(a.clientX-b.clientX,a.clientY-b.clientY)/g.distance));
-      zoomAnchor.current={mapX:g.mapX,mapY:g.mapY,x,y};
-      const scale=renderedMapScale(v);
-      v.scrollLeft=g.mapX*scale-x;v.scrollTop=g.mapY*scale-y;
-      setZoom(next);didDrag.current=true;
+      previewZoom(next,x,y,{mapX:g.mapX,mapY:g.mapY});didDrag.current=true;
     }else if(e.touches.length===1&&drag.current){
-      e.preventDefault();const t=e.touches[0],g=drag.current,dx=t.clientX-g.x,dy=t.clientY-g.y;
-      if(Math.abs(dx)+Math.abs(dy)>5)didDrag.current=true;
-      v.scrollLeft=g.left-dx;v.scrollTop=g.top-dy;
+      // One-finger panning is native scrolling (touch-action: pan-x pan-y): inertia, off the main thread.
+      const t=e.touches[0],g=drag.current;
+      if(Math.abs(t.clientX-g.x)+Math.abs(t.clientY-g.y)>5)didDrag.current=true;
     }
   }
   function endTouch(e:TouchEvent<HTMLDivElement>){
+    if(touchGesture.current&&e.touches.length<2)commitZoom();
     touchGesture.current=null;drag.current=null;
     if(e.touches.length)beginTouch(e);
   }
@@ -310,12 +343,12 @@ export default function ExplorationGame({optimized=false,hd=false,hdManifest}:{o
       if(!delta)return;
       const next=Math.max(.25,Math.min(5,wheelZoom.current*Math.exp(-Math.max(-200,Math.min(200,delta))*.0015)));
       if(next===wheelZoom.current)return;
-      const rect=v!.getBoundingClientRect(),x=e.clientX-rect.left,y=e.clientY-rect.top,scale=renderedMapScale(v!);
-      zoomAnchor.current={mapX:(v!.scrollLeft+x)/scale,mapY:(v!.scrollTop+y)/scale,x,y};
-      wheelZoom.current=next;setZoom(next);
+      const rect=v!.getBoundingClientRect();
+      wheelZoom.current=next;previewZoom(next,e.clientX-rect.left,e.clientY-rect.top);
+      window.clearTimeout(wheelTimer.current);wheelTimer.current=window.setTimeout(commitZoom,140);
     }
     v.addEventListener('wheel',wheel,{passive:false,capture:true});
-    return()=>v.removeEventListener('wheel',wheel,true);
+    return()=>{v.removeEventListener('wheel',wheel,true);window.clearTimeout(wheelTimer.current);};
   },[viewportNode]);
   function locateFoundCharacter(id:string){
     if(!found.includes(id))return false;
@@ -385,7 +418,12 @@ export default function ExplorationGame({optimized=false,hd=false,hdManifest}:{o
     viewport.current.scrollTop = drag.current.top - dy;
     constrainCamera();
   }
-  return <MapEditorContext.Provider value={{enabled:localEditor&&editing,offsets:localEditor?layoutOffsets:savedLayoutOffsets,selected:editingSelection,select:setEditingSelection,move:moveElement}}><main className="game-shell">
+  const handleSelect=(id:string,keyboard?:boolean)=>{if(keyboard||!didDrag.current){const target=targets.find(t=>t.id===id);if(target?.category === 'people')discover(target);else if(target){locateDestination(id);showMessage(`Você está em ${target.name}.`);}}};
+  const selectRef=useRef(handleSelect);selectRef.current=handleSelect;
+  const stableSelect=useCallback((id:string,keyboard?:boolean)=>selectRef.current(id,keyboard),[]);
+  const contextOffsets=localEditor?layoutOffsets:savedLayoutOffsets;
+  const editorValue=useMemo(()=>({enabled:localEditor&&editing,offsets:contextOffsets,selected:editingSelection,select:setEditingSelection,move:(id:string,x:number,y:number,begin?:boolean)=>moveRef.current(id,x,y,begin)}),[localEditor,editing,contextOffsets,editingSelection]);
+  return <MapEditorContext.Provider value={editorValue}><main className="game-shell">
     {process.env.NODE_ENV==='development'&&<div className="map-preview-links"><a href={optimized?'/':'/map-hd-preview'}>{optimized?'Voltar ao editor local':'Testar mapa HD'}</a>{optimized&&<span>Prévia otimizada · posições salvas</span>}</div>}
     {localEditor&&<div className="map-editor-toolbar">
       <button onClick={()=>setEditing(v=>!v)} aria-pressed={editing}>{editing?'Concluir edição':'Editar posições'}</button>
@@ -421,8 +459,8 @@ export default function ExplorationGame({optimized=false,hd=false,hdManifest}:{o
       <section className="map-section" aria-label="Mapa interativo da Vila AmiguINs">
         <div className="map-topbar" aria-hidden="true"/>
         <div className="map-frame">
-          <div className="map-viewport" ref={attachViewport} onTouchStart={e=>{if(e.touches.length===1)didDrag.current=false;beginTouch(e);}} onTouchMove={moveTouch} onTouchEnd={endTouch} onTouchCancel={()=>{touchGesture.current=null;drag.current=null;}} onScroll={constrainCamera} onPointerDown={startDrag} onPointerMove={moveDrag} onPointerUp={() => { drag.current = null; }} onPointerLeave={() => { drag.current = null; }}>
-            <div className="map-world modular-world" style={{width:`${mapScale*100}%`,minWidth:`${740*mapScale}px`}}>{optimized?<OptimizedMap hd={hd} previewManifest={hdManifest} onSelect={(id,keyboard)=>{if(keyboard||!didDrag.current){const target=targets.find(t=>t.id===id);if(target?.category === 'people')discover(target);else if(target){locateDestination(id);showMessage(`Você está em ${target.name}.`);}}}}/>:<ModularMap selected={selected} onSelect={(id,keyboard)=>{if(keyboard||!didDrag.current){const target=targets.find(t=>t.id===id);if(target?.category === 'people')discover(target);else if(target){locateDestination(id);showMessage(`Você está em ${target.name}.`);}}}}/>}</div>
+          <div className="map-viewport" ref={attachViewport} onTouchStart={e=>{if(e.touches.length===1)didDrag.current=false;beginTouch(e);}} onTouchMove={moveTouch} onTouchEnd={endTouch} onTouchCancel={()=>{commitZoom();touchGesture.current=null;drag.current=null;}} onPointerDown={startDrag} onPointerMove={moveDrag} onPointerUp={() => { drag.current = null; }} onPointerLeave={() => { drag.current = null; }}>
+            <div className="map-world modular-world" style={{width:`${mapScale*100}%`,minWidth:`${740*mapScale}px`}}>{optimized?<OptimizedMap hd={hd} previewManifest={hdManifest} onSelect={stableSelect}/>:<ModularMap selected={selected} onSelect={stableSelect}/>}</div>
           </div>
 
           {<div className="map-actions"><button className="help-button" aria-label="Como jogar" onClick={() => help.current?.showModal()}><HelpCircle size={17} /></button><button className="help-button" aria-label="Recomeçar" onClick={() => reset.current?.showModal()}><RotateCcw size={17} /></button><button className="help-button privacy-button" aria-label="Política de privacidade" title="Política de privacidade" aria-haspopup="dialog" onClick={() => { if(privacy.current){privacy.current.showModal();privacy.current.querySelector<HTMLElement>('#privacy-policy-title')?.focus({preventScroll:true});privacy.current.scrollTop=0;} }}><ShieldCheck size={17} aria-hidden="true" /></button></div>}
