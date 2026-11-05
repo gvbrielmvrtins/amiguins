@@ -392,9 +392,13 @@ h1,h2,h3,h4,h5,h6,button,label,.eyebrow,.progress-label,.category-count,.map-top
 .game-milestone > span { width:100%; text-align:center; }
 .game-milestone button { position:absolute; top:8px; right:8px; margin:0; pointer-events:auto; }
 
-/* Keep the first thaw frame still when the visitor requests reduced motion. */
-.mariah-thaw-still { display: none; }
-@media (prefers-reduced-motion: reduce) {
-  .mariah-thaw-animation { display: none; }
-  .mariah-thaw-still { display: inline; }
+/* Animate only the water drop and respect reduced-motion preferences. */
+@media (prefers-reduced-motion: no-preference) {
+  .mariah-thaw-drop { animation: mariah-drip 1.45s linear infinite; }
+}
+@keyframes mariah-drip {
+  0% { transform: translateY(0); opacity: 0; }
+  12% { opacity: 1; }
+  88% { opacity: 1; }
+  100% { transform: translateY(21px); opacity: 0; }
 }
