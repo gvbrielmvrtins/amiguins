@@ -27,10 +27,7 @@ function MovableInstance({id,children,duplicate=false,locked=false,selectionBoun
   const [hasElements,setHasElements]=useState(false);
   const drag=useRef<{x:number;y:number;dx:number;dy:number}|null>(null);
   const offset=editor.offsets[id]??{x:0,y:0};
-  // Bounds are only needed to draw editor handles or to scale/rotate around the centre.
-  // Measuring ~800 elements (getBBox) on every visitor's load forces layout and is wasted work.
-  const needsBounds=editor.enabled||(offset.scale??1)!==1||(offset.rotation??0)!==0;
-  useLayoutEffect(()=>{if(needsBounds&&art.current){const b=selectionBounds??art.current.getBBox();setBounds({x:b.x,y:b.y,width:b.width,height:b.height});setHasElements(Boolean(art.current.querySelector('[data-layout-element]')));}},[needsBounds,children,selectionBounds]);
+  useLayoutEffect(()=>{if(art.current){const b=selectionBounds??art.current.getBBox();setBounds({x:b.x,y:b.y,width:b.width,height:b.height});setHasElements(Boolean(art.current.querySelector('[data-layout-element]')));}},[editor.enabled,children,selectionBounds]);
   useLayoutEffect(()=>{
     const a=anchor.current,svg=a?.ownerSVGElement,layer=offset.layer??0;
     if(!a||!svg||!layer){setPortal(null);return;}

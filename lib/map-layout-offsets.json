@@ -3188,8 +3188,8 @@
   },
   "raquel-rocha": {
     "x": 16.64,
-    "y": 12.95,
-    "scale": 1.2,
+    "y": 13.12,
+    "scale": 1.3,
     "rotation": 0,
     "layer": 1,
     "hidden": false
@@ -5423,9 +5423,9 @@
     "hidden": false
   },
   "odete-roitman-helicopter-nonplayable": {
-    "x": -2.51,
-    "y": 2.8,
-    "scale": 0.45,
+    "x": -4.14,
+    "y": 4.94,
+    "scale": 0.55,
     "rotation": 0,
     "layer": 0,
     "hidden": false
@@ -6140,9 +6140,9 @@
     "hidden": false
   },
   "flavio-carminha-nonplayable": {
-    "x": -0.8,
-    "y": 2.81,
-    "scale": 0.85,
+    "x": -0.24,
+    "y": 3.75,
+    "scale": 0.95,
     "rotation": 0,
     "layer": 0,
     "hidden": false
@@ -6308,21 +6308,5 @@
     "layer": 0,
     "hidden": false,
     "sourceId": "north-residence-coral"
-  },
-  "camilla-toscano": {
-    "x": 398.41,
-    "y": -32.52,
-    "scale": 1.1,
-    "rotation": 0,
-    "layer": 0,
-    "hidden": false
-  },
-  "alana-becherer": {
-    "x": -41.58,
-    "y": -2.46,
-    "scale": 0.6,
-    "rotation": 0,
-    "layer": 0,
-    "hidden": false
   }
 }
