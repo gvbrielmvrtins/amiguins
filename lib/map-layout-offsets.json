@@ -6308,5 +6308,21 @@
     "layer": 0,
     "hidden": false,
     "sourceId": "north-residence-coral"
+  },
+  "camilla-toscano": {
+    "x": 398.41,
+    "y": -32.52,
+    "scale": 1.1,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
+  },
+  "alana-becherer": {
+    "x": -41.58,
+    "y": -2.46,
+    "scale": 0.6,
+    "rotation": 0,
+    "layer": 0,
+    "hidden": false
   }
 }
